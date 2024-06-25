@@ -1,0 +1,2 @@
+inquisit.version	computer.platform	startdate	starttime	subjectid	groupid	sessionid	elapsedtime	completed	headphonecheck_numberCorrectResponses	headphonecheck_propCorrect	headphoneCheckPass	stereocheck_numberCorrectResponses	stereocheck_propCorrect	stereoCheckPass	DL_propCorrect	DL_propCorrect_mono	DL_count_mono	DL_propCorrect_dual	DL_count_dual	DL_count_corrLeft	DL_count_corrRight
+6.6.1	win	2023-06-23	11:56:51	60fd64fd34ee5940500d499f	3	1	1107095	1	5	0.8333333333333333703	1	6	1	1	0.8472222222222222099	0.9583333333333333703	24	0.8249999999999999556	120	57	42

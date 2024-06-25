@@ -1,0 +1,28 @@
+﻿// (z) Q1d: Recap.
+<surveypage interactive_q1d_correct>
+/ questions = [1=interactive_q1_image; 2=interactive_q1d_caption_correct]
+</surveypage>
+
+<caption interactive_q1d_caption_correct>
+/ caption = "Correct! There is a rectangle in the big shapes."
+/ fontstyle = (parameters.fontfamily_default, parameters.fontsize_survey_caption, false, false, false, false, 5, 1)
+// position = (10%, 70%)
+// size = (80%, null)
+/// valign = center
+/ position = (10%, 80%)
+/ valign = bottom
+</caption>
+
+<surveypage interactive_q1d_incorrect>
+/ questions = [1=interactive_q1_image; 2=interactive_q1d_caption_incorrect]
+</surveypage>
+
+<caption interactive_q1d_caption_incorrect>
+/ caption = "Incorrect! The rectangle is in the big shapes. If you see these shapes in the experiment, you should press the '<% values.response_key_string %>' key, because the shapes include either a rectangle or a square—In this case, there is a rectangle in the big shapes."
+/ fontstyle = (parameters.fontfamily_default, parameters.fontsize_survey_caption, false, false, false, false, 5, 1)
+// position = (10%, 70%)
+// size = (80%, null)
+/// valign = center
+/ position = (10%, 80%)
+/ valign = bottom
+</caption>

@@ -1,0 +1,2 @@
+inquisit.version	computer.platform	startdate	starttime	subjectid	groupid	sessionid	elapsedtime	completed	headphonecheck_numberCorrectResponses	headphonecheck_propCorrect	headphoneCheckPass	stereocheck_numberCorrectResponses	stereocheck_propCorrect	stereoCheckPass	DL_propCorrect	DL_propCorrect_mono	DL_count_mono	DL_propCorrect_dual	DL_count_dual	DL_count_corrLeft	DL_count_corrRight
+6.6.1	mac	2023-07-10	13:14:10	5ad0c8fd4d061300011b07e4	3	1	1904551	1	5	0.8333333333333333703	1	6	1	1	0.7569444444444444198	0.9166666666666666297	24	0.7249999999999999778	120	24	63

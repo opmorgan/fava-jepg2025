@@ -1,0 +1,2 @@
+date	time	group	subject	session	build	task_experience_response	task_experience_latency	task_experience_other_response	task_experience_other_latency	open_ended_feedback_response	open_ended_feedback_latency
+2023-07-06	19:17:45	4	6496f9fbc2928ee6956ef623	2	6.6.1	No	6331		6331	When trying to initiate the first task, I was unable to move forward as the space bar to continue was not being processed, so in order for me to to continue, I had to close out the program and which unfortunately prematurely submitted the study. However, I reopned the task and have now completed it.	91164

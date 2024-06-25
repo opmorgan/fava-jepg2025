@@ -1,0 +1,992 @@
+---
+title: "Experiments 1 & 2: Sex Analyses"
+pagetitle: "exp 1-2 | sex analyses"
+author: "Owen Morgan"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: html_document
+---
+
+<style type="text/css">
+  body{
+  font-family: Avenir;
+  font-size: 12pt;
+}
+</style>
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE,
+                      fig.align = "center", fig.width = 9,
+                      fig.height = 6, results = "markup")
+options(knitr.kable.NA = "")
+
+cli.progress_show_after <- 0
+
+## Do not use scientific notation until 9 decimal places.
+options(scipen = 9, digits = 9)
+
+# Suppress summarise info
+options(dplyr.summarise.inform = FALSE)
+```
+
+```{r lib}
+library(here)
+library(tidyverse)
+select <- dplyr::select
+library(cli) # For printing error messages
+library(glue)
+
+library(lme4)
+library(emmeans)
+library(broom)
+library(gt)
+
+library(ggpubr) ## functions for plotting SD, SEM, CI.
+library(ggbeeswarm)
+library(patchwork)
+library(ggh4x) ## for nested facets
+
+library(knitr) # For include_graphics
+
+source(here::here("lib", "util.R"))
+source(here::here("lib", "demographics.R"))
+source(here::here("lib", "plots-jepg.R"))
+
+EXPERIMENT_DIR <- "experiments_1-2"
+source(here::here(EXPERIMENT_DIR, "lib", "load_process", "load_process.R"))
+source(here::here(EXPERIMENT_DIR, "lib", "tests.R"))
+
+interaction_stats <-
+  function(model_with_interaction,
+           model_with_no_interaction) {
+    return(anova(model_with_interaction, model_with_no_interaction))
+  }
+
+plot_blue <- c("#337aB7")
+plot_colors <- c("#4477AA",
+                 "#EE6677",
+                 "#CCBB44",
+                 "#66CCEE",
+                 "#AA3377",
+                 "#228833",
+                 "#BBBBBB")
+
+middle_purple1 <- "#996F91" ## In between plot colors one and two
+```
+
+```{r config}
+experiment_label <- "Experiments 1 and 2"
+
+## Emmeans settings (use Satterthwaire approx. instead of default t-to-z for large df)
+## See: Luke (2017). Evaluating significance in linear mixed-effects models in R
+DF_METHOD <- "satterthwaite"
+LMERTEST_LIMIT <- 500000
+
+## Figure settings
+DEFAULT_HEIGHT = 3
+DEFAULT_WIDTH = 5
+
+## Specify directories
+proc_dir_e1 <- set_or_make_dir(label = "proc (e1)",
+  here::here(EXPERIMENT_DIR, "data", "proc_exp_n1008")
+)
+proc_dir_e2 <- set_or_make_dir(label = "proc (e2)",
+  here::here(EXPERIMENT_DIR, "data", "proc_exp_n1450")
+)
+fig_dir <- set_or_make_dir(label = "fig",
+  here::here(EXPERIMENT_DIR, "figures")
+)
+manual_cache_dir <- set_or_make_dir(label = "manual cache",
+ here::here(EXPERIMENT_DIR, "manual_cache")
+)
+
+use_cached_figs <- T
+use_cached_models <- T
+use_cached_proc_data <- T
+```
+
+# {.tabset}
+```{r load_data}
+## Load "the data" with all subjects & AAH trials.
+aah_long_e1 <- load_aah_long(proc_dir_e1) |> mutate(experiment = "one")
+aah_long_e2 <- load_aah_long(proc_dir_e2) |> mutate(experiment = "two")
+test_for_dupes(aah_long_e1, aah_long_e2)
+aah_long <- bind_rows(aah_long_e1, aah_long_e2)
+
+## Load summary data table
+## with all subjects.
+aah_summary_all_e1 <- read_tsv(here(proc_dir_e1, "aah_summary.tsv")) |> 
+  mutate(experiment = "one")
+aah_summary_all_e2 <- read_tsv(here(proc_dir_e2, "aah_summary.tsv")) |> 
+  mutate(experiment = "two")
+test_for_dupes(aah_summary_all_e1, aah_summary_all_e2)
+aah_summary_all <- bind_rows(aah_summary_all_e1, aah_summary_all_e2)
+```
+
+```{r prepare_data}
+# use_cached_proc_data <- FALSE
+#### PREPARE SUMMARY DATA FOR DEMOGRAPHICS ANALYSES (NAVON EXCLUSIONS)
+if (use_cached_proc_data == FALSE) {
+  cli::cli_alert_info("Filtering summary data for analysis (no excluded subjects).")
+  cli::cli_bullets(c(" " = "aah_summary_all -> aah_summary"))
+  aah_summary <- aah_summary_all |>
+    filter(
+      (experiment == "two" & exclude_navon == 0) |
+      (experiment == "one" & exclude == 0)
+      ) |>
+    select(-starts_with("exclude")) |>
+    mutate(
+      handedness_extremes = case_when(ehi == -100 ~ "Left",
+                                      ehi == 100 ~ "Right",
+                                      ehi > -100 &
+                                        ehi < 100 ~ "Mixed")
+    )
+  saveRDS(aah_summary, here(manual_cache_dir, "aah_summary.rds"))
+} else {
+  aah_summary <- readRDS(here(manual_cache_dir, "aah_summary.rds"))
+}
+
+#### PREPARE TRIAL-LEVEL DATA FOR RT, ACCURACY ANALYSES
+## Prepare "the data" (aah_long) for all analyses:
+## Filter out practice trials, absent trials, and excluded subjects
+## This data (all present trials, correct or incorrect) will be used for
+## accuracy analyses
+if (use_cached_proc_data == FALSE) {
+cli::cli_alert_info("Filtering long navon data for analysis (no excluded subjects; experimental trials (not practice) only; target present only).")
+aah <- aah_long |>
+    filter(
+      (experiment == "two" & exclude_navon == 0) |
+      (experiment == "one" & exclude == 0)
+      ) |>
+  filter(block_type == "main" & target_present == "yes") |>
+  select(-starts_with("exclude")) |>
+  ## Recode "level", "target" for nicer printing.
+  mutate(level = recode(level, global = "Global", local = "Local")) |>
+  mutate(target = recode(target, square = "Square", rectangle = "Rectangle",
+                         circle = "Circle")) |>
+  rename(shape = target) |> 
+  ## Code handedness extremes
+  mutate(
+    handedness_extremes = case_when(ehi == -100 ~ "Left",
+                                    ehi == 100 ~ "Right",
+                                    ehi > -100 & ehi < 100 ~ "Mixed")
+    )
+  saveRDS(aah, here(manual_cache_dir, "aah.rds"))
+} else {
+  aah <- readRDS(here(manual_cache_dir, "aah.rds"))
+}
+
+## For RT analyses, prepare dataset with only correct, present trials.
+## In our RT model, we only care about correct responses to present trials.
+if (use_cached_proc_data == FALSE) {
+aah_correct <- aah |> filter(correct == T)
+  saveRDS(aah_correct, here(manual_cache_dir, "aah_correct.rds"))
+} else {
+  aah_correct <- readRDS(here(manual_cache_dir, "aah_correct.rds"))
+}
+
+## Relevel field and level with RVF first (unintuitive for plotting),
+## so that emmeans will show a positive number for LVF global bias.
+if (use_cached_proc_data == FALSE) {
+aah_for_rt_model <- aah_correct |>
+  mutate(level = level |> factor(levels = c("Global", "Local")),
+         field = field |> factor(levels = c("RVF", "LVF")))
+  saveRDS(aah_for_rt_model, here(manual_cache_dir, "aah_for_rt_model.rds"))
+} else {
+  aah_for_rt_model <- readRDS(here(manual_cache_dir, "aah_for_rt_model.rds"))
+}
+
+## For accuracy analyses, prepare dataset will all present trials.
+## Relevel field and level,
+## so that emmeans will show a positive number for LVF global bias.
+if (use_cached_proc_data == FALSE) {
+aah_for_acc_model <- aah |>
+  mutate(level = level |> factor(levels = c("Global", "Local")),
+         field = field |> factor(levels = c("RVF", "LVF")))
+  saveRDS(aah_for_acc_model, here(manual_cache_dir, "aah_for_acc_model.rds"))
+} else {
+  aah_for_acc_model <- readRDS(here(manual_cache_dir, "aah_for_acc_model.rds"))
+}
+
+#### PREPARE SUBJECT_LEVEL DATA FOR RT, ACCURACY ANALYSES
+## Prepare subject-level data (RT)
+if (use_cached_proc_data == FALSE) {
+rt_subject <- aah_correct |> group_by(subject, field, level, handedness, experiment) |>
+  summarize(rt = median(rt))
+  saveRDS(rt_subject, here(manual_cache_dir, "rt_subject.rds"))
+} else {
+  rt_subject <- readRDS(here(manual_cache_dir, "rt_subject.rds"))
+}
+
+
+## Prepare subject-level LVF Global bias summary (RT)
+if (use_cached_proc_data == FALSE) {
+rt_1 <- rt_subject |>
+  pivot_wider(names_from = c(field, level),
+              values_from = rt) |>
+  mutate(LVF_Global_Bias = (RVF_Global - RVF_Local) - (LVF_Global - LVF_Local)) |>
+  mutate(all_one_group = "all_one_group")
+  saveRDS(rt_1, here(manual_cache_dir, "rt_1.rds"))
+} else {
+  rt_1 <- readRDS(here(manual_cache_dir, "rt_1.rds"))
+}
+```
+
+## Summary
+
+*All p-values two-sided.*
+
+*1,958 combined participants (860 left handers, 307 mixed handers, and 791 right handers) met inclusion criteria for experiments 1 or 2 (E1: n = 844 [331, 135, 378]; E2: n = 1,114 [529, 172, 413]).*
+
+Some conflicting research suggests that hemispheric specialization for spatial frequency may depend on sex. Using frequency-filtered natural scenes, Peyrin et al. (2006) found greater hemispheric specialization (in the direction of RVF high-spatial frequency bias) in males, with no significant hemispheric specialization detected in females. In contrast, Perilla-Rodriguez et al. (2013) found greater hemispheric specialization in females, and no significant hemispheric specialization in males, when identifying frequency-filtered face images. (Both studies included only right handed participants). Does sex influence hemispheric specialization for frequency, in either direction? And, does the effect of handedness on frequency specialization hold across male and female participants?
+
+Within right handed participants, the typical effect of field by level was present in both males (38.28s, 95\% CI [31.20, 45.36], \textit{t}(193,708.4) = 10.60, \textit{p} < .0001) and females (32.26ms, 95\% CI [23.89, 45.36], \textit{t}(193,710.3) = 7.55, \textit{p} < .0001), with no significant difference between groups (difference = 6.01ms greater in males, 95\% CI [-4.95, 16.98, \textit{t}(193,709.5) = 1.08, \textit{p} = .282). The effect of handedness on frequency specialization held in both male (13.37ms, 95\% CI [3.15, 23.59, \textit{t}(193,708.5) = 2.57, \textit{p} = .01) and female (17.58ms, 95\% CI [6.29, 28.86], \textit{t}(193,709.8) = 3.05, \textit{p} = .002) participants, with no significant difference between groups (difference = 4.20ms greater in females, 95\% CI [-11.02, 19.43], \textit{t}(193,709.8) = 0.54, \textit{p} = .59).
+
+
+## Demographics {.tabset .tabset-pills}
+
+### Summary
+```{r}
+demo_table <- aah_summary |>
+  summarize(
+            N = n(),
+            `Age (years)` = report_mean_sd(age),
+            `Education (years)`= report_mean_sd(education),
+            `Sex (M/F/O)` = report_sex(sex)
+  )
+
+demo_table |>
+  pretty_table() |> 
+  tab_header(title = "Demographics, combining experiments", subtitle = "Summary")
+```
+<br>
+```{r}
+## Pool experiments, break up by handedness
+demo_table <- aah_summary |>
+  group_by(handedness) |> 
+  summarize(
+            N = n(),
+            `Age (years)` = report_mean_sd(age),
+            `Education (years)` = report_mean_sd(education),
+            `Sex (M/F/O)` = report_sex(sex),
+            EHI = report_mean_sd(ehi)
+  ) |> 
+  rename(Handedness = handedness)
+
+demo_table |>
+  pretty_table(groupname_col = "experiment") |> 
+  tab_header(title = "Demographics, combining experiments", subtitle = "Summary") |> 
+  tab_footnote("Left: (EHI <= -40)  |  Mixed: (-40 < EHI < 40)  |  Right: (EHI >= 40)")
+```
+<br>
+
+
+### Race
+
+```{r}
+group_n <- aah_summary |> 
+  summarize(n_group = n()) |> pull(n_group)
+demo_race <- aah_summary |> 
+  group_by(race) |>
+  summarize(n = n(),
+            pct = round((n/group_n*100), 1)
+            ) |>
+  arrange(-n) |> 
+  rename(Race = race)
+
+demo_race |>
+  pretty_table() |> 
+  tab_header(title = "Demographics, combining experiments", subtitle = "Race")
+```
+<br>
+```{r}
+demo_ethnicity <- aah_summary |>
+  group_by(hispanic_ethnicity) |>
+  summarize(n = n(),
+            pct = round((n/group_n)*100, 1)
+            ) |>
+  arrange(-n) |> 
+  rename(`Hispanic ethnicity` = hispanic_ethnicity)
+
+demo_ethnicity |>
+  pretty_table() |> 
+  tab_header(title = "Demographics, combining experiments", subtitle = "Ethnicity")
+```
+<br>
+
+### Sex
+```{r}
+sex_sub <- aah_summary |> 
+  filter(sex %in% c("Male", "Female"))
+
+group_n <- sex_sub |> 
+  group_by(sex) |> 
+  summarize(n_group = n())
+
+sex_sub_with_n <- full_join(sex_sub, group_n)
+
+demo_sex <- sex_sub_with_n |> 
+  filter(sex %in% c("Male", "Female")) |> 
+  group_by(sex, handedness, n_group) |>
+  summarize(n = n(),
+            pct = round((n/first(n_group)*100), 1)
+            ) |>
+  arrange(sex, handedness) |> 
+  rename(Sex = sex)
+
+demo_sex |>
+  select(-n_group) |> 
+  pretty_table(groupname_col = "Sex") |> 
+  tab_header(title = "Demographics, combining experiments", subtitle = "Sex & Handedness") |> 
+  tab_options(
+    row_group.as_column = TRUE
+  )
+```
+<br>
+```{r}
+sex_sub <- aah_summary |> 
+  filter(sex %in% c("Male", "Female")) |> 
+  mutate(experiment = paste0("Experiment ", experiment))
+
+group_n <- sex_sub |> 
+  group_by(sex, experiment) |> 
+  summarize(n_group = n())
+
+sex_sub_with_n <- full_join(sex_sub, group_n)
+
+demo_sex <- sex_sub_with_n |> 
+  filter(sex %in% c("Male", "Female")) |> 
+  group_by(experiment, sex, handedness, n_group) |>
+  summarize(n = n(),
+            pct = round((n/first(n_group)*100), 1)
+            ) |>
+  arrange(sex, handedness) |> 
+  rename(Sex = sex)
+
+demo_sex |>
+  select(-n_group) |> 
+  pretty_table(groupname_col = "experiment") |> 
+  tab_header(title = "Demographics, by experiment", subtitle = "Sex & Handedness") |> 
+  tab_options(
+    row_group.as_column = TRUE
+  )
+```
+
+### Country
+
+```{r}
+demo_country <- aah_summary |>
+  mutate(experiment = paste0("Experiment ", experiment)) |> 
+  group_by(experiment, country) |>
+  summarize(n = n()) |>
+  rename(Country = country)
+
+demo_country |>
+  pretty_table(groupname_col = "experiment") |> 
+  tab_header(title = "Demographics by experiment", subtitle = "Country")
+```
+<br>
+
+### EHI
+```{r}
+fig_path_var <- here(fig_dir, "demo_ehi_dots_purple_e1-2.png")
+
+if (use_cached_figs == F) {
+  ehi_plot_data <- aah_summary |> group_by(ehi) |> summarize(n = n())
+  g <- gg_ehi_dotarea(ehi_plot_data, plot_color = middle_purple1,
+                      cutoff = 40, cutoff_label_ypos = 240,
+                      group_label_ypos = 340,
+                      y_lims = c(0, 400))
+  g <- g + labs(title = "EHI distribution (Combining Experiments 1 and 2)")
+  ggsave(fig_path_var, g, "png", height = 3, width = 6)
+}
+
+include_graphics(fig_path_var)
+```
+
+## Stats {.tabset .tabset-pills}
+
+`RT ~ field * level * handedness * experiment * sex + (1|subject) + (1|shape)`
+
+### Categorical handedness (exploratory) {.tabset}
+
+```{r}
+MODEL_DESCRIPTION <- "Model: field * level * handedness (EHI +/-40) * experiment * sex + (1|subject) + (1|shape)"
+
+aah_cat <- aah_for_rt_model |> 
+  filter(handedness %in% c("Right", "Left")) |> 
+  filter(sex %in% c("Male", "Female"))
+
+if (use_cached_models == FALSE) {
+  rt_mm_cat <- lmer(
+    data = aah_cat,
+    formula = rt ~
+      field * level * handedness * experiment * sex
+    + (1 | subject)
+    + (1 | shape)
+  )
+  
+  saveRDS(rt_mm_cat, here(manual_cache_dir, "rt_mm_cat_sex.rds"))
+} else if (use_cached_models == TRUE) {
+  rt_mm_cat <- readRDS(here(manual_cache_dir, "rt_mm_cat_sex.rds"))
+}
+```
+
+#### FxL
+<br>
+```{r FLS_H}
+## FxLxS | H (Is the effect of FxL smaller in women, within right handers?)
+if (use_cached_models == FALSE) {
+  rt_emm <- emmeans(rt_mm_cat, ~ field * level * sex | handedness,
+                    lmer.df = DF_METHOD,
+    lmerTest.limit = LMERTEST_LIMIT)
+  
+  rt_interaction_emm <- rt_emm |> 
+  contrast(interaction = c("consec")) |>
+  summary(infer = T)
+
+  
+  saveRDS(rt_interaction_emm,
+          here(manual_cache_dir, "rt_interaction_emm_FLG_H.rds"))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_interaction_emm <-
+    readRDS(here(manual_cache_dir, "rt_interaction_emm_FLG_H.rds"))
+}
+
+rt_interaction_emm |>
+  as_tibble() |>
+  format_p.value() |> 
+  pretty_table() |>
+  tab_header(title = str_glue("{experiment_label}: Field by Level by Sex (by handedness) (RT)"),
+             subtitle = "Compare effect estimate to zero with emmeans()") |>
+  tab_footnote(footnote = "A positive number means the effect size is larger in women",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = MODEL_DESCRIPTION,
+               locations = cells_title()) |> 
+  tab_footnote(footnote = "Two-sided",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+
+```
+
+```{r FL_S_H}
+## FxL | S | H (What is the effect of FxL, within right handers, by sex?)
+if (use_cached_models == FALSE) {
+  rt_emm <- emmeans(rt_mm_cat, ~ field * level | sex | handedness,
+                    lmer.df = DF_METHOD,
+    lmerTest.limit = LMERTEST_LIMIT)
+  
+  rt_interaction_emm <- rt_emm |> 
+  contrast(interaction = c("consec")) |>
+  summary(infer = T)
+
+  
+  saveRDS(rt_interaction_emm,
+          here(manual_cache_dir, "rt_interaction_emm_FL_G_H.rds"))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_interaction_emm <-
+    readRDS(here(manual_cache_dir, "rt_interaction_emm_FL_G_H.rds"))
+}
+
+rt_interaction_emm |>
+  as_tibble() |>
+  format_p.value() |> 
+  pretty_table() |>
+  tab_header(title = str_glue("{experiment_label}: Field by Level (by Sex, by Handedness) (RT)"),
+             subtitle = "Compare effect estimate to zero with emmeans()") |>
+  tab_footnote(footnote = "A positive number means RVF local bias",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = MODEL_DESCRIPTION,
+               locations = cells_title()) |> 
+  tab_footnote(footnote = "Two-sided",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+
+```
+
+#### FxLxH
+```{r FLHS}
+#### FxLxHxS (emmeans)
+## Estimate effect of experiment on field x level x handedness with emmeans
+## Use emmeans() to test 4-way interaction.
+if (use_cached_models == FALSE) {
+  rt_emm <-
+    emmeans(rt_mm_cat, ~ field * level * handedness * sex,
+            lmer.df = DF_METHOD,
+    lmerTest.limit = LMERTEST_LIMIT)
+  rt_interaction_emm <- rt_emm |>
+    contrast(interaction = c("consec")) |>
+    summary(infer = T)
+  
+  saveRDS(rt_interaction_emm,
+          here(manual_cache_dir, "rt_interaction_emm_FLHG.rds"))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_interaction_emm <-
+    readRDS(here(manual_cache_dir, "rt_interaction_emm_FLHG.rds"))
+}
+
+rt_interaction_emm |>
+  as_tibble() |>
+  format_p.value() |> 
+  pretty_table() |>
+  tab_header(title = str_glue("{experiment_label}: Field by Level by Handedness by Sex (RT)"),
+             subtitle = "Compare effect estimate to zero with emmeans()") |>
+  tab_footnote(footnote = "A positive number means a greater effect in Experiment 2",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = MODEL_DESCRIPTION,
+               locations = cells_title()) |> 
+  tab_footnote(footnote = "Two-sided",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+<br>
+```{r FLH_S}
+#### FxLxH | S
+if (use_cached_models == FALSE) {
+  rt_emm <- emmeans(rt_mm_cat, ~ field * level * handedness | sex,
+                    lmer.df = DF_METHOD,
+    lmerTest.limit = LMERTEST_LIMIT)
+  
+  rt_interaction_emm <- rt_emm |> 
+  contrast(interaction = c("consec")) |>
+  summary(infer = T)
+
+  
+  saveRDS(rt_interaction_emm,
+          here(manual_cache_dir, "rt_interaction_emm_FLH_S.rds"))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_interaction_emm <-
+    readRDS(here(manual_cache_dir, "rt_interaction_emm_FLH_S.rds"))
+}
+
+rt_interaction_emm |>
+  as_tibble() |>
+  format_p.value() |> 
+  pretty_table() |>
+  tab_header(title = str_glue("{experiment_label}: Field by Level by Handendess (by Sex) (RT)"),
+             subtitle = "Compare effect estimate to zero with emmeans()") |>
+  tab_footnote(footnote = "A positive number means RVF Local bias",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = MODEL_DESCRIPTION,
+               locations = cells_title()) |> 
+  tab_footnote(footnote = "Two-sided",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+<br>
+
+
+#### FxH
+<br>
+```{r FH_S_L}
+## FxH | S | L
+if (use_cached_models == FALSE) {
+  rt_emm <- emmeans(rt_mm_cat, ~ field * handedness | sex | level,
+                    lmer.df = DF_METHOD,
+    lmerTest.limit = LMERTEST_LIMIT)
+  
+  rt_interaction_emm <- rt_emm |> 
+  contrast(interaction = c("consec")) |>
+  summary(infer = T)
+
+  
+  saveRDS(rt_interaction_emm,
+          here(manual_cache_dir, "rt_interaction_emm_FH_G_L.rds"))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_interaction_emm <-
+    readRDS(here(manual_cache_dir, "rt_interaction_emm_FH_G_L.rds"))
+}
+
+rt_interaction_emm |>
+  as_tibble() |> 
+  format_p.value() |> 
+  arrange(sex, level) |> 
+  pretty_table() |> 
+  tab_header(title = str_glue("{experiment_label}: Field by Handedness (by Sex by Level) (RT)"),
+             subtitle = "Compare effect estimate to zero with emmeans()") |>
+  tab_footnote(footnote = "A positive number means RVF right>left handed bias",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = MODEL_DESCRIPTION,
+               locations = cells_title()) |> 
+  tab_footnote(footnote = "Two-sided",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+<br>
+```{r F_H_S_L}
+## F | H | S | L
+if (use_cached_models == FALSE) {
+  rt_emm <- emmeans(rt_mm_cat, ~ field | handedness | sex | level,
+                    lmer.df = DF_METHOD,
+    lmerTest.limit = LMERTEST_LIMIT)
+  
+  rt_interaction_emm <- rt_emm |> 
+  contrast(interaction = c("consec")) |>
+  summary(infer = T)
+
+  
+  saveRDS(rt_interaction_emm,
+          here(manual_cache_dir, "rt_interaction_emm_F_H_G_L.rds"))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_interaction_emm <-
+    readRDS(here(manual_cache_dir, "rt_interaction_emm_F_H_G_L.rds"))
+}
+
+rt_interaction_emm |>
+  as_tibble() |> 
+  format_p.value() |> 
+  arrange(sex, handedness, level) |> 
+  select(field_consec, sex, handedness, level, everything()) |> 
+  pretty_table(groupname_col = "sex") |> 
+  tab_header(title = str_glue("{experiment_label}: Field (by Handedness by Sex by Level) (RT)"),
+             subtitle = "Compare effect estimate to zero with emmeans()") |>
+  tab_footnote(footnote = "A positive number means RVF bias",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = MODEL_DESCRIPTION,
+               locations = cells_title()) |> 
+  tab_footnote(footnote = "Two-sided",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+<br>
+
+## Plots {.tabset .tabset-pills}
+
+```{r}
+DEFAULT_HEIGHT = 3
+DEFAULT_WIDTH = 5
+```
+
+Diamonds and lineranges show mixed-effects model point estimates and 95% CI.
+
+### Categorical handedness (EHI +/- 40) {.tabset}
+
+```{r}
+## Start over, with numeric y axis
+## Add a line with CI from the model
+fig_path_var <- here(fig_dir, "rt_1_lmer_M.png")
+fig_path_var_wide <- here(fig_dir, "rt_1_lmer_wide_M.png")
+
+
+if (use_cached_figs == F) {
+  # rt_mm_cat <- readRDS(here(manual_cache_dir, "rt_mm_cat.rds"))
+  model_data <- aah_cat |> filter(sex == "Male")
+  plot_model <- lmer(
+    data = model_data,
+    formula = rt ~
+      field * level * handedness * experiment
+    + (1 | subject)
+    + (1 | shape)
+  )
+  rt_emm <- emmeans(plot_model, ~ field * level * handedness,
+                    lmer.df = DF_METHOD,
+    lmerTest.limit = LMERTEST_LIMIT)
+
+  ## Get estimates for right and left handers.
+  emm_data <- rt_emm |>
+    contrast("pairwise", by = c("handedness", "level")) |>
+    summary(infer = T, level = .95) |>
+    as_tibble() |>
+    ## Fix units
+    mutate(
+      estimate = estimate * -1,
+      lower.CL = lower.CL * -1,
+      upper.CL = upper.CL * -1
+    )
+
+
+  plot_data <- emm_data |> mutate(dv = estimate)
+
+  ## Extract n's (MANUALLY COUNT N IN DATAFRAME USED IN MODEL)
+  n_left <- model_data |> group_by(subject, handedness) |>  count() |>
+    group_by(handedness) |> count() |>
+    filter(handedness == "Left") |> pull(n)
+
+  n_right <- model_data |> group_by(subject, handedness) |>  count() |>
+    group_by(handedness) |> count() |>
+    filter(handedness == "Right") |> pull(n)
+
+  g <- gg_rt_2_lmer(
+    # title = "Experiment 1:\n Hemifield bias by level (EHI cut at +/-40)",
+    title = "Hemifield bias by level (EHI cut at +/-40)",
+    plot_data,
+    handedness_labeller = NULL,
+    plot_colors = plot_colors,
+    direction_labels = list(right = "RVF bias",
+                            left = "LVF bias"),
+    direction_labels_pos = list(right = 38,
+                                left = -38),
+    xlims = list(upper = 38,
+                 lower = -38),
+    xbreaks = list(major = 10,
+                   minor = 5),
+    n_subjects = list(right = n_right,
+                      left = n_left)
+  )
+  
+  
+  g <- g + labs(subtitle = "Male participants") +
+    theme(plot.title = element_text(hjust = .5),
+          plot.subtitle = element_text(hjust = .5, face = "italic")
+    )
+
+  ggsave(fig_path_var, g, "png", height = DEFAULT_HEIGHT, width = DEFAULT_WIDTH)
+}
+
+include_graphics(fig_path_var)
+```
+<br>
+```{r}
+## Start over, with numeric y axis
+## Add a line with CI from the model
+fig_path_var <- here(fig_dir, "rt_1_lmer_F.png")
+fig_path_var_wide <- here(fig_dir, "rt_1_lmer_wide_F.png")
+
+
+if (use_cached_figs == F) {
+  # rt_mm_cat <- readRDS(here(manual_cache_dir, "rt_mm_cat.rds"))
+  model_data <- aah_cat |> filter(sex == "Female")
+  plot_model <- lmer(
+    data = model_data,
+    formula = rt ~
+      field * level * handedness
+    + (1 | subject)
+    + (1 | shape)
+  )
+  rt_emm <- emmeans(plot_model, ~ field * level * handedness,
+                    lmer.df = DF_METHOD,
+    lmerTest.limit = LMERTEST_LIMIT)
+
+  ## Get estimates for right and left handers.
+  emm_data <- rt_emm |>
+    contrast("pairwise", by = c("handedness", "level")) |>
+    summary(infer = T, level = .95) |>
+    as_tibble() |>
+    ## Fix units
+    mutate(
+      estimate = estimate * -1,
+      lower.CL = lower.CL * -1,
+      upper.CL = upper.CL * -1
+    )
+
+
+  plot_data <- emm_data |> mutate(dv = estimate)
+
+  ## Extract n's (MANUALLY COUNT N IN DATAFRAME USED IN MODEL)
+  n_left <- model_data |> group_by(subject, handedness) |>  count() |>
+    group_by(handedness) |> count() |>
+    filter(handedness == "Left") |> pull(n)
+
+  n_right <- model_data |> group_by(subject, handedness) |>  count() |>
+    group_by(handedness) |> count() |>
+    filter(handedness == "Right") |> pull(n)
+
+  g <- gg_rt_2_lmer(
+    # title = "Experiment 2:\n Hemifield bias by level (EHI cut at +/-40)",
+    title = "Hemifield bias by level (EHI cut at +/-40)",
+    plot_data,
+    handedness_labeller = NULL,
+    plot_colors = plot_colors,
+    direction_labels = list(right = "RVF bias",
+                            left = "LVF bias"),
+    direction_labels_pos = list(right = 38,
+                                left = -38),
+    xlims = list(upper = 38,
+                 lower = -38),
+    xbreaks = list(major = 10,
+                   minor = 5),
+    n_subjects = list(right = n_right,
+                      left = n_left)
+  )
+  
+  g <- g + labs(subtitle = "Female participants") +
+    theme(plot.title = element_text(hjust = .5),
+          plot.subtitle = element_text(hjust = .5, face = "italic")
+    )
+
+  ggsave(fig_path_var, g, "png", height = DEFAULT_HEIGHT, width = DEFAULT_WIDTH)
+}
+
+include_graphics(fig_path_var)
+```
+<br>
+
+### Categorical handedness (EHI +/- 100) {.tabset}
+<br>
+```{r}
+aah_cat_zoom <- aah_for_rt_model |> 
+  filter(handedness_extremes %in% c("Right", "Left")) |> 
+  mutate(handedness = handedness_extremes)
+```
+<br>
+```{r}
+## Start over, with numeric y axis
+## Add a line with CI from the model
+fig_path_var <- here(fig_dir, "rt_1_lmer_M_zoom.png")
+fig_path_var_wide <- here(fig_dir, "rt_1_lmer_wide_M_zoom.png")
+
+
+if (use_cached_figs == F) {
+  # rt_mm_cat <- readRDS(here(manual_cache_dir, "rt_mm_cat.rds"))
+  model_data <- aah_cat_zoom |> filter(sex == "Male")
+  plot_model <- lmer(
+    data = model_data,
+    formula = rt ~
+      field * level * handedness * experiment
+    + (1 | subject)
+    + (1 | shape)
+  )
+  rt_emm <- emmeans(plot_model, ~ field * level * handedness,
+                    lmer.df = DF_METHOD,
+    lmerTest.limit = LMERTEST_LIMIT)
+
+  ## Get estimates for right and left handers.
+  emm_data <- rt_emm |>
+    contrast("pairwise", by = c("handedness", "level")) |>
+    summary(infer = T, level = .95) |>
+    as_tibble() |>
+    ## Fix units
+    mutate(
+      estimate = estimate * -1,
+      lower.CL = lower.CL * -1,
+      upper.CL = upper.CL * -1
+    )
+
+
+  plot_data <- emm_data |> mutate(dv = estimate)
+
+  ## Extract n's (MANUALLY COUNT N IN DATAFRAME USED IN MODEL)
+  n_left <- model_data |> group_by(subject, handedness) |>  count() |>
+    group_by(handedness) |> count() |>
+    filter(handedness == "Left") |> pull(n)
+
+  n_right <- model_data |> group_by(subject, handedness) |>  count() |>
+    group_by(handedness) |> count() |>
+    filter(handedness == "Right") |> pull(n)
+
+  g <- gg_rt_2_lmer(
+    title = "Hemifield bias by level (EHI cut at +/-100)",
+    plot_data,
+    handedness_labeller = NULL,
+    plot_colors = plot_colors,
+    direction_labels = list(right = "RVF bias",
+                            left = "LVF bias"),
+    direction_labels_pos = list(right = 38,
+                                left = -38),
+    xlims = list(upper = 38,
+                 lower = -38),
+    xbreaks = list(major = 10,
+                   minor = 5),
+    n_subjects = list(right = n_right,
+                      left = n_left)
+  )
+  
+  
+  g <- g + labs(subtitle = "Male participants") +
+    theme(plot.title = element_text(hjust = .5),
+          plot.subtitle = element_text(hjust = .5, face = "italic")
+    )
+
+  ggsave(fig_path_var, g, "png", height = DEFAULT_HEIGHT, width = DEFAULT_WIDTH)
+}
+
+include_graphics(fig_path_var)
+```
+<br>
+```{r}
+## Start over, with numeric y axis
+## Add a line with CI from the model
+fig_path_var <- here(fig_dir, "rt_1_lmer_F_zoom.png")
+fig_path_var_wide <- here(fig_dir, "rt_1_lmer_wide_F_zoom.png")
+
+
+if (use_cached_figs == F) {
+  # rt_mm_cat <- readRDS(here(manual_cache_dir, "rt_mm_cat.rds"))
+  model_data <- aah_cat_zoom |> filter(sex == "Female")
+  plot_model <- lmer(
+    data = model_data,
+    formula = rt ~
+      field * level * handedness
+    + (1 | subject)
+    + (1 | shape)
+  )
+  rt_emm <- emmeans(plot_model, ~ field * level * handedness,
+                    lmer.df = DF_METHOD,
+    lmerTest.limit = LMERTEST_LIMIT)
+
+  ## Get estimates for right and left handers.
+  emm_data <- rt_emm |>
+    contrast("pairwise", by = c("handedness", "level")) |>
+    summary(infer = T, level = .95) |>
+    as_tibble() |>
+    ## Fix units
+    mutate(
+      estimate = estimate * -1,
+      lower.CL = lower.CL * -1,
+      upper.CL = upper.CL * -1
+    )
+
+
+  plot_data <- emm_data |> mutate(dv = estimate)
+
+  ## Extract n's (MANUALLY COUNT N IN DATAFRAME USED IN MODEL)
+  n_left <- model_data |> group_by(subject, handedness) |>  count() |>
+    group_by(handedness) |> count() |>
+    filter(handedness == "Left") |> pull(n)
+
+  n_right <- model_data |> group_by(subject, handedness) |>  count() |>
+    group_by(handedness) |> count() |>
+    filter(handedness == "Right") |> pull(n)
+
+  g <- gg_rt_2_lmer(
+    title = "Hemifield bias by level (EHI cut at +/-100)",
+    plot_data,
+    handedness_labeller = NULL,
+    plot_colors = plot_colors,
+    direction_labels = list(right = "RVF bias",
+                            left = "LVF bias"),
+    direction_labels_pos = list(right = 38,
+                                left = -38),
+    xlims = list(upper = 38,
+                 lower = -38),
+    xbreaks = list(major = 10,
+                   minor = 5),
+    n_subjects = list(right = n_right,
+                      left = n_left)
+  )
+  
+  g <- g + labs(subtitle = "Female participants") +
+    theme(plot.title = element_text(hjust = .5),
+          plot.subtitle = element_text(hjust = .5, face = "italic")
+    )
+
+  ggsave(fig_path_var, g, "png", height = DEFAULT_HEIGHT, width = DEFAULT_WIDTH)
+}
+
+include_graphics(fig_path_var)
+```
+<br>

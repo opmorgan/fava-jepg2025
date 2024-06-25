@@ -1,0 +1,581 @@
+﻿<usermanual>___________________________________________________________________________________________________________________
+BACKGROUND INFO 	
+___________________________________________________________________________________________________________________	
+
+This script implements the Stero check procedure described in Parker et al. (2021)
+
+Adam J. Parker, Zoe V. J. Woodhead, Paul A. Thompson & Dorothy V. M. Bishop (2020) Assessing the reliability of an online behavioural laterality battery: A pre-registered study, Laterality.
+https://doi.org/10.1080/1357650X.2020.1859526
+
+___________________________________________________________________________________________________________________
+TASK DESCRIPTION	
+___________________________________________________________________________________________________________________	
+
+Participants listen to sounds presented to either headphone ear and have to confirm which ear they heard them with.
+
+Screen 1
+
+"It is important that you are wearing headphones for this study."
+
+"Please check that your headphones are in the correct ear."
+"When you press play, the sound should play to your left ear"
+
+Button: "play"
+
+Now, you are ready to continue. Next, you will hear a few short sounds. 
+We will ask you to confirm whether each sound was played to the left or right ear.
+
+
+Screen 2 (Repeats 6 times)
+
+"Press play to hear the sound. 
+After you hear the sound, please report which ear the sound was played to by clicking the "Left" or "Right" button."
+
+Button: Play
+
+Response Button: Left
+Response Button: Right
+
+___________________________________________________________________________________________________________________	
+DURATION 
+___________________________________________________________________________________________________________________	
+the default set-up of the script takes appr. 3 minutes to complete
+
+___________________________________________________________________________________________________________________	
+DATA FILE INFORMATION 
+___________________________________________________________________________________________________________________		
+The default data stored in the data files are:
+
+(1) Raw data file: 'stereocheck_raw*.iqdat' (a separate file for each participant)*
+
+
+build:								The specific Inquisit version used (the 'build') that was run
+computer.platform:					the platform the script was run on (win/mac/ios/android)
+date, time: 						date and time script was run 
+subject, group: 					with the current subject/groupnumber
+session:							with the current session id
+
+blockcode, blocknum:				the name and number of the current block (built-in Inquisit variable)
+trialcode, trialnum: 				the name and number of the currently recorded trial (built-in Inquisit variable)
+										Note: trialnum is a built-in Inquisit variable; it counts all trials run; even those
+										that do not store data to the data file. 
+										
+countTestTrials:					test trial counter
+index:								randomly selected itemcounter for the test soundfile
+testSound:							the played test soundfile
+correctResponse:					the correct response for the played test soundfile										
+										
+response:							the participant's response (left, right, third)
+correct:							accuracy of response: 1 = correct response; 0 = otherwise
+latency: 							the response latency (in ms); measured from: offset of sound
+
+(2) Summary data file: 'stereoCheck_summary*.iqdat' (a separate file for each participant)*
+
+inquisit.version: 						Inquisit version run
+computer.platform:					the platform the script was run on (win/mac/ios/android)
+startdate:							date script was run
+starttime:							time script was started
+subjectid:							assigned subject id number
+groupid:							assigned group id number
+sessionid:							assigned session id number
+elapsedtime:						time it took to run script (in ms); measured from onset to offset of script
+completed:							0 = script was not completed (prematurely aborted); 
+									1 = script was completed (all conditions run)
+									
+stereocheck_numberCorrectResponses:				number of correct responses 
+propCorrect:						proportion correct responses
+
+stereoCheckPass:					1 = soundCheck passed (proportion correct >= parameters.stereocheck_passCriterium)
+									0 = soundCheck failed
+							
+							
+* separate data files: to change to one data file for all participants (on Inquisit Lab only), go to section
+"DATA" and follow further instructions
+
+___________________________________________________________________________________________________________________	
+EXPERIMENTAL SET-UP 
+___________________________________________________________________________________________________________________	
+
+Participants work through
+1. Sound Calibration: set volume so that the calibration sound can be heard comfortably
+2. Test: 6 trials
+- each trial randomly selects one of the 6 provided soundfiles (three are left ear, three are right ear)
+- participants are asked to play the soundfiles are are asked to select a button that
+corresponds to the whether the sound was played in the right or left headphone
+
+___________________________________________________________________________________________________________________
+STIMULI
+___________________________________________________________________________________________________________________
+
+...
+___________________________________________________________________________________________________________________	
+INSTRUCTIONS 
+___________________________________________________________________________________________________________________	
+The instructions are based on the instructions provided by 
+the Behavioural Laterality Project (Parker et al, 2020)
+
+//Behavioural Laterality Battery:
+Adam J. Parker , Zoe V. J. Woodhead , Paul A. Thompson & Dorothy V. M.
+Bishop (2020): Assessing the reliability of an online behavioural laterality battery: A pre-registered
+study, Laterality, DOI: 10.1080/1357650X.2020.1859526
+___________________________________________________________________________________________________________________	
+EDITABLE CODE 
+___________________________________________________________________________________________________________________	
+check below for (relatively) easily editable parameters, stimuli, instructions etc. 
+Keep in mind that you can use this script as a template and therefore always "mess" with the entire code 
+to further customize your experiment.
+
+The parameters you can change are:
+</usermanual>
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EDITABLE PARAMETERS: change editable parameters here
+**************************************************************************************************************
+**************************************************************************************************************
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EDITABLE STIMULI
+**************************************************************************************************************
+**************************************************************************************************************
+
+see https://github.com/mcdermottLab/stereoCheck/blob/master/stereoCheck.js#L99
+<item stereocheck_testSoundFiles>
+/1 = "noise_calib_stim_LEFT.wav"
+/2 = "noise_calib_stim_LEFT.wav"
+/3 = "noise_calib_stim_LEFT.wav"
+/4 = "noise_calib_stim_RIGHT.wav"
+/5 = "noise_calib_stim_RIGHT.wav"
+/6 = "noise_calib_stim_RIGHT.wav"
+</item>
+
+<list stereocheck_indices>
+/ items = (1, 2, 3, 4, 5, 6)
+/ replace = false
+/ resetinterval = 0
+</list>
+
+<item stereocheck_correctResponses>
+/1 = "1"
+/2 = "1"
+/3 = "1"
+/4 = "2"
+/5 = "2"
+/6 = "2"
+</item>
+
+original code: https://github.com/mcdermottLab/stereoCheck/blob/master/stereoCheck.js#L99
+{'id': 1, 'src': 'https://s3.amazonaws.com/mcd-headphone-check/v1.0/assets/antiphase_HC_ISO.wav', 'correct': '2'},
+{'id': 2, 'src': 'https://s3.amazonaws.com/mcd-headphone-check/v1.0/assets/antiphase_HC_IOS.wav', 'correct': '3'},
+{'id': 3, 'src': 'https://s3.amazonaws.com/mcd-headphone-check/v1.0/assets/antiphase_HC_SOI.wav', 'correct': '1'},
+{'id': 4, 'src': 'https://s3.amazonaws.com/mcd-headphone-check/v1.0/assets/antiphase_HC_SIO.wav', 'correct': '1'},
+{'id': 5, 'src': 'https://s3.amazonaws.com/mcd-headphone-check/v1.0/assets/antiphase_HC_OSI.wav', 'correct': '2'},
+{'id': 6, 'src': 'https://s3.amazonaws.com/mcd-headphone-check/v1.0/assets/antiphase_HC_OIS.wav', 'correct': '3'}
+
+<item stereocheck_calibrationSound>
+/1 = "noise_calib_stim_LEFT.wav"
+</item>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EDITABLE INSTRUCTIONS: change instructions here
+**************************************************************************************************************
+**************************************************************************************************************
+
+********************************************************************************
+generalIntro
+********************************************************************************
+
+Sketch of task instructions:
+Screen 1
+
+"It is important that you are wearing headphones or earphones for this study."
+
+"Please check that your headphones are in the correct ear."
+"When you press play, the sound should play to your left ear"
+
+Button: "play"
+
+Now, you are ready to continue. Next, you will hear a few short sounds. 
+We will ask you to confirm whether each sound was played to the left or right ear.
+
+
+Screen 2 (Repeats 6 times)
+
+"Press play to hear the sound. 
+After you hear the sound, please report which ear the sound was played to by clicking the "Left" or "Right" button."
+
+Button: Play
+
+Response Button: Left
+Response Button: Right
+
+
+<button stereocheck_continueButton>
+/ caption = "NEXT"
+/ fontstyle = ("Avenir Next", 5%, false, false, false, false, 5, 1)
+/ size = (20%, 8%)
+/ position = (50%, 90%)
+/ erase = false
+</button>
+
+********************************************************************************
+calibrationIntro
+********************************************************************************
+
+<text stereocheck_calibrationIntro>
+/ items = ("<h1>Sound Check 2</h1><hr>
+It is important that you are <b>wearing headphones or earphones</b> for this study.<br><br>
+Please check that your headphones (or earphones) are on the correct ears. When you press TEST, the sound should play to your left ear.")
+/ erase = false
+/ halign = left
+/ valign = bottom
+/ hjustify = left
+/ vjustify = bottom
+/ size = (100%, 40%)
+/ position = (0%, 46%)
+</text>
+
+<button stereocheck_calibrationButton>
+/ caption = "TEST"
+/ fontstyle = ("Avenir Next", 5%, false, false, false, false, 5, 1)
+/ size = (30%, 8%)
+/ position = (50%, 55%)
+/ erase = false
+</button>
+
+<text stereocheck_calibrationIntro2>
+/ items = ("Next, you will hear a few more sounds. We will ask you to confirm whether each sound was played to the left or right ear.
+Please press NEXT to continue.")
+/ erase = false
+/ halign = left
+/ valign = top
+/ hjustify = left
+/ vjustify = top
+/ size = (100%, 22%)
+/ position = (0%, 64%)
+</text>
+
+<trial stereocheck_calibrationIntro>
+/ inputdevice = mouse
+/ stimulusframes = [1 = clearscreen, stereocheck_calibrationIntro, stereocheck_calibrationButton]
+/ validresponse = (stereocheck_calibrationButton)
+/ branch = [
+	return trial.stereocheck_calibration;
+]
+</trial>
+
+
+********************************************************************************
+testIntro
+********************************************************************************
+
+<text stereocheck_testInstructions>
+/ items = ("<h1>Sound Check 2</h1><hr>
+Press PLAY to play a sound. Then, please indicate which ear you heard it in by clicking 'Left' or 'Right.' Then, when the PLAY button turns green again, press it again to play another sound, and repeat (there will be six trials).")
+/ position = (50%, 30%)
+/ erase = false
+</text>
+
+<button stereocheck_playButton>
+/ caption = "► PLAY"
+/ fontstyle = ("Avenir Next", 5%, false, false, false, false, 5, 1)
+/ size = (20%, 8%)
+/ position = (50%, 55%)
+/ erase = false
+</button>
+
+<shape stereocheck_playButtonColor>
+/ shape = rectangle
+/ width = button.stereocheck_playButton.width + 1%
+/ height = button.stereocheck_playButton.height + 1%
+/ color = lightgreen
+/ erase = false
+/ vposition = button.stereocheck_playButton.vposition
+/ hposition = button.stereocheck_playButton.hposition
+</shape>
+
+<button stereocheck_left>
+/ caption = "Left"
+/ fontstyle = ("Avenir Next", 5%, false, false, false, false, 5, 1)
+/ size = (20%, 10%)
+/ position = (35%, 80%)
+/ erase = false
+</button>
+
+<shape stereocheck_leftButtonColor>
+/ shape = rectangle
+/ width = button.stereocheck_left.width + 1%
+/ height = button.stereocheck_left.height + 1%
+/ color = lightgreen
+/ erase = false
+/ vposition = button.stereocheck_left.vposition
+/ hposition = button.stereocheck_left.hposition
+</shape>
+
+<button stereocheck_right>
+/ caption = "Right"
+/ fontstyle = ("Avenir Next", 5%, false, false, false, false, 5, 1)
+/ size = (20%, 10%)
+/ position = (65%, 80%)
+/ erase = false
+</button>
+
+<shape stereocheck_rightButtonColor>
+/ shape = rectangle
+/ width = button.stereocheck_right.width + 1%
+/ height = button.stereocheck_right.height + 1%
+/ color = lightgreen
+/ erase = false
+/ vposition = button.stereocheck_right.vposition
+/ hposition = button.stereocheck_right.hposition
+</shape>
+
+<text stereocheck_trialCounter>
+/ items = ("Trial <%values.stereocheck_countTestTrials%> of <%parameters.stereocheck_numberTestTrials%>")
+/ erase = false
+/ position = (50%, 5%)
+/ fontstyle = ("Avenir Next", 3%, false, false, false, false, 5, 1)
+/ txcolor = gray
+</text>
+
+
+********************************************************************************
+Finish
+********************************************************************************
+
+<text stereocheck_finish>
+/ items = ("Thank you for completing this sound check! Press NEXT to continue.")
+/ fontstyle = ("Avenir Next", 5%, false, false, false, false, 5, 1)
+/ position = (50%, 66%)
+/ size = (100%, 50%)
+/ vjustify = bottom
+/ valign = bottom
+/ halign = center
+</text>
+
+<button stereocheck_exitbutton>
+/ caption = "Next"
+/ fontstyle = ("Avenir Next", 3%, false, false, false, false, 5, 1)
+/ position = (50%, 80%)
+/ size = (30%, 8%)
+/ valign = center
+/ halign = center
+</button>
+
+<trial stereocheck_finish>
+/ inputdevice = mouse
+/ stimulusframes = [1 = clearscreen, finish, exitButton]
+/ validresponse = (exitButton)
+/ recorddata = false
+</trial>
+
+**************************************************************************************************************
+				!!!REMAINING CODE: Customize after careful consideration only!!!
+**************************************************************************************************************
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	DEFAULTS
+**************************************************************************************************************
+**************************************************************************************************************
+
+**************************************************************************************************************
+**************************************************************************************************************
+	DATA
+**************************************************************************************************************
+**************************************************************************************************************
+
+**************************************************************************************************************
+**************************************************************************************************************
+	VALUES: automatically updated
+**************************************************************************************************************
+**************************************************************************************************************
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EXPRESSIONS
+**************************************************************************************************************
+**************************************************************************************************************
+
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	STIMULI
+**************************************************************************************************************
+**************************************************************************************************************
+
+<sound stereocheck_calibrationSound>
+/ items = stereocheck_calibrationSound
+/ select = 1
+/ playthrough = true
+</sound>
+
+<sound stereocheck_testSound>
+/ items = stereocheck_testSoundFiles
+/ select = values.stereocheck_index
+/ playthrough = true
+</sound>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	LISTS	
+**************************************************************************************************************
+**************************************************************************************************************
+
+
+*************************************************
+Data Lists: used for descriptive statistics
+store correct latencies/accuracy data
+fill up during runtime
+*************************************************
+
+Note: list stores 1 = correct response; 0 = incorrect response for each relevant trial
+any response coded as an error is automatically coded as 0
+<list stereocheck_ACC>
+</list>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	TRIALS 	
+**************************************************************************************************************
+**************************************************************************************************************
+
+**************************
+calibration
+**************************
+
+//plays the calibration sound
+<trial stereocheck_calibration>
+/ inputdevice = mouse
+/ stimulusframes = [1=stereocheck_calibrationSound]
+/ trialduration = 0
+/ branch = [
+	return trial.stereocheck_calibration2;
+]
+/ recorddata = false
+</trial>
+
+//provides next button or the option to play the calibration Sound once more
+<trial stereocheck_calibration2>
+/ inputdevice = mouse
+/ stimulusframes = [1 = stereocheck_calibrationIntro2, stereocheck_continueButton, stereocheck_calibrationButton]
+/ validresponse = (stereocheck_continueButton, stereocheck_calibrationButton)
+/ branch = [
+	if (trial.stereocheck_calibration2.response == "stereocheck_calibrationButton"){
+		return trial.stereocheck_calibration;
+	}
+]
+/ recorddata = false
+</trial>
+
+
+**************************
+test
+**************************
+
+//randomly selects the next testSound
+//provides active PLAY button to play the next testSound
+<trial stereocheck_test_start>
+/ inputdevice = mouse
+/ ontrialbegin = [
+	values.stereocheck_countTestTrials += 1;
+	values.stereocheck_index = list.stereocheck_indices.nextvalue;
+	values.stereocheck_correctResponse = item.stereocheck_correctResponses.item(values.stereocheck_index);
+	shape.stereocheck_playButtonColor.color = lightgreen;
+	shape.stereocheck_leftButtonColor.color = gray;
+	shape.stereocheck_rightButtonColor.color = gray;
+]
+
+/ stimulusframes = [1 = clearscreen, stereocheck_testInstructions, stereocheck_playButtonColor, stereocheck_playButton, 
+stereocheck_leftButtonColor, stereocheck_left, stereocheck_rightButtonColor, stereocheck_right, stereocheck_trialCounter]
+/ validresponse = (stereocheck_playButton)
+/ branch = [
+	return trial.stereocheck_test_playSound;
+]
+/ recorddata = false
+</trial>
+
+//plays the testSound
+<trial stereocheck_test_playSound>
+/ inputdevice = mouse
+/ ontrialbegin = [
+	shape.stereocheck_playButtonColor.color = gray;
+]
+
+/ stimulusframes = [1 = clearscreen, stereocheck_testSound, stereocheck_testInstructions, stereocheck_playButtonColor, stereocheck_playButton, 
+stereocheck_leftButtonColor, stereocheck_left, stereocheck_rightButtonColor, stereocheck_right, stereocheck_trialCounter]
+/ trialduration = 0
+/ branch = [
+	return trial.stereocheck_test_collectResponse;
+]
+/ recorddata = false
+
+</trial>
+
+//provides active response buttons
+//collects response and evaluates it
+<trial stereocheck_test_collectResponse>
+/ inputdevice = mouse
+/ ontrialbegin = [
+	shape.stereocheck_leftButtonColor.color = lightgreen;
+	shape.stereocheck_rightButtonColor.color = lightgreen;
+]
+/ stimulusframes = [1 = clearscreen, stereocheck_testInstructions, stereocheck_playButtonColor, stereocheck_playButton, 
+stereocheck_leftButtonColor, stereocheck_left, stereocheck_rightButtonColor, stereocheck_right, stereocheck_trialCounter]
+/ validresponse = (stereocheck_left, stereocheck_right)
+/ iscorrectresponse = [
+	return ((trial.stereocheck_test_collectResponse.response == "stereocheck_left" && values.stereocheck_correctResponse == 1) ||
+		(trial.stereocheck_test_collectResponse.response == "stereocheck_right" && values.stereocheck_correctResponse == 2))
+]
+/ ontrialend = [
+	list.stereocheck_ACC.appenditem(trial.stereocheck_test_collectResponse.correct);
+	values.stereocheck_testSound = sound.stereocheck_testSound.currentitem;
+]
+/ branch = [
+	if (values.stereocheck_countTestTrials < parameters.stereocheck_numberTestTrials){
+		return trial.stereocheck_test_start;
+	};
+]
+</trial>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	BLOCKS
+**************************************************************************************************************
+**************************************************************************************************************
+
+<block stereocheck_calibration>
+/ trials = [
+	1 = stereocheck_calibrationIntro]
+
+</block>
+
+<block stereocheck_testphase>
+/ onblockbegin = [
+	values.stereocheck_countTestTrials = 0;
+]
+/ trials = [1 = stereocheck_test_start]
+</block>
+
+<block stereocheck_finish>
+/ trials = [
+	1 = stereocheck_finish;
+]
+</block>
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EXPERIMENT 
+**************************************************************************************************************
+**************************************************************************************************************
+
+
+**************************************************************************************************************
+												End of File
+**************************************************************************************************************

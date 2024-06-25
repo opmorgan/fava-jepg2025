@@ -1,0 +1,2 @@
+date	time	group	subject	session	build	ehi_i1_writing_response	ehi_i1_writing_latency	ehi_i2_throwing_response	ehi_i2_throwing_latency	ehi_i3_toothbrush_response	ehi_i3_toothbrush_latency	ehi_i4_spoon_response	ehi_i4_spoon_latency
+2023-06-27	20:52:57	2	60f94ae0c088d8cb4f4a39ff	1	6.6.1	Always left	37478	Usually right	37478	Usually left	37478	Always left	37478

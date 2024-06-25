@@ -1,0 +1,9 @@
+build	computer.platform	date	time	timestamp	time_elapsed_ms	subject	group	session	blockcode	blocknum	trialcode	trialnum	stimulus_left	stimulus_right	stim_index	target_present	response	correct	latency	headphonecheck_countTestTrials	headphonecheck_index	headphonecheck_testSound	headphonecheck_correctResponse	stereocheck_countTestTrials	stereocheck_index	stereocheck_testSound	stereocheck_correctResponse	DL_index	DL_soundfile	DL_leftSound	DL_rightSound	DL_dualSound	DL_choice
+6.6.1	win	2023-07-12	16:55:34	0	0	58a478847cf56d0001f91f2e	2	1	headphonecheck_calibration	4	headphonecheck_calibrationIntro	1			0		calibrationButton	0	2405	0	0			0	0			1				0	
+6.6.1	win	2023-07-12	16:55:34	0	0	58a478847cf56d0001f91f2e	2	1	headphonecheck_testphase	5	test_collectResponse	3			0		third	1	3317	1	2	antiphase_hc_ios.wav	3	0	0			1				0	
+6.6.1	win	2023-07-12	16:55:34	0	0	58a478847cf56d0001f91f2e	2	1	headphonecheck_testphase	5	test_collectResponse	6			0		third	1	2032	2	6	antiphase_hc_ois.wav	3	0	0			1				0	
+6.6.1	win	2023-07-12	16:55:34	0	0	58a478847cf56d0001f91f2e	2	1	headphonecheck_testphase	5	test_collectResponse	9			0		first	1	1572	3	4	antiphase_hc_sio.wav	1	0	0			1				0	
+6.6.1	win	2023-07-12	16:55:34	0	0	58a478847cf56d0001f91f2e	2	1	headphonecheck_testphase	5	test_collectResponse	12			0		second	1	1078	4	1	antiphase_hc_iso.wav	2	0	0			1				0	
+6.6.1	win	2023-07-12	16:55:34	0	0	58a478847cf56d0001f91f2e	2	1	headphonecheck_testphase	5	test_collectResponse	15			0		first	0	909	5	5	antiphase_hc_osi.wav	2	0	0			1				0	
+6.6.1	win	2023-07-12	16:55:34	0	0	58a478847cf56d0001f91f2e	2	1	headphonecheck_testphase	5	test_collectResponse	18			0		first	1	695	6	3	antiphase_hc_soi.wav	1	0	0			1				0	
+6.6.1	win	2023-07-12	16:55:34	0	0	58a478847cf56d0001f91f2e	2	1	stereocheck_calibration	7	stereocheck_calibrationIntro	1			0		Ctrl+'Q'	1	21427	6	3	antiphase_hc_soi.wav	1	0	0			1				0	

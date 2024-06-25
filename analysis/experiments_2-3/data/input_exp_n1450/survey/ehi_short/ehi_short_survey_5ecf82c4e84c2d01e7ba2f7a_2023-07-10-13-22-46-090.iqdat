@@ -1,0 +1,2 @@
+date	time	group	subject	session	build	ehi_i1_writing_response	ehi_i1_writing_latency	ehi_i2_throwing_response	ehi_i2_throwing_latency	ehi_i3_toothbrush_response	ehi_i3_toothbrush_latency	ehi_i4_spoon_response	ehi_i4_spoon_latency
+2023-07-10	14:22:46	2	5ecf82c4e84c2d01e7ba2f7a	1	6.6.1	Always right	8987	Usually right	8987	Both equally	8987	Both equally	8987

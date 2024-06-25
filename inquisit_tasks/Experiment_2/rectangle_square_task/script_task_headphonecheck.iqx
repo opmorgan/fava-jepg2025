@@ -1,0 +1,599 @@
+﻿<usermanual>
+___________________________________________________________________________________________________________________	
+
+									*Headphone Check Procedure*
+___________________________________________________________________________________________________________________	
+
+Script Author: Katja Borchert, Ph.D. (katjab@millisecond.com) for Millisecond Software, LLC
+Date: 12-30-2020
+last updated:  02-23-2022 by K. Borchert (katjab@millisecond.com) for Millisecond Software, LLC
+
+Script Copyright © 02-23-2022 Millisecond Software
+
+___________________________________________________________________________________________________________________
+BACKGROUND INFO 	
+___________________________________________________________________________________________________________________	
+
+This script implements the Headphone Check Procedure by Woods et al (2017).
+The Headphone Check Procedure is intended to be easy over headphones but difficult over loudspeakers
+due to phase-cancellation. This procedure can thus be used online for screening purposes for procedures that
+require headphone usage.
+
+Reference
+
+//Headphone Check:
+Woods, K.J.P., Siegel, M.H., Traer, J, & McDermott, J. H. (2017). Attention, Perception, and Psychophysics, 79, 2064–2072
+https://doi.org/10.3758/s13414-017-1361-2
+
+https://github.com/mcdermottLab/HeadphoneCheck
+
+___________________________________________________________________________________________________________________
+TASK DESCRIPTION	
+___________________________________________________________________________________________________________________	
+
+Participants listen to 3 tones and have to decide which of the tones is the quietest.
+
+___________________________________________________________________________________________________________________	
+DURATION 
+___________________________________________________________________________________________________________________	
+the default set-up of the script takes appr. 3 minutes to complete
+
+___________________________________________________________________________________________________________________	
+DATA FILE INFORMATION 
+___________________________________________________________________________________________________________________		
+The default data stored in the data files are:
+
+(1) Raw data file: 'headphonecheck_raw*.iqdat' (a separate file for each participant)*
+
+
+build:								The specific Inquisit version used (the 'build') that was run
+computer.platform:					the platform the script was run on (win/mac/ios/android)
+date, time: 						date and time script was run 
+subject, group: 					with the current subject/groupnumber
+session:							with the current session id
+
+blockcode, blocknum:				the name and number of the current block (built-in Inquisit variable)
+trialcode, trialnum: 				the name and number of the currently recorded trial (built-in Inquisit variable)
+										Note: trialnum is a built-in Inquisit variable; it counts all trials run; even those
+										that do not store data to the data file. 
+										
+countTestTrials:					test trial counter
+index:								randomly selected itemcounter for the test soundfile
+testSound:							the played test soundfile
+correctResponse:					the correct response for the played test soundfile										
+										
+response:							the participant's response (first, second, third)
+correct:							accuracy of response: 1 = correct response; 0 = otherwise
+latency: 							the response latency (in ms); measured from: offset of sound
+
+(2) Summary data file: 'headphonecheck_summary*.iqdat' (a separate file for each participant)*
+
+inquisit.version: 						Inquisit version run
+computer.platform:					the platform the script was run on (win/mac/ios/android)
+startdate:							date script was run
+starttime:							time script was started
+subjectid:							assigned subject id number
+groupid:							assigned group id number
+sessionid:							assigned session id number
+elapsedtime:						time it took to run script (in ms); measured from onset to offset of script
+completed:							0 = script was not completed (prematurely aborted); 
+									1 = script was completed (all conditions run)
+									
+numberCorrectResponses:				number of correct responses 
+propCorrect:						proportion correct responses
+
+headphoneCheckPass:					1 = soundCheck passed (proportion correct >= parameters.passCriterium)
+									0 = soundCheck failed
+							
+							
+* separate data files: to change to one data file for all participants (on Inquisit Lab only), go to section
+"DATA" and follow further instructions
+
+___________________________________________________________________________________________________________________	
+EXPERIMENTAL SET-UP 
+___________________________________________________________________________________________________________________	
+
+Participants work through
+1. Sound Calibration: set volume so that the calibration sound can be heard comfortably
+2. Test: 6 trials
+- each trial randomly selects one of the 6 provided soundfiles
+- participants are asked to play the soundfiles are are asked to select a button that
+corresponds to the soundfile that was the 'quietest'
+
+___________________________________________________________________________________________________________________
+STIMULI
+___________________________________________________________________________________________________________________
+
+downloaded from: 
+https://github.com/mcdermottLab/HeadphoneCheck/tree/master/assets
+
+___________________________________________________________________________________________________________________	
+INSTRUCTIONS 
+___________________________________________________________________________________________________________________	
+provided by Millisecond Software - The instructions are based on the instructions provided by 
+the Behavioural Laterality Project (Parker et al, 2020) as well as information provided at
+https://github.com/mcdermottLab/HeadphoneCheck
+
+//Behavioural Laterality Battery:
+Adam J. Parker , Zoe V. J. Woodhead , Paul A. Thompson & Dorothy V. M.
+Bishop (2020): Assessing the reliability of an online behavioural laterality battery: A pre-registered
+study, Laterality, DOI: 10.1080/1357650X.2020.1859526
+To link to this article: https://doi.org/10.1080/1357650X.2020.1859526
+
+https://gorilla.sc/openmaterials/104636
+
+___________________________________________________________________________________________________________________	
+EDITABLE CODE 
+___________________________________________________________________________________________________________________	
+check below for (relatively) easily editable parameters, stimuli, instructions etc. 
+Keep in mind that you can use this script as a template and therefore always "mess" with the entire code 
+to further customize your experiment.
+
+The parameters you can change are:
+</usermanual>
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EDITABLE PARAMETERS: change editable parameters here
+**************************************************************************************************************
+**************************************************************************************************************
+
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EDITABLE STIMULI
+**************************************************************************************************************
+**************************************************************************************************************
+
+see https://github.com/mcdermottLab/HeadphoneCheck/blob/master/HeadphoneCheck.js#L99
+<item headphonecheck_testSoundFiles>
+/1 = "antiphase_hc_iso.wav"
+/2 = "antiphase_hc_ios.wav"
+/3 = "antiphase_hc_soi.wav"
+/4 = "antiphase_hc_sio.wav"
+/5 = "antiphase_hc_osi.wav"
+/6 = "antiphase_hc_ois.wav"
+</item>
+
+<list headphonecheck_indices>
+/ items = (1, 2, 3, 4, 5, 6)
+/ replace = false
+/ resetinterval = 0
+</list>
+
+<item headphonecheck_correctResponses>
+/1 = "2"
+/2 = "3"
+/3 = "1"
+/4 = "1"
+/5 = "2"
+/6 = "3"
+</item>
+
+original code: https://github.com/mcdermottLab/HeadphoneCheck/blob/master/HeadphoneCheck.js#L99
+{'id': 1, 'src': 'https://s3.amazonaws.com/mcd-headphone-check/v1.0/assets/antiphase_HC_ISO.wav', 'correct': '2'},
+{'id': 2, 'src': 'https://s3.amazonaws.com/mcd-headphone-check/v1.0/assets/antiphase_HC_IOS.wav', 'correct': '3'},
+{'id': 3, 'src': 'https://s3.amazonaws.com/mcd-headphone-check/v1.0/assets/antiphase_HC_SOI.wav', 'correct': '1'},
+{'id': 4, 'src': 'https://s3.amazonaws.com/mcd-headphone-check/v1.0/assets/antiphase_HC_SIO.wav', 'correct': '1'},
+{'id': 5, 'src': 'https://s3.amazonaws.com/mcd-headphone-check/v1.0/assets/antiphase_HC_OSI.wav', 'correct': '2'},
+{'id': 6, 'src': 'https://s3.amazonaws.com/mcd-headphone-check/v1.0/assets/antiphase_HC_OIS.wav', 'correct': '3'}
+
+<item calibrationSound>
+/1 = "noise_calib_stim.wav"
+</item>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EDITABLE INSTRUCTIONS: change instructions here
+**************************************************************************************************************
+**************************************************************************************************************
+
+********************************************************************************
+generalIntro
+********************************************************************************
+
+<text generalIntro>
+/ items = ("<h1>Sound Check</h1><hr>
+It is important that you are <b>wearing headphones</b> for this study.<br><br>
+To check that your sound is working well, you will hear three sounds. 
+You will then be asked <u>'which tone is quietest?'</u>.<br><br>
+When you are ready and are wearing headphones, press NEXT.")
+/ position = (50%, 30%)
+/ erase = false
+</text>
+
+<button continueButton>
+/ caption = "NEXT"
+/ fontstyle = ("Avenir next", 5%, false, false, false, false, 5, 1)
+/ size = (20%, 8%)
+/ position = (50%, 90%)
+/ erase = false
+</button>
+
+<trial generalIntro>
+/ inputdevice = mouse
+/ stimulusframes = [1 = clearscreen, generalIntro, continueButton]
+/ validresponse = (continueButton)
+/ recorddata = false
+</trial>
+
+********************************************************************************
+
+Intro
+********************************************************************************
+<text headphonecheck_calibrationIntro>
+/ items = ("<h1>Calibration</h1><hr>
+Before we start, please set your volume to a level that allows you to <u>comfortably</u> hear the following calibration tone.<br><br>
+Press CALIBRATION to hear the tone.")
+/ erase = false
+/ position = (50%, 30%)
+</text>
+
+<button calibrationButton>
+/ caption = "CALIBRATION"
+/ fontstyle = ("Avenir next", 5%, false, false, false, false, 5, 1)
+/ size = (30%, 8%)
+/ position = (50%, 55%)
+/ erase = false
+</button>
+
+<text headphonecheck_calibrationIntro2>
+/ items = ("Press CALIBRATION as often as needed to adjust your volume.<br><br>
+When you are ready, press NEXT.")
+/ erase = false
+/ position = (50%, 70%)
+</text>
+
+
+<trial headphonecheck_calibrationIntro>
+/ inputdevice = mouse
+/ stimulusframes = [1 = clearscreen, headphonecheck_calibrationIntro, calibrationButton]
+/ validresponse = (calibrationButton)
+/ branch = [
+	return trial.calibration;
+]
+</trial>
+
+
+********************************************************************************
+testIntro
+********************************************************************************
+
+<text testInstructions>
+/ items = ("<h1>Which tone is the quietest?</h1><br>
+Press PLAY to play three sounds. After hearing the three sounds, please indicate which one was the <u>quietest</u> by pressing one of the three buttons below. 
+Then, when the PLAY button turns green again, press it again to play another three sounds, and repeat (there will be six trials).")
+/ position = (50%, 30%)
+/ erase = false
+</text>
+
+<button playButton>
+/ caption = "► PLAY"
+/ fontstyle = ("Avenir next", 5%, false, false, false, false, 5, 1)
+/ size = (20%, 8%)
+/ position = (50%, 55%)
+/ erase = false
+</button>
+
+<shape playButtonColor>
+/ shape = rectangle
+/ width = button.playButton.width + 1%
+/ height = button.playButton.height + 1%
+/ color = lightgreen
+/ erase = false
+/ vposition = button.playButton.vposition
+/ hposition = button.playButton.hposition
+</shape>
+
+<button first>
+/ caption = "First"
+/ fontstyle = ("Avenir next", 5%, false, false, false, false, 5, 1)
+/ size = (20%, 10%)
+/ position = (25%, 80%)
+/ erase = false
+</button>
+
+<shape firstButtonColor>
+/ shape = rectangle
+/ width = button.first.width + 1%
+/ height = button.first.height + 1%
+/ color = lightgreen
+/ erase = false
+/ vposition = button.first.vposition
+/ hposition = button.first.hposition
+</shape>
+
+<button second>
+/ caption = "Second"
+/ fontstyle = ("Avenir next", 5%, false, false, false, false, 5, 1)
+/ size = (20%, 10%)
+/ position = (50%, 80%)
+/ erase = false
+</button>
+
+<shape secondButtonColor>
+/ shape = rectangle
+/ width = button.second.width + 1%
+/ height = button.second.height + 1%
+/ color = lightgreen
+/ erase = false
+/ vposition = button.second.vposition
+/ hposition = button.second.hposition
+</shape>
+
+<button third>
+/ caption = "Third"
+/ fontstyle = ("Avenir next", 5%, false, false, false, false, 5, 1)
+/ size = (20%, 10%)
+/ position = (75%, 80%)
+/ erase = false
+</button>
+
+<shape thirdButtonColor>
+/ shape = rectangle
+/ width = button.third.width + 1%
+/ height = button.third.height + 1%
+/ color = lightgreen
+/ erase = false
+/ vposition = button.third.vposition
+/ hposition = button.third.hposition
+</shape>
+
+<text trialCounter>
+/ items = ("Trial <%values.headphonecheck_countTestTrials%> of <%parameters.headphonecheck_numberTestTrials%>")
+/ erase = false
+/ position = (50%, 5%)
+/ fontstyle = ("Avenir next", 3%, false, false, false, false, 5, 1)
+/ txcolor = gray
+</text>
+
+
+********************************************************************************
+Finish
+********************************************************************************
+
+<text finish>
+/ items = ("Thank you for completing this sound check! Press NEXT to continue.")
+/ fontstyle = ("Avenir Next", 5%, false, false, false, false, 5, 1)
+/ position = (50%, 66%)
+/ size = (100%, 50%)
+/ vjustify = bottom
+/ valign = bottom
+/ halign = center
+</text>
+
+<button exitbutton>
+/ caption = "Next"
+/ fontstyle = ("Avenir Next", 3%, false, false, false, false, 5, 1)
+/ position = (50%, 80%)
+/ size = (30%, 8%)
+/ valign = center
+/ halign = center
+</button>
+
+<trial finish>
+/ inputdevice = mouse
+/ stimulusframes = [1 = clearscreen, finish, exitButton]
+/ validresponse = (exitButton)
+/ recorddata = false
+</trial>
+
+**************************************************************************************************************
+				!!!REMAINING CODE: Customize after careful consideration only!!!
+**************************************************************************************************************
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	DEFAULTS
+**************************************************************************************************************
+**************************************************************************************************************
+Refactored to script_main.iqx
+**************************************************************************************************************
+**************************************************************************************************************
+	DATA
+**************************************************************************************************************
+**************************************************************************************************************
+Refactored to script.main.iqx
+
+**************************************************************************************************************
+**************************************************************************************************************
+	VALUES: automatically updated
+**************************************************************************************************************
+**************************************************************************************************************
+Refactored to script.main.iqx
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EXPRESSIONS
+**************************************************************************************************************
+**************************************************************************************************************
+Refactored to script.main.iqx
+
+**************************************************************************************************************
+**************************************************************************************************************
+	STIMULI
+**************************************************************************************************************
+**************************************************************************************************************
+
+<sound calibrationSound>
+/ items = calibrationSound
+/ select = 1
+/ playthrough = true
+</sound>
+
+<sound headphonecheck_testSound>
+/ items = headphonecheck_testSoundFiles
+/ select = values.headphonecheck_index
+/ playthrough = true
+</sound>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	LISTS	
+**************************************************************************************************************
+**************************************************************************************************************
+
+
+*************************************************
+Data Lists: used for descriptive statistics
+store correct latencies/accuracy data
+fill up during runtime
+*************************************************
+
+Note: list stores 1 = correct response; 0 = incorrect response for each relevant trial
+any response coded as an error is automatically coded as 0
+<list ACC>
+</list>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	TRIALS 	
+**************************************************************************************************************
+**************************************************************************************************************
+
+**************************
+calibration
+**************************
+
+//plays the calibration sound
+<trial calibration>
+/ inputdevice = mouse
+/ stimulusframes = [1=calibrationSound]
+/ trialduration = 0
+/ branch = [
+	return trial.calibration2;
+]
+/ recorddata = false
+</trial>
+
+//provides next button or the option to play the calibration Sound once more
+<trial calibration2>
+/ inputdevice = mouse
+/ stimulusframes = [1 = headphonecheck_calibrationIntro2, continueButton, calibrationButton]
+/ validresponse = (continueButton, calibrationButton)
+/ branch = [
+	if (trial.calibration2.response == "calibrationButton"){
+		return trial.calibration;
+	}
+]
+/ recorddata = false
+</trial>
+
+
+**************************
+test
+**************************
+
+//randomly selects the next testSound
+//provides active PLAY button to play the next testSound
+<trial test_start>
+/ inputdevice = mouse
+/ ontrialbegin = [
+	values.headphonecheck_countTestTrials += 1;
+	values.headphonecheck_index = list.headphonecheck_indices.nextvalue;
+	values.headphonecheck_correctResponse = item.headphonecheck_correctResponses.item(values.headphonecheck_index);
+	shape.playButtonColor.color = lightgreen;
+	shape.firstButtonColor.color = gray;
+	shape.secondButtonColor.color = gray;
+	shape.thirdButtonColor.color = gray;	
+]
+
+/ stimulusframes = [1 = clearscreen, testInstructions, playButtonColor, playButton, 
+firstButtonColor, first, secondButtonColor, second, thirdButtonColor, third, trialCounter]
+/ validresponse = (playButton)
+/ branch = [
+	return trial.test_playSound;
+]
+/ recorddata = false
+</trial>
+
+//plays the testSound
+<trial test_playSound>
+/ inputdevice = mouse
+/ ontrialbegin = [
+	shape.playButtonColor.color = gray;
+]
+
+/ stimulusframes = [1 = clearscreen, headphonecheck_testSound, testInstructions, playButtonColor, playButton, 
+firstButtonColor, first, secondButtonColor, second, thirdButtonColor, third, trialCounter]
+/ trialduration = 0
+/ branch = [
+	return trial.test_collectResponse;
+]
+/ recorddata = false
+
+</trial>
+
+//provides active response buttons
+//collects response and evaluates it
+<trial test_collectResponse>
+/ inputdevice = mouse
+/ ontrialbegin = [
+	shape.firstButtonColor.color = lightgreen;
+	shape.secondButtonColor.color = lightgreen;
+	shape.thirdButtonColor.color = lightgreen;	
+]
+/ stimulusframes = [1 = clearscreen, testInstructions, playButtonColor, playButton, 
+firstButtonColor, first, secondButtonColor, second, thirdButtonColor, third, trialCounter]
+/ validresponse = (first, second, third)
+/ iscorrectresponse = [
+	return ((trial.test_collectResponse.response == "first" && values.headphonecheck_correctResponse == 1) ||
+		(trial.test_collectResponse.response == "second" && values.headphonecheck_correctResponse == 2) ||
+		(trial.test_collectResponse.response == "third" && values.headphonecheck_correctResponse == 3))
+]
+/ ontrialend = [
+	list.ACC.appenditem(trial.test_collectResponse.correct);
+	values.headphonecheck_testSound = sound.headphonecheck_testSound.currentitem;
+]
+/ branch = [
+	if (values.headphonecheck_countTestTrials < parameters.headphonecheck_numberTestTrials){
+		return trial.test_start;
+	};
+]
+</trial>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	BLOCKS
+**************************************************************************************************************
+**************************************************************************************************************
+
+<block headphonecheck_intro>
+/ trials = [1 = generalIntro]
+</block>
+
+
+<block headphonecheck_calibration>
+/ trials = [
+	1 = headphonecheck_calibrationIntro]
+
+</block>
+
+<block headphonecheck_testphase>
+/ onblockbegin = [
+	values.headphonecheck_countTestTrials = 0;
+]
+
+/ trials = [1 = test_start]
+</block>
+
+<block headphonecheck_finish>
+/ trials = [
+	1 = finish;
+]
+</block>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EXPERIMENT 
+**************************************************************************************************************
+**************************************************************************************************************
+
+
+
+**************************************************************************************************************
+												End of File
+**************************************************************************************************************

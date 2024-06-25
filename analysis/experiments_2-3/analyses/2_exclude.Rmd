@@ -1,0 +1,1081 @@
+---
+title: "Experiments 2 & 3: Demographics & Exclusions"
+pagetitle: "exp 2-3 | exclusions"
+author: "Owen Morgan"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_document
+---
+
+<style type="text/css">
+  body{
+  font-family: Avenir;
+  font-size: 12pt;
+}
+</style>
+
+**Summary**. We have recruited 366 right handers, and 1084 "left" and "mixed" handers. Of these, 357 right (98%), 685 left, and 288 mixed handers (90%) completed the experiment. 
+
+529 EHI left handers, 171 mixed handers, and 413 right handers meet inclusion criteria for Navon.
+
+342 EHI left handers, 99 mixed handers, and 293 right handers meet inclusion criteria for both Navon and Dichotic listening.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE,
+                      fig.align = "center", fig.width = 9,
+                      fig.height = 6)
+options(knitr.kable.NA = "")
+
+cli.progress_show_after <- 0
+
+# Suppress summarise info
+options(dplyr.summarise.inform = FALSE)
+```
+
+```{r lib}
+library(here)
+library(tidyverse)
+library(cli) # For printing error messages
+library(knitr) # for printing figures
+
+library(gt)
+
+source(here::here("lib", "util.R"))
+source(here::here("lib", "demographics.R"))
+
+EXPERIMENT_DIR <- "experiments_2-3"
+source(here::here(EXPERIMENT_DIR, "lib", "load_process", "load_process.R"))
+
+## Colors for plots
+plot_blue <- c("#337aB7")
+plot_colors <- c("#4477AA",
+                 "#EE6677",
+                 "#CCBB44",
+                 "#66CCEE",
+                 "#AA3377",
+                 "#228833",
+                 "#BBBBBB")
+```
+
+```{r config}
+data_dir <- here::here(EXPERIMENT_DIR, "data")
+input_dir <- here::here(data_dir, "input_exp_n1450")
+proc_dir <- here::here(data_dir, "proc_exp_n1450")
+fig_dir <- here::here(EXPERIMENT_DIR, "figures")
+n_recruited = 1450 ## Total recruited + paid. For reporting exclusions
+
+use_cached_demofigs = FALSE
+```
+
+```{r load_combined, include = F}
+## Load pre-exclusion combined trial-per-row data, subset columns
+aah_navon_all <- load_navon_all(proc_dir)
+
+## Load pre-exclusion summary data (includes DL data), subset columns, and recode "ehi_total" to "ehi."
+aah_summary_all <- load_summary_all(proc_dir)
+```
+
+```{r prepare}
+## Combine prolific demographic/prescreener data with summary data
+
+## Load Prolific's handedness screening data
+prolific_data_dir <- here::here(input_dir, "prolific")
+
+## Paths to Experiment 2 & 3 prolific data
+path_E2_exp_10RH <- "E2_exp_10RH_prolific_export_64626d237f28021d02c46b88.csv"
+path_E2_exp_356RH <- "E2_exp_356RH_prolific_export_64627d85b57d4ca484b09c41.csv"
+path_E2_exp_231LH <- "E2_exp_231LH_prolific_export_6487624e53e6e5976dcfd077.csv"
+path_E2_exp_77LH <- "E2_exp_VT_77LH_prolific_export_6494fe8f198463398ffc8ffd.csv"
+path_E2_exp_355LH <- "E2_exp_VT_355LH_prolific_export_6499f70caf303cfd6821adef.csv"
+path_E2_exp_421LH <- "E2_exp_421LH_prolific_export_6494f989acc551f18bbce523.csv"
+
+pdata_E2_exp_10RH <- read_prolific_data(here(prolific_data_dir, path_E2_exp_10RH)) |> 
+  mutate(sample = "10 pilot righties", sample2 = "All righties")
+pdata_E2_exp_356RH <- read_prolific_data(here(prolific_data_dir, path_E2_exp_356RH)) |> 
+  mutate(sample = "356 righties", sample2 = "All righties")
+pdata_E2_exp_231LH <- read_prolific_data(here(prolific_data_dir, path_E2_exp_231LH)) |> 
+  mutate(sample = "231 lefties", sample2 = "All lefties")
+pdata_E2_exp_77LH <- read_prolific_data(here(prolific_data_dir, path_E2_exp_77LH)) |> 
+  mutate(sample = "77 lefties", sample2 = "All lefties")
+pdata_E2_exp_355LH <- read_prolific_data(here(prolific_data_dir, path_E2_exp_355LH)) |> 
+  mutate(sample = "355 lefties", sample2 = "All lefties")
+pdata_E2_exp_421LH <- read_prolific_data(here(prolific_data_dir, path_E2_exp_421LH)) |> 
+  mutate(sample = "421 lefties", sample2 = "All lefties")
+
+prolific_data <-
+  bind_rows(pdata_E2_exp_10RH,
+            pdata_E2_exp_356RH,
+            pdata_E2_exp_231LH,
+            pdata_E2_exp_77LH,
+            pdata_E2_exp_355LH,
+            pdata_E2_exp_421LH,
+            ) |>
+  rename(subject = `Participant id`,
+         prolific_handedness = Handedness) |>
+  mutate(
+    prolific_handedness = prolific_handedness |> recode(
+      `Right-handed` = "Right",
+      `Left-handed` = "Left",
+      `Ambidextrous` = "Mixed"
+    ) |> as.factor() |> droplevels()
+  ) |>
+  select(subject, sample, sample2, prolific_handedness)
+
+## Add prolific handedness to dataset
+aah_summary_all <-
+  aah_summary_all |> left_join(prolific_data, by = "subject")
+### Code handedness
+aah_summary_all <- aah_summary_all |>
+  mutate(handedness = case_when(ehi <= -40 ~ "Left",
+                                ehi >= 40 ~ "Right",
+                                ehi > -40 & ehi < 40 ~ "Mixed"))
+
+```
+
+## {.tabset}
+
+### Recruitment & Exclusions {.tabset .tabset-pills}
+
+```{r make_exclusions}
+## Calculate any exclusions not based on Navon task data.
+##   (Exclusions based on Navon task data are specified in:
+##    1_process.Rmd, calling load_process.R/summarize_ind())
+##       Responded "go" almost every time (78/80 or more)?
+##       Accuracy at 60% or lower on any main block?
+##       Median RT over 1500 or under 200?
+##       Took longer than 45 minutes to do the task? (Should delete this one - not preregistered, don't know why we included it.
+## Exclusions not based on Navon task data:
+##   Dichotic listening exclusions (sound checks, accuracy)
+##   Demographics exclusions that slipped through pre-screener:
+##     Country (non-us); Age (not between 18 and 40)
+##   Failed "Have you done this task before"
+##   Has task data, but no EHI data. (e.g., if they quit inquisit after task)
+##   EHI handedness does not match pre-screener
+
+
+#### UNIVERSAL EXCLUSIONS
+
+## Mark exclusion if visually identified outlier
+## 1330
+aah_summary_all <- aah_summary_all |> 
+  mutate(exclude_visual = case_when(
+    subject == "5eee761287fdd331fc618449" ~ 1,
+    TRUE ~ 0
+    )
+  )
+
+## Mark exclusion if country is not "US"
+aah_summary_all <- aah_summary_all |>
+  mutate(exclude_country = case_when(
+    country %in% c("US", "UK") ~ 0,
+    TRUE ~ 1,)
+    )
+
+## Mark exclusion if age is not between 18 and 40
+aah_summary_all <- aah_summary_all |>
+  mutate(exclude_age = case_when(
+    age >=18 & age <= 40 ~ 0,
+    TRUE ~ 1
+  ))
+
+## Mark exclusion if failed "Have you done this task before?"
+aah_summary_all <- aah_summary_all |> 
+  mutate(exclude_done_before = case_when(
+    task_experience_response == "No" ~ 0,
+    task_experience_response == "Yes" ~ 1,
+    TRUE ~ 0 # do not exclude people who did not complete the question
+  ))
+
+
+## Mark exclusion if no EHI (if EHI is not between -100 & 100)
+aah_summary_all <- aah_summary_all |>
+  mutate(exclude_no_ehi = case_when(
+    ehi >= -100 & ehi <= 100 ~ 0,
+    TRUE ~ 1
+  ))
+
+## Mark exclusion if EHI response does not match pre-screened handedness
+##  Remove pre-screen lefties with EHI > 0; Remove pre-screen ambis with EHI == 100 or -100; Remove pre-screen righties with handedness < 0.
+aah_summary_all <- aah_summary_all |>
+  mutate(exclude_ehi_mismatch = case_when(
+    prolific_handedness == "Left" & ehi >= 0 ~ 1,
+    prolific_handedness == "Mixed" & (ehi == 100 | ehi == -100) ~ 1,
+    prolific_handedness == "Right" & ehi <= 0 ~ 1,
+    TRUE ~ 0
+  ))
+
+#### DICHOTIC LISTENING EXCLUSIONS
+#### Calculate and mark dichotic listening exclusions
+
+## Mark headphone check exclusions (less than 5/6)
+aah_summary_all <- aah_summary_all |> 
+  mutate(exclude_headphone_check = case_when(
+    headphonecheck_nCorrect < 5 ~ 1,
+    TRUE ~ 0
+  ))
+
+## Mark stereo audio check exclusions (less than 5/6)
+aah_summary_all <- aah_summary_all |> 
+  mutate(exclude_stereo_check = case_when(
+    stereocheck_nCorrect < 5 ~ 1,
+    TRUE ~ 0
+  ))
+
+## Mark mono trial accuracy exclusions
+aah_summary_all <- aah_summary_all |> 
+  mutate(exclude_DL_mono_acc = case_when(
+    DL_monoPctCorrect < 75 ~ 1,
+    TRUE ~ 0
+  ))
+
+## Mark stereo trial accuracy exclusions
+aah_summary_all <- aah_summary_all |> 
+  mutate(exclude_DL_dual_acc = case_when(
+    DL_dualPctCorrect < 60 ~ 1,
+    TRUE ~ 0
+  ))
+
+aah_summary_all <- aah_summary_all |>
+  mutate(
+    exclude_dl = case_when(
+      exclude_country == 1 ~ 1,
+      exclude_age == 1 ~ 1,
+      exclude_done_before == 1 ~ 1,
+      exclude_no_ehi == 1 ~ 1,
+      exclude_ehi_mismatch == 1 ~ 1,
+      exclude_headphone_check == 1 ~ 1,
+      exclude_stereo_check == 1 ~ 1,
+      exclude_DL_mono_acc == 1 ~ 1,
+      exclude_DL_dual_acc == 1 ~ 1,
+      TRUE ~ 0
+    )
+  )
+
+#### NAVON EXCLUSIONS
+
+## Update "exclude" column.
+aah_summary_all <- aah_summary_all |>
+  mutate(
+    exclude_navon = case_when(
+      exclude_many_gos == 1 ~ 1,
+      exclude_low_acc == 1 ~ 1,
+      exclude_low_rt == 1 ~ 1,
+      exclude_high_rt == 1 ~ 1,
+      exclude_country == 1 ~ 1,
+      exclude_age == 1 ~ 1,
+      exclude_done_before == 1 ~ 1,
+      exclude_no_ehi == 1 ~ 1,
+      exclude_ehi_mismatch == 1 ~ 1,
+      exclude_visual == 1 ~ 1,
+      TRUE ~ 0
+    )
+  )
+
+#### ANY EXCLUSIONS
+aah_summary_all <- aah_summary_all |>
+  mutate(
+    exclude_any = case_when(
+      exclude_many_gos == 1 ~ 1,
+      exclude_low_acc == 1 ~ 1,
+      exclude_low_rt == 1 ~ 1,
+      exclude_high_rt == 1 ~ 1,
+      exclude_headphone_check == 1 ~ 1,
+      exclude_stereo_check == 1 ~ 1,
+      exclude_DL_mono_acc == 1 ~ 1,
+      exclude_DL_dual_acc == 1 ~ 1,
+      exclude_country == 1 ~ 1,
+      exclude_age == 1 ~ 1,
+      exclude_done_before == 1 ~ 1,
+      exclude_no_ehi == 1 ~ 1,
+      exclude_ehi_mismatch == 1 ~ 1,
+      exclude_visual == 1 ~ 1,
+      TRUE ~ 0
+    )
+  )
+
+## Create long dataset with all subjects (included and excluded)
+aah_long_all <- left_join(aah_navon_all, aah_summary_all) %>% 
+  ## filter columns to match E1 long dataset
+  select(
+    -ehi_i1_writing,
+    -ehi_i2_throwing,
+    -ehi_i3_toothbrush,
+    -ehi_i4_spoon
+  )
+           
+aah_summary_all_filtered <- aah_summary_all %>% 
+  select(
+    -ehi_i1_writing,
+    -ehi_i2_throwing,
+    -ehi_i3_toothbrush,
+    -ehi_i4_spoon
+  )
+
+## Save long table with columns for all exclusion reasons.
+## This is "the data."
+readr::write_tsv(aah_long_all, here(proc_dir, "aah_long.tsv"))
+readr::write_tsv(aah_summary_all_filtered, here(proc_dir, "aah_summary.tsv"))
+
+## Create long data tables with inclusions only
+aah <- aah_long_all |> filter(exclude_any == 0)
+aah_navon <- aah_long_all |> filter(exclude_navon == 0)
+aah_dl <- aah_long_all |> filter(exclude_dl == 0)
+
+## Create summary table with inclusions only, and handedness coded
+aah_summary_all <- aah_summary_all |> mutate(
+  handedness = case_when(
+    ehi <= -40 ~ "Left",
+    ehi >= 40 ~ "Right",
+    ehi > -40 & ehi < 40 ~ "Mixed"
+  )
+)
+
+aah_summary <- aah_summary_all |> filter(exclude_any == 0)
+aah_summary_navon <- aah_summary_all |> filter(exclude_navon == 0)
+aah_summary_dl <- aah_summary_all |> filter(exclude_dl == 0)
+```
+
+
+#### Everyone
+<br>
+
+##### Exclusions: Any reason
+<br>
+```{r describe_exclusions_1}
+n_all <- aah_summary_all$subject |> unique() |> length()
+n_exclusions <- aah_summary_all$exclude_any |> sum()
+n_keepers <- aah_summary_all |>
+  filter(exclude_any == 0) |>
+  (\(.) .[["subject"]])() |>
+  unique() |>
+  length()
+tibble(
+  "n (recruited)" = n_recruited,
+  "n (with full task data)" = n_all,
+  "exclusions" = n_exclusions,
+  "n (keepers)" = n_keepers) |> 
+  pretty_table()
+```
+<br>
+We have recruited `r n_recruited` participants through prolific. Of these, `r n_all` completed the task phase of the experiment.
+<br>
+<br>
+`r n_exclusions` were excluded for the reasons described below, leaving `r n_keepers` keepers.
+<br>
+```{r}
+## Check number of participants excluded for multiple reasons
+aah_summary_all |> 
+  select(subject, exclude_country, exclude_age, exclude_done_before, exclude_no_ehi, exclude_ehi_mismatch, exclude_visual,
+         exclude_many_gos, exclude_low_acc, exclude_low_rt, exclude_high_rt,
+         exclude_headphone_check, exclude_stereo_check, exclude_DL_mono_acc, exclude_DL_dual_acc) |> 
+  mutate(n_exclusion_reasons = rowSums(across(starts_with("exclude")))) |> 
+  group_by(n_exclusion_reasons) |> 
+  summarize(n_subjects = n()) |> 
+  pretty_table("How many subjects were excluded for multiple reasons?")
+```
+<br>
+```{r describe_exclusions_2}
+exclusion_tbl <- aah_summary_all |> 
+  rename(any = exclude_any) |> 
+  select(any, subject, exclude_country, exclude_age, exclude_done_before, exclude_no_ehi, exclude_ehi_mismatch, exclude_visual,
+         exclude_many_gos, exclude_low_acc, exclude_low_rt, exclude_high_rt,
+         exclude_headphone_check, exclude_stereo_check, exclude_DL_mono_acc, exclude_DL_dual_acc) |> 
+summarize(across(starts_with("exclude"), sum)) |> 
+pivot_longer(cols = everything(), 
+             names_to = 'exclusion', values_to = "n",
+             names_prefix = "exclude_") |> 
+  mutate('exclusion' = recode(exclusion,
+    any = "Any",
+    country = "Non-US/UK country",
+    age = "Age outside 18-40",
+    done_before = "Reported having done the task before",
+    high_rt = "Navon: High RT (median > 1500ms)",
+    low_rt = "Navon: Low RT (median < 200ms)",
+    low_acc = "Navon: Low accuracy (below 60% on any block)",
+    many_gos = "Navon: Too many 'gos' (78/80 trials or more)",
+    no_ehi = "Quit before completing EHI",
+    ehi_mismatch = "Prescreener/EHI mismatch",
+    headphone_check = "Dichotic listening: Failed headphone check (<5/6)",
+    stereo_check = "Dichotic listening: Failed stereo check (<5/6)",
+    DL_mono_acc = "Dichotic listening: low mono accuracy (<75%)",
+    DL_dual_acc = "Dichotic listening: low dual accuracy (<60%)",
+    visual = "Outlier based on visual inspection"
+  )) |> 
+  arrange(-n, exclusion) |> 
+  select(n, exclusion) |> 
+  rename('Reason for exclusion' = exclusion)
+
+# exclusion_tbl
+exclusion_tbl |> pretty_table()
+```
+<br>
+
+##### Exclusions: Navon
+<br>
+```{r}
+n_all <- aah_summary_all$subject |> unique() |> length()
+n_exclusions <- aah_summary_all$exclude_navon |> sum()
+n_keepers <- aah_summary_all |>
+  filter(exclude_navon == 0) |>
+  (\(.) .[["subject"]])() |>
+  unique() |>
+  length()
+tibble(
+  "n (recruited)" = n_recruited,
+  "n (with full task data)" = n_all,
+  "exclusions" = n_exclusions,
+  "n (keepers)" = n_keepers) |> 
+  pretty_table()
+```
+<br>
+`r n_exclusions` were excluded for the reasons described below, leaving `r n_keepers` keepers.
+<br>
+```{r}
+## Check number of participants excluded for multiple reasons
+aah_summary_all |> 
+  select(subject, exclude_country, exclude_age, exclude_done_before, exclude_no_ehi, exclude_ehi_mismatch, exclude_visual,
+         exclude_many_gos, exclude_low_acc, exclude_low_rt, exclude_high_rt) |> 
+  mutate(n_exclusion_reasons = rowSums(across(starts_with("exclude")))) |> 
+  group_by(n_exclusion_reasons) |> 
+  summarize(n_subjects = n()) |> 
+  pretty_table("How many subjects were excluded for multiple reasons?")
+```
+<br>
+```{r }
+exclusion_tbl <- aah_summary_all |> 
+  rename(any = exclude_navon) |> 
+  select(any, subject, exclude_country, exclude_age, exclude_done_before, exclude_no_ehi, exclude_ehi_mismatch, exclude_visual,
+         exclude_many_gos, exclude_low_acc, exclude_low_rt, exclude_high_rt) |> 
+summarize(across(starts_with("exclude"), sum)) |> 
+pivot_longer(cols = everything(), 
+             names_to = 'exclusion', values_to = "n",
+             names_prefix = "exclude_") |> 
+  mutate('exclusion' = recode(exclusion,
+    any = "Any",
+    country = "Non-US/UK country",
+    age = "Age outside 18-40",
+    done_before = "Reported having done the task before",
+    high_rt = "Navon: High RT (median > 1500ms)",
+    low_rt = "Navon: Low RT (median < 200ms)",
+    low_acc = "Navon: Low accuracy (below 60% on any block)",
+    many_gos = "Navon: Too many 'gos' (78/80 trials or more)",
+    no_ehi = "Quit before completing EHI",
+    ehi_mismatch = "Prescreener/EHI mismatch",
+    headphone_check = "Dichotic listening: Failed headphone check (<5/6)",
+    stereo_check = "Dichotic listening: Failed stereo check (<5/6)",
+    DL_mono_acc = "Dichotic listening: low mono accuracy (<75%)",
+    DL_dual_acc = "Dichotic listening: low dual accuracy (<60%)",
+    visual = "Outlier based on visual inspection"
+  )) |> 
+  arrange(-n, exclusion) |> 
+  select(n, exclusion) |> 
+  rename('Reason for exclusion' = exclusion)
+
+exclusion_tbl |> pretty_table()
+```
+<br>
+
+
+##### Exclusions: Dichotic Listening
+<br>
+```{r}
+n_all <- aah_summary_all$subject |> unique() |> length()
+n_exclusions <- aah_summary_all$exclude_dl |> sum()
+n_keepers <- aah_summary_all |>
+  filter(exclude_dl == 0) |>
+  (\(.) .[["subject"]])() |>
+  unique() |>
+  length()
+tibble(
+  "n (recruited)" = n_recruited,
+  "n (with full task data)" = n_all,
+  "exclusions" = n_exclusions,
+  "n (keepers)" = n_keepers) |> 
+  pretty_table()
+```
+<br>
+`r n_exclusions` were excluded for the reasons described below, leaving `r n_keepers` keepers.
+<br>
+```{r}
+## Check number of participants excluded for multiple reasons
+aah_summary_all |> 
+  select(subject, exclude_country, exclude_age, exclude_done_before, exclude_no_ehi, exclude_ehi_mismatch,
+         exclude_headphone_check, exclude_stereo_check, exclude_DL_mono_acc, exclude_DL_dual_acc) |> 
+  mutate(n_exclusion_reasons = rowSums(across(starts_with("exclude")))) |> 
+  group_by(n_exclusion_reasons) |> 
+  summarize(n_subjects = n()) |> 
+  pretty_table("How many subjects were excluded for multiple reasons?")
+```
+<br>
+```{r}
+exclusion_tbl <- aah_summary_all |> 
+  rename(any = exclude_dl) |> 
+  select(subject, exclude_country, exclude_age, exclude_done_before, exclude_no_ehi, exclude_ehi_mismatch,
+         exclude_headphone_check, exclude_stereo_check, exclude_DL_mono_acc, exclude_DL_dual_acc) |> 
+summarize(across(starts_with("exclude"), sum)) |> 
+pivot_longer(cols = everything(), 
+             names_to = 'exclusion', values_to = "n",
+             names_prefix = "exclude_") |> 
+  mutate('exclusion' = recode(exclusion,
+    any = "Any",
+    country = "Non-US/UK country",
+    age = "Age outside 18-40",
+    done_before = "Reported having done the task before",
+    high_rt = "Navon: High RT (median > 1500ms)",
+    low_rt = "Navon: Low RT (median < 200ms)",
+    low_acc = "Navon: Low accuracy (below 60% on any block)",
+    many_gos = "Navon: Too many 'gos' (78/80 trials or more)",
+    no_ehi = "Quit before completing EHI",
+    ehi_mismatch = "Prescreener/EHI mismatch",
+    headphone_check = "Dichotic listening: Failed headphone check (<5/6)",
+    stereo_check = "Dichotic listening: Failed stereo check (<5/6)",
+    DL_mono_acc = "Dichotic listening: low mono accuracy (<75%)",
+    DL_dual_acc = "Dichotic listening: low dual accuracy (<60%)"
+  )) |> 
+  arrange(-n, exclusion) |> 
+  select(n, exclusion) |> 
+  rename('Reason for exclusion' = exclusion)
+
+# exclusion_tbl
+exclusion_tbl |> pretty_table()
+```
+<br>
+```{r}
+aah_summary_all |> group_by(headphonecheck_nCorrect) |> 
+  summarize(n = n()) |> arrange(desc(n)) |> 
+  pretty_table("Distribution of headphone check accuracy (which sound was the quietest?)")
+```
+<br>
+```{r}
+aah_summary_all |> group_by(stereocheck_nCorrect) |> 
+  summarize(n = n()) |> arrange(desc(n)) |> 
+  pretty_table("Distribution of stereo check accuracy (did the sound play to the right or left ear?)")
+```
+<br>
+
+#### By handedness group
+
+All recruits before exclusions.
+```{r demo_allrecruits_grouped}
+aah_summary_all |>
+  group_by(handedness) |> 
+  demo_summary_table() |> 
+  pretty_table("All recruits (before exclusions)")
+```
+<br>
+```{r}
+aah_summary_all |> group_by(prolific_handedness) |> 
+  summarize(n = n(),
+            `Any exclusion` = sum(exclude_any),
+            Navon = sum(exclude_navon),
+            DL = sum(exclude_dl),
+            `EHI mismatch` = sum(exclude_ehi_mismatch)) |> 
+  pretty_table("Exclusions by Prolific handedness group")
+```
+<br>
+<br>
+```{r}
+aah_summary_all |> group_by(handedness) |> 
+  summarize(n = n(),
+            `Any exclusion` = sum(exclude_any),
+            Navon = sum(exclude_navon),
+            DL = sum(exclude_dl),
+            `EHI mismatch` = sum(exclude_ehi_mismatch)) |> 
+  pretty_table("Exclusions by EHI handedness group")
+```
+<br>
+
+**Exclusions by Prolific handedness**
+<br>
+```{r}
+counts <- aah_summary_all |> group_by(prolific_handedness) |> count()
+n_recruited_left <- counts |> filter(prolific_handedness == "Left") |> pull(n)
+n_recruited_mixed <- counts |> filter(prolific_handedness == "Mixed") |> pull(n)
+n_recruited_right <- counts |> filter(prolific_handedness == "Right") |> pull(n)
+```
+<br>
+Right handers (n recruited = `r n_recruited_right`)
+```{r describe_exclusions_2_grouped_pR}
+exclusion_tbl <- aah_summary_all |>
+  filter(prolific_handedness == "Right") |>
+  rename(exclude_any = exclude_any) |>
+summarize(across(starts_with("exclude"), sum)) |>
+pivot_longer(cols = everything(),
+             names_to = 'exclusion', values_to = "n",
+             names_prefix = "exclude_") |>
+  mutate('exclusion' = recode(exclusion,
+    any = "Any",
+    country = "Non-US country",
+    age = "Age outside 18-40",
+    done_before = "Reported having done the task before",
+    high_rt = "Navon: High RT (median > 1500ms)",
+    low_rt = "Navon: Low RT (median < 200ms)",
+    low_acc = "Navon: Low accuracy (below 60% on any block)",
+    many_gos = "Navon: Too many 'gos' (78/80 trials or more)",
+    no_ehi = "Quit before completing EHI",
+    ehi_mismatch = "Prescreener/EHI mismatch",
+    headphone_check = "Failed headphone check (<5/6)",
+    stereo_check = "Failed stereo check (<5/6)",
+    DL_mono_acc = "Dichotic listening: low mono accuracy (<75%)",
+    DL_dual_acc = "Dichotic listening: low dual accuracy (<60%)"
+  )) |>
+  arrange(-n, exclusion) |>
+  select(n, exclusion) |>
+  rename('Reason for exclusion' = exclusion,
+         "n (Right)" = n)
+
+# exclusion_tbl
+exclusion_tbl |> pretty_table()
+```
+<br>
+Mixed handers (n recruited = `r n_recruited_mixed`)
+```{r describe_exclusions_2_grouped_pM}
+exclusion_tbl <- aah_summary_all |>
+  filter(prolific_handedness == "Mixed") |>
+  rename(exclude_any = exclude_any) |>
+summarize(across(starts_with("exclude"), sum)) |>
+pivot_longer(cols = everything(),
+             names_to = 'exclusion', values_to = "n",
+             names_prefix = "exclude_") |>
+  mutate('exclusion' = recode(exclusion,
+    any = "Any",
+    country = "Non-US country",
+    age = "Age outside 18-40",
+    done_before = "Reported having done the task before",
+    high_rt = "Navon: High RT (median > 1500ms)",
+    low_rt = "Navon: Low RT (median < 200ms)",
+    low_acc = "Navon: Low accuracy (below 60% on any block)",
+    many_gos = "Navon: Too many 'gos' (78/80 trials or more)",
+    no_ehi = "Quit before completing EHI",
+    ehi_mismatch = "Prescreener/EHI mismatch",
+    headphone_check = "Failed headphone check (<5/6)",
+    stereo_check = "Failed stereo check (<5/6)",
+    DL_mono_acc = "Dichotic listening: low mono accuracy (<75%)",
+    DL_dual_acc = "Dichotic listening: low dual accuracy (<60%)"
+  )) |>
+  arrange(-n, exclusion) |>
+  select(n, exclusion) |>
+  rename('Reason for exclusion' = exclusion,
+         "n (Mixed)" = n)
+
+exclusion_tbl |> pretty_table()
+```
+<br>
+Left handers (n recruited = `r n_recruited_left`)
+```{r describe_exclusions_2_grouped_pL}
+exclusion_tbl <- aah_summary_all |>
+  filter(prolific_handedness == "Left") |>
+  rename(exclude_any = exclude_any) |>
+summarize(across(starts_with("exclude"), sum)) |>
+pivot_longer(cols = everything(),
+             names_to = 'exclusion', values_to = "n",
+             names_prefix = "exclude_") |>
+  mutate('exclusion' = recode(exclusion,
+    any = "Any",
+    country = "Non-US country",
+    age = "Age outside 18-40",
+    done_before = "Reported having done the task before",
+    high_rt = "Navon: High RT (median > 1500ms)",
+    low_rt = "Navon: Low RT (median < 200ms)",
+    low_acc = "Navon: Low accuracy (below 60% on any block)",
+    many_gos = "Navon: Too many 'gos' (78/80 trials or more)",
+    no_ehi = "Quit before completing EHI",
+    ehi_mismatch = "Prescreener/EHI mismatch",
+    headphone_check = "Failed headphone check (<5/6)",
+    stereo_check = "Failed stereo check (<5/6)",
+    DL_mono_acc = "Dichotic listening: low mono accuracy (<75%)",
+    DL_dual_acc = "Dichotic listening: low dual accuracy (<60%)"
+  )) |>
+  arrange(-n, exclusion) |>
+  select(n, exclusion) |>
+  rename('Reason for exclusion' = exclusion,
+         "n (Left)" = n)
+
+exclusion_tbl |> pretty_table()
+```
+<br>
+**Exclusions by EHI handedness**
+<br>
+```{r}
+counts <- aah_summary_all |> group_by(handedness) |> count()
+n_ehi_left <- counts |> filter(handedness == "Left") |> pull(n)
+n_ehi_mixed <- counts |> filter(handedness == "Mixed") |> pull(n)
+n_ehi_right <- counts |> filter(handedness == "Right") |> pull(n)
+```
+<br>
+Right handers (n = `r n_ehi_right`)
+```{r describe_exclusions_2_grouped_R}
+exclusion_tbl <- aah_summary_all |>
+  filter(handedness == "Right") |>
+  rename(exclude_any = exclude_any) |>
+summarize(across(starts_with("exclude"), sum)) |>
+pivot_longer(cols = everything(),
+             names_to = 'exclusion', values_to = "n",
+             names_prefix = "exclude_") |>
+  mutate('exclusion' = recode(exclusion,
+    any = "Any",
+    country = "Non-US country",
+    age = "Age outside 18-40",
+    done_before = "Reported having done the task before",
+    high_rt = "Navon: High RT (median > 1500ms)",
+    low_rt = "Navon: Low RT (median < 200ms)",
+    low_acc = "Navon: Low accuracy (below 60% on any block)",
+    many_gos = "Navon: Too many 'gos' (78/80 trials or more)",
+    no_ehi = "Quit before completing EHI",
+    ehi_mismatch = "Prescreener/EHI mismatch",
+    headphone_check = "Failed headphone check (<5/6)",
+    stereo_check = "Failed stereo check (<5/6)",
+    DL_mono_acc = "Dichotic listening: low mono accuracy (<75%)",
+    DL_dual_acc = "Dichotic listening: low dual accuracy (<60%)"
+  )) |>
+  arrange(-n, exclusion) |>
+  select(n, exclusion) |>
+  rename('Reason for exclusion' = exclusion,
+         "n (Right)" = n)
+
+exclusion_tbl |> pretty_table()
+```
+<br>
+Mixed handers (n = `r n_ehi_mixed`)
+```{r describe_exclusions_2_grouped_M}
+exclusion_tbl <- aah_summary_all |>
+  filter(handedness == "Mixed") |>
+  rename(exclude_any = exclude_any) |>
+summarize(across(starts_with("exclude"), sum)) |>
+pivot_longer(cols = everything(),
+             names_to = 'exclusion', values_to = "n",
+             names_prefix = "exclude_") |>
+  mutate('exclusion' = recode(exclusion,
+    any = "Any",
+    country = "Non-US country",
+    age = "Age outside 18-40",
+    done_before = "Reported having done the task before",
+    high_rt = "Navon: High RT (median > 1500ms)",
+    low_rt = "Navon: Low RT (median < 200ms)",
+    low_acc = "Navon: Low accuracy (below 60% on any block)",
+    many_gos = "Navon: Too many 'gos' (78/80 trials or more)",
+    no_ehi = "Quit before completing EHI",
+    ehi_mismatch = "Prescreener/EHI mismatch",
+    headphone_check = "Failed headphone check (<5/6)",
+    stereo_check = "Failed stereo check (<5/6)",
+    DL_mono_acc = "Dichotic listening: low mono accuracy (<75%)",
+    DL_dual_acc = "Dichotic listening: low dual accuracy (<60%)"
+  )) |>
+  arrange(-n, exclusion) |>
+  select(n, exclusion) |>
+  rename('Reason for exclusion' = exclusion,
+         "n (Mixed)" = n)
+
+exclusion_tbl |> pretty_table()
+```
+<br>
+Left handers (n = `r n_ehi_left`)
+```{r describe_exclusions_2_grouped_L}
+exclusion_tbl <- aah_summary_all |>
+  filter(handedness == "Left") |>
+  rename(exclude_any = exclude_any) |>
+summarize(across(starts_with("exclude"), sum)) |>
+pivot_longer(cols = everything(),
+             names_to = 'exclusion', values_to = "n",
+             names_prefix = "exclude_") |>
+  mutate('exclusion' = recode(exclusion,
+    any = "Any",
+    country = "Non-US country",
+    age = "Age outside 18-40",
+    done_before = "Reported having done the task before",
+    high_rt = "Navon: High RT (median > 1500ms)",
+    low_rt = "Navon: Low RT (median < 200ms)",
+    low_acc = "Navon: Low accuracy (below 60% on any block)",
+    many_gos = "Navon: Too many 'gos' (78/80 trials or more)",
+    no_ehi = "Quit before completing EHI",
+    ehi_mismatch = "Prescreener/EHI mismatch",
+    headphone_check = "Failed headphone check (<5/6)",
+    stereo_check = "Failed stereo check (<5/6)",
+    DL_mono_acc = "Dichotic listening: low mono accuracy (<75%)",
+    DL_dual_acc = "Dichotic listening: low dual accuracy (<60%)"
+  )) |>
+  arrange(-n, exclusion) |>
+  select(n, exclusion) |>
+  rename('Reason for exclusion' = exclusion,
+         "n (Left)" = n)
+
+exclusion_tbl |> pretty_table()
+```
+<br>
+
+
+
+### Demographics (Keepers) {.tabset .tabset-pills}
+
+
+#### Navon + DL
+
+<br>
+Demographics for included participants, by handedness group (EHI bins). 
+```{r}
+hand_demo_summary_table(aah_summary) |> 
+  pretty_table() |>
+  tab_footnote("Left: (EHI <= -40)  |  Mixed: (-40 < EHI < 40)  |  Right: (EHI >= 40)")
+```
+<br>
+
+```{r ehi_bin_handedness_plot_keepers}
+## Show distribution of handedness by EHI bin
+plot_color = plot_blue
+
+h_data_n <-
+  aah_summary |>
+  group_by(handedness) |>
+  summarize(n = str_c("n = ", as.character(n())))
+
+fig_path <- here(fig_dir, "bin_ehi_keepers_any.png")
+
+if (use_cached_demofigs == FALSE) {
+  g <- ggplot(aah_summary, aes(x = ehi)) +
+    geom_histogram(
+      color = NA,
+      fill = plot_color,
+      alpha = .8,
+      binwidth = 8,
+      boundary = 100
+    ) +
+    labs(x = "EHI") +
+    xlim(c(-104, 104)) +
+    facet_grid( ~ handedness) +
+    geom_text(
+      data = h_data_n,
+      aes(x = -100, y = 5, label = n),
+      hjust = 0,
+      colour = "gray20",
+      inherit.aes = FALSE,
+      parse = FALSE
+    ) +
+    labs(title = "Distribution within each EHI bin (keepers only)")
+  
+  g <- g |> gg_style() + theme(aspect.ratio = 1 / 1,
+                                    axis.title.y = element_blank())
+  
+  ggsave(fig_path, g, "png", height = 3, width = 6)
+}
+
+include_graphics(fig_path)
+```
+
+Demographics for all included participants.
+
+```{r demographics_summary_included}
+rt_demo <- demo_summary_table(aah_summary)
+rt_demo |> 
+  pretty_table() |> tab_header(title = "Demographics", subtitle = "Summary")
+```
+<br>
+```{r country_included}
+demo_country_table(aah_summary) |> 
+  pretty_table()
+```
+<br>
+```{r race_included}
+demo_race_table(aah_summary) |> 
+ pretty_table()
+```
+<br>
+```{r ethnicity_included}
+demo_ethnicity_table(aah_summary) |> 
+ pretty_table()
+```
+<br>
+
+#### Navon
+
+<br>
+Demographics for included participants, by handedness group (EHI bins). 
+```{r}
+hand_demo_summary_table(aah_summary_navon) |> 
+  pretty_table() |>
+  tab_footnote("Left: (EHI <= -40)  |  Mixed: (-40 < EHI < 40)  |  Right: (EHI >= 40)")
+```
+<br>
+
+```{r ehi_bin_handedness_plot_keepers_navon}
+## Show distribution of handedness by EHI bin
+plot_color = plot_blue
+
+h_data_n <-
+  aah_summary_navon |>
+  group_by(handedness) |>
+  summarize(n = str_c("n = ", as.character(n())))
+
+fig_path <- here(fig_dir, "bin_ehi_keepers_navon.png")
+
+if (use_cached_demofigs == FALSE) {
+  g <- ggplot(aah_summary_navon, aes(x = ehi)) +
+    geom_histogram(
+      color = NA,
+      fill = plot_color,
+      alpha = .8,
+      binwidth = 8,
+      boundary = 100
+    ) +
+    labs(x = "EHI") +
+    xlim(c(-104, 104)) +
+    facet_grid( ~ handedness) +
+    geom_text(
+      data = h_data_n,
+      aes(x = -100, y = 5, label = n),
+      hjust = 0,
+      colour = "gray20",
+      inherit.aes = FALSE,
+      parse = FALSE
+    ) +
+    labs(title = "Distribution within each EHI bin (keepers only)")
+  
+  g <- g |> gg_style() + theme(aspect.ratio = 1 / 1,
+                                    axis.title.y = element_blank())
+  
+  ggsave(fig_path, g, "png", height = 3, width = 6)
+}
+
+include_graphics(fig_path)
+```
+
+Demographics for all included participants.
+
+```{r demographics_summary_included_navon}
+rt_demo <- demo_summary_table(aah_summary_navon)
+rt_demo |> 
+  pretty_table() |> tab_header(title = "Demographics", subtitle = "Summary")
+```
+<br>
+```{r country_included_navon}
+demo_country_table(aah_summary_navon) |> 
+  pretty_table()
+```
+<br>
+```{r race_included_navon}
+demo_race_table(aah_summary_navon) |> 
+ pretty_table()
+```
+<br>
+```{r ethnicity_included_navon}
+demo_ethnicity_table(aah_summary_navon) |> 
+ pretty_table()
+```
+<br>
+
+#### Dichotic Listening
+
+<br>
+Demographics for included participants, by handedness group (EHI bins). 
+```{r}
+hand_demo_summary_table(aah_summary_dl) |> 
+  pretty_table() |>
+  tab_footnote("Left: (EHI <= -40)  |  Mixed: (-40 < EHI < 40)  |  Right: (EHI >= 40)")
+```
+<br>
+
+```{r ehi_bin_handedness_plot_keepers_dl}
+## Show distribution of handedness by EHI bin
+plot_color = plot_blue
+
+h_data_n <-
+  aah_summary_dl |>
+  group_by(handedness) |>
+  summarize(n = str_c("n = ", as.character(n())))
+
+fig_path <- here(fig_dir, "bin_ehi_keepers_dl.png")
+
+if (use_cached_demofigs == FALSE) {
+  g <- ggplot(aah_summary_dl, aes(x = ehi)) +
+    geom_histogram(
+      color = NA,
+      fill = plot_color,
+      alpha = .8,
+      binwidth = 8,
+      boundary = 100
+    ) +
+    labs(x = "EHI") +
+    xlim(c(-104, 104)) +
+    facet_grid( ~ handedness) +
+    geom_text(
+      data = h_data_n,
+      aes(x = -100, y = 5, label = n),
+      hjust = 0,
+      colour = "gray20",
+      inherit.aes = FALSE,
+      parse = FALSE
+    ) +
+    labs(title = "Distribution within each EHI bin (keepers only)")
+  
+  g <- g |> gg_style() + theme(aspect.ratio = 1 / 1,
+                                    axis.title.y = element_blank())
+  
+  ggsave(fig_path, g, "png", height = 3, width = 6)
+}
+
+include_graphics(fig_path)
+```
+
+```{r demographics_summary_included_dl}
+rt_demo <- demo_summary_table(aah_summary_dl)
+rt_demo |> 
+  pretty_table() |> tab_header(title = "Demographics", subtitle = "Summary")
+```
+<br>
+```{r country_included_dl}
+demo_country_table(aah_summary_dl) |> 
+  pretty_table()
+```
+<br>
+```{r race_included_dl}
+demo_race_table(aah_summary_dl) |> 
+ pretty_table()
+```
+<br>
+```{r ethnicity_included_dl}
+demo_ethnicity_table(aah_summary_dl) |> 
+ pretty_table()
+```
+<br>
+
+#### Group differences?
+
+Any demographics differences between handedness groups?
+
+<br>
+```{r}
+lm(data = aah_summary, formula = age ~ handedness) |> 
+  emmeans(~ handedness) |> 
+  contrast("pairwise") |> 
+  summary(infer = T, adj = "none") |>
+  as_tibble() |> 
+  pretty_table("Age (years)")
+```
+<br>
+```{r}
+lm(data = aah_summary, formula = education ~ handedness) |> 
+  emmeans(~ handedness) |> 
+  contrast("pairwise") |> 
+  summary(infer = T, adj = "none") |>
+  as_tibble() |> 
+  pretty_table("Education (years)")
+```
+<br>
+```{r}
+sex_data <- aah_summary |> filter(sex %in% c("Male", "Female")) |> 
+  mutate(sex = as.factor(sex))
+
+glm(data = sex_data,
+    formula = sex ~ handedness,
+    family = "binomial") |> 
+  emmeans(~ handedness) |>
+  contrast("pairwise") |>
+  summary(infer = T, adj = "none", type = "response") |>
+  as_tibble() |>
+  pretty_table("Sex") |> 
+  tab_footnote(footnote = "Odds (female / male)",
+               locations = cells_column_labels(columns = "odds.ratio"))
+```
+
+
+
+

@@ -1,0 +1,882 @@
+﻿<usermanual>
+___________________________________________________________________________________________________________________	
+
+										*Dichotic Listenting Task*
+										- used by the Behavioural Laterality Battery-
+___________________________________________________________________________________________________________________	
+
+Script Author: Katja Borchert, Ph.D. (katjab@millisecond.com) for Millisecond Software, LLC
+Date: 01-19-2021
+last updated:  02-21-2022 by K. Borchert (katjab@millisecond.com) for Millisecond Software, LLC
+
+Script Copyright © 02-21-2022 Millisecond Software
+
+___________________________________________________________________________________________________________________
+BACKGROUND INFO 	
+___________________________________________________________________________________________________________________	
+
+This script implements a Dichotic Listening Task similar to the one used by the Behavioural Laterality Battery
+(Parker et al, 2020). 
+This task assesses the lateralisation of language processing.
+
+References:
+
+//Behavioural Laterality Battery:
+Adam J. Parker , Zoe V. J. Woodhead , Paul A. Thompson & Dorothy V. M.
+Bishop (2020): Assessing the reliability of an online behavioural laterality battery: A pre-registered
+study, Laterality, DOI: 10.1080/1357650X.2020.1859526
+To link to this article: https://doi.org/10.1080/1357650X.2020.1859526
+
+https://gorilla.sc/openmaterials/104636
+
+
+//Dichotic Listening Tasks:
+
+Bless, J. J., Westerhausen, R., Arciuli, J., Kompus, K., Gudmundsen, M., & Hugdahl, K. (2013). 
+Right on all Occasions?” – On the Feasibility of Laterality Research Using a Smartphone Dichotic Listening Application.
+Frontiers in Psychology, 4, 42.
+https://doi.org/10.3389/fpsyg.2013.00042
+
+Hugdahl, K., & Andersson, L. (1986). 
+The “Forced-Attention Paradigm” in Dichotic Listening to CV-Syllables: A Comparison Between Adults and Children.
+Cortex, 22, 417-432.
+https://doi.org/10.1016/S0010-9452(86)80005-3 
+
+___________________________________________________________________________________________________________________
+TASK DESCRIPTION	
+___________________________________________________________________________________________________________________	
+
+Participants hear two syllables (selected from: ba, da, ga, ka, pa, ta) through their left and right ear
+and are asked to indicate which syllable their heard best.
+
+___________________________________________________________________________________________________________________	
+DURATION 
+___________________________________________________________________________________________________________________	
+the default set-up of the script takes appr. 5 minutes to complete
+
+___________________________________________________________________________________________________________________	
+DATA FILE INFORMATION 
+___________________________________________________________________________________________________________________		
+The default data stored in the data files are:
+
+(1) Raw data file: 'blb_dichoticlistening_raw*.iqdat' (a separate file for each participant)*
+
+
+build:								The specific Inquisit version used (the 'build') that was run
+computer.platform:					the platform the script was run on (win/mac/ios/android)
+date, time: 						date and time script was run 
+subject, group: 					with the current subject/groupnumber
+session:							with the current session id
+
+blockcode, blocknum:				the name and number of the current block (built-in Inquisit variable)
+trialcode, trialnum: 				the name and number of the currently recorded trial (built-in Inquisit variable)
+										Note: trialnum is a built-in Inquisit variable; it counts all trials run; even those
+										that do not store data to the data file. 
+																			
+index:								itemnumber of the selected soundfile 
+soundfile:							the selected soundfile 
+leftSound:							the sound played through the left ear 
+rightSound:							the sound played through the right ear 
+
+dualSound:							1 = the left sound is different than the right sound
+									0 = the same sound is played in both ears
+																		
+response:							the participant's response (selected response button)
+
+choice:								left/right/other (= the selected ear; if an incorrect sound was selected it says 'other')
+									(in case of mono sounds: if the correct sound was selected it will always say 'left')
+
+correct:							accuracy of response: 	
+									1 = correct response (either the left or right sound was selected)
+									0 = otherwise (a different sound was selected)
+									
+latency: 							the response latency (in ms); measured from: onset of sound
+									Note: the soundfiles are ~500ms long. 
+									Any latencies smaller than that => participant responded before the entire soundfile was played
+
+
+(2) Summary data file: 'blb_dichoticlistening_summary*.iqdat' (a separate file for each participant)*
+
+inquisit.version: 						Inquisit version run
+computer.platform:					the platform the script was run on (win/mac/ios/android)
+startdate:							date script was run
+starttime:							time script was started
+subjectid:							assigned subject id number
+groupid:							assigned group id number
+sessionid:							assigned session id number
+elapsedtime:						time it took to run script (in ms); measured from onset to offset of script
+completed:							0 = script was not completed (prematurely aborted); 
+									1 = script was completed (all conditions run)
+														
+* separate data files: to change to one data file for all participants (on Inquisit Lab only), go to section
+"DATA" and follow further instructions
+
+___________________________________________________________________________________________________________________	
+EXPERIMENTAL SET-UP 
+___________________________________________________________________________________________________________________	
+
+(1) Intro + Demo
+- all 6 mono sounds are introduced, order is determined randomly
+- each sound can be played multiple times
+
+(2) Practice: 9 trials
+- all 6 mono sounds + (da-ba, ga-ta, ka-pa); order is randomly determined
+=> each sound is played equally often during practice
+
+(3) 4 test blocks (see Editable Parameters) of 36 trials
+- order of trials is randomly determined for each block
+___________________________________________________________________________________________________________________
+STIMULI
+___________________________________________________________________________________________________________________
+
+the stimuli are provided by the Behavioural Laterality Battery (Parker et al 2020)
+and can be downloaded at:
+https://osf.io/4bqe6/
+
+Note: if used, please cite reference articles for Dichotic Listening Task as given above.
+___________________________________________________________________________________________________________________	
+INSTRUCTIONS 
+___________________________________________________________________________________________________________________	
+
+provided by Millisecond Software. The instructions are based on the ones used by 
+the Behavioural Laterality Battery (Parker et al 2020).
+The instructions can edited in the provided htm-files.
+
+___________________________________________________________________________________________________________________	
+EDITABLE CODE 
+___________________________________________________________________________________________________________________	
+check below for (relatively) easily editable parameters, stimuli, instructions etc. 
+Keep in mind that you can use this script as a template and therefore always "mess" with the entire code 
+to further customize your experiment.
+
+The parameters you can change are:
+</usermanual>
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EDITABLE PARAMETERS: change editable parameters here
+**************************************************************************************************************
+**************************************************************************************************************
+
+<parameters>
+/ fixationHeight = 10%				//the proportional height of the fixation cross (default: 10%)
+/fixationDuration = 500				//the duration (in ms) of the fixation cross (default: 500ms)
+
+/numberTestBlocks = 4				//the number of test blocks to run (Note: each test block runs 36 trials)
+</parameters>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EDITABLE STIMULI
+**************************************************************************************************************
+**************************************************************************************************************
+
+the stimuli are provided by the Behavioural Laterality Battery (Parker et al 2020)
+and can be downloaded at:
+https://osf.io/4bqe6/
+<item soundfiles>
+/1="blb_dichoticlistening_ba-ba.mp3"
+/2="blb_dichoticlistening_ba-da.mp3"
+/3="blb_dichoticlistening_ba-ga.mp3"
+/4="blb_dichoticlistening_ba-ka.mp3"
+/5="blb_dichoticlistening_ba-pa.mp3"
+/6="blb_dichoticlistening_ba-ta.mp3"
+/7="blb_dichoticlistening_da-ba.mp3"
+/8="blb_dichoticlistening_da-da.mp3"
+/9="blb_dichoticlistening_da-ga.mp3"
+/10="blb_dichoticlistening_da-ka.mp3"
+/11="blb_dichoticlistening_da-pa.mp3"
+/12="blb_dichoticlistening_da-ta.mp3"
+/13="blb_dichoticlistening_ga-ba.mp3"
+/14="blb_dichoticlistening_ga-da.mp3"
+/15="blb_dichoticlistening_ga-ga.mp3"
+/16="blb_dichoticlistening_ga-ka.mp3"
+/17="blb_dichoticlistening_ga-pa.mp3"
+/18="blb_dichoticlistening_ga-ta.mp3"
+/19="blb_dichoticlistening_ka-ba.mp3"
+/20="blb_dichoticlistening_ka-da.mp3"
+/21="blb_dichoticlistening_ka-ga.mp3"
+/22="blb_dichoticlistening_ka-ka.mp3"
+/23="blb_dichoticlistening_ka-pa.mp3"
+/24="blb_dichoticlistening_ka-ta.mp3"
+/25="blb_dichoticlistening_pa-ba.mp3"
+/26="blb_dichoticlistening_pa-da.mp3"
+/27="blb_dichoticlistening_pa-ga.mp3"
+/28="blb_dichoticlistening_pa-ka.mp3"
+/29="blb_dichoticlistening_pa-pa.mp3"
+/30="blb_dichoticlistening_pa-ta.mp3"
+/31="blb_dichoticlistening_ta-ba.mp3"
+/32="blb_dichoticlistening_ta-da.mp3"
+/33="blb_dichoticlistening_ta-ga.mp3"
+/34="blb_dichoticlistening_ta-ka.mp3"
+/35="blb_dichoticlistening_ta-pa.mp3"
+/36="blb_dichoticlistening_ta-ta.mp3"
+</item>
+
+<item soundfiles_sounds>
+/1="ba-ba"
+/2="ba-da"
+/3="ba-ga"
+/4="ba-ka"
+/5="ba-pa"
+/6="ba-ta"
+/7="da-ba"
+/8="da-da"
+/9="da-ga"
+/10="da-ka"
+/11="da-pa"
+/12="da-ta"
+/13="ga-ba"
+/14="ga-da"
+/15="ga-ga"
+/16="ga-ka"
+/17="ga-pa"
+/18="ga-ta"
+/19="ka-ba"
+/20="ka-da"
+/21="ka-ga"
+/22="ka-ka"
+/23="ka-pa"
+/24="ka-ta"
+/25="pa-ba"
+/26="pa-da"
+/27="pa-ga"
+/28="pa-ka"
+/29="pa-pa"
+/30="pa-ta"
+/31="ta-ba"
+/32="ta-da"
+/33="ta-ga"
+/34="ta-ka"
+/35="ta-pa"
+/36="ta-ta"
+</item>
+
+<list testSoundfiles_itemnumbers>
+/ poolsize = 36
+/ replace = false
+</list>
+
+//stores the soundfiles used for the practice trials (6 uni + 3 additional ones)
+<list practiceSoundfiles_itemnumbers>
+/ items = (1, 7, 8, 15, 18, 22, 23, 29, 36)
+/ replace = false
+</list>
+
+<item demoSoundfiles>
+/1="blb_dichoticlistening_ba-ba.mp3"
+/2="blb_dichoticlistening_da-da.mp3"
+/3="blb_dichoticlistening_ga-ga.mp3"
+/4="blb_dichoticlistening_ka-ka.mp3"
+/5="blb_dichoticlistening_pa-pa.mp3"
+/6="blb_dichoticlistening_ta-ta.mp3"
+</item>
+
+<item demoSoundfiles_sounds>
+/1="ba"
+/2="da"
+/3="ga"
+/4="ka"
+/5="pa"
+/6="ta"
+</item>
+
+<list demoSoundfiles_itemnumbers>
+/ poolsize = 6
+/ replace = false
+/ resetinterval = 0
+</list>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EDITABLE INSTRUCTIONS: change instructions here
+**************************************************************************************************************
+**************************************************************************************************************
+<instruct>
+</instruct>
+
+********************************************************************************
+generalIntro
+********************************************************************************
+
+<html generalIntro>
+/ items = ("blb_dichoticlistening_instruct_intro.htm")
+/ size = (100%, 80%)
+/ position = (50%, 40%)
+</html>
+
+<button continueButton>
+/ caption = "NEXT"
+/ fontstyle = ("Arial", 5%, false, false, false, false, 5, 1)
+/ size = (20%, 8%)
+/ position = (50%, 90%)
+/ erase = false
+</button>
+
+<trial generalIntro>
+/ stimulusframes = [1 = clearscreen, generalIntro, continueButton]
+/ validresponse = (continueButton)
+/ recorddata = false
+</trial>
+
+********************************************************************************
+Demo
+********************************************************************************
+
+<html demoIntro>
+/ items = ("blb_dichoticlistening_instruct_demo.htm")
+/ size = (100%, 80%)
+/ position = (50%, 40%)
+</html>
+
+<trial demoIntro>
+/ stimulusframes = [1 = clearscreen, demoIntro, continueButton]
+/ validresponse = (continueButton)
+/ recorddata = false
+</trial>
+
+<button playButton>
+/ caption = "► PLAY"
+/ fontstyle = ("Arial", 5%, false, false, false, false, 5, 1)
+/ size = (20%, 8%)
+/ position = (50%, 50%)
+/ erase = false
+</button>
+
+<button replayButton>
+/ caption = "► REPLAY"
+/ fontstyle = ("Arial", 5%, false, false, false, false, 5, 1)
+/ size = (20%, 8%)
+/ position = (50%, 50%)
+/ erase = false
+</button>
+
+<text demoInstructions>
+/ items = ("When you press play, you will hear:")
+/ fontstyle = ("Arial", 5%, false, false, false, false, 5, 1)
+/ position = (50%, 20%)
+/ vjustify = center
+/ erase = false
+</text>
+
+<text demoSound>
+/ items = demoSoundfiles_sounds
+/ select = values.index
+/ fontstyle = ("Courier New", 8%, true, false, false, false, 5, 1)
+/ position = (50%, 35%)
+/ vjustify = center
+/ erase = false
+</text>
+
+<sound soundfile_demo>
+/ items = demoSoundfiles
+/ select = values.index
+/ playthrough = true
+</sound>
+
+
+<trial demoStart>
+/ ontrialbegin = [
+	values.index = list.demoSoundfiles_itemnumbers.nextindex;
+	button.playButton.skip = false;
+	button.replayButton.skip = true;
+]
+/ trialduration = 0
+/ branch = [
+	return trial.demo;
+]
+/ recorddata = false
+</trial>
+
+<trial demo>
+/ stimulusframes = [1 = clearscreen, demoInstructions, demoSound, continueButton, playButton, replayButton]
+/ validresponse = (continueButton, playButton)
+/ ontrialend = [
+	if (trial.demo.response == "playButton"){
+		button.playButton.skip = true;
+		button.replayButton.skip = false;
+	};
+]
+/ branch = [
+	if (trial.demo.response == "playButton"){
+		return trial.playSound_demo;
+	}
+]
+/ recorddata = false
+</trial>
+
+<trial playSound_demo>
+/ stimulusframes = [1 = soundfile_demo, replayButton]
+/ trialduration = 0
+/ ontrialend = [
+	values.soundfile = sound.soundfile_demo.currentitem;
+	values.leftSound = expressions.leftSound;
+	values.rightSound = expressions.rightSound;	
+	values.dualSound = 0;
+]
+/ branch = [
+	return trial.demo;
+]
+/ recorddata = false
+</trial>
+
+********************************************************************************
+Practice
+********************************************************************************
+
+<html practiceStart>
+/ items = ("blb_dichoticlistening_instruct_practice.htm")
+/ size = (100%, 80%)
+/ position = (50%, 40%)
+</html>
+
+<trial practiceStart>
+/ stimulusframes = [1 = clearscreen, practiceStart, continueButton]
+/ validresponse = (continueButton)
+/ recorddata = false
+</trial>
+
+<button ba>
+/ caption = "ba"
+/ fontstyle = ("Arial", 3%, false, false, false, false, 5, 1)
+/ size = (10%, 10%)
+/ position = (12.5%, 80%)
+/ erase = false
+</button>
+
+<button da>
+/ caption = "da"
+/ fontstyle = ("Arial", 3%, false, false, false, false, 5, 1)
+/ size = (10%, 10%)
+/ position = (27.5%, 80%)
+/ erase = false
+</button>
+
+<button ga>
+/ caption = "ga"
+/ fontstyle = ("Arial", 3%, false, false, false, false, 5, 1)
+/ size = (10%, 10%)
+/ position = (42.5%, 80%)
+/ erase = false
+</button>
+
+<button ka>
+/ caption = "ka"
+/ fontstyle = ("Arial", 3%, false, false, false, false, 5, 1)
+/ size = (10%, 10%)
+/ position = (57.5%, 80%)
+/ erase = false
+</button>
+
+<button pa>
+/ caption = "pa"
+/ fontstyle = ("Arial", 3%, false, false, false, false, 5, 1)
+/ size = (10%, 10%)
+/ position = (72.5%, 80%)
+/ erase = false
+</button>
+
+<button ta>
+/ caption = "ta"
+/ fontstyle = ("Arial", 3%, false, false, false, false, 5, 1)
+/ size = (10%, 10%)
+/ position = (87.5%, 80%)
+/ erase = false
+</button>
+
+********************************************************************************
+Test
+********************************************************************************
+
+<html testStart>
+/ items = ("blb_dichoticlistening_instruct_test.htm")
+/ size = (100%, 80%)
+/ position = (50%, 40%)
+</html>
+
+<trial testStart>
+/ stimulusframes = [1 = clearscreen, testStart, continueButton]
+/ validresponse = (continueButton)
+/ recorddata = false
+</trial>
+
+********************************************************************************
+Break
+********************************************************************************
+
+<html break>
+/ items = ("blb_dichoticlistening_instruct_break.htm")
+/ position = (50%, 40%)
+/ size = (100%, 80%)
+</html>
+
+<trial break>
+/ skip = [
+	values.testblockCounter == parameters.numberTestBlocks;
+]
+
+/ stimulusframes = [1 = clearscreen, break, continueButton]
+/ validresponse = (continueButton)
+/ recorddata = false
+</trial>
+
+********************************************************************************
+Finish
+********************************************************************************
+
+<text finish>
+/ items = ("Thank you!")
+/ fontstyle = ("Arial", 8%, true, false, false, false, 5, 1)
+/ position = (50%, 50%)
+/ size = (80%, 10%)
+/ vjustify = center
+/ valign = center
+/ halign = center
+</text>
+
+<button exitbutton>
+/ caption = "EXIT"
+/ fontstyle = ("Arial", 3%, false, false, false, false, 5, 1)
+/ position = (50%, 80%)
+/ size = (30%, 8%)
+/ valign = center
+/ halign = center
+</button>
+
+<trial finish>
+/ inputdevice = mouse
+/ stimulusframes = [1 = clearscreen, finish, exitButton]
+/ validresponse = (exitButton)
+/ recorddata = false
+</trial>
+
+**************************************************************************************************************
+				!!!REMAINING CODE: Customize after careful consideration only!!!
+**************************************************************************************************************
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	DEFAULTS
+**************************************************************************************************************
+**************************************************************************************************************
+script requires Inquisit 6.5.2.0 or higher
+
+<defaults>
+/canvasaspectratio = (4,3)
+/minimumversion = "6.5.2.0"
+/ fontstyle = ("Arial", 3%, false, false, false, false, 5, 1)
+/txbgcolor = white
+/ txcolor = black
+/ screencolor = white
+/ inputdevice = mouse
+</defaults>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	DATA
+**************************************************************************************************************
+**************************************************************************************************************
+
+Note: data file explanations under User Manual Information at the top
+
+To change from one data file per participant to one data file for all participants, set
+/separatefiles = false
+
+***********************
+raw data file
+***********************
+<data>
+/ columns = (build, computer.platform, date, time, subject, group, session, 
+blockcode, blocknum, trialcode, trialnum, 
+values.index, values.soundfile, values.leftSound, values.rightSound, values.dualSound,
+response, values.choice, correct, latency)
+</data>
+
+***********************
+summary data file
+***********************
+<summarydata>
+/ columns = (inquisit.version, computer.platform, script.startdate, script.starttime, 
+script.subjectid, script.groupid, script.sessionid, 
+script.elapsedtime, script.completed,
+
+expressions.propCorrect, 
+expressions.propCorrect_mono, expressions.count_mono, 
+expressions.propCorrect_dual, expressions.count_dual, values.count_corrLeft, values.count_corrRight)
+
+</summarydata>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	VALUES: automatically updated
+**************************************************************************************************************
+**************************************************************************************************************
+
+<values>
+/soundfile = ""
+/sounds = ""
+/index = 1
+/leftSound = ""
+/rightSound = ""
+/dualSound = 0
+/choice = ""
+
+/count_corrLeft = 0
+/count_corrRight = 0
+
+/testblockCounter = 0
+</values>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EXPRESSIONS
+**************************************************************************************************************
+**************************************************************************************************************
+
+<expressions>
+/leftSound = substring(values.soundfile, 22, 2) //"blb_dichoticlistening_[b]a-da.mp3" [b] is at index22, ba = 2 characters
+/rightSound = substring(values.soundfile, 25, 2)//"blb_dichoticlistening_ba-[d]a.mp3" [d] is at index25, da = 2 characters
+</expressions>
+
+<expressions>
+
+/propCorrect = list.ACC.mean
+
+/propCorrect_dual = list.ACC_dual.mean
+/count_dual = list.ACC_dual.itemcount
+/propCorrect_mono = list.ACC_mono.mean
+/count_mono = list.ACC_mono.itemcount
+</expressions>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	STIMULI
+**************************************************************************************************************
+**************************************************************************************************************
+
+<text fixation>
+/ items = ("+")
+/ fontstyle = ("Arial",parameters.fixationHeight, false, false, false, false, 5, 1)
+/ position = (50%, 50%)
+/ erase = false
+</text>
+
+<text fixation_eraser>
+/ items = ("+")
+/ fontstyle = ("Arial",parameters.fixationHeight, false, false, false, false, 5, 1)
+/ position = (50%, 50%)
+/ erase = false
+/ txcolor = white
+</text>
+
+<sound soundfile>
+/ items = soundFiles
+/ select = values.index
+/ playthrough = false
+</sound>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	LISTS	
+**************************************************************************************************************
+**************************************************************************************************************
+
+
+*************************************************
+Data Lists: used for descriptive statistics
+store correct latencies/accuracy data
+fill up during runtime
+*************************************************
+
+Note: list stores 1 = correct response; 0 = incorrect response for each relevant trial
+any response coded as an error is automatically coded as 0
+<list ACC>
+</list>
+
+Note: list stores 1 = correct response; 0 = incorrect response for each relevant trial
+any response coded as an error is automatically coded as 0
+<list ACC_mono>
+</list>
+
+Note: list stores 1 = correct response; 0 = incorrect response for each relevant trial
+any response coded as an error is automatically coded as 0
+<list ACC_dual>
+</list>
+
+Note: list stores 1 = correct response; 0 = incorrect response for each relevant trial
+any response coded as an error is automatically coded as 0
+<list dual_left>
+</list>
+
+Note: list stores 1 = correct response; 0 = incorrect response for each relevant trial
+any response coded as an error is automatically coded as 0
+<list dual_right>
+</list>
+
+Note: list stores the latency of correct responses for each relevant trial
+<list RT>
+</list>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	TRIALS 	
+**************************************************************************************************************
+**************************************************************************************************************
+
+<trial practice>
+/ ontrialbegin = [
+	values.index = list.practiceSoundfiles_itemnumbers.nextvalue;
+	values.soundfile = item.soundfiles.item(values.index);
+	values.leftSound = expressions.leftSound;
+	values.rightSound = expressions.rightSound;
+	if (values.leftSound == values.rightSound){
+		values.dualSound = 0;
+	} else {
+		values.dualSound = 1;
+	};
+	trial.practice.insertstimulustime(text.fixation_eraser, parameters.fixationDuration);	
+	trial.practice.insertstimulustime(sound.soundfile, parameters.fixationDuration);
+]
+/ stimulusframes = [1 = clearscreen, fixation, ba, da, ga, ka, pa, ta]
+/ validresponse = (ba, da, ga, ka, pa, ta)
+/ beginresponsetime = parameters.fixationDuration
+/ iscorrectresponse = [
+	return ((values.dualSound == 1 && (trial.practice.response == values.rightSound || trial.practice.response == values.leftSound)) ||
+	(values.dualSound == 0 && trial.practice.response == values.rightSound))
+]
+/ ontrialend = [
+	trial.practice.resetstimulusframes();
+	
+	if (trial.practice.response == values.leftSound){
+		values.choice = "left";
+	} else if (trial.practice.response == values.rightSound){
+		values.choice = "right";
+	} else {
+		values.choice = "other";
+	};	
+]
+</trial>
+
+
+<trial test>
+/ ontrialbegin = [
+	values.index = list.testSoundfiles_itemnumbers.nextindex;
+	values.soundfile = item.soundfiles.item(values.index);
+	values.leftSound = expressions.leftSound;
+	values.rightSound = expressions.rightSound;
+	if (values.leftSound == values.rightSound){
+		values.dualSound = 0;
+	} else {
+		values.dualSound = 1;
+	};
+	trial.test.insertstimulustime(text.fixation_eraser, parameters.fixationDuration);		
+	trial.test.insertstimulustime(sound.soundfile, parameters.fixationDuration);
+]
+/ stimulusframes = [1 = clearscreen, fixation, ba, da, ga, ka, pa, ta]
+/ validresponse = (ba, da, ga, ka, pa, ta)
+/ beginresponsetime = parameters.fixationDuration
+/ iscorrectresponse = [
+	return ((values.dualSound == 1 && (trial.test.response == values.rightSound || trial.test.response == values.leftSound)) ||
+	(values.dualSound == 0 && trial.test.response == values.rightSound))
+]
+/ ontrialend = [
+	trial.test.resetstimulusframes();
+	
+	if (trial.test.response == values.leftSound){
+		values.choice = "left";
+	} else if (trial.test.response == values.rightSound){
+		values.choice = "right";
+	} else {
+		values.choice = "other";
+	};
+		
+	//summary variables:
+	list.ACC.appenditem(trial.test.correct);
+	if (values.dualSound == 1){
+		list.ACC_dual.appenditem(trial.test.correct);
+	} else {
+		list.ACC_mono.appenditem(trial.test.correct);
+	};
+	
+	if (values.dualSound == 1){
+		if (values.choice == "left"){
+			values.count_corrLeft += 1;
+		} else if (values.choice == "right"){
+			values.count_corrRight += 1;
+		};
+	};
+]
+</trial>
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	BLOCKS
+**************************************************************************************************************
+**************************************************************************************************************
+
+<block intro>
+/ trials = [
+	1 = generalIntro;
+	2 = demoIntro;
+	3-8 = demoStart;
+]
+</block>
+
+<block practice>
+/ trials = [
+	1 = practiceStart;
+	2-10 = practice;
+]
+</block>
+
+<block testStart>
+/trials = [
+	1 = testStart;
+]
+</block>
+
+
+<block test>
+/ onblockbegin = [
+	values.testblockCounter += 1;
+]
+/ trials = [
+	1-36 = test;
+	37 = break;
+]
+/ branch = [
+	if (values.testblockCounter < parameters.numberTestBlocks){
+		return block.test;
+	};
+]
+</block>
+
+
+<block finish>
+/ trials = [
+	1 = finish;
+]
+</block>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EXPERIMENT 
+**************************************************************************************************************
+**************************************************************************************************************
+
+<expt a>
+/ blocks = [
+	1 = intro;
+	2 = practice;
+	3 = testStart;
+	4 = test;
+	5 = finish;
+]
+</expt>
+
+**************************************************************************************************************
+												End of File
+**************************************************************************************************************

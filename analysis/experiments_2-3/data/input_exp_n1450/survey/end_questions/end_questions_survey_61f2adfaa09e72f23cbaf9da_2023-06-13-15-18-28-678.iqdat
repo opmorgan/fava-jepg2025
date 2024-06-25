@@ -1,0 +1,2 @@
+date	time	group	subject	session	build	task_experience_response	task_experience_latency	task_experience_other_response	task_experience_other_latency	open_ended_feedback_response	open_ended_feedback_latency
+2023-06-13	11:18:28	3	61f2adfaa09e72f23cbaf9da	1	6.6.1	No	4048		4048	I enjoyed the experiment	13143

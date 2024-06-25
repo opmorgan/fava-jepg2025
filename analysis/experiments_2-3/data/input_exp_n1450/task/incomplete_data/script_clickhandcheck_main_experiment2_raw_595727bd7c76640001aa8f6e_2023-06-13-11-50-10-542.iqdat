@@ -1,0 +1,6 @@
+build	computer.platform	date	time	timestamp	time_elapsed_ms	subject	group	session	blockcode	blocknum	trialcode	trialnum	stimulus_left	stimulus_right	stim_index	target_present	response	correct	latency	headphonecheck_countTestTrials	headphonecheck_index	headphonecheck_testSound	headphonecheck_correctResponse	stereocheck_countTestTrials	stereocheck_index	stereocheck_testSound	stereocheck_correctResponse	DL_index	DL_soundfile	DL_leftSound	DL_rightSound	DL_dualSound	DL_choice
+6.6.1	mac	2023-06-13	06:50:10	0	0	595727bd7c76640001aa8f6e	2	1	headphonecheck_calibration	4	headphonecheck_calibrationIntro	1			0		calibrationButton	0	3341	0	0			0	0			1				0	
+6.6.1	mac	2023-06-13	06:50:10	0	0	595727bd7c76640001aa8f6e	2	1	headphonecheck_testphase	5	test_collectResponse	3			0		first	0	10645	1	2	antiphase_hc_ios.wav	3	0	0			1				0	
+6.6.1	mac	2023-06-13	06:50:10	0	0	595727bd7c76640001aa8f6e	2	1	headphonecheck_testphase	5	test_collectResponse	6			0		second	1	181334	2	5	antiphase_hc_osi.wav	2	0	0			1				0	
+6.6.1	mac	2023-06-13	06:50:10	0	0	595727bd7c76640001aa8f6e	2	1	headphonecheck_testphase	5	test_collectResponse	9			0		second	0	30608	3	4	antiphase_hc_sio.wav	1	0	0			1				0	
+6.6.1	mac	2023-06-13	06:50:10	0	0	595727bd7c76640001aa8f6e	2	1	headphonecheck_testphase	5	test_collectResponse	12			0		Ctrl+'Q'	1	11972	4	3	antiphase_hc_soi.wav	1	0	0			1				0	

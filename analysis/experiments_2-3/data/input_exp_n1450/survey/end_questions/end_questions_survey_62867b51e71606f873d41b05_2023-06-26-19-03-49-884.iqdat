@@ -1,0 +1,2 @@
+date	time	group	subject	session	build	task_experience_response	task_experience_latency	task_experience_other_response	task_experience_other_latency	open_ended_feedback_response	open_ended_feedback_latency
+2023-06-26	15:03:49	3	62867b51e71606f873d41b05	1	6.6.1	No	4885		4885	The software locked up my computer for a couple of minutes at the end when it said we have a few more questions press space to continue. I'm not sure what happened there. You may need to look into it or have a message saying to be patient or something.	104056

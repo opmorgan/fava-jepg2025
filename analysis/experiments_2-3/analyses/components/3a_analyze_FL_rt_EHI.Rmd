@@ -1,0 +1,344 @@
+```{r}
+## Setup
+aah_correct_sub <- aah_correct |> filter(handedness == handedness_subgroup)
+aah_for_rt_model_sub <- aah_for_rt_model |> filter(handedness == handedness_subgroup)
+```
+
+#### Reaction time
+
+##### Plots
+
+```{r plot_cat_model}
+## Plot "the figure"
+
+## Start over, with numeric y axis
+## Add a line with CI from the model
+fig_path_var <- here(fig_dir, "rt_1_lmer.png")
+fig_path_var_wide <- here(fig_dir, "rt_1_lmer_wide.png")
+
+
+model_cache_dir <- here("manual_cache", "exp_n999", "RH")
+
+
+## Make a linear model using data from every trial.
+## Fixed effects: field, level (and their interaction)
+## Random effects: subject.
+## rt ~ field + level + field:level + (1 | subject)
+rt_model <- lmer(rt ~ field:level + field + level + (1 | subject), data = aah_for_rt_model_sub)
+
+if (use_cached_model_rt == FALSE) {
+  ## Create emmeans model object, and manually cache it.
+  rt_emm <- emmeans(rt_model, ~ field * level)
+  
+  ## Manually cache model
+  saveRDS(rt_emm, here(manual_cache_dir, subgroup_label, "rt_emm.rds"))
+  
+} else if (use_cached_model_rt == TRUE) {
+  ## Load cached model
+  rt_emm <- readRDS(here(manual_cache_dir, subgroup_label, "rt_emm.rds"))
+}
+
+# rt_emm <- readRDS(here(model_cache_dir, "rt_emm.rds"))
+
+
+## Get estimates for right and left handers.
+emm_data_2 <- rt_emm |>
+  contrast("pairwise", by = c("level")) |>
+  summary(infer = T, level = .95) |>
+  as_tibble() |>
+  ## Fix units (so that a positive number means RT advantage, not higher RT)
+  mutate(
+    estimate = estimate * -1,
+    upper.CL = asymp.UCL * -1,
+    lower.CL = asymp.LCL * -1
+  )
+
+
+plot_data <- emm_data_2 |> mutate(dv = estimate)
+
+g <- gg_rt_2_lmer_onegroup(
+  title = "Hemifield bias by level (EHI cut at +/-40)",
+  plot_data,
+  handedness_labeller = NULL,
+  plot_colors = plot_colors,
+  direction_labels = list(up = "LVF bias",
+                          down = "RVF bias"),
+  direction_labels_pos = list(up = 38,
+                              down = -38),
+  ylims = list(upper = 40,
+               lower = -40),
+  ybreaks = list(major = 10,
+                 minor = 5),
+  n_subjects = list(
+    right = 324,
+    left = 0
+  )
+)
+
+ggsave(fig_path_var, g, "png", height = 3, width = 4)
+
+include_graphics(fig_path_var)
+```
+
+```{r}
+fig_path_var <- here(fig_dir, "rt_2_horizontal.png")
+
+if (use_cached_rtfigs == FALSE) {
+  rt_subject_plot <- rt_subject |>
+    filter(handedness %in% c("Left", "Right"))
+  
+    g <- gg_rt_2_horizontal(title = "Hemifield bias for global and local targets, by handedness (EHI cut at +/-40)",
+                          rt_subject_plot,
+                          handedness_labeller = NULL,
+                          plot_colors = plot_colors
+    )
+    
+  ggsave(fig_path_var, g, "png", height = 4, width = 8)
+}
+
+include_graphics(fig_path_var)
+```
+
+```{r plot_rt_4_horizontal}
+fig_path_var <- here(fig_dir, "rt_4_horizontal.png")
+
+if (use_cached_rtfigs == F) {
+  rt_subject_plot <- rt_subject |>
+    filter(handedness %in% c("Left", "Right"))
+  
+    g <- gg_rt_4_horizontal(title = "Reaction time by level, field, and handedness (EHI cut at +/-40)",
+                          rt_subject_plot,
+                          handedness_labeller = NULL,
+                          plot_colors = plot_colors
+    )
+    
+  ggsave(fig_path_var, g, "png", height = 4, width = 8)
+}
+
+include_graphics(fig_path_var)
+```
+
+##### Statistics
+
+Reaction time is modeled as a linear effect of field and level, using data from every target-present trial with a "go" response:
+<br>
+<br>
+`lmer( rt ~ field + level + field:level + (1 | subject) )`
+<br>
+<br>
+
+
+
+
+
+```{r}
+## Make a linear model using data from every trial.
+## Fixed effects: field, level (and their interaction)
+## Random effects: subject.
+## rt ~ field + level + field:level + (1 | subject)
+rt_model <- lmer(rt ~ field:level + field + level + (1 | subject), data = aah_for_rt_model_sub)
+
+if (use_cached_model_rt == FALSE) {
+  ## Create emmeans model object, and manually cache it.
+  rt_emm <- emmeans(rt_model, ~ field * level)
+  
+  ## Manually cache model
+  saveRDS(rt_emm, here(manual_cache_dir, subgroup_label, "rt_emm.rds"))
+  
+} else if (use_cached_model_rt == TRUE) {
+  ## Load cached model
+  rt_emm <- readRDS(here(manual_cache_dir, subgroup_label, "rt_emm.rds"))
+}
+```
+
+<!-- Test for field x level interaction, using the anova() function: is the interaction model's fit significantly different from the no-interaction model's fit? -->
+<br>
+```{r}
+## Use anova() on competing models to test 2-way interaction.
+interaction_stats <-
+  function(model_with_interaction,
+           model_with_no_interaction) {
+    return(anova(model_with_interaction, model_with_no_interaction))
+  }
+
+rt_model_no_interaction <- update(rt_model, . ~ . - field:level)
+interaction_anova <- interaction_stats(rt_model, rt_model_no_interaction)
+interaction_anova |>
+  as_tibble() |>
+  rename(p.value = `Pr(>Chisq)`) |> 
+  format_p.value()
+  # pretty_table() |> 
+  # tab_header(title = "Field by level interaction (RT)", 
+  #            subtitle = "ANOVA: compare models with vs. without interaction term") 
+```
+<br>
+```{r}
+## Use aov to test 2-way interaction with a traditional F-test.
+rt_aov <- aov(rt ~ field + level + field:level, data = aah_for_rt_model_sub)
+rt_aov_summary <- summary(rt_aov)
+rt_aov_summary |> (\(.) .[[1]])() |> tidy() |>
+  format_p.value()
+  # pretty_table() |>
+  # tab_header(title = "Field by level interaction (RT)",
+  #            subtitle = "Omnibus F-test")
+```
+<br>
+<!-- Test for field x level interaction, using emmeans() - is the model's interaction effect estimate significantly different from zero? -->
+```{r}
+## Use emmeans() to test 2-way interaction.
+rt_interaction_emm <- rt_emm |> 
+  contrast(interaction = c("consec")) |>
+  summary(infer = T)
+#rt_interaction_emm
+
+rt_interaction_emm |>
+  as_tibble() |>
+  format_p.value() |> 
+  pretty_table() |>
+  tab_header(title = "Field by level interaction (RT)",
+             subtitle = "Compare effect estimate to zero with emmeans()") |>
+  tab_footnote(footnote = "A positive number means global bias is stronger in LVF (as predicted for right handers)",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Two-sided",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+<br>
+```{r}
+## Field bias by level
+rt_field_bias <- rt_emm |> 
+  contrast("revpairwise", by = c("level")) |> 
+  summary(infer = T, adjust = "none") |> 
+  as_tibble()
+
+rt_field_bias |>
+  format_p.value() |> 
+  pretty_table() |>
+  tab_header(title = "Hemifield (RVF>LVF) bias by level (RT)") |>
+  tab_footnote(footnote = "A positive number means RVF bias (faster RT for RVF than LVF)",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+<br>
+```{r}
+rt_field_bias_emm <- rt_emm |>
+  contrast("revpairwise") |>
+  summary(infer = T, adjust = "none", rows = c(3, 4))
+#rt_field_bias_emm
+
+rt_field_bias <- rt_field_bias_emm |>  
+  as_tibble() |> 
+  filter(contrast %in%
+           c("LVF Local - LVF Global", "RVF Local - RVF Global")) |> 
+  arrange(contrast)
+
+rt_field_bias |>
+  format_p.value() |> 
+  pretty_table() |>
+  tab_header(title = "Global bias by field (RT)") |>
+  tab_footnote(footnote = "A positive number means global bias (faster RT for global)",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+<br>
+
+```{r}
+rt_modelled <- summary(rt_emm, type = "response")
+rt_modelled |>
+  as_tibble() |>
+  arrange(desc(field)) |> 
+  pretty_table() |>
+  tab_header(title = "RT estimates by field and level (from model)") |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+<br>
+```{r}
+rt_descriptive <- aah_correct_sub |>
+  group_by(field, level) |>
+  summarize(
+    median = median(rt),
+    mean = mean(rt),
+    SE = sd(rt) / sqrt(length((rt)))
+  )
+
+rt_descriptive |> 
+  pretty_table() |>
+  tab_header(title = "RT estimates by field and level (descriptive)")
+```
+<br>
+
+```{r}
+## Check model assumptions (normality of residuals)
+# rt_model <- lmer(rt ~ field:level + field + level + (1 | subject), data = aah_for_rt_model_sub)
+
+## (1) check for normality of residuals
+## qqplots, plot residuals.
+## Visualize RT distribution, and residuals
+dist_plot <- ggplot(data = aah_for_rt_model_sub, aes(x = rt)) +
+  geom_bar(width = 1)
+dist_plot |> gg_style()
+
+resid <- plot (rt_model)
+resid
+
+## Visualize log-transformed RTs
+# dist_plot <- ggplot(data = aah_for_rt_model_sub, aes(x = log(rt))) +
+#   geom_bar(width = .2)
+# dist_plot
+
+## Then, if needed, transform RTs (Box-cox)
+## Log transform?
+## Not needed -- the residuals look pretty normal.
+
+
+# rt_emm <- emmeans(rt_model, ~ field * level)
+# 
+# ## Use emmeans() to test 2-way interaction.
+# rt_emm |> 
+#   contrast(interaction = c("consec")) |>
+#   summary(infer = T) |>
+#   as_tibble() |>
+#   format_p.value()
+# 
+# ## Field bias by level
+#  rt_emm |> 
+#   contrast("revpairwise", by = c("level")) |> 
+#   summary(infer = T, adjust = "none") |> 
+#   as_tibble() |>
+#   format_p.value()
+ 
+## Try a more maximal random effects structure
+rt_model_plus <- lmer(rt ~ field:level + field + level + (1 | subject) + (1 | target), data = aah_for_rt_model_sub)
+
+rt_emm_plus <- emmeans(rt_model_plus, ~ field * level)
+
+## Use emmeans() to test 2-way interaction.
+rt_emm_plus |> 
+  contrast(interaction = c("consec")) |>
+  summary(infer = T) |>
+  as_tibble() |>
+  format_p.value()
+
+## Field bias by level
+ rt_emm_plus |> 
+  contrast("revpairwise", by = c("level")) |> 
+  summary(infer = T, adjust = "none") |> 
+  as_tibble() |>
+  format_p.value()
+```
