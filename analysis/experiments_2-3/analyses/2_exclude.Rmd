@@ -1047,7 +1047,9 @@ Any demographics differences between handedness groups?
 
 <br>
 ```{r}
-lm(data = aah_summary_navon, formula = age ~ handedness) |> 
+aah_summary_navon_rl <- aah_summary_navon |> filter(handedness %in% c("Right", "Left"))
+
+lm(data = aah_summary_navon_rl, formula = age ~ handedness) |> 
   emmeans(~ handedness) |> 
   contrast("pairwise") |> 
   summary(infer = T, adj = "none") |>
@@ -1057,7 +1059,7 @@ lm(data = aah_summary_navon, formula = age ~ handedness) |>
 ```
 <br>
 ```{r}
-lm(data = aah_summary_navon, formula = education ~ handedness) |> 
+lm(data = aah_summary_navon_rl, formula = education ~ handedness) |> 
   emmeans(~ handedness) |> 
   contrast("pairwise") |> 
   summary(infer = T, adj = "none") |>
@@ -1067,7 +1069,7 @@ lm(data = aah_summary_navon, formula = education ~ handedness) |>
 ```
 <br>
 ```{r}
-sex_data <- aah_summary_navon |> filter(sex %in% c("Male", "Female")) |> 
+sex_data <- aah_summary_navon_rl |> filter(sex %in% c("Male", "Female")) |> 
   mutate(sex = as.factor(sex))
 
 glm(data = sex_data,
@@ -1086,7 +1088,9 @@ glm(data = sex_data,
 #### Navon + Dichotic (Exp 3) 
 <br>
 ```{r}
-lm(data = aah_summary, formula = age ~ handedness) |> 
+aah_summary_rl <- aah_summary |> filter(handedness %in% c("Right", "Left"))
+
+lm(data = aah_summary_rl, formula = age ~ handedness) |> 
   emmeans(~ handedness) |> 
   contrast("pairwise") |> 
   summary(infer = T, adj = "none") |>
@@ -1095,7 +1099,7 @@ lm(data = aah_summary, formula = age ~ handedness) |>
 ```
 <br>
 ```{r}
-lm(data = aah_summary, formula = education ~ handedness) |> 
+lm(data = aah_summary_rl, formula = education ~ handedness) |> 
   emmeans(~ handedness) |> 
   contrast("pairwise") |> 
   summary(infer = T, adj = "none") |>
@@ -1104,7 +1108,7 @@ lm(data = aah_summary, formula = education ~ handedness) |>
 ```
 <br>
 ```{r}
-sex_data <- aah_summary |> filter(sex %in% c("Male", "Female")) |> 
+sex_data <- aah_summary_rl |> filter(sex %in% c("Male", "Female")) |> 
   mutate(sex = as.factor(sex))
 
 glm(data = sex_data,
