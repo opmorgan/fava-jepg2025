@@ -37,11 +37,13 @@ library(here)
 library(tidyverse)
 library(cli) # For printing error messages
 library(knitr) # for printing figures
+library(emmeans)
 
 library(gt)
 
 source(here::here("lib", "util.R"))
 source(here::here("lib", "demographics.R"))
+source(here::here("lib", "plots-jepg.R"))
 
 EXPERIMENT_DIR <- "experiments_2-3"
 source(here::here(EXPERIMENT_DIR, "lib", "load_process", "load_process.R"))
@@ -132,9 +134,9 @@ aah_summary_all <- aah_summary_all |>
 
 ```
 
-## {.tabset}
+# {.tabset}
 
-### Recruitment & Exclusions {.tabset .tabset-pills}
+## Recruitment & Exclusions {.tabset .tabset-pills}
 
 ```{r make_exclusions}
 ## Calculate any exclusions not based on Navon task data.
@@ -336,10 +338,10 @@ aah_summary_dl <- aah_summary_all |> filter(exclude_dl == 0)
 ```
 
 
-#### Everyone
+### Everyone
 <br>
 
-##### Exclusions: Any reason
+#### Exclusions: Any reason
 <br>
 ```{r describe_exclusions_1}
 n_all <- aah_summary_all$subject |> unique() |> length()
@@ -410,7 +412,7 @@ exclusion_tbl |> pretty_table()
 ```
 <br>
 
-##### Exclusions: Navon
+#### Exclusions: Navon
 <br>
 ```{r}
 n_all <- aah_summary_all$subject |> unique() |> length()
@@ -476,7 +478,7 @@ exclusion_tbl |> pretty_table()
 <br>
 
 
-##### Exclusions: Dichotic Listening
+#### Exclusions: Dichotic Listening
 <br>
 ```{r}
 n_all <- aah_summary_all$subject |> unique() |> length()
@@ -553,7 +555,7 @@ aah_summary_all |> group_by(stereocheck_nCorrect) |>
 ```
 <br>
 
-#### By handedness group
+### By handedness group
 
 All recruits before exclusions.
 ```{r demo_allrecruits_grouped}
@@ -805,10 +807,10 @@ exclusion_tbl |> pretty_table()
 
 
 
-### Demographics (Keepers) {.tabset .tabset-pills}
+## Demographics (Keepers) {.tabset .tabset-pills}
 
 
-#### Navon + DL
+### Navon + DL
 
 <br>
 Demographics for included participants, by handedness group (EHI bins). 
@@ -885,7 +887,7 @@ demo_ethnicity_table(aah_summary) |>
 ```
 <br>
 
-#### Navon
+### Navon
 
 <br>
 Demographics for included participants, by handedness group (EHI bins). 
@@ -962,7 +964,7 @@ demo_ethnicity_table(aah_summary_navon) |>
 ```
 <br>
 
-#### Dichotic Listening
+### Dichotic Listening
 
 <br>
 Demographics for included participants, by handedness group (EHI bins). 
@@ -1037,14 +1039,51 @@ demo_ethnicity_table(aah_summary_dl) |>
 ```
 <br>
 
-#### Group differences?
-
-#*********************
-#TODO Add tab for group difference, in the experiment 2 sample (vs. Exp 3 sample, which is below)
-#*********************
+### Group differences?
 
 Any demographics differences between handedness groups?
 
+#### Navon (Exp 2)
+
+<br>
+```{r}
+lm(data = aah_summary_navon, formula = age ~ handedness) |> 
+  emmeans(~ handedness) |> 
+  contrast("pairwise") |> 
+  summary(infer = T, adj = "none") |>
+  as_tibble() |> 
+  format_p.value() |> 
+  pretty_table("Age (years)")
+```
+<br>
+```{r}
+lm(data = aah_summary_navon, formula = education ~ handedness) |> 
+  emmeans(~ handedness) |> 
+  contrast("pairwise") |> 
+  summary(infer = T, adj = "none") |>
+  as_tibble() |> 
+  format_p.value() |> 
+  pretty_table("Education (years)")
+```
+<br>
+```{r}
+sex_data <- aah_summary_navon |> filter(sex %in% c("Male", "Female")) |> 
+  mutate(sex = as.factor(sex))
+
+glm(data = sex_data,
+    formula = sex ~ handedness,
+    family = "binomial") |> 
+  emmeans(~ handedness) |>
+  contrast("pairwise") |>
+  summary(infer = T, adj = "none", type = "response") |>
+  as_tibble() |>
+  format_p.value() |> 
+  pretty_table("Sex") |> 
+  tab_footnote(footnote = "Odds (female / male)",
+               locations = cells_column_labels(columns = "odds.ratio"))
+```
+
+#### Navon + Dichotic (Exp 3) 
 <br>
 ```{r}
 lm(data = aah_summary, formula = age ~ handedness) |> 
