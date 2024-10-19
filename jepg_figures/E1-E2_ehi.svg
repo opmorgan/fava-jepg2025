@@ -8,7 +8,7 @@
    height="608.55121"
    viewBox="0 0 500.21201 608.55121"
    sodipodi:docname="E1-E2_ehi.svg"
-   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
    inkscape:export-filename="E1-E2_ehi.jpg"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300"
@@ -63,6 +63,18 @@
          x="37.893997"
          y="-1.1538768e-08" />
     </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2">
+      <rect
+         style="opacity:0;fill:#ff6600;stroke-width:0.99543"
+         id="rect2"
+         width="499.49084"
+         height="226.15836"
+         x="38.587734"
+         y="451.4798"
+         inkscape:label="mask" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="namedview1"
@@ -74,15 +86,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="0.76720824"
-     inkscape:cx="203.33462"
-     inkscape:cy="286.75396"
-     inkscape:window-width="815"
-     inkscape:window-height="734"
-     inkscape:window-x="1280"
-     inkscape:window-y="286"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="g1" />
+     inkscape:zoom="0.76979711"
+     inkscape:cx="146.79192"
+     inkscape:cy="288.38768"
+     inkscape:window-width="1392"
+     inkscape:window-height="777"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g13" />
   <g
      inkscape:groupmode="layer"
      inkscape:label="Image"
@@ -111,7 +123,8 @@
            sodipodi:role="line"
            id="tspan4"
            x="287.85999"
-           y="29.58">Handedness distribution</tspan></text>
+           y="29.58"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">Handedness distribution</tspan></text>
       <g
          id="g12"
          inkscape:label="Figures"
@@ -134,20 +147,49 @@
           <text
              xml:space="preserve"
              style="font-size:16px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:1"
-             x="159.63199"
+             x="156.30806"
              y="79.888496"
              id="text9"
              inkscape:label="E1 exp label"><tspan
                sodipodi:role="line"
                id="tspan9"
-               x="159.63199"
+               x="156.30806"
                y="79.888496"
-               style="font-style:italic;font-size:16px">Experiment 1</tspan></text>
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:'Arial Italic'">Experiment 1</tspan></text>
         </g>
         <g
            id="g11"
            inkscape:label="E2 with exp label"
            transform="translate(-2.4999997e-7,-89.264265)">
+          <text
+             xml:space="preserve"
+             style="font-size:16px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:1"
+             x="156.30806"
+             y="446.43427"
+             id="text9-3"
+             inkscape:label="E2 exp label"><tspan
+               sodipodi:role="line"
+               id="tspan9-6"
+               x="156.30806"
+               y="446.43427"
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:'Arial Italic'">Experiment 2</tspan><tspan
+               sodipodi:role="line"
+               x="156.30806"
+               y="466.5806"
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+               id="tspan10" /></text>
+          <text
+             xml:space="preserve"
+             style="font-size:16px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:1"
+             x="300.85291"
+             y="691.33362"
+             id="text9-3-2"
+             inkscape:label="x axis label"><tspan
+               sodipodi:role="line"
+               x="300.85291"
+               y="691.33362"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:Arial;-inkscape-font-specification:Arial"
+               id="tspan10-8">Laterality score from 4-item Veale Edinburgh Handedness Inventory (EHI)</tspan></text>
           <image
              width="576"
              height="288"
@@ -158,24 +200,8 @@
              y="418"
              style="fill:#000000"
              inkscape:label="E2"
-             clip-path="url(#clipPath6)" />
-          <text
-             xml:space="preserve"
-             style="font-size:16px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:1"
-             x="159.63199"
-             y="446.43427"
-             id="text9-3"
-             inkscape:label="E2 exp label"><tspan
-               sodipodi:role="line"
-               id="tspan9-6"
-               x="159.63199"
-               y="446.43427"
-               style="font-style:italic;font-size:16px">Experiment 2</tspan><tspan
-               sodipodi:role="line"
-               x="159.63199"
-               y="466.43427"
-               style="font-style:italic;font-size:16px"
-               id="tspan10" /></text>
+             clip-path="url(#clipPath2)"
+             transform="translate(2.4999997e-7)" />
         </g>
       </g>
     </g>
