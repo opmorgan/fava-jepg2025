@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-59f78f90a764fc000135f6e6	37	US	Female	18	Multiple	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+59f78f90a764fc000135f6e6	37	US	Female	18	Multiple	No	4

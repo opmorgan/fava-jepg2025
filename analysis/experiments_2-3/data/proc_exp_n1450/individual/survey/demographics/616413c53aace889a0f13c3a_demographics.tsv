@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-616413c53aace889a0f13c3a	21	UK	Female	16	White	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+616413c53aace889a0f13c3a	21	UK	Female	16	White	No	2

@@ -314,10 +314,5 @@ data_tests <- function(data_cleaned, data_type) {
     return()
   } else
     return()
-  
-  #### TODO: Test for demographics
-  
-  #### TODO: Tests for EHI
-  
-  #### TODO: Tests for end questions
+
 }

@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-57c4761195a3ea00016e5992	26	UK	Female	18	Asian	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+57c4761195a3ea00016e5992	26	UK	Female	18	Asian	No	2

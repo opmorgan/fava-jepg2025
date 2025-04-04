@@ -38,12 +38,12 @@ if (reprocess_all == T) {
 } else if (reprocess_all == F) {
   reprocess_task_data <- FALSE
   reprocess_ehi_data <- FALSE
-  reprocess_demographics_data <- FALSE
+  reprocess_demographics_data <- TRUE
   reprocess_end_data <- FALSE
   
   resummarize_task_data <- FALSE
   resummarize_ehi_data <- FALSE
-  resummarize_demographics_data <- FALSE
+  resummarize_demographics_data <- TRUE
   resummarize_end_data <- FALSE
   
   recombine_task_data <- FALSE

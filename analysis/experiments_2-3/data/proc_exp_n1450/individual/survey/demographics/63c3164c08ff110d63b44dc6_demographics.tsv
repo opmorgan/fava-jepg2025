@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-63c3164c08ff110d63b44dc6	57	US	Male	18	Black or African American	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+63c3164c08ff110d63b44dc6	57	US	Male	18	Black or African American	No	1

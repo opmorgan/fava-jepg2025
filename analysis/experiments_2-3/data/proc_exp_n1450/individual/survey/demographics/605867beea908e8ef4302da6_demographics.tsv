@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-605867beea908e8ef4302da6	20	UK	Female	18	Black or African American	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+605867beea908e8ef4302da6	20	UK	Female	18	Black or African American	No	1

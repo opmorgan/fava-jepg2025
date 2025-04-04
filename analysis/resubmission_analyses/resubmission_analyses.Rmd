@@ -100,7 +100,6 @@ manual_cache_dir <- set_or_make_dir(label = "manual cache",
  here::here(EXPERIMENT_DIR, "manual_cache")
 )
 
-# use_cached_figs <- T
 use_cached_models <- F
 use_cached_proc_data <- F
 ```
@@ -124,8 +123,6 @@ aah_summary_all <- bind_rows(aah_summary_all_e1, aah_summary_all_e2)
 ```
 
 ```{r prepare_data}
-# TODO: remove any code from this block that isn't used
-# use_cached_proc_data <- FALSE
 #### PREPARE SUMMARY DATA FOR DEMOGRAPHICS ANALYSES (NAVON EXCLUSIONS)
 if (use_cached_proc_data == FALSE) {
   cli::cli_alert_info("Filtering summary data for analysis (no excluded subjects).")
@@ -196,46 +193,9 @@ aah_for_rt_model <- aah_correct |>
 } else {
   aah_for_rt_model <- readRDS(here(manual_cache_dir, "aah_for_rt__model.rds"))
 }
-
-## For accuracy analyses, prepare dataset will all present trials.
-## Relevel field and level,
-## so that emmeans will show a positive number for LVF global bias.
-if (use_cached_proc_data == FALSE) {
-aah_for_acc_model <- aah |>
-  mutate(level = level |> factor(levels = c("Global", "Local")),
-         field = field |> factor(levels = c("RVF", "LVF")))
-  saveRDS(aah_for_acc_model, here(manual_cache_dir, "aah_for_acc__model.rds"))
-} else {
-  aah_for_acc_model <- readRDS(here(manual_cache_dir, "aah_for_acc__model.rds"))
-}
-
-#### PREPARE SUBJECT_LEVEL DATA FOR RT, ACCURACY ANALYSES
-## Prepare subject-level data (RT)
-if (use_cached_proc_data == FALSE) {
-rt_subject <- aah_correct |> group_by(subject, field, level, handedness, experiment) |>
-  summarize(rt = median(rt))
-  saveRDS(rt_subject, here(manual_cache_dir, "rt_subject.rds"))
-} else {
-  rt_subject <- readRDS(here(manual_cache_dir, "rt_subject.rds"))
-}
-
-
-## Prepare subject-level LVF Global bias summary (RT)
-if (use_cached_proc_data == FALSE) {
-rt_1 <- rt_subject |>
-  pivot_wider(names_from = c(field, level),
-              values_from = rt) |>
-  mutate(LVF_Global_Bias = (RVF_Global - RVF_Local) - (LVF_Global - LVF_Local)) |>
-  mutate(all_one_group = "all_one_group")
-  saveRDS(rt_1, here(manual_cache_dir, "rt_1.rds"))
-} else {
-  rt_1 <- readRDS(here(manual_cache_dir, "rt_1.rds"))
-}
 ```
 
 ## Summary
-
-<!-- *All p-values two-sided.* -->
 
 Is there a significant effect of response hand congruence on RT?
 Response hand congruency facilitated reaction times in Experiment 1 (10.28ms faster for congruent trials, 95/% CI [7.53, 13.03], p < .0001, two-sided), Experiment 2 (9.83ms, 95/% CI [7.33, 12.32], p > .0001, two-sided), and Experiment 1 and 2 combined (10.03ms, 95/% CI [8.18, 11.88], p < .0001, two-sided).
@@ -811,7 +771,26 @@ rt_interaction_emm |>
 ```
 
 ## Model task order
+```{r}
+## Prepare variable: task order
+aah_for_rt_model |> filter(experiment == "two") |> View()
 
+aah_for_rt_model <- aah_for_rt_model |> 
+  ## Create variable: response hand
+  mutate(response_hand = 
+           case_when(
+             block_response == "slash" ~ "right",
+             block_response == "z" ~ "left"
+           )) |> 
+  ## Create variable: response hand congruence
+    mutate(response_hand_congruence = 
+           case_when(
+             (response_hand == "right" & field == "RVF")  ~ "congruent",
+             (response_hand == "right" & field == "LVF")  ~ "incongruent",
+             (response_hand == "left" & field == "LVF")  ~ "congruent",
+             (response_hand == "left" & field == "RVF")  ~ "incongruent",
+           ))
+```
 ### Exp 1
 
 #### Demographics

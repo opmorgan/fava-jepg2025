@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-61119018babf810c0cab7d3b	26	US	Not listed: non binary	14	White	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+61119018babf810c0cab7d3b	26	US	Not listed: non binary	14	White	No	4

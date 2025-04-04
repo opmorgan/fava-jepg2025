@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-64401360c45f52531fde4aa6	20	US	Male	12	Native Hawaiian or Other Pacific Islander	Yes
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+64401360c45f52531fde4aa6	20	US	Male	12	Native Hawaiian or Other Pacific Islander	Yes	4

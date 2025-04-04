@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-5e2ef88b30c15c000bbfae06	24	US	Female	21	White	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+5e2ef88b30c15c000bbfae06	24	US	Female	21	White	No	3

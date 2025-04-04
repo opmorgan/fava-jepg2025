@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-5ddd7db419eecbce5c2dbc6f	34	US	Female	14	Black or African American	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+5ddd7db419eecbce5c2dbc6f	34	US	Female	14	Black or African American	No	1

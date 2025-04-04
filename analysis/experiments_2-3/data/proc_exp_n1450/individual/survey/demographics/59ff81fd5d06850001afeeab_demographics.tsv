@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-59ff81fd5d06850001afeeab	28	US	Male	12	Black or African American	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+59ff81fd5d06850001afeeab	28	US	Male	12	Black or African American	No	1

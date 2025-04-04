@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-5d206e075278fa001848134d	22	US	Male	12	White	Yes
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+5d206e075278fa001848134d	22	US	Male	12	White	Yes	2

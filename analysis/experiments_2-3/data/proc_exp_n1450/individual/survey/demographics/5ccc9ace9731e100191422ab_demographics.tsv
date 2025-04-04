@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-5ccc9ace9731e100191422ab	23	UK	Male	16	Black or African American	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+5ccc9ace9731e100191422ab	23	UK	Male	16	Black or African American	No	4

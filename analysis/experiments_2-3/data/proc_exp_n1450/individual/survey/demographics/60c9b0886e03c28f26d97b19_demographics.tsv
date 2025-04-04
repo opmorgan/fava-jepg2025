@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-60c9b0886e03c28f26d97b19	37	UK	Female	18	White	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+60c9b0886e03c28f26d97b19	37	UK	Female	18	White	No	4

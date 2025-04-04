@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-55b42b7cfdf99b5244217cf4	36	US	Female	18	American Indian or Alaska Native	Yes
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+55b42b7cfdf99b5244217cf4	36	US	Female	18	American Indian or Alaska Native	Yes	4

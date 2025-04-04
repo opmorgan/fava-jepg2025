@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-6151e572a07b1d5e164bab2c	25	US	Male	16	Other	Yes
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+6151e572a07b1d5e164bab2c	25	US	Male	16	Other	Yes	4

@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-63d7eca29f0291aff53b003e	39	US	Female	12	Multiple	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+63d7eca29f0291aff53b003e	39	US	Female	12	Multiple	No	2

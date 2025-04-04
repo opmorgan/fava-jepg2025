@@ -304,7 +304,7 @@ recode_raw <- function(data_raw, data_type) {
   } else if (data_type == "demographics") {
     data_proc <- data_raw |>
       ## remove all latency measures, and trim columns
-      select(-ends_with("latency"),-date,-time,-group,-session,-build) |>
+      select(-ends_with("latency"),-date,-time,-session,-build) |>
       ## remove "response" suffix
       rename_with(trim_end, ends_with("response"))
     
@@ -335,7 +335,7 @@ recode_raw <- function(data_raw, data_type) {
     data_proc <- data_proc |>
       select(-starts_with("race")) |>
       mutate(race = race_recoded) |>
-      select(subject, age, country, sex, education, race, ethnicity) |>
+      select(subject, age, country, sex, education, race, ethnicity, group) |>
       rename(hispanic_ethnicity = ethnicity) |>
       mutate(race = case_when(
         race == "Some other race (please describe)" ~ "Other",
@@ -599,7 +599,8 @@ load_and_summarize_proc <-
         sex = as.character(),
         education = as.character(),
         race = as.character(),
-        hispanic_ethnicity = as.character()
+        hispanic_ethnicity = as.character(),
+        group = as.character()
       )
     } else if (data_type == "end") {
       group_summary <- tibble(
@@ -746,7 +747,8 @@ load_proc <- function(input_path, data_type) {
             sex = col_character(),
             education = col_character(),
             race = col_character(),
-            hispanic_ethnicity = col_character()
+            hispanic_ethnicity = col_character(),
+            group = col_character()
           )
       )
     } else if (data_type == "end") {
@@ -1097,7 +1099,8 @@ load_and_combine_proc <-
         sex = as.character(),
         education = as.character(),
         race = as.character(),
-        hispanic_ethnicity = as.character()
+        hispanic_ethnicity = as.character(),
+        group = as.character()
       )
     } else if (data_type == "end") {
       group_proc <- tibble(
@@ -1186,6 +1189,7 @@ load_summary <- function(proc_dir) {
       education = col_double(),
       race = col_character(),
       hispanic_ethnicity = col_character(),
+      group = col_character(),
       task_experience_response = col_character(),
       task_experience_other_response = col_character(),
       open_ended_feedback_response = col_character()
@@ -1306,6 +1310,7 @@ load_aah_long <- function(proc_dir) {
       education = col_double(),
       race = col_character(),
       hispanic_ethnicity = col_character(),
+      group = col_character(),
       rt_overall = col_double(),
       duration_s = col_double(),
       task_experience_response = col_character(),
@@ -1369,6 +1374,7 @@ load_aah_summary <- function(proc_dir) {
       education = col_double(),
       race = col_character(),
       hispanic_ethnicity = col_character(),
+      group = col_character(),
       rt_overall = col_double(),
       duration_s = col_double(),
       task_experience_response = col_character(),

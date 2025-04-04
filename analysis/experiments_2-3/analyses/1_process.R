@@ -45,19 +45,19 @@ if (reprocess_all == T) {
   reprocess_navon_data <- F
   reprocess_dichotic_data <- F
   reprocess_ehi_data <- F
-  reprocess_demographics_data <- F
+  reprocess_demographics_data <- T
   reprocess_end_data <- F
   reprocess_clickhand_data <- F
   
   resummarize_navon_data <- F
   resummarize_dichotic_data <- F
   resummarize_ehi_data <- F
-  resummarize_demographics_data <- F
+  resummarize_demographics_data <- T
   resummarize_end_data <- F
   resummarize_clickhand_data <- F
   
   recombine_navon_data <- F
-  recombine_summary_data <- F
+  recombine_summary_data <- T
 }
 
 data_dir <- here::here(EXPERIMENT_DIR, "data")
@@ -100,7 +100,6 @@ ind_input_dir <- here(proc_dir, "individual")
 summary_output_dir <- here(proc_dir, "summary")
 
 ## Create summary row for each subject
-## TODO: Add overall median RT to summary spreadsheet
 if (resummarize_navon_data == TRUE) {
   ## Create summarized navon data (saves to tsv as a side effect)
   ## Calculate any exclusions based on navon data
@@ -159,6 +158,8 @@ if (resummarize_clickhand_data == TRUE) {
 
 # ----------------------------------------------------------------------------#
 # Create combined summary table (with task and survey data)
+
+
 if (resummarize_navon_data == TRUE
     | resummarize_dichotic_data == TRUE
     | resummarize_ehi_data == TRUE
@@ -184,6 +185,9 @@ combined_output_dir <- here(proc_dir, "combined")
 if (recombine_navon_data == TRUE) {
   navon_combined <-
     load_and_combine_proc(ind_input_dir, combined_output_dir, data_type = "navon")
+} else {
+  ## Load navon_combined
+  navon_combined <- read_tsv(here(combined_output_dir, "combined_navon.tsv"))
 }
 
 if (recombine_summary_data == TRUE) {

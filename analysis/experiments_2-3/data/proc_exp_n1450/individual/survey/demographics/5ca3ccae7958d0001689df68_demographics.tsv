@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-5ca3ccae7958d0001689df68	35	US	Female	16	Multiple	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+5ca3ccae7958d0001689df68	35	US	Female	16	Multiple	No	1

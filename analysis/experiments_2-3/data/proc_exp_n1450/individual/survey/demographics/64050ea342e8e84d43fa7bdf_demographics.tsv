@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-64050ea342e8e84d43fa7bdf	27	US	Not listed: Non-Binary	12	White	Yes
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+64050ea342e8e84d43fa7bdf	27	US	Not listed: Non-Binary	12	White	Yes	2

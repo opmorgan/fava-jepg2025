@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-63bd61cff50297c9332e3f39	28	GH	Female	16	Black or African American	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+63bd61cff50297c9332e3f39	28	GH	Female	16	Black or African American	No	2

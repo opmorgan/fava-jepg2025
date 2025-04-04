@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-6415b71b73e494b88ef767e0	27	US	Male	18	Native Hawaiian or Other Pacific Islander	Yes
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+6415b71b73e494b88ef767e0	27	US	Male	18	Native Hawaiian or Other Pacific Islander	Yes	3

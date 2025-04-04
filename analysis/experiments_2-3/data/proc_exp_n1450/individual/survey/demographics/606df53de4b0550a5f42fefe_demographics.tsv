@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-606df53de4b0550a5f42fefe	36	US	Male	18	Asian	Yes
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+606df53de4b0550a5f42fefe	36	US	Male	18	Asian	Yes	2

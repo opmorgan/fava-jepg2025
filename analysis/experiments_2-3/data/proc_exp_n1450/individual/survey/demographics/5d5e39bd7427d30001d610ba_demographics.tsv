@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-5d5e39bd7427d30001d610ba	30	US	Not listed: nonbinary	12	White	Yes
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+5d5e39bd7427d30001d610ba	30	US	Not listed: nonbinary	12	White	Yes	3

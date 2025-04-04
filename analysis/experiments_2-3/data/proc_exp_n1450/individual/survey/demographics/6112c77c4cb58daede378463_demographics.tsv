@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-6112c77c4cb58daede378463	22	US	Male	16	Asian	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+6112c77c4cb58daede378463	22	US	Male	16	Asian	No	3

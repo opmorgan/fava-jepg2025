@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-6165a8ee6dde7ff6f4b22e6f	32	US	Female	12	Black or African American	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+6165a8ee6dde7ff6f4b22e6f	32	US	Female	12	Black or African American	No	4

@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-63d13d1465e0743b7b2b7962	24	UK	Male	18	Black or African American	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+63d13d1465e0743b7b2b7962	24	UK	Male	18	Black or African American	No	1

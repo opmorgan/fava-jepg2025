@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-59098fbcc3338c000105a042	35	UK	Male	18	White	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+59098fbcc3338c000105a042	35	UK	Male	18	White	No	3
