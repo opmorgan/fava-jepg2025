@@ -1,4 +1,4 @@
-This repo contains data, analysis scripts, task scripts, and figures for the paper, "Frequency asymmetries in vision and action."
+This repo contains data, analysis scripts, task scripts, and figures for the paper, "Frequency asymmetries in vision: The action asymmetry hypothesis."
 
 The experiments in this study were preregistered using AsPredicted:
 - Experiment 1: https://aspredicted.org/GBB_3TD (#115434)
