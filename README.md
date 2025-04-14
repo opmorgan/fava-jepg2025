@@ -69,6 +69,11 @@ Analyses of the combined data from experiments 1 and 2 are found in `analysis/ex
 - `3_rt.Rmd`: Reaction time analyses (Exp. 1 and 2).
 - `3_sex.Rmd`: Analyses on effect of sex (Exp. 1 and 2).
 
+
+## Supplementary analyses: response hand congruence and task order
+Analyses of response hand congruence and task order are found in `analysis/supplementary_analyses`:
+- `supplementary_analyses.Rmd`
+
 # Data dictionary
 A copy of "the data" (the preprocessed data for every participant with at least one full experimental run) from each experiment is available in the `analysis/data/` directory. `data/[E1/E2-3]_aah_long.tsv` includes task data, with a row for every trial. `data/[E1/E2-3]_aah_summary.tsv` includes demographic and summary data, with a row for every subject. These files are copies of the files found in `experiment_1/data/proc_exp_n1008` and `experiments_2-3/data/proc_exp_n1450`.
 
