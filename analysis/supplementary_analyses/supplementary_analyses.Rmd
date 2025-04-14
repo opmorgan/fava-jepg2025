@@ -52,7 +52,7 @@ source(here::here("lib", "util.R"))
 source(here::here("lib", "demographics.R"))
 source(here::here("lib", "plots-jepg.R"))
 
-EXPERIMENT_DIR <- "resubmission_analyses"
+EXPERIMENT_DIR <- "supplementary_analyses"
 source(here::here(EXPERIMENT_DIR, "lib", "load_process", "load_process.R"))
 source(here::here(EXPERIMENT_DIR, "lib", "tests.R"))
 

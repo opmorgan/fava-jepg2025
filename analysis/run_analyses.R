@@ -68,10 +68,8 @@ render_rmd('/experiments_1-2/analyses/3_sex.Rmd')
 
 
 # ----------------------------------------------------------------------------#
-
-
-
-
+#### Supplementary analyses of response hand congruence and task order
+render_rmd('/supplementary_analyses/supplementary_analyses.Rmd')
 
 
 
