@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-5a639a04c0d836000107b977	40	US	Female	16	Black or African American	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+5a639a04c0d836000107b977	40	US	Female	16	Black or African American	No	4

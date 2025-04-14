@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-637e2af8fcc2c65c96d9e1a0	22	US	Female	12	American Indian or Alaska Native	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+637e2af8fcc2c65c96d9e1a0	22	US	Female	12	American Indian or Alaska Native	No	1

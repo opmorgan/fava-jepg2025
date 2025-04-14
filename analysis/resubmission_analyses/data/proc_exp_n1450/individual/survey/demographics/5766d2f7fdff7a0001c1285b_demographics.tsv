@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-5766d2f7fdff7a0001c1285b	36	US	Female	12	White	Yes
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+5766d2f7fdff7a0001c1285b	36	US	Female	12	White	Yes	3

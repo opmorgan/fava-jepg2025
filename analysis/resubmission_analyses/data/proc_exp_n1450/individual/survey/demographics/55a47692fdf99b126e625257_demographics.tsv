@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-55a47692fdf99b126e625257	33	US	Not listed: agender	14	Black or African American	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+55a47692fdf99b126e625257	33	US	Not listed: agender	14	Black or African American	No	2

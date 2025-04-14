@@ -1,1458 +1,1458 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-54676961fdf99b7ba4d35cd6	39	UK	Female	16	White	No
-546e7e16fdf99b2b8df9842e	36	US	Female	12	White	No
-54876fe7fdf99b03efa64374	36	UK	Male	16	White	No
-54e32a60fdf99b3eae9de85b	38	US	Female	16	White	No
-550c3ed5fdf99b3039d68894	36	UK	Female	8	White	No
-5512eee1fdf99b7e1fb1be40	31	UK	Female	16	White	No
-55519750fdf99b7f2114cc3e	33	US	Male	16	White	No
-5552121afdf99b74d81d09ef	38	UK	Male	21	White	No
-555e3c45fdf99b423b15e013	35	UK	Male	16	White	No
-558830fbfdf99b3a56b47ef5	29	US	Female	16	Asian	No
-558996f2fdf99b7ae47f5ed2	36	UK	Male	12	White	No
-5596f7bdfdf99b4a8bd2d49f	24	US	Male	16	Black or African American	No
-55a47692fdf99b126e625257	33	US	Not listed: agender	14	Black or African American	No
-55ad3f2dfdf99b563a2471c8	27	UK	Male	18	White	No
-55b42b7cfdf99b5244217cf4	36	US	Female	18	American Indian or Alaska Native	Yes
-55bd8669fdf99b5bfc7d4cfc	29	US	Male	12	Black or African American	No
-55d06fd334e9060012e5781c	35	UK	Female	16	White	No
-55d09e4934e9060005e5729a	28	UK	Male	14	White	No
-55d4c46f58c35800113dc131	35	UK	Female	16	White	No
-55d51a6b8ce09000127d4821	33	UK	Male	16	White	No
-55da1c4669dbc30010b67569	33	UK	Male	16	White	No
-55eb04337480920010aa9e0d	37	US	Male	14	White	No
-55f9e9564f51400011296872	39	UK	Female	16	White	No
-5608a73fd7def20012b7389d	35	US	Male	16	White	No
-5611f6dd7ffc8a00058117e7	34	US	Male	12	White	No
-5638d3a544e8c8000ee869a2	34	US	Male	14	White	Yes
-5640acc0074be600055e9afd	32	UK	Female	12	Multiple	No
-564e93659b124900127eb55b	31	US	Male	18	Asian	No
-5654175604212700054a12b1	32	US	Male	12	Asian	No
-5658000ca9872d0011e1ba26	33	US	Male	12	White	No
-565955077d6957000adfe029	27	US	Not listed: nonbinary	12	Black or African American	No
-56b4b565b2de2a000d3316ba	33	US	Female	12	White	No
-56c89222dfea6c000bb23762	32	US	Male	16	White	No
-56d7623f04c67d000c7b9de6	34	UK	Female	16	White	No
-56e1bb4e6ce054000b3ffcaf	35	UK	Male	16	White	No
-56f7f09335c4760006278fca	30	UK	Male	12	White	No
-56fc8248b5648e000fac9980	36	US	Male	12	White	No
-571144323d47e800096358d9	35	US	Male	16	White	No
-5715699a30185b0008b40009	28	US	Male	16	Multiple	Yes
-57165ba7c5aca2000a8d32ca	25	UK	Male	16	White	No
-5717864c94d4fc001297198d	39	UK	Female	16	White	No
-571f543bf6d15a0013df11e1	39	UK	Female	18	White	No
-572bcf0d34b25a000edd2cf1	36	US	Male	14	White	No
-572f8258ad13160010008a61	30	UK	Female	18	White	No
-5732a7595bb657000f727f02	22	US	Male	16	White	No
-5766d2f7fdff7a0001c1285b	36	US	Female	12	White	Yes
-576745749dcd970001dbdd0b	32	UK	Female	12	White	No
-57739704c1b42d0001a58ae6	34	UK	Female	16	White	No
-577d1216b425c40001434b2f	39	UK	Female	16	White	No
-577d6a6c160201000103d7fc	32	US	Male	16	White	Yes
-5783d80d275be60001358349	21	US	Male	16	Asian	No
-578b5756160201000103fe40	27	US	Male	12	White	Yes
-579f1d3bc9abeb0001af52d8	40	US	Male	16	Black or African American	No
-57a5c633275be6000135b61c	27	UK	Female	16	White	No
-57a9f41a16a091000112f1cf	23	US	Male	16	White	No
-57bf2f693aa21900017f7ae6	39	US	Male	12	White	No
-57c2f3ed0c656b00019c5988	35	US	Female	16	Black or African American	No
-57c4761195a3ea00016e5992	26	UK	Female	18	Asian	No
-57dab7f721d77800018e42fe	28	US	Male	14	Multiple	No
-57dd3b0e91b7fc0001493db9	34	UK	Male	12	White	No
-57e4d48d6c447e000116b22a	31	US	Female	14	White	No
-57ee8eb1e62704000199d5ae	37	UK	Female	12	White	No
-57f2b5b82a1c2a0001ab0562	37	US	Male	12	White	No
-58061b34c7b1100001138a1e	32	UK	Male	16	White	No
-5809006b2a296e0001005451	37	US	Female	14	White	No
-5862a405d22a5800014c4c27	25	UK	Male	16	Asian	No
-58635484a73baa00010db537	37	US	Female	12	White	No
-5870f3b92bd3c90001859a3d	29	UK	Female	16	White	Yes
-587674406e2f8d00015c6148	32	US	Male	16	White	No
-588093c6704f1100014a3d01	35	UK	Female	16	White	No
-589ce4d65e63bf00013b3175	28	US	Female	12	White	No
-589cf2a3f6cc2100012af256	34	UK	Male	18	White	No
-58a478847cf56d0001f91f2e	38	UK	Female	16	White	No
-58a63a64ea3d11000170e1cc	35	US	Male	12	White	No
-58bfee7de5869400018f5e9e	37	UK	Male	16	White	No
-58d954ec58d78900016eaf6d	28	UK	Female	12	White	No
-58e52aa56112f70001f47096	32	UK	Female	18	White	No
-58ed2be2a083320001a13783	38	US	Female	12	White	No
-58eec4b09fbdde00011e95b0	33	US	Male	18	Multiple	No
-58f3913fcb9e9600013ca530	37	UK	Female	14	White	No
-590208c89571f50001c666e3	35	US	Male	16	White	No
-59098fbcc3338c000105a042	35	UK	Male	18	White	No
-59175c2896ffb800017c4caf	36	UK	Female	21	White	No
-592bb32c943e670001cde123	38	US	Male	16	White	No
-594425f07ccfd00001d3f462	27	US	Male	16	Black or African American	No
-59451bd536b8f40001de0a83	39	UK	Female	14	Multiple	No
-594ec90eca6e670001b2c184	29	US	Male	16	White	No
-59528796a186be000114dc32	28	US	Male	16	White	No
-595727bd7c76640001aa8f6e	24	US	Female	12	White	Yes
-596dd49a0fe2ff00016a7d50	40	UK	Female	16	White	No
-596f8a83c988c000015bf765	38	UK	Female	12	White	No
-5971cee2f4058000011deea6	35	UK	Female	16	White	No
-597e1b3f9d51240001f1f71d	37	UK	Female	16	White	No
-598aee4fe65fa90001580921	40	UK	Female	21	White	No
-599e74eeb4e8c80001d1147e	37	UK	Female	12	White	No
-59aae1188cef7d00011f8884	30	US	Female	14	Asian	No
-59b85e50d793b40001459a2f	39	UK	Female	16	White	No
-59c3eeac05da9d0001402bcd	36	US	Female	14	White	No
-59c4f0a2916c4d000109428a	40	UK	Male	12	White	No
-59d3d4026cc82800013e31a2	40	UK	Female	12	White	No
-59d6c032ea41450001ec76c9	27	US	Male	12	White	No
-59d9d9cd8fd07a0001842484	29	US	Male	12	White	Yes
-59dc458f77860e000151240e	40	US	Male	12	Multiple	No
-59e27cc0c0d35a0001294e6b	30	UK	Male	18	White	No
-59e6f84616ecc200016ff141	33	UK	Female	16	White	No
-59f78f90a764fc000135f6e6	37	US	Female	18	Multiple	No
-59ff81fd5d06850001afeeab	28	US	Male	12	Black or African American	No
-5a063c2d844c7a00015e477d	34	US	Male	12	White	No
-5a0a03fa074b190001251b3c	33	US	Male	12	White	No
-5a198755f2e3460001edc5c9	34	US	Male	12	White	No
-5a270517b4a5de00011af15c	33	UK	Female	16	White	No
-5a2adf6a8e00a000019864fb	39	US	Male	16	White	No
-5a3bdd2c8d005a0001829f3e	32	US	Male	12	White	Yes
-5a47b7be2f91ec0001dcbfee	37	US	Female	12	White	No
-5a639a04c0d836000107b977	40	US	Female	16	Black or African American	No
-5a6f1ccade1f390001dbd8b7	40	US	Male	12	White	No
-5a6fd0626923df0001ef977b	35	US	Male	16	White	Yes
-5a7dc159000dab00018c5a06	30	UK	Female	18	White	No
-5a804807000dab00018c6e5a	39	UK	Female	16	White	No
-5a8b3fa3b093f80001a80576	32	US	Male	14	White	No
-5a8d8079190420000156435d	38	US	Male	16	White	No
-5a8f3dd5eea3d300016ece86	39	US	Female	12	White	No
-5a9f9e14b5e2110001c6f6f5	35	UK	Female	12	White	No
-5aa2ac74873cda00010d4bd2	31	US	Male	12	White	No
-5aac21406be3fa00013a2a51	27	UK	Female	12	White	No
-5ab10212fb22320001bacdfe	29	UK	Male	12	White	No
-5ab65c67f69e940001d8e06c	27	UK	Female	18	Asian	No
-5abd5f3b5cd105000161f167	24	US	Male	12	White	No
-5aca34565cd1050001626480	33	UK	Female	21	White	No
-5acf8cd5a010190001b34afa	36	US	Female	12	White	No
-5ad0c55ad9f7470001db0e09	26	UK	Male	18	White	No
-5ad0c8fd4d061300011b07e4	31	UK	Female	18	Black or African American	No
-5ad57f5c27c301000101d9c5	31	US	Female	12	Black or African American	No
-5ad59462045cb000015c9960	33	UK	Female	18	White	No
-5ad5efefe2338200017798d4	28	UK	Female	16	Asian	No
-5ae2b45afef71c0001bea628	31	US	Female	12	White	No
-5aeb063b2f05b500013028a0	36	UK	Female	21	White	No
-5aed87e375deca0001627011	40	UK	Male	12	White	No
-5af28311c36b060001f7f98d	38	US	Female	12	Black or African American	No
-5af2f6c0c36b060001f80163	31	UK	Male	14	Multiple	No
-5af59378f856320001cf2ffc	25	US	Female	12	White	Yes
-5af5e288e19f8c00019e3d09	32	UK	Not listed: agender	16	White	No
-5afb134c57516b0001416b48	26	UK	Male	16	White	No
-5b12b275e9270900013c3e01	32	UK	Female	16	White	No
-5b1f92bdc9d3cb0001107e75	29	UK	Male	14	White	No
-5b2aac848580750001aa0b64	20	UK	Male	12	Asian	No
-5b393581c49ecb00010a6693	22	US	Male	12	White	Yes
-5b421b9ac2e3810001763252	35	UK	Female	16	Multiple	No
-5b4915add4c93b00019beed6	35	UK	Female	12	Black or African American	No
-5b494218ff7497000125219a	37	UK	Male	12	Multiple	No
-5b4d41e13d01bd0001ec46c2	36	US	Male	16	Black or African American	Yes
-5b50d6214e2d6800010b6092	23	UK	Female	16	White	No
-5b575da5f633200001232769	25	UK	Male	16	White	No
-5b59862535af16000164960a	33	UK	Female	14	White	No
-5b5cff1c9351420001b78419	33	US	Male	16	White	No
-5b6515e83662a8000158b2aa	39	US	Male	12	White	No
-5b65f7935c431c000127ae5f	31	US	Female	16	White	Yes
-5b6c312fa1fda800015fe165	33	US	Female	14	Black or African American	No
-5b6c72f29dc5550001f8a514	38	US	Male	16	White	No
-5b6cf2c61b61b60001bc0678	24	US	Male	16	White	No
-5b72d1b972a6fc0001b2abc2	29	US	Male	16	White	No
-5b7ba10e4ba9cd0001e66fb4	30	US	Female	14	White	No
-5b7d518d1e35f0000173153c	26	US	Female	18	Asian	No
-5b7ecfe47a63030001019c35	38	UK	Male	16	White	No
-5b82e33f184f45000155f0ba	36	UK	Male	12	White	No
-5b87cdc34dc3210001904196	40	UK	Female	12	White	No
-5b87dd09019cf60001a115b3	28	US	Male	16	White	No
-5b8c7161284d9b00019dee13	25	US	Female	12	White	No
-5b8e11444cd6dd0001bf07d9	24	US	Female	14	Black or African American	No
-5b920a69abfadc0001e7ffa9	27	US	Female	12	White	No
-5b9754dce1adf100014ac3d1	30	UK	Male	12	White	No
-5b985404a15058000124e508	29	UK	Male	16	White	No
-5b9aa47491b20a0001176287	40	US	Female	16	Black or African American	No
-5ba3223a68b542000112c1b6	27	US	Male	16	White	No
-5ba6d507cf54e40001c45aaf	38	US	Male	12	Multiple	No
-5ba849b3a2a1ae0001f08d2d	22	US	Male	16	White	No
-5baa7acf14779d0001a23968	31	UK	Female	21	White	No
-5bace423b95cc700014b5334	37	US	Female	18	White	No
-5bad4be8b712f30001b87947	39	US	Male	12	White	No
-5bad4db8b712f30001b87990	31	US	Male	14	White	Yes
-5bb0f624a1c73d0001b9d62d	30	UK	Male	21	White	No
-5bb0f83f71e1b2000176c35b	36	UK	Male	16	White	No
-5bb21a6ed14ec100019840fb	31	UK	Male	16	White	No
-5bb535574cb73b00011437d0	25	UK	Female	12	White	No
-5bbc18010cb04c00015025ce	35	US	Female	12	White	No
-5bbd2bdcf7358a000171636f	23	UK	Male	16	White	No
-5bc10133904b2f000194b264	25	UK	Male	16	White	No
-5bc9ed7f3d893f0001bee4b6	23	UK	Female	14	White	No
-5bdc4a3b0f86a60001be614a	33	UK	Female	12	White	No
-5bdfb648484288000130dad0	30	US	Male	12	White	No
-5be08379a34306000165f14c	29	UK	Female	12	White	No
-5be084ec4c397b0001ec3567	27	US	Male	14	White	No
-5be12624b08fb60001f5680a	25	UK	Male	12	Black or African American	No
-5be1f0b7b77afc0001bb9b06	31	UK	Female	12	White	No
-5be9b18df5c1060001085048	38	UK	Male	12	White	No
-5bea1d914e38ca00014b399e	27	US	Female	18	White	No
-5bead56b5324b10001c2551c	28	UK	Male	16	White	No
-5bebbb9694bff800011dc37c	34	US	Female	16	White	Yes
-5beccd423b6489000156596f	40	US	Female	16	White	No
-5befb6e27c387400016983bf	36	US	Male	16	White	No
-5bf19d37e657aa0001a2314a	39	US	Female	12	White	No
-5bfd8910eed5280001ead1dd	38	UK	Female	16	White	No
-5c0004a72340e10001bfc3a0	27	UK	Male	21	White	No
-5c024be169406e00014e0b8e	28	US	Male	14	Asian	Yes
-5c0586b43199f4000153f133	26	UK	Female	12	White	No
-5c05c77f24419e0001a3094f	35	US	Female	18	White	No
-5c086d3d3be61100011a694d	29	US	Female	18	White	No
-5c0c28915b32d500012eef60	37	UK	Female	18	White	No
-5c0e80423a0b8e000183089b	28	UK	Female	16	White	No
-5c11f8202b16ba0001c8b764	25	US	Female	16	Asian	No
-5c18c248acd3f30001459833	38	UK	Female	12	White	No
-5c190c311e18d10001eca667	22	UK	Male	16	Asian	No
-5c2477b010677f0001db2661	23	US	Female	16	White	Yes
-5c28884289f035000174bfbe	26	US	Female	12	Multiple	Yes
-5c28c65636efd800010f30fb	35	US	Female	16	White	No
-5c2c189b867f660001af5dc5	30	US	Female	16	White	Yes
-5c2dae2110677f0001dd1137	40	US	Male	16	White	No
-5c2e33e751dcf20001b3204d	34	UK	Female	12	White	No
-5c37aa8b832a8400010983b3	35	US	Male	18	Asian	No
-5c395df5f5ebd50001850900	28	US	Male	14	Asian	No
-5c3affca11b5a4000154f997	32	US	Female	12	White	No
-5c3dfadfef1d0d0001b2870e	27	US	Female	16	White	No
-5c3e80671580e9000122d168	38	UK	Male	18	White	No
-5c4db2cd430fb000014d1448	25	US	Male	12	Black or African American	No
-5c4e5f2ae5f00f0001542748	35	UK	Female	12	White	Yes
-5c4f7b99b33a5300013dbfdd	27	UK	Female	21	White	No
-5c50046b2b89f500015e5f6b	26	US	Male	16	Asian	No
-5c560b6fccb08c0001e134a8	34	US	Female	18	White	No
-5c56964991c0ad0001cfa5ae	34	US	Male	16	White	Yes
-5c574d3f53fba80001bd302e	32	US	Female	14	White	No
-5c588d147831040001973ab3	24	US	Female	12	White	No
-5c59f7cb4eea0b00017c9317	22	UK	Male	12	White	No
-5c5cb3bf6a946500015a3411	38	UK	Female	16	Black or African American	No
-5c5ff87f8c0552000109d7de	30	UK	Female	12	White	No
-5c62fbd932207f00016bd19e	28	UK	Female	16	White	No
-5c6325a730ccf800019350c6	25	UK	Male	12	White	No
-5c663cd56fdc87000162e255	25	US	Male	12	White	No
-5c6709ab926a5b0001eb29c1	35	US	Female	14	White	No
-5c6838ea5f8d580001e8a8ab	34	UK	Male	14	White	No
-5c6849dc5b27b00001a340f5	31	UK	Female	16	White	No
-5c69bdaf81ea8900018aeccd	25	US	Female	16	Multiple	No
-5c6d4c85948b0700010d6f44	34	UK	Male	14	White	No
-5c6ddaefdf677d00013fa313	37	UK	Male	16	White	No
-5c707693db12e3000146b16d	32	UK	Male	16	White	No
-5c742339e621f900163f4543	40	US	Male	12	White	No
-5c778f10848d2a0016b3c65d	23	US	Female	16	Asian	No
-5c799405e62652001656f06f	39	UK	Female	18	White	No
-5c7cf8b58ca9000001b52f6e	31	US	Male	12	White	No
-5c82c9a4d8302a00010639b8	32	US	Male	16	White	No
-5c83b0408c0d0100175902f7	40	UK	Female	16	White	No
-5c858ca8eceaa40001d3f488	28	US	Female	16	Asian	No
-5c8c22bafeeaeb0016207a00	25	UK	Male	12	White	No
-5c8d2f74e775150016db3700	23	UK	Female	18	White	No
-5c8f9fa8dfbf30001697845d	33	US	Female	16	White	No
-5c92aa671ce0cd00128c6c86	33	US	Male	18	White	No
-5c993969c6d15000019bbc4f	37	UK	Female	16	White	No
-5c9b3126a586fd00154d5440	34	UK	Female	18	White	No
-5c9cb71960a25400174337a0	28	UK	Male	12	White	No
-5c9d88bb2b3c77001744ec1c	37	UK	Male	16	White	No
-5ca3ccae7958d0001689df68	35	US	Female	16	Multiple	No
-5ca776d10982ca0012684afe	33	UK	Female	12	White	No
-5caba2588d77140014bac508	36	UK	Male	16	White	No
-5cadcbd3cdf3eb00136336a4	35	UK	Male	12	White	No
-5cb489ff0cd1ed0017465d19	33	US	Male	12	White	No
-5cb50cffce95710018cc9c9e	23	US	Female	16	Multiple	No
-5cbc345609683c00017c878a	28	UK	Male	18	Asian	No
-5cbe04b4f429ff00159de30e	37	US	Female	16	Black or African American	No
-5cbe2edd577eb000184124b9	23	US	Female	12	Black or African American	No
-5cc369725986a4001b4e9041	33	UK	Female	16	White	No
-5cc48c234bb96d00018a8bfe	32	UK	Male	12	White	No
-5cc4969c3b1b1c0018f9da36	32	UK	Male	12	Asian	No
-5cc8039e3ef93000171c96b8	36	US	Male	16	White	No
-5cc93ce7627fc30013fc22aa	25	US	Male	12	White	Yes
-5ccc9ace9731e100191422ab	23	UK	Male	16	Black or African American	No
-5cd8d08636870e001901bd6e	22	US	Male	16	Asian	No
-5cdfb7d5ed552600019dc9f3	34	UK	Female	16	Asian	No
-5ce438ca825c71001ce02880	39	UK	Female	12	White	No
-5cec60a0de266200191eb2c9	31	UK	Female	21	White	No
-5cef892f0c5fb30018fbdfbe	37	US	Not listed: trans, nonbinary, fluidflux, transmasc	16	White	No
-5cf510ccb0bafb00161ffd56	25	UK	Female	12	White	No
-5d013b6597491100014a4fca	23	US	Male	12	Multiple	Yes
-5d02e8a7c087120001942ae7	38	UK	Male	Other	Asian	No
-5d09895e65eb3400189cc207	37	US	Female	12	Black or African American	No
-5d09d2a3fcc453001981ee4e	34	UK	Female	Other	White	No
-5d0a831fac01cb001c691cb1	22	UK	Female	16	White	No
-5d0bff3d9599aa001a256b15	27	UK	Female	16	White	No
-5d0e0c9c312297001a37d0ca	23	UK	Female	12	White	No
-5d1426c8efc9c20001495f2f	23	US	Female	14	White	No
-5d15f79acc08a30019744de2	35	UK	Female	14	White	No
-5d15fedfa8eae10015738ed7	24	US	Male	16	White	No
-5d1652ba768bdf000154e37d	37	US	Female	16	White	No
-5d166f8340218700169a0814	25	US	Male	12	White	No
-5d171334b49a4a0001e8aca4	33	US	Male	12	White	No
-5d17c7644700940015463ef1	28	US	Female	18	Black or African American	No
-5d17ce93ac37cd0019535088	22	US	Male	12	Asian	No
-5d19281012e152001920227f	35	US	Male	21	Asian	No
-5d1a21a834dc47000196b3fd	24	UK	Male	16	White	No
-5d1c92bc5f54410001ef8f0c	22	UK	Male	14	White	No
-5d206e075278fa001848134d	22	US	Male	12	White	Yes
-5d24df75a80a600019d97b2e	32	UK	Female	21	Asian	No
-5d278e6a6f7c660019b56196	22	US	Female	12	Other	Yes
-5d29187bd96c80001769ec41	36	US	Male	18	White	No
-5d2de4db914b6e001877da8f	22	UK	Female	12	White	No
-5d2f7fb4bb27200019010768	27	US	Male	12	Multiple	Yes
-5d30752a0334500019f10720	22	UK	Female	16	White	No
-5d30ec10a5c3c900194c5d12	30	UK	Male	18	Asian	No
-5d3afd98bea4e90019c67c9f	23	UK	Male	16	Asian	No
-5d4254db5b2c430001418a3c	40	US	Female	12	White	No
-5d432a9dfc19f8001a2964e7	26	UK	Male	12	White	No
-5d46daa91274770001916403	39	US	Male	21	White	No
-5d49bdf4723ba900180b7de8	28	UK	Female	12	Multiple	No
-5d4a36e8a61675000169036f	38	US	Female	21	White	No
-5d4a41890e604c00011ade8b	27	US	Male	16	Asian	No
-5d4c394a090b51001a1775fe	27	US	Male	12	White	No
-5d4ca16427393e0001161cb2	27	UK	Female	16	White	No
-5d55d562e04e1c0001f5e682	32	US	Female	16	White	No
-5d59b01348766d0016949e6a	40	US	Female	16	White	No
-5d5d13312a28f400015a5b6f	31	UK	Female	18	Asian	No
-5d5d6e95909e4c0001b12fe8	25	US	Male	12	White	No
-5d5e39bd7427d30001d610ba	30	US	Not listed: nonbinary	12	White	Yes
-5d5e4baff521f100166c5d3a	25	US	Male	16	Black or African American	No
-5d612ae16512d700159face7	38	US	Female	18	White	No
-5d62886927a84f00010fbbb4	37	US	Male	18	White	No
-5d6472c63ca9fc00153d2ba4	25	US	Male	12	White	No
-5d66b39acb411d00170f69d6	39	US	Male	14	White	No
-5d6ab68809f9270001dac666	25	US	Male	16	White	No
-5d6eb94fb861b60001e7760c	33	UK	Female	16	White	No
-5d728c6f1c91d40001a4b6ad	23	US	Male	12	Multiple	No
-5d7695cc7ae60f001bc4bde6	32	UK	Female	14	Black or African American	No
-5d7e1d2db5bd580017d11cec	34	UK	Male	12	White	No
-5d8125f63d05eb0001731115	33	UK	Female	16	White	No
-5d833b0e6642ee0001bfa9cb	38	UK	Male	16	Asian	No
-5d849ee0a954540019f513dd	33	US	Female	12	White	No
-5d89435aa8e8120018a4e202	33	UK	Female	16	Black or African American	No
-5d8a2b0f887a21001543980f	30	UK	Female	16	White	No
-5d8a797185a7f1001a27c3cf	22	US	Female	16	White	No
-5d8a9a8714087d001898dbbf	20	US	Female	12	White	No
-5d91daf3704e790018f47229	32	US	Male	16	White	No
-5d93c8c883e2470018a4f853	36	UK	Female	16	Black or African American	No
-5d959fdf9cf6ab001982afee	39	UK	Male	12	White	No
-5d9be88c195db300128d652a	33	US	Female	12	White	No
-5da179412996110016d853d5	35	UK	Female	14	White	No
-5da3865a7f1f7d001005f581	27	UK	Female	18	White	No
-5da87d83d120450015806cc1	37	US	Male	12	Black or African American	No
-5db061b0f876e1001620e2ee	32	UK	Male	16	Multiple	No
-5db16ce33990ed0014564873	23	UK	Female	18	White	No
-5db41a3f9ca75a000b71110c	39	UK	Female	12	White	No
-5db853720f6ebd000ba94ed8	30	UK	Female	16	White	No
-5dbbfa90c486791b1bd03292	23	US	Male	12	White	No
-5dc52848b63adf3bbb43f869	37	UK	Female	16	White	No
-5dc61a4e1173bb4786278f33	30	US	Male	16	White	No
-5dcb6fb005be6f8311d7e836	26	UK	Male	14	White	No
-5dcc836b6a24b5912d7c33f4	25	UK	Female	16	White	No
-5dcefcd0307b8d05031d7264	32	US	Male	18	White	No
-5dcfc4a09595a10cd3ef3e59	23	US	Female	16	Asian	No
-5dd2e29b2c5c102e6454227a	30	US	Not listed: nonbinary	18	White	No
-5dd3e3cd5daaa63c5fdb7bb8	36	US	Male	16	White	No
-5dd3f2988f45b93cd7da62d3	32	US	Male	12	White	No
-5dd48444dd9a7447d224cc71	26	US	Male	16	White	No
-5dd72efa82569a6d38e06854	40	US	Female	16	White	No
-5dd742a140460e6e2b707d58	26	US	Male	12	White	No
-5dda7e609d9e309e55d8eeb2	33	UK	Male	18	Multiple	No
-5ddc3d39fce606ba6f9e1fa4	35	US	Female	16	White	No
-5ddd7db419eecbce5c2dbc6f	34	US	Female	14	Black or African American	No
-5dded98ea4aa26f899702668	32	UK	Male	16	Asian	No
-5de260b9553cee28d97b058d	29	US	Male	18	White	No
-5de4eec72cf204481c6e5c1e	36	UK	Male	14	White	No
-5de5a131676a6d531c75b6ab	24	US	Male	14	White	No
-5de8734b44b3127e513ae247	32	US	Female	16	White	No
-5de8bc74553cee8280a7dd84	25	US	Male	16	White	Yes
-5dea9f92c3aca11bffec8b7e	28	US	Male	16	White	No
-5ded38c39f631c3f7601388f	40	US	Female	16	White	No
-5dee72917309b950e5262f3a	29	US	Male	16	White	No
-5df15288b1fb0506c5fc6afb	34	UK	Female	16	White	No
-5df490aa6e4db6337452be8b	40	US	Male	14	White	No
-5df8dfbb9b92b164c645b5b5	28	UK	Male	16	White	No
-5dfac1ba83907981767ce907	31	US	Female	14	White	No
-5dfc64647adf4b971f329cbf	35	US	Male	14	White	Yes
-5e03f8517f08edece67a3137	34	US	Male	16	White	Yes
-5e12202adc79bd8a6c74499b	27	UK	Female	18	White	No
-5e126c25a98a7a8fab258f14	22	US	Male	12	White	No
-5e13859753e8469d270982c0	35	UK	Male	12	White	No
-5e14f72f557425b04528df9a	33	UK	Male	16	White	No
-5e1582d9805a30b7d0c8b9c7	24	US	Female	16	Multiple	No
-5e15da8a805a30bcd2ed796d	28	UK	Male	21	White	No
-5e185c397eeb87000d989683	33	UK	Female	16	White	No
-5e1878b9a3d56c151399af37	25	UK	Female	18	White	No
-5e1aa82a8b6dfb30edf157a8	39	US	Female	16	Black or African American	No
-5e1b2b3e4a955b350b1e0a63	34	UK	Male	12	White	No
-5e1cf0cfdc1a170855fd89c2	28	UK	Female	16	Black or African American	No
-5e212f851bad6c42f4faeece	36	US	Female	16	White	No
-5e24e9e7adb5b7773faa4522	39	UK	Female	16	Multiple	No
-5e26f291ab132b92d1bb6544	35	UK	Female	16	Multiple	Yes
-5e282e43266894a3e79a6eaa	23	UK	Female	12	White	No
-5e29d82712b2f8029e117f2b	27	UK	Male	12	White	No
-5e2ef776425d8601c43079f2	38	US	Female	14	White	No
-5e2ef88b30c15c000bbfae06	24	US	Female	21	White	No
-5e2f65a3be23b2525a9b4d97	39	UK	Female	18	White	No
-5e30492697a58001749fce6b	25	UK	Female	12	White	No
-5e30f51461ac040fd0d1b266	33	US	Female	8	Black or African American	No
-5e3760815bfa436fd256b2e9	29	US	Male	12	White	No
-5e3db8f9456974000afeb855	21	US	Female	16	Asian	No
-5e3ddcf95556b204cb143eab	28	UK	Female	18	White	No
-5e405a1cfce14d29997364da	26	US	Male	16	Black or African American	No
-5e40c6d2aa21c630069197ea	26	US	Male	12	White	No
-5e41723aade7c2000b4c14f8	36	UK	Male	12	White	No
-5e4192083514ba02bc057574	37	UK	Male	12	White	No
-5e42d790c1742f000c1e2a9b	31	US	Male	16	White	No
-5e437d7404eaba215eafbd2a	40	US	Female	16	White	No
-5e45477286e27102354a420b	26	US	Male	12	White	No
-5e456129f5b428000b5b0f81	31	UK	Male	16	White	No
-5e5291ff6c3d7d2a79ec869e	33	US	Female	16	White	No
-5e533e9d1ffa373595a2bcfb	32	US	Male	16	White	No
-5e5578c220b63957aeea65dd	19	US	Female	12	White	No
-5e5c58012272eb4328419f08	22	US	Female	16	Asian	No
-5e5fe64a8278d103d35cac54	37	US	Male	12	White	No
-5e60db57fdef8001c1fdc6f7	28	UK	Female	16	White	No
-5e641dcaef80c61af57629c3	29	UK	Female	12	White	No
-5e69987e0873d600084bc920	29	US	Female	12	White	No
-5e6b9027bc9dab1425346017	35	UK	Female	16	White	No
-5e6bb512e18e0d03e89a7831	25	UK	Not listed: Intersex	14	White	No
-5e6d7b0421be18343d8bc4a9	23	UK	Female	18	White	No
-5e6de0ab9e71d4392921839b	38	US	Male	14	Multiple	No
-5e6ec2818808e6486e268039	28	US	Female	16	White	No
-5e6f3121d618ce4f1e207112	34	UK	Male	18	Asian	No
-5e716ca3bea4de092aebb04e	25	UK	Female	18	White	No
-5e730aa954a7b42617d99c5a	26	US	Female	12	Black or African American	No
-5e7902515312ee4a99c22e53	35	UK	Male	18	White	No
-5e7987df47422a5443426cd7	19	UK	Female	12	Asian	No
-5e7e846a89a21d55d5e77411	21	UK	Male	12	Asian	No
-5e80b2ad6f603400087d0611	36	UK	Male	18	White	No
-5e836a3c2598d409928dae31	39	US	Male	16	White	No
-5e84bd7c34d5d9072128fac1	36	US	Male	14	White	No
-5e872f5b3a32c337ba65aa68	33	US	Male	8	Black or African American	No
-5e88288b0a0d8f4ad029f6e3	39	US	Male	12	White	No
-5e8caf1b063693041f6ac524	40	US	Male	12	White	No
-5e8d44819163b611f62d706c	31	US	Female	8	White	No
-5e8f1eb6bb578701f190229b	28	UK	Female	18	White	No
-5e8f4b597ec957073a4ea143	23	UK	Male	16	White	No
-5e905888b3f91e367d4b555f	26	UK	Female	16	Multiple	No
-5e92a1a4fc57e20f92eef47f	36	US	Female	16	White	No
-5e937e8e4d246b6b4162ae72	33	US	Male	21	White	No
-5e9847daec534b03f4769cab	27	UK	Male	18	Asian	No
-5e98ce846515431026d195c6	27	UK	Female	18	White	No
-5e9a753ccc244610ac6b0d87	33	US	Female	14	White	No
-5e9b9eaee0e30b0b27983c50	22	UK	Female	18	Asian	No
-5e9bda4fc2758f0f5713a3f8	30	UK	Female	16	White	No
-5e9f31ca9b0a040704ee0bad	24	UK	Female	16	White	No
-5e9f324c7a996d0aa2ff651e	29	US	Male	12	Multiple	Yes
-5ea043f2618bcf041cb4c245	31	UK	Female	12	Black or African American	No
-5ea556346fe116549c336fc9	22	UK	Male	12	White	No
-5ea63190173fb765f87a89a8	23	US	Male	12	White	No
-5ea848facb20c326fa2679bb	31	UK	Female	16	Asian	No
-5ea8c2580e5ed332ad771cb7	27	US	Female	12	Multiple	No
-5ea92954ef7ece00096faf5a	27	US	Female	16	Asian	No
-5ea95ca4936cd3035f7e3e3a	38	US	Female	18	White	No
-5ea9cb32040c211222bcbb69	34	US	Female	12	Multiple	No
-5ea9f6b340571b17901e6949	31	UK	Female	16	White	No
-5eaab7bc385332016e089dda	37	UK	Male	16	White	No
-5eaecb0824839e59ed3523eb	38	UK	Male	18	White	No
-5eb1d84a32ae1d128f1fc7ba	19	UK	Male	12	White	No
-5eb2134abde80d38a869a0a3	38	US	Female	16	White	No
-5eb32b8adc8fc511560fca82	22	US	Male	12	Asian	Yes
-5eb400dfeb119a1f67e22297	22	UK	Female	16	Multiple	No
-5eb4909c2f46f82f9280a49b	25	UK	Male	12	White	No
-5eb8ff91a1bdb386c80cd7ea	30	UK	Male	16	White	No
-5ebed2706c113a28c66ad396	21	UK	Male	14	Asian	No
-5ec06f59c4ceb1481f225bbd	21	US	Female	12	White	No
-5ec2142f6e98202af3300059	27	US	Male	12	White	No
-5ec359a0e7928519b8cf64af	24	US	Male	16	Multiple	Yes
-5ec3f8bde69a92288ec450af	27	UK	Female	12	White	No
-5ec441b77b846b31db2d328a	23	US	Female	16	Asian	No
-5ec4a156bc5aac3819ac52f2	29	US	Male	14	Black or African American	No
-5ec53ac5db44d64b617c1b97	34	US	Female	16	White	Yes
-5ec599168c7fa65cabe8b5c7	34	US	Female	16	White	No
-5ec5a64c306f255ec98d5cc1	35	US	Female	14	Asian	No
-5ec62902bb44c16b842128f9	35	US	Male	16	White	No
-5ec6df52f52d1111598b1221	38	US	Male	12	White	No
-5ec6f9a4ce75e2141fb9d957	34	UK	Female	16	Black or African American	No
-5ec9313c4e028f4247cacaa8	24	UK	Female	18	White	No
-5ecb6acd10d2c36e6124c9bd	38	UK	Female	21	White	No
-5ecc5d22a5e08e45bf551927	21	UK	Male	16	White	No
-5ece0f3693c34518cb5cbef5	30	US	Female	12	White	No
-5ece8e8cfe7304272dc17551	39	UK	Female	16	White	No
-5ecf82c4e84c2d01e7ba2f7a	21	UK	Female	16	White	No
-5ed1cd25eb6dc1122dbd700f	32	US	Female	18	Black or African American	No
-5ed2bdf295ed8f251d614b21	21	UK	Male	16	White	No
-5ed3f7a0f387a109b6580537	31	UK	Male	18	White	No
-5ed3f7c5c739ce0a04ce3df5	29	UK	Female	16	White	No
-5ed40545225e613ba9f16b57	21	UK	Female	14	White	No
-5ed543442db0060a955d12e1	34	US	Male	18	White	No
-5edbf6a29a8d508920c14f6c	33	UK	Male	12	White	No
-5ee00b8630f30b34f2a5dc1c	33	US	Male	12	White	No
-5ee167bb5b9407188fc9f15f	29	UK	Female	16	White	No
-5ee1be444c9d75206ce5aa92	26	US	Male	16	Asian	No
-5ee232f2b970662cfa352567	35	US	Male	16	White	No
-5ee5483b1dfa3b0ded826eee	23	UK	Male	16	Asian	No
-5ee5e3b02eebe932ee9559c5	33	US	Male	12	White	No
-5ee62007551db1034cb9696a	24	UK	Male	12	White	No
-5ee6be54321536000905346a	31	US	Female	14	Multiple	No
-5ee7b0a316b7d10662171450	25	UK	Male	12	White	No
-5ee811d6f82aa71171ed4d83	26	US	Female	12	Multiple	No
-5ee91ec1ef56832aa7947169	33	UK	Male	16	White	No
-5ee93ab8a93d8b15baf72fc5	24	US	Female	16	White	No
-5ee9e9c1496265000a792544	25	UK	Female	16	White	No
-5eea49c09e6f8711b4cdf3bb	26	US	Male	16	White	No
-5eeaa8ee94a7f8046a02a20d	39	US	Male	21	White	No
-5eeaff28cf5da71d691ef212	23	US	Male	16	Asian	No
-5eecd2e3a38fd009dd9d1f3d	33	UK	Male	12	White	No
-5eee761287fdd331fc618449	31	UK	Male	12	White	No
-5eee7e5812de8e32ecde556c	24	UK	Female	16	White	No
-5ef23630f2d2bf0589880921	27	UK	Female	16	White	No
-5ef246c6d2b9060809858e7e	25	US	Female	12	White	No
-5ef35d30f4c5240865ab26b5	24	UK	Male	14	White	No
-5efa98dd74af25000cdbbf43	22	US	Male	12	White	No
-5efb022116108c000a66a141	30	UK	Female	18	White	No
-5efb31fa8cd32f04bf048643	36	US	Female	12	White	No
-5efb49177e130c0785b93842	29	UK	Female	16	White	No
-5efb4cfd797e7108c3823ae5	28	UK	Female	18	White	No
-5efca9b3026506070acda120	40	UK	Female	16	White	No
-5efcd984f7176d0e6a59dd17	36	UK	Female	16	White	No
-5efcdcfeaead790f210c3181	40	UK	Female	12	White	No
-5efd3f03dbefb617cf28b12e	33	US	Male	16	Asian	No
-5efef32a88bb6a01c8087591	22	US	Male	14	White	No
-5effb79e21345d0b33188d71	22	UK	Female	12	Multiple	Yes
-5f0576c2b5b074000a8664cc	27	UK	Female	16	White	No
-5f05b6a83c0c4206b334458a	39	UK	Male	16	White	No
-5f07d4c092ba8742ace3d2de	39	US	Female	12	White	No
-5f08d7adb7990e14b0a2b4a2	30	UK	Male	16	White	No
-5f0a14c3d362030c483654a3	21	UK	Male	12	Asian	No
-5f0a7dec44c42c19a6c9f6d9	34	US	Male	12	White	No
-5f0bcb67acb8844f8a226f2b	24	US	Female	12	White	No
-5f0e9896f5e4e11e12c8f5ac	24	US	Male	12	White	No
-5f0fba550d4c1304aa069f1d	25	UK	Female	12	White	No
-5f105b47d36c8701ec112317	23	UK	Female	18	White	No
-5f105fb050ae3d02c17bf90e	20	UK	Female	12	White	No
-5f110f4591d25946c7df1b87	28	US	Male	12	White	No
-5f117601aeef1d5095578b01	36	US	Female	12	White	No
-5f11eb333c6e2c0df5b92270	22	UK	Female	12	White	No
-5f178176fd9dc510cad21a86	28	US	Male	12	White	Yes
-5f1b775a104d42375a677b15	25	UK	Female	16	White	Yes
-5f1c0a9e47a90a000ad55e2c	24	UK	Female	16	White	No
-5f1c0b2946a0aa454dd5ee2c	19	UK	Male	Other	Multiple	No
-5f1dc8e9a351ad07a95854c1	27	US	Male	16	White	No
-5f20c7843957f61f62c58bb6	28	US	Female	12	White	No
-5f218ec7604e35564a7ea1ea	28	US	Male	12	White	No
-5f23cda9d12b451b7da3e09d	21	UK	Female	16	White	No
-5f240054aa2111204f231a51	29	UK	Female	8	White	No
-5f2788ddf5b51d1407d074b5	23	UK	Male	14	Black or African American	No
-5f2ef53d7729c52ae63230a2	37	UK	Female	14	White	No
-5f3077924fd8214dc6684e55	24	UK	Female	16	White	No
-5f31bbe840a5c90e5a9a7b68	32	US	Female	16	White	No
-5f36767024b51d0277f24582	30	UK	Female	18	White	Yes
-5f3b033d78bf3c202a84aeb6	33	UK	Male	16	White	No
-5f3bd56999a44d9324b76ddb	38	UK	Male	18	White	No
-5f3c2648a9ef86a4c10de377	34	US	Male	16	White	No
-5f3c5d4c9168ccad270ddb36	25	UK	Male	14	White	No
-5f3d18ef9b85490197cc41fb	37	UK	Male	12	White	No
-5f3d6f7010ad88124f3906e2	26	UK	Male	12	White	No
-5f44ed0e7f545e029071c4e8	26	UK	Female	16	White	No
-5f4a835e9e84256238129995	32	US	Female	12	White	No
-5f4afb1288eb746d1804dc1e	20	US	Female	12	Asian	No
-5f4c49b249b99c1462dd2640	39	US	Female	12	White	No
-5f4c9e74da9c148b0d42ecbd	35	US	Male	18	Asian	No
-5f4dc319c9fb1509b77d8b84	25	US	Female	12	White	No
-5f4e58804562c701d08b08d2	28	UK	Female	16	Multiple	No
-5f4eb6d4b6f7400f5bffa97f	33	UK	Female	18	White	No
-5f4ee0e82f0d6c12d692c29b	37	US	Male	12	Multiple	No
-5f4f5d2da7606a000ab233c9	34	UK	Male	12	White	No
-5f4f94b31fa4ba0605c8bcae	24	UK	Female	16	Multiple	No
-5f4fe37111a2531213497942	39	UK	Male	12	White	No
-5f54b7bc649418811db24711	26	UK	Male	18	White	No
-5f56268bff7e03a1800a3a2f	25	UK	Female	16	White	No
-5f565c9592080106c6b4d467	33	US	Female	16	Black or African American	No
-5f579cc797c3ee2607f6e344	27	US	Female	12	Multiple	No
-5f590fd00f0eec104b473961	25	US	Female	16	Multiple	No
-5f5b27db857807236ee3e3f3	29	US	Male	14	White	No
-5f5f72d80c064e02b8662ced	22	UK	Male	14	White	No
-5f67c39d8d62624067e07396	28	UK	Female	18	White	No
-5f6912baefd1c50f7f3b83f7	27	UK	Male	16	White	No
-5f6e36c7f042f033d0f97bc1	32	US	Male	12	White	No
-5f6f28ca6df91347f156ad9a	30	US	Female	8	White	No
-5f712c16875f0375275c57d5	29	US	Male	16	White	No
-5f729d7c15c1dd1ee6058997	26	US	Female	12	White	No
-5f77480675b83a250b3e8c36	24	UK	Female	12	White	No
-5f775d8ac99f3125e763b144	25	US	Male	18	White	No
-5f778d553167a12eae0e1c00	30	UK	Female	16	White	No
-5f7a28b8bedcf2112ebd1289	37	US	Female	16	White	No
-5f7dd6ed4303f7000814dd3b	35	US	Female	12	White	No
-5f7e6f9c1212c514f9437e3a	21	US	Male	12	Black or African American	No
-5f7f466a83fbad0b6a4ccb15	24	UK	Female	12	White	No
-5f846dd4e962ce0bf61b95fb	23	UK	Female	18	White	No
-5f85c88c61e23608718cbd03	34	UK	Male	18	Multiple	No
-5f88a9e10b3478081e131706	33	UK	Female	16	White	No
-5f8b066742a6381ddae03d75	37	US	Male	14	White	No
-5f8b4513fb7c7425abdbbb81	39	US	Male	16	Black or African American	No
-5f8cbc5c355ea745e6cef2ca	39	US	Female	14	White	Yes
-5f8d88be68198208a829cd5f	22	UK	Female	16	White	No
-5f8f0ae15fe9e60fbbbaead9	28	US	Male	18	Black or African American	No
-5f9389fafdbecb173b329cca	22	US	Male	12	White	No
-5f93aff4d654c619d22b94b9	32	US	Male	21	White	No
-5f985596be2ea910b23827ed	23	US	Male	16	Asian	No
-5fa1636a77c875235bd8e1f6	28	US	Male	14	White	Yes
-5fa7c59d7c24a5554e80e4aa	30	US	Male	14	Multiple	Yes
-5fa9a4789785cb1d1735dba4	35	UK	Female	16	White	No
-5fadeb340e10471fdeb5fbf5	24	US	Male	12	White	Yes
-5faeb8eb6562cd0163f216ec	28	US	Male	12	Asian	No
-5fb2ce5316dfd3963b4be37c	30	US	Female	16	Multiple	No
-5fb3e1ecadba8802c0d12fe6	23	UK	Male	18	Asian	No
-5fb402a66cba9801673f2b5c	32	UK	Female	12	White	No
-5fb5829e56cf2b0b8446dda2	24	UK	Female	18	White	No
-5fb70808c7c7bb1d76c2b9d4	34	UK	Female	16	White	No
-5fb93f3349adcb75d64045d1	24	UK	Female	16	White	No
-5fba91d5a2e5dda8c5977190	37	US	Female	14	White	Yes
-5fbd948d22ebef1c398a8e8a	34	US	Female	12	White	No
-5fbedb605c74b312137f371b	31	US	Male	16	Asian	No
-5fc0c49264908d09e94c8cd7	38	US	Female	12	White	No
-5fc14a9cfddce609bd3e5015	24	UK	Female	16	White	No
-5fc2a0d812bc59000b746ee5	30	US	Male	12	White	No
-5fc3442312bc5917b8341963	24	US	Male	8	Black or African American	No
-5fc42a3648abac377a552522	37	US	Male	12	White	No
-5fc45894c518494211619c7e	36	UK	Male	16	White	No
-5fcd709227fabfc6ca7a969e	31	UK	Female	16	White	No
-5fd0dc0d8dae67016ed65a54	32	UM	Male	12	White	No
-5fd0ef1dbfdf0801f669f642	31	US	Male	16	Asian	No
-5fd18d125e1f92195b1717bc	26	US	Male	16	Black or African American	No
-5fd410790e3b0716869c801e	22	UK	Male	16	Multiple	No
-5fd8c059856120277dec48ef	34	UK	Female	18	Asian	No
-5fde9d8446872e61791b82c7	29	US	Male	12	White	Yes
-5fe9ccf43803bb921592f8ac	34	UK	Male	16	White	No
-5feb9a64d42dc5c4926ffe03	33	UK	Male	16	White	No
-5fef00fd52b0e2d230369a01	27	UK	Female	12	White	No
-5fef2fa9efea401f0b55a7c2	27	UK	Male	8	White	No
-5fefbee02c2ee6e7ad30b24d	27	UK	Female	18	White	No
-5ff35316d4f1e4411075686b	38	UK	Male	21	White	No
-5ff39ec71d6cb49c6c906727	33	US	Male	16	White	Yes
-5ff633cda2b5841a81ec5b9a	30	US	Female	16	White	No
-5ff94e71c59814230b0fb713	31	US	Male	14	Black or African American	No
-6000cefee380e61fa9bc5ae4	30	US	Male	16	White	No
-6002e90144049f32edaf9ccf	24	UK	Female	18	White	No
-600604af2e88fb932d0b7aec	32	US	Female	12	White	No
-60079f45348bb62bdcd363ff	38	US	Female	14	White	No
-600c3a4cf1786b0d29f2e0b5	24	UK	Female	18	White	No
-601228de8f04be234171ca8f	31	US	Male	16	Black or African American	No
-6012a60ae800da000ce2e328	28	UK	Female	18	White	No
-60130d613d3ca613b04d39bb	23	US	Female	14	Black or African American	No
-6014319e270fe939a04f9750	33	UK	Male	12	White	No
-6017f6742d7cc9ad4f98fb4d	22	UK	Male	12	White	No
-60188f5f74e975153e518af0	32	UK	Female	16	White	No
-6018e7e271455e1e9e49bda1	31	US	Female	14	White	No
-601957589dce2d020c0b68fd	20	UK	Male	12	White	No
-601bd7b6f176775ca8d0cd76	31	UK	Female	16	White	No
-601d7cc678b34c000c119699	23	US	Male	12	White	No
-601e13b872774f263d64acac	34	US	Male	18	White	No
-601fe0abd9466c54b4ae2edf	28	UK	Female	16	White	No
-60205d8a88ba9165dda2b151	35	UK	Female	16	White	No
-6025322c854f3a000b5f39f4	33	US	Female	12	Multiple	No
-6025534aacfd7c07175859d8	23	UK	Male	16	Asian	No
-60282d2ffedb021342e2df15	22	UK	Female	12	White	No
-6028daf2a770da7b4c6bc0c9	35	UK	Female	18	White	No
-6029b0e17f3b5d944ab183f1	33	US	Male	16	White	No
-602d0d644ae79165540824c7	21	UK	Female	12	White	No
-60301eb443d657e3194282fa	22	UK	Female	12	White	No
-603862f99e00971c55fe0874	32	US	Male	12	Multiple	No
-60392f725862f13f0fe248fd	22	UK	Female	Other	White	No
-603bbf426ba69e8af20ace6f	21	UK	Female	16	White	No
-603cdf727dc2aaaf78665c7a	30	UK	Male	16	White	No
-603ed5d8d98e95fc0e0a67a9	35	UK	Female	18	Asian	No
-603ffa2297399c196dd985c6	30	UK	Female	16	White	No
-60412f7a5f580407f8e6e615	37	US	Male	12	White	No
-604397dd75ab0c367e5f2604	36	US	Male	16	White	No
-6044aeec82a9db5312244eff	32	UK	Female	16	Multiple	No
-60469cfa17b0fd0dca2c2286	26	US	Male	16	White	No
-604948af3d18f08a6d339883	30	UK	Female	16	White	No
-604b682a8b6ed9694d8e48aa	25	US	Male	16	Black or African American	No
-604c43026c4192103feff6e7	21	US	Male	16	Multiple	Yes
-604e634b32d4a6d79fe6dff9	20	UK	Female	12	White	No
-604ece0ddcb93c1afcda5601	23	US	Female	14	White	Yes
-6053af645a4c66eac9bb2c2b	22	UK	Male	16	Asian	No
-6054e1ddb68b58dd23242765	36	US	Male	16	Multiple	No
-605504fc7a5a699c16ae8b4d	31	US	Female	16	White	Yes
-6055710aefbed49cbc6c872b	23	US	Female	12	Multiple	No
-605867beea908e8ef4302da6	20	UK	Female	18	Black or African American	No
-6059de1764f0ba6ded888c05	25	UK	Female	18	White	No
-605af9d7b86acbdc81560f8b	27	UK	Female	18	White	No
-605e9cc770aa6d1947d02bfa	31	UK	Male	16	White	No
-6061fff2c21e787791b1d052	39	US	Female	12	Black or African American	No
-60628138bcaf1a1ee218738e	22	US	Male	12	White	Yes
-606492360e422d12dc63000e	26	US	Male	18	White	No
-6065d6c60c9d35be7632a6ca	22	UK	Female	16	White	No
-606df53de4b0550a5f42fefe	36	US	Male	18	Asian	Yes
-607047e8bf8855d7e3112b91	32	UK	Female	14	White	No
-6071a3faff84952d04771a21	34	UK	Female	16	White	No
-6072f0c49cdfff6846fc1964	29	UK	Female	16	White	No
-6072f5e58232a7e276108b28	32	UK	Female	12	White	No
-60743e408fd768b1a939ed4c	20	UK	Male	12	White	No
-6074b929f753216d88c77e88	31	US	Male	12	White	No
-6074c0ce19889ca4efd4448e	31	UK	Female	12	Asian	No
-6075ecc30e7921c183644eaa	25	UK	Female	14	White	No
-60794cf6640dbc4d3662ef07	40	UK	Male	14	White	No
-607cce4d28ef1f0561fc93ca	30	US	Female	18	White	No
-607f0b70818fde7990b3992d	34	US	Male	16	White	No
-607f2e7133afa07084f6be01	34	UK	Female	16	Asian	No
-607f7f18d84d010ea2cd8664	23	US	Female	12	Multiple	No
-6080c437c4d7109234489144	23	US	Female	8	White	No
-6080f54b42dcabe9e1418fe3	27	US	Female	12	White	No
-60815de360f218f8b6164656	20	UK	Male	12	White	No
-6083e4575dc56d8ed869d70f	21	UK	Male	16	White	No
-60868644bc3f19d6d4f9a413	24	UK	Female	18	White	No
-60873d2ab16643e5a08cafd2	31	US	Male	16	White	No
-608bfa04767191aa4d57bfd8	40	US	Female	12	White	No
-608da9dd3e630867a6efd9b2	34	UK	Male	16	White	No
-6090578fb2299eacaec32b7a	28	US	Female	12	Asian	No
-6091e1be3df7254e526f7168	21	US	Not listed: Non-binary	12	Multiple	No
-6093352bbe7fa5d5483fa970	21	US	Female	12	Multiple	Yes
-6094af4acc2ca8dd2c6f8edd	24	US	Female	16	White	No
-6095fc75ab1d101e060d808b	38	US	Male	16	Black or African American	No
-60996e96d40f57772e96ab4f	24	UK	Male	16	White	No
-609992993f9e385c720e2ba5	30	UK	Female	16	White	No
-609a9aae2e53d2c195a1bba6	31	UK	Female	Other	White	No
-60a1e78bca6d054be353758f	22	US	Female	12	Multiple	Yes
-60a2cf0845851125015f4c1e	30	US	Male	18	White	Yes
-60a80fbd13aba726d46b8f2e	25	UK	Male	18	White	No
-60aa79fa99f7d53701b02256	27	UK	Female	12	White	No
-60ab9e649e9587f020d43ede	21	UK	Female	Other	White	No
-60ae58bc8c294827d300e31c	23	UK	Male	18	White	No
-60aecded93eb495d413a482b	29	UK	Female	16	White	No
-60aee0858e96f753f593b729	26	US	Female	14	Multiple	Yes
-60b15442ddeb2fb71659ae2e	33	UK	Female	16	White	No
-60b610d8c3c4f177c8337729	38	UK	Male	21	White	No
-60b78dc1eb46833a5c6b1235	29	UK	Female	8	White	No
-60b8198defba8da1d95a93b8	34	US	Male	16	White	No
-60b8ee3c30afdb493743872e	28	US	Female	14	White	Yes
-60b9b66f3b3795d796a82ee6	29	UK	Male	18	White	No
-60ba660517a2dba7f4b8c4de	23	UK	Male	12	White	No
-60bb3b463887c2f9d1385cce	31	UK	Male	14	White	No
-60bd4bfc88b646e72d772977	33	US	Female	14	White	No
-60be1e056f39c387c4f02308	37	US	Male	18	Black or African American	No
-60bf9da88006aeba20357735	23	UK	Female	18	Asian	No
-60bfa45e4b4c6f448676b18e	30	UK	Male	14	White	No
-60c12fe6ca8c4aa6d0185190	39	US	Male	16	Black or African American	No
-60c29201092d523e3b08a603	37	UK	Male	12	Asian	No
-60c939f66b866cfeb73eec68	26	US	Female	21	White	No
-60c93f189082587ea79ce324	26	US	Female	16	Multiple	No
-60c9b0886e03c28f26d97b19	37	UK	Female	18	White	No
-60cb864c78911d94995416e9	23	UK	Female	16	White	No
-60ce179aa6f645eb5543c20e	36	UK	Female	16	White	No
-60cef7be32400c5dd5a5a10f	27	US	Male	12	White	No
-60cf5539b37d771226c81bd2	22	UK	Female	14	White	No
-60cfa8282c2d838ec7e98e95	21	UK	Female	12	White	No
-60cfc6dc65562d055da211c1	19	UK	Female	14	White	No
-60d0709ffc9b494cf65a266c	20	UK	Male	12	White	No
-60d13d406f3b34d6791c8831	26	US	Male	12	White	No
-60d20bdca2934c2104798fff	40	UK	Male	12	White	No
-60d2c59451b12e36fb281477	28	UK	Male	18	White	No
-60d35fa71e56e17e064c2c1e	21	UK	Male	12	Asian	No
-60d3740f31606cb50e49f00c	32	US	Male	16	White	No
-60d54e6c7c07f25c5b751491	38	US	Female	16	White	No
-60d5c363dd49bcb80e528806	33	US	Female	18	White	No
-60d6562174087c2eccf2357f	34	US	Male	16	White	No
-60d8c6bc9686529cdc824a49	37	US	Female	12	White	No
-60dd27004a74c325f5b22e17	20	UK	Male	12	White	No
-60ddf72ef11f891328449fb0	24	UK	Female	18	White	No
-60e0687e08d77efdaa4e9aa8	23	UK	Female	14	White	No
-60e0932282119517de61e37c	24	UK	Female	16	White	No
-60e3abf8c7ce5b28f917f5d3	21	US	Male	12	White	Yes
-60e46e6029128248ba4b9e5d	19	US	Female	12	Black or African American	No
-60e5e5b0ceabcb5d6c5f1dd0	36	UK	Male	12	Asian	No
-60e67bc1585c7158f6f9116a	33	UK	Female	12	White	No
-60e6edaeed006606fe5d0419	35	US	Female	14	Black or African American	No
-60e7044ddc2523fab6cbc0cd	30	US	Female	16	White	No
-60e8a63f733f423be3da1846	33	US	Female	12	White	No
-60e8b68c9033e23d58e9dcc0	33	US	Female	5	White	No
-60e8f275f92d76c8f3a687bb	29	UK	Female	18	Asian	No
-60e9cbd27102b08fc616fbe6	30	US	Male	21	White	Yes
-60ea57c074a703877f04330b	30	US	Male	12	White	Yes
-60ea8e0a21b4d8ed9eddcc82	25	US	Male	12	Multiple	Yes
-60eacff7b678411f44e11a12	24	UK	Female	16	White	No
-60eb81e023788423a6ea43f9	20	US	Female	12	Asian	No
-60edac38ac8045d6947c92c4	22	UK	Female	16	White	No
-60edac884fef13c0b0660daf	38	US	Female	12	White	No
-60eec0367a7cc5ea6ed0e099	40	UK	Male	12	White	No
-60ef047e8969715a3db7181a	34	UK	Male	16	White	No
-60f47fc03ca663a2425b8085	34	US	Male	14	Black or African American	No
-60f4e3ab507bbb123f866e88	24	US	Female	16	Black or African American	No
-60f5917414ac7d222d22db64	26	UK	Female	12	White	No
-60f5d68c9b6838e7659f53af	26	US	Male	16	Black or African American	No
-60f74d68056e79023b681952	25	US	Female	16	White	No
-60f8658bf9d1627d3bc87a3d	32	UK	Female	8	White	No
-60f94ae0c088d8cb4f4a39ff	35	UK	Female	12	White	No
-60fb0deb007dc3a640662150	20	US	Female	14	White	No
-60fb9db54c70dd24172b67c3	20	US	Female	12	Multiple	No
-60fc1b9a79d5bbbb6712bf8e	37	UK	Female	14	White	No
-60fc2f923851f117e21b878f	21	US	Female	12	White	No
-60fc3a1e0eb578aa02590e27	22	UK	Female	16	Multiple	No
-60fc613690b108048160a92c	25	US	Female	16	White	No
-60fcd5602ff7c8f0866ecd0c	21	US	Female	12	White	No
-60fcdc8565f979db697cbb62	22	US	Female	16	White	No
-60fcefe49e61a0aa689df3c8	27	US	Female	16	White	Yes
-60fcfc727484888d11fac02a	38	US	Female	12	White	No
-60fd006a5893cbce502dffd4	28	US	Female	16	White	No
-60fd0d9bafc469eb390491a0	39	UK	Female	12	White	No
-60fd104de10db57a893a0296	33	UK	Male	14	White	No
-60fd47060f9034b90c94ac08	27	UK	Female	18	White	No
-60fd4a53b6aed2f94948d362	20	UK	Female	12	White	No
-60fd58f89d037589c34f5a18	31	UK	Female	18	White	No
-60fd64fd34ee5940500d499f	28	US	Female	16	Asian	No
-60fd80c426ac8c2b5da717b7	21	US	Female	12	White	No
-60fd99228ede8e6e8c0a2411	22	US	Female	16	White	Yes
-60fdb99f392d7600a5d42c1f	27	US	Female	18	White	No
-60fdc934e81b93f92f561d76	24	US	Female	12	White	Yes
-60fde2dcd1deb9c16988f4ea	26	US	Not listed: Non-binary	18	White	No
-60fe0a8295a33168e57c2073	22	US	Female	12	Multiple	No
-60fe1e46d1cbe0214ada4526	31	US	Male	16	White	No
-60fe1f142ea14f6f8d70e68d	25	US	Female	16	White	No
-60feaeb30d9981f22b233712	20	UK	Female	12	Black or African American	Yes
-60fed81a020a69e3bbb6017d	25	US	Female	16	Asian	No
-60fee6ac4251e521b4546f1d	23	US	Female	16	White	No
-60fef79fa408c9eae61e49c3	30	US	Female	16	Asian	No
-60ff0ff28636a214aed9a72e	30	US	Male	12	White	No
-60ff30f3bc42a1631f5758ee	28	UK	Female	16	White	No
-60ff6673abdb3e7cbdfafe10	27	US	Female	14	Multiple	Yes
-60ffea6791b8a6fca294f97c	19	US	Male	12	White	No
-61002113b721112eda846c7f	20	US	Female	12	White	No
-610058f21b82dddf45b44009	23	US	Male	12	White	No
-61005ada2ffbf75efed5deb5	24	US	Female	12	White	No
-61005b49f8382e2e24f00ef0	33	US	Female	18	White	No
-61009113cbe76c23b4a0800d	21	US	Female	12	White	No
-610093fb67a014f2230f77bb	21	US	Female	12	Black or African American	No
-6100c17164f9f4c063f4d25f	22	US	Female	16	Asian	No
-6100d28f1e251a6dff92f0df	22	US	Female	16	White	No
-6100fd9153a73727cf2edda8	20	US	Not listed: nonbinary	12	Multiple	Yes
-61020197f83a83260d8c78b4	28	US	Female	16	White	No
-6103777b1cf4f1d223482c72	20	US	Male	12	White	No
-6103a781f654509f2e43ef13	26	US	Female	12	Multiple	Yes
-6104768a9cb1e52907ff3bd5	26	US	Female	16	Black or African American	No
-6104f2626b46bd21f1c9a1b3	29	US	Male	12	Asian	No
-6105758d070f9b350cea24ba	29	UK	Female	18	Asian	No
-6105f0d0cbe5d053ff7ecade	32	US	Female	12	White	Yes
-61067ed9f756e2096f4ae3bc	36	UK	Female	16	White	Yes
-610761fce69907203f8b2488	23	US	Female	16	White	No
-6107747487630f86119418da	28	US	Female	16	White	No
-6107a5be3cbf757b3297d8a1	38	UK	Male	12	White	No
-61084dbab48ab21fce452554	25	US	Female	18	White	No
-61088f97759a1199340202e9	21	US	Female	12	White	No
-6108d6efa698e3dbe3b313d3	30	US	Male	18	Black or African American	No
-6108e2470b62bbe11b9f2e7c	25	US	Female	12	Asian	No
-61098efe1c7dcf4133162908	22	US	Female	16	White	Yes
-6109df8b813b0d148dde496f	29	US	Female	18	White	No
-610acf76d33d448b391eb588	21	US	Not listed: Nonbinary	12	White	No
-610b64dc95ff0ef5b5b9ac6b	25	US	Male	12	White	No
-610c66163e803a3564dfaf9c	20	UK	Male	16	Black or African American	No
-610d170f7bb4e720cb85b6b2	20	US	Female	12	White	No
-610e0a1e95c323743ff02dcb	37	US	Male	16	Black or African American	No
-610e47e32fee3f67f185cb37	34	UK	Female	Other	White	No
-61103c2b7810420e5f23f437	24	US	Female	14	White	No
-61107313f8a8c5d8adc23703	21	US	Female	12	American Indian or Alaska Native	Yes
-6110bcb9e93c1960b9f28deb	30	US	Female	18	White	No
-6110db4e6d45d7849cd5231e	38	UK	Male	16	White	No
-611112142433b5e95c84acd9	28	US	Female	16	White	No
-611131e47725f6a04c723651	28	US	Female	16	White	Yes
-61114a817e2f468c9af43bba	21	US	Female	12	White	Yes
-61119018babf810c0cab7d3b	26	US	Not listed: non binary	14	White	No
-6111949dc977e72c3f9e7335	25	US	Female	16	White	No
-6111997b776e4a117a04cccb	24	US	Female	16	White	Yes
-6111b5e34b026c7ce51a4353	31	UK	Female	21	White	No
-6111cbf1e5dffb55a8f70153	24	US	Female	12	White	No
-611291090e626fdfde536f38	39	US	Male	12	Black or African American	No
-6112c77c4cb58daede378463	22	US	Male	16	Asian	No
-611383641ef5dff3b6f75ee5	25	UK	Female	18	White	No
-611409d13bdb227076c9426b	24	US	Female	16	White	No
-6116006273dc164b00631515	28	UK	Female	18	White	No
-6116aa8875bdab57cab52804	27	US	Female	12	White	Yes
-61193152f8e8156f6723e801	26	UK	Male	16	White	No
-611988e5392b6d421939c5d1	23	UK	Female	16	White	No
-611a435c3f45b6c288196363	23	UK	Female	18	White	No
-611ab91a00baa062f55b86d8	23	US	Female	16	White	Yes
-611ae10542e79063248b4f47	20	US	Male	12	Multiple	Yes
-611e4e160f41977f737035ef	21	UK	Male	16	White	No
-611fb8ddcc7bb35d86ec0714	33	UK	Female	16	White	No
-6120d602c1976a4114dcb110	32	US	Female	14	White	No
-61210b5c3f465c51a7f4166a	38	US	Female	18	White	No
-61216047eea1fe5523aa30e4	21	US	Female	12	White	No
-6122bff4706b6d848da00ec1	26	US	Female	16	White	Yes
-61230b14a3bcb65c585dfdaa	37	US	Female	16	White	No
-6125653f9d984b6fd3d68983	30	US	Male	16	Multiple	No
-612669b8c92504572e54c62b	29	UK	Male	16	White	No
-6128a3db67305ef94021fcd7	29	UK	Male	18	White	No
-6129cc7a565c9c03752802fa	26	US	Female	18	Multiple	No
-612cb8ab5ad60fc4504e073f	28	UK	Female	14	White	No
-612d5ca50be0e9ff3505561f	30	UK	Female	12	Multiple	No
-612df6ef33e1afb850d6d56f	31	US	Male	12	White	Yes
-6130ea03d6862384241af61a	23	US	Female	16	White	No
-61313473de5462f652bb133c	30	US	Male	14	White	Yes
-6132cc58d1dcc24bcdb61606	26	US	Female	12	White	No
-61338374ecef87bfdfd1c7bb	20	US	Male	14	White	No
-6134eba70b3263b484d2b471	20	US	Female	12	White	No
-613589ac6333693e1927fa76	39	US	Female	12	Multiple	No
-613637a4f7a0e5359082010b	30	UK	Female	21	White	No
-613b33351fe3b5ef6a70f654	22	UK	Not listed: non-binary	16	White	No
-613b94b83b5cb4c72904f8b3	24	UK	Female	16	White	No
-613b94c0131c197e3151d176	25	UK	Female	16	White	No
-613e4fe98859554b7170871b	27	UK	Female	16	White	No
-613e7bf4ae5857b728674b91	20	UK	Female	12	White	No
-613fa6a4ac727e4d53fcaf38	20	UK	Female	Other	White	No
-61413568af671b4a3f59aa8a	24	US	Male	16	White	Yes
-6141f62294ff9bf9d89e8897	28	UK	Female	18	White	No
-61432781817c1541f59bbf33	19	UK	Male	12	White	No
-6144c14d93e88592f8e9750d	26	UK	Female	16	Black or African American	No
-6146f9d153bd39dfa1fe49b5	24	UK	Female	18	White	No
-6147082f6a4363dd25430c10	24	UK	Female	12	White	No
-6147213e9333ddd0c65b3ed3	34	UK	Female	16	White	No
-61474f07f4cfbc50cb3b2f1e	27	UK	Female	14	White	No
-61479ab9218564b0c032d382	30	UK	Female	18	Black or African American	No
-6148963108ad9e90ae61c8ab	24	UK	Male	0	White	No
-61498e629580b6d5cc8f67f3	27	UK	Male	16	White	No
-614a125a754b4a9660643d88	23	US	Female	16	White	No
-614dc45c0ed5f55d9036e0d9	27	UK	Female	16	White	No
-614e43c148febeb17c93e998	37	UK	Male	16	White	No
-614e5f296503fcbc29f42b3a	39	US	Male	14	White	Yes
-614fe09fec9ce4a2a415476d	18	US	Female	18	White	No
-61511b7499620085c08c171d	40	US	Female	18	White	No
-6151b373b274d12a949a4369	28	UK	Female	16	White	No
-6151e572a07b1d5e164bab2c	25	US	Male	16	Other	Yes
-61530d04a2176282b7ee6fac	35	UK	Female	16	White	No
-6153593be7f8925dee8d7db6	33	UK	Female	12	White	No
-6153b5513ccada2d35fae508	32	US	Male	14	White	No
-61544c7e85951454f9c5b60e	24	UK	Female	16	White	No
-6154973c69da7c97996a19f6	24	US	Female	16	White	No
-6154b0b9c638eb2b8b147def	35	US	Female	12	Black or African American	No
-61577f23f2c969a3eae09d3b	32	UK	Female	18	White	No
-61592ea07347e286bca1955f	22	US	Female	16	Asian	No
-6159fb27b6340dda3fc6a5c3	36	US	Male	12	White	No
-615c6b6db80030c2df00f6b7	23	UK	Female	16	Asian	No
-615c9a75a3347425d96d9f4f	21	UK	Female	12	White	No
-615dd0f9a1497c3521241dbc	39	UK	Female	16	White	No
-615dd1eb2702a672f7db49f1	37	US	Female	12	White	No
-615edb3967bc743ac381a940	24	UK	Female	14	White	No
-615fdfca4830432512527cf3	27	US	Female	12	White	Yes
-6160c8f657e3c4094b01614a	35	UK	Male	12	White	No
-616413c53aace889a0f13c3a	21	UK	Female	16	White	No
-616426c9ef325b5dd26f7d8e	29	US	Female	18	Black or African American	No
-6164b1a030e4e2dbcd02e92e	29	UK	Male	16	White	No
-6164cb24dbf61b550392e841	33	US	Male	18	White	No
-616555ec3460f0a519c1cdff	24	UK	Female	18	White	No
-6165a8ee6dde7ff6f4b22e6f	32	US	Female	12	Black or African American	No
-6165ab1d62dc48b90438ea1d	32	US	Male	16	Multiple	No
-6167abbd7db521535e811eb0	22	US	Female	16	Black or African American	No
-6168713d805efede55796d7f	27	US	Male	12	White	No
-6168ace1ef0f716f56f08f5b	34	US	Female	18	Black or African American	No
-61698720ea3862e067c47c73	31	UK	Male	16	White	No
-616996c4f97c112b8c31d813	35	US	Female	12	White	No
-616ae9c2a6c0fec55d16c130	23	UK	Female	16	White	No
-616c056b42e788ef31efc4b0	38	US	Female	16	Asian	No
-616ddd8fb030bba466234e7a	35	US	Male	12	White	Yes
-616f3c3672c07234d96edc86	26	UK	Female	16	White	No
-61716052a11968c4644776b7	38	UK	Male	12	White	No
-617172d3e4d3b6d6ab6a705c	35	UK	Male	12	White	No
-6171f15c2b846b1f468a266e	32	US	Male	16	White	No
-61731c0ef27028acbfbbf972	25	US	Male	18	Black or African American	No
-6175e05636b79082f8d345c5	35	US	Female	16	White	No
-61bb36e440db417c1a13894a	21	UK	Male	16	White	No
-61f2adfaa09e72f23cbaf9da	29	US	Female	16	Black or African American	No
-61fa945e5719bc09cb834f15	30	US	Male	18	White	No
-62029a07ef1cb18a1337c583	20	UK	Male	14	White	No
-62029a55ef1cb18a1337c61a	24	US	Male	16	White	No
-62029adcef1cb18a1337c71c	25	US	Female	18	White	No
-6234864ec4a6e1aa0229fbd7	37	US	Female	14	White	No
-62349b9d9d293b56a95ede2c	28	UK	Male	12	White	No
-6234a7fc493d026318784c23	20	US	Female	12	White	No
-6236844dad7b8f69aad35b69	20	US	Male	12	Multiple	Yes
-6237ca974050879378c8fea8	25	US	Male	12	White	No
-62694fbeede8c79c1b047e80	32	UK	Male	18	Multiple	No
-62712d1c0b71829386d60eb4	36	UK	Male	16	White	No
-62718acba39cea360d198b7d	32	US	Female	12	White	Yes
-62728c148af5805feea46dc8	40	US	Female	12	White	No
-6272b9dfc470a51d5fa0e6ea	41	US	Male	14	Asian	No
-6273eeabe7637501530d9733	27	UK	Male	14	White	No
-6277fb597942c07d74b16b98	33	UK	Female	16	Asian	No
-627809c52874925390a423a6	31	US	Female	12	White	No
-627935c4e5d7e70b502e206e	28	US	Male	16	White	No
-62824c37f4cc437ab86e0ae6	34	UK	Female	12	White	No
-6282571cf39cd89341a474e9	21	US	Male	12	Black or African American	Yes
-62827ef2d905564e88a46d01	25	US	Female	14	White	No
-6282a9b9015ed5c3dbf566b3	20	US	Female	12	White	No
-628419137c4c3ded72e4874d	22	US	Male	16	White	No
-62853cad232ad9273433f22e	31	US	Female	16	White	No
-6285918873f1ff83c2bfa809	21	US	Male	14	White	No
-628659966054a3064240cb17	34	US	Male	18	White	Yes
-628678ca852c5ee97a800552	37	US	Female	16	White	No
-62867b51e71606f873d41b05	36	US	Male	12	White	No
-6286ad40f6f08677959e431e	25	UK	Female	12	White	No
-628781515f29a0394e23b15b	31	UK	Male	16	White	No
-628bbe2c0f8080e6985e8592	26	US	Male	12	White	Yes
-628d62e2c99c773b217f1321	28	US	Male	12	White	No
-628e5f283594e1a48a04886f	32	US	Male	12	White	No
-628f6d4d2a3cf806fc7e01ff	24	UK	Male	16	White	No
-628f9b391ab8b87c64643248	30	US	Female	14	Black or African American	No
-6290d34243e9347c40bac608	31	US	Female	12	White	No
-6290d930eb8f73a88e290de6	27	US	Male	12	White	No
-62913423a2eafb7ddd64d975	20	US	Male	12	Asian	No
-629186f7e2f20297ead170be	27	US	Male	12	White	No
-629531cb501e6d23d9797050	39	US	Male	18	White	No
-629534afc0924e49e1464589	37	US	Male	18	Asian	No
-6296bef3248bf76cc113926b	24	US	Male	12	Black or African American	No
-6298a9085d14b6e56be0c482	31	US	Female	14	White	Yes
-629b3b3c89d490460eacbfbc	38	UK	Male	21	White	No
-629e1fc50453c5096d91c5f4	39	UK	Female	18	White	No
-629f2a1f516a323b811b8273	33	UK	Male	16	White	No
-629f2a9c3effb1dc81c49116	31	UK	Male	18	White	No
-629f2dccc6e91be06559e2f1	35	UK	Male	18	White	No
-629f2edb4e2e1d417c524cb7	20	UK	Male	12	White	No
-62a0b2f90e25677103262820	25	US	Male	12	White	No
-62a2648755dec7ce4164f875	32	UK	Male	16	White	No
-62a2adb16716c2e0c8d3c07a	24	US	Female	12	Multiple	No
-62a338e26dc04ba4e4fb26bb	39	UK	Male	16	White	No
-62a42874616cea6120350ad9	34	US	Male	12	White	No
-62a733deec84f43ab19f7cca	25	US	Female	16	Asian	No
-62a7970f8387f3fcc95b106b	31	UK	Male	12	White	No
-62a88dbc14372bc103a1accb	40	UK	Male	12	White	No
-62a8f3aeaf0846daa75fbc3d	26	UK	Male	18	Black or African American	No
-62ab2034b58fe149d144acf4	35	UK	Male	12	White	No
-62ac75a88ed59acd2d641ef5	38	UK	Male	14	White	No
-62ac7ba73347a349866fb1f9	28	US	Not listed: Nonbinary	12	White	No
-62ac7d0d794fad54e6cf7d84	32	US	Male	14	White	No
-62aca272d3567b4b0e575647	25	UK	Male	12	White	No
-62b09bc02efbcc7d0dd81f3b	27	US	Male	14	White	No
-62b1418c313cf1ef437ed9c3	18	US	Female	12	Multiple	Yes
-62b1ff970dfb7055f35d6937	30	UK	Female	12	White	No
-62b33a6e9bcbf397ffc647b0	19	UK	Male	12	White	No
-62b4370c9a89e5a09c4447de	40	UK	Female	16	Asian	No
-62b4403257f7d42730f83394	39	UK	Male	12	Multiple	No
-62b447656327845c605becd9	22	UK	Male	16	White	No
-62b46cafda63e83d14eb4ec5	30	US	Male	16	Black or African American	No
-62b5d90d09660072824f68cf	37	UK	Male	18	White	No
-62b5e2bd8c3c515ab19b911a	34	UK	Male	16	White	No
-62b5fea64b239d91783414ff	28	UK	Male	12	Black or African American	No
-62b8b2be4c2b1d481f4f68c0	40	UK	Male	14	White	No
-62bc3401dc67c7598dbba4a6	30	US	Male	16	Black or African American	No
-62bd685ac3edc9ad0d77812b	35	US	Male	18	Black or African American	No
-62bdc8f9ce5149c655938472	30	US	Male	14	Multiple	Yes
-62bddb63d7c84ff6e9c592f5	25	US	Female	12	White	Yes
-62c0ccde4bd16c7f96a2959f	35	US	Male	16	White	No
-62c41fe598ab94de4d4f021e	27	US	Male	16	Black or African American	No
-62c61d523167ae5eafc98e6c	30	US	Male	18	White	No
-62c79dafb9222348d5e5a90c	32	US	Male	18	Black or African American	No
-62c83041b362f6fad2f05822	31	UK	Male	16	White	No
-62c8c2d71e87b86722f0215b	35	US	Male	18	Asian	No
-62c8d159937c939dd4d139e3	30	US	Male	12	White	No
-62caff3bc44f4d702b6e2e35	25	US	Male	12	White	No
-62cc0f224275a8e076973853	28	UK	Male	16	White	No
-62cdb59eb5cfe2052ca5074c	37	UK	Female	12	White	No
-62cdd40d1b2793efe13fd204	33	US	Female	12	White	No
-62ce9f115a24ca323371d2dc	30	UK	Male	16	Asian	No
-62cf2192b9212fc96a5b3917	28	US	Male	16	Black or African American	No
-62d133d8355730e56a6722dc	33	UK	Male	12	White	No
-62d161281d1cc51873268298	18	UK	Female	18	White	No
-62d59d0df8da03fdf7f8c317	24	UK	Male	12	White	No
-62d68f14d9b476ca9b026253	29	UK	Male	16	White	No
-62d709bbd195748a93cf951b	20	UK	Male	12	White	No
-62d9242891fdb4cd2294633e	23	UK	Male	14	White	No
-62da6435cd756fcdd166ba69	28	UK	Female	12	White	No
-62daadb99f0265052485e7cf	31	UK	Male	16	White	No
-62db607906a1c0be0039aa32	37	US	Not listed: transfem	12	White	No
-62df7fc27c9e824a7a774103	40	US	Male	16	White	No
-62e024e1be720e4322dade00	39	UK	Male	12	White	No
-62e02b1ed5b0fbc1b1dc09e7	36	US	Female	12	Black or African American	No
-62e0629e7fbb8a1907dade0e	40	US	Male	18	Black or African American	No
-62e0c40c68eaa2ad1508eae6	28	AL	Not listed: Prefer not to say	16	Multiple	Yes
-62e154b0682e270b4acdf5ee	31	UK	Male	14	White	No
-62e185484154c451882a8a3d	25	US	Male	16	White	No
-62e19208352cd518d7b2f085	34	US	Male	12	White	No
-62e1f3f870894e12168113c5	32	US	Male	16	Black or African American	No
-62e25115fb932baf4a93173f	31	UK	Male	12	White	No
-62e3f7b224ec70641fd86b7b	35	UK	Male	12	White	No
-62e40abe71c1b7e395e9bf4a	39	UK	Male	18	White	No
-62eaacea4ed738b3a35c0455	31	US	Not listed: non binary	16	White	No
-62ebd8c191cf8e7fe54af5cf	35	UK	Male	16	Multiple	No
-62ebf162fc296d770d108698	19	UK	Male	14	White	No
-62ec4c02ead47ce424644dd8	29	UK	Male	14	White	No
-62ecf80065974f9ca24a6430	33	UK	Female	12	White	No
-62ee4337445b044245a71185	25	UK	Male	16	White	No
-62fb383ce16d6921d1c2c2b8	24	US	Male	16	Black or African American	No
-62fb7a1e911792cb94b547c6	29	UK	Male	16	White	No
-62fb7b282ed3a1e42d9a5f46	19	UK	Female	12	White	No
-62fb7ba781f1eaac2b543934	25	UK	Female	16	White	No
-62fb7dc39338d2a30ae9cff4	24	UK	Female	18	Asian	No
-62fb7eb177df6c3faae7baba	30	UK	Female	16	White	No
-62fbdda6e4b5a034b71296f8	30	US	Male	12	White	No
-62fc25ef4ce0d3d169b7a120	31	US	Female	12	White	No
-62fcabf17fc3d7ef0952fb6c	26	UK	Male	12	White	No
-62fe6312269d0e4ae894297b	33	US	Male	12	White	No
-62fe744f4cd35a1a91b43f13	27	US	Male	16	Black or African American	No
-63003bb4d6f83995fb271ba3	40	US	Male	16	White	No
-63026a8fd8429b224cd2a134	26	US	Male	16	White	No
-63039dbefda87c47a91fec04	36	US	Male	12	Black or African American	No
-6303b2a667e441d9712da559	31	UK	Female	21	White	No
-6303c0bf11a5be642b52830e	35	UK	Female	8	White	No
-63068110447ef1aaa9660816	28	UK	Male	12	White	No
-63069f585b35a5ec752fcd30	34	US	Male	18	Black or African American	No
-6306d4da805f2e38a841c3ad	26	US	Male	12	White	No
-63077eb74317918cf6dde8db	31	US	Male	12	Black or African American	No
-6307bd3bb93e804d22332b3e	32	US	Male	12	White	No
-630a2fd6e76ccbe74374656d	19	US	Male	8	White	Yes
-630adf01fe54101d5214a17f	31	US	Male	14	White	No
-630f06eb561655a94229a93d	18	US	Male	14	Asian	No
-6312ada1ce715ee3916c3748	29	US	Male	14	White	No
-63136313a568ce59fb97feb9	33	US	Male	12	White	Yes
-631381096e95278a3f97fed4	34	US	Female	12	Multiple	Yes
-6314453e0a22cc4e1e66ca08	37	US	Male	16	White	No
-6314bc49055e150c92f4736e	34	US	Male	16	Asian	No
-6315a102cb675027354ef5d8	29	US	Male	12	Black or African American	No
-631610af8e747093cd90e00d	38	UK	Female	12	Multiple	No
-631659ad8e5354f16aef7249	35	US	Male	12	Multiple	No
-631746048043e6fd54a798d4	26	UK	Male	12	Black or African American	No
-63179fe6d8b52834c9c8f5f7	21	US	Male	12	White	No
-6318ec19888839dfc0b4d5c8	21	UK	Male	12	White	No
-631a0abd840b151d3bf54b6b	35	UK	Male	12	White	No
-631a114b543a75e72096fc17	39	US	Male	12	White	No
-631ab79e8635a1df26319958	19	US	Male	12	White	No
-631b1437200a529b7f31919d	28	UK	Female	21	White	No
-631b32b0796f2941b55e7d58	33	US	Male	14	White	No
-631bfb8f27645e704e21c1cd	25	US	Male	16	Asian	No
-631c8e97db06f601f81bd82f	26	US	Male	18	White	No
-631f1b608af38f654d2a3b1f	39	US	Male	14	White	No
-631f8164145b26de1567f040	36	UK	Male	16	White	No
-631fd12cab0b639506214b7b	38	US	Male	16	Black or African American	No
-632222532c12ab0ab7ca00bd	30	UK	Male	12	White	No
-632245347d475b31018e889f	26	US	Male	14	White	No
-63239f94b13228f09348c943	24	US	Male	12	White	No
-6324190c00acac6ac06d882b	20	US	Female	12	White	No
-63251e479509813fab713ad2	39	US	Male	16	White	No
-6325482a5da955ebe4a72c93	39	US	Male	16	Black or African American	No
-63287c548c0d66d1e300fd64	30	UK	Male	16	White	No
-632881a28fcc3aae4da242e2	19	UK	Male	12	White	No
-6329f8bd8622aaba8e13a6d7	19	UK	Female	12	White	No
-632a2b88ee7ba45758fde30b	30	US	Male	16	White	No
-632b19a12e685b61f1ac6508	35	UK	Male	16	White	No
-632b1b35331d4efbfb0d0f8d	28	UK	Male	12	White	No
-632b21ce03008aff6a4314b6	31	US	Male	14	White	No
-632c0075227e9b734c80424d	38	US	Male	12	White	No
-632c211dcdf6a137b26dfdce	29	US	Male	16	White	No
-632e79f0df7174aeed22be38	34	US	Male	12	White	No
-632ff41f3631baf749984e3e	33	US	Male	12	Black or African American	No
-6332177870f40e88d0206f74	35	US	Male	16	Asian	No
-6335e35d7a38530d68fd75ca	21	US	Male	16	Black or African American	No
-63383ce105061ac9c94a652a	34	US	Male	14	White	No
-6338c289b6f1c7bdcef71166	21	US	Male	14	White	No
-633c74ad6178784ed5b52104	25	US	Male	14	American Indian or Alaska Native	Yes
-633eb584ec1a3cf0efdc2563	36	US	Male	16	White	No
-63403b47287756c1978d2985	26	US	Male	16	White	No
-6341a541b6cfd5f8933f48c4	36	US	Male	12	Black or African American	No
-634282de38138fa9316eb482	30	US	Male	16	Black or African American	No
-6346880c3d5b5160c4dd3b62	19	UK	Male	14	Multiple	No
-63468824bc01887b6007d674	27	UK	Female	18	White	No
-6346887083e9dda2b38f6c56	28	UK	Female	14	White	No
-634694c3bb371c8377659b72	27	UK	Male	18	Multiple	No
-634695670344cd46b52f7249	22	UK	Male	16	Multiple	No
-63469771ec0b74d9c71458d0	38	UK	Male	16	White	No
-6346da4e7ac002d7383bd243	34	UK	Male	12	White	No
-6347e31ef77fad7edd2f53f1	40	UK	Male	16	White	No
-63483c4522d65d46028da7a7	32	US	Male	16	White	No
-634bf82ea58e2f34672d56ba	38	UK	Male	12	White	No
-634db0be66af0236b2c14770	32	UK	Male	18	White	No
-6361483717c4df2ebf189d07	28	US	Male	12	Black or African American	No
-63614928290a805b5455d371	28	UK	Male	16	White	No
-636166e1694fe8d9ed77dd68	24	US	Male	16	Asian	No
-6361769fee0c219b0f1cc480	34	US	Male	12	White	No
-6361ad38e1417ab3691c97ff	27	US	Male	16	Multiple	Yes
-6361bfe81e0da4a406b33f1e	30	UK	Male	12	White	No
-6362a31e279a0277702f9a45	22	UK	Male	12	Asian	No
-6365491e5682032c1c2a6687	19	UK	Male	12	Multiple	No
-637e1d4874d7ff427504812b	37	UK	Female	16	White	No
-637e2af8fcc2c65c96d9e1a0	22	US	Female	12	American Indian or Alaska Native	No
-637f7c6517daaa050a1632ba	30	UK	Male	16	White	No
-6384e8f79ddf2df1432db0e8	31	UK	Male	16	Multiple	Yes
-638af58823dc0ec4b64d0d34	36	US	Male	18	White	No
-63acd72d84094941de5813e5	26	US	Male	16	White	No
-63b6be87ead45e4fa772fbf5	39	US	Female	14	White	No
-63b6cc23f13731158517f900	39	US	Female	18	Multiple	No
-63b6ef9027eb90f292852ee4	30	US	Female	18	White	No
-63bc7fe62d69346a94c04b9e	20	UK	Male	16	Asian	No
-63bca8a6f3803fbb0c3aca28	36	US	Female	16	White	No
-63bd61cff50297c9332e3f39	28	GH	Female	16	Black or African American	No
-63bdfe6a69fc4d15b3aec18d	30	US	Male	16	Multiple	No
-63be6aae1b65a42e794770ee	32	US	Male	16	Multiple	Yes
-63c3164c08ff110d63b44dc6	57	US	Male	18	Black or African American	No
-63c3584c5e3d88814d1005ab	37	US	Female	16	Black or African American	No
-63c48023d6116ee42fa17bf8	33	US	Male	16	White	No
-63c487fa9db90581d57dc017	33	US	Male	16	White	No
-63ced19b7422296653437e30	34	US	Male	16	White	No
-63ced2194f403847de36bab5	35	US	Male	12	White	No
-63ced5ba289fa7af427c3740	24	US	Female	16	Black or African American	No
-63cee09007fbf47334157cb9	30	UK	Female	12	White	No
-63cee33497b8fc261dde69ba	33	UK	Female	18	Black or African American	No
-63cf4f4722d1c48cef8b0b10	27	US	Male	16	White	No
-63cff31d0fabe7166966c8b7	29	UK	Male	16	White	No
-63cff34d33a9948e3b0b28d6	30	US	Male	12	White	No
-63d005e38ccccb84f2c1d04c	29	UK	Male	16	White	No
-63d00e3cea3280c3ed8a340c	40	UK	Female	14	White	No
-63d042c98e64ec1173d30ab7	24	US	Male	16	Black or African American	No
-63d07155a81baf5108925992	35	US	Male	16	Asian	No
-63d086f89f695e2d3c210e9f	18	US	Male	12	Asian	No
-63d1156045971dc6b0006c73	39	US	Male	12	White	No
-63d13b643c7b2dd31426e8af	39	UK	Male	16	White	No
-63d13b764f00a53476867c25	35	US	Male	16	Asian	No
-63d13b9d237fce03faaae024	35	UK	Female	12	White	No
-63d13ca7d896eababf86d150	39	UK	Male	16	White	No
-63d13cb81a0a88a3ce29e33f	38	US	Male	12	White	No
-63d13d1465e0743b7b2b7962	24	UK	Male	18	Black or African American	No
-63d13f138cb8f46cf6ff65e9	23	UK	Male	16	White	No
-63d13f2f59ef764f641406dd	27	US	Male	12	White	No
-63d1412396ee4fa133b52643	31	UK	Male	16	White	No
-63d14eca0fd7e8476aff6652	24	US	Male	12	White	No
-63d15a2dccce0705127190e3	23	UK	Male	12	White	No
-63d18647419ae52f5e141607	35	US	Male	12	American Indian or Alaska Native	No
-63d1c1095b55c7061678a96e	23	US	Female	12	White	No
-63d2a4b549eb02187fd40092	37	US	Male	12	White	No
-63d2cb67dfc2a799bbd30c69	40	US	Male	16	White	No
-63d2eec88a81e2462be70762	30	US	Male	16	Black or African American	No
-63d2f3294efc674f84b302d2	26	US	Male	12	American Indian or Alaska Native	Yes
-63d3a3629d0b9452d3f32c7e	24	UK	Male	14	White	No
-63d3f99eac52371a49e65825	26	US	Female	16	White	No
-63d3fb15a2f8df9e46752d80	28	UK	Male	16	White	No
-63d3fbdc74f911908d4c50b3	29	UK	Male	18	White	No
-63d3fc20bb484480bed0228c	21	US	Female	12	Black or African American	No
-63d3fd4267f25518af752d7e	40	US	Female	16	White	No
-63d3fec908b40217bbd48993	34	US	Male	18	White	No
-63d404f4eaf69448ef9e09e6	36	US	Male	18	Asian	No
-63d4061bc9ec9cf926d6c9f7	29	US	Female	12	White	No
-63d40b7d3c7f92ff15ef6b67	20	US	Female	14	Asian	No
-63d40f21ea1c311723c7c847	31	US	Male	12	White	No
-63d410114a361b7bee9c12b9	36	US	Female	16	Black or African American	No
-63d413840c9c512ac3dfc533	34	US	Male	12	Multiple	No
-63d41536bd37096fda85cfb8	20	UK	Male	14	White	No
-63d41641e3864dede6329c16	38	UK	Male	18	Multiple	No
-63d416bc58ca5094af85cf8a	25	UK	Female	18	White	No
-63d4251f684e52575206f44b	23	UK	Male	12	White	No
-63d44472a72a227e0fef6bdc	27	US	Male	16	White	No
-63d447dff5d5b197f0d02275	29	UK	Male	16	White	No
-63d461ae668907ea6006f43f	29	US	Male	14	White	No
-63d4dbdd4adb3ccef611be9c	39	US	Male	12	White	No
-63d5e3bf4a739d1158b9ce64	35	US	Female	16	White	No
-63d6607ac75addc076b9ce5e	30	UK	Male	16	White	No
-63d672fd60ac772cd04cc33b	34	US	Male	8	Multiple	No
-63d68acca98cdd2bf385cfad	26	UK	Male	16	White	No
-63d6d8e21745f34be8ce7c35	30	US	Male	18	Black or African American	No
-63d6dfc970a407ead0b0d3a1	29	US	Male	16	Black or African American	No
-63d6f2705562fd353b7948dc	30	US	Male	14	Black or African American	No
-63d6fd6a2ab6a0946433add6	18	US	Male	12	White	Yes
-63d6ffe31d0f4bc7fad6c995	38	US	Male	18	Black or African American	No
-63d767905eeabd2239a652db	22	UK	Male	12	White	No
-63d77a647dbf6c0c53b0d375	36	US	Male	14	White	No
-63d79c120d736e870e993b8c	21	UK	Female	12	White	No
-63d79d065189719c8393e3eb	19	US	Male	12	White	No
-63d79d7e23a410a0bcdb390a	26	UK	Male	12	White	No
-63d79efd58203fb36a6e7f21	37	UK	Male	21	White	No
-63d79f1ac825afada26d2a63	35	UK	Male	16	White	No
-63d7a22621e496f7486bc851	36	US	Female	18	White	No
-63d7a79e2606216262545e75	24	UK	Male	14	White	No
-63d7aaec3ca7349b1aa83301	40	UK	Female	16	Multiple	No
-63d7ab86c847cafcb6b8803c	31	UK	Female	16	Asian	No
-63d7b127485d5655e70c8282	33	US	Male	16	Black or African American	No
-63d7bb92ab9685eb344e78f4	39	UK	Female	12	White	No
-63d7c1c77724f08194bcf7d9	24	US	Male	18	White	No
-63d7e609051bf50f9d1dcd35	30	UK	Male	18	White	No
-63d7eca29f0291aff53b003e	39	US	Female	12	Multiple	No
-63d7ee554df9f854d75ea6a7	25	UK	Female	18	White	No
-63d7f17bc657e6dc9e481a9a	26	UK	Male	12	White	No
-63d7f3f4e50de685d3d5b4fb	37	US	Male	16	Multiple	Yes
-63d7f42900f82081456a376a	38	UK	Female	12	White	No
-63d7f67f398e16e63a1fb6cf	26	US	Female	12	White	No
-63d82b0ef18b425db684c7e5	29	US	Not listed: Non-binary	12	White	No
-63d863ab3ccec5d222287168	20	UK	Male	12	White	No
-63d864bfc3bc732e26295c9c	34	US	Male	12	Multiple	No
-63d8665164999168637f2029	27	US	Female	12	White	No
-63d881ab484805569b553bd8	33	US	Male	12	White	Yes
-63d8d641a5a265b01a28716c	27	US	Male	12	White	No
-63d92dacc885e6167a4a486c	34	US	Male	18	White	No
-63d95313b31ba96b668888e2	34	UK	Male	18	White	No
-63d9f41910c61f3eb102079f	33	US	Male	12	White	No
-63dab0380b8791f9560fd329	35	US	Male	12	White	No
-63db1ccde6434330f2a99d87	37	US	Not listed: nonbinary	16	Black or African American	No
-63dbe76cbc72cdb0f3e93414	39	UK	Female	16	White	No
-63dc9888ca8a3238e40fada8	31	US	Male	12	White	No
-63dcc00d97b599698e60a1a6	30	US	Male	16	Black or African American	No
-63dd37970407f565167e5361	18	UK	Male	12	Multiple	No
-63ddc6baab6a2130b8a41bf7	30	US	Male	16	White	Yes
-63de2e4a0c6fd41343f82a79	31	US	Female	16	White	No
-63e316f79fdeba5ba50385e1	25	US	Male	12	Multiple	No
-63e3d578865b052c54e5bb22	31	UK	Female	18	White	No
-63e51bc04bab3dc97deba8de	29	UK	Male	14	White	No
-63e51bcabf370d509e9a93b0	22	UK	Female	16	White	No
-63e51bd9b573cd46809e1d56	28	US	Male	12	Asian	No
-63e51be13df7cac2d9348a05	26	US	Male	18	White	No
-63e51be199687d0e5eec6f0b	23	UK	Male	18	White	No
-63e51c373af1cc5baf0c727f	34	UK	Male	18	White	No
-63e51ccf6611acbfdc8c13c9	25	UK	Male	18	Asian	No
-63e51d228f42d1767efa8cbf	32	US	Male	12	White	No
-63e520b01779bbc9c4f6d1eb	37	UK	Male	16	White	No
-63e52666f4a31e05b9fc6680	38	UK	Male	16	White	No
-63e52dbdcdee07bcdb0e7da4	23	US	Female	18	White	No
-63e52f8ab3688f45f842114c	33	US	Male	12	Multiple	Yes
-63e530e893c44a3aefe9b29c	35	UK	Male	16	Asian	No
-63e538754c4b30560ca84884	30	US	Male	12	Multiple	No
-63e5525d306024ee8865e880	23	UK	Female	21	White	No
-63e55f03b3c1f7481cec6eb9	38	US	Female	16	White	No
-63e55f08844f6fb08115851f	32	US	Male	16	White	No
-63e56678a87f209e2ca83059	26	US	Female	12	White	No
-63e5747f1eb29ec68ae2ddd6	21	UK	Male	12	Multiple	No
-63e5a6690eeedc20da056717	39	US	Male	16	White	No
-63e5ffdf639ebdcf35aacb09	33	US	Male	18	White	No
-63e6378e04ade071ebf9ff9c	31	US	Male	16	Black or African American	No
-63e6cf0764dc4e52bee573af	27	UK	Male	14	White	No
-63e6dfd8bb1c10a44d13d7e5	29	UK	Female	16	White	No
-63ea44a0adefd2af8e13015c	32	UK	Male	21	Asian	No
-63ea451d26e9af5be0b01d50	29	US	Male	16	White	No
-63ea4730d677f800a8887ad6	40	US	Male	16	American Indian or Alaska Native	No
-63ea4a4ed214b26e3ff8b7f2	23	UK	Male	14	White	No
-63ea4ab1ce4168cbe9f63775	30	US	Male	16	White	No
-63ea52b8342eff8b95ef0f95	38	UK	Male	12	White	No
-63ea54cae81a2baf10a14930	27	US	Female	12	White	No
-63ea6b49edfcb9164c21a4bd	30	UK	Male	16	White	No
-63ea79021f0c43def6174042	27	US	Male	12	White	No
-63ea94c7220a944dcd17400b	27	UK	Male	16	Black or African American	No
-63eaace3d44d695631f32db0	29	UK	Male	18	Black or African American	No
-63eab29693a6eb7fd0174010	31	US	Male	14	Black or African American	No
-63eac31811a6da58d4f32d76	20	US	Male	12	White	Yes
-63ead665638c8546d8c3a962	21	US	Female	14	White	No
-63ead6f452e11793b2f8dab8	23	US	Male	12	Multiple	No
-63ebd1e66feb52fb3009c707	24	US	Male	16	Black or African American	No
-63ed0a8a65ddbf9edae99a16	26	UK	Male	18	White	No
-63ed15bed4665c62d9e6dbb2	24	US	Male	14	White	No
-63edb6401c8f280841255a82	26	US	Male	18	Multiple	Yes
-63f049c2d78b2bc822a16dac	34	US	Male	12	Multiple	Yes
-63f120152d0d387ed7666017	23	US	Male	16	White	No
-63f3731fccf0d4e95aa80d11	34	US	Male	18	Black or African American	No
-63f519601c333d44a17bb35a	19	US	Female	12	White	Yes
-63f5c99a1cecb4136b93f7db	38	US	Male	16	Black or African American	No
-63f688aaa4a19c78ebdfc479	35	US	Male	16	Black or African American	No
-63f77915c48d021a3bf77b0f	27	UK	Male	14	Black or African American	Yes
-63f77b9ca8439f6e1620c1cd	37	US	Male	12	White	No
-63f77ee4aa0961332b87fd0f	40	US	Female	21	White	No
-63f7811862c6df4e5438367d	30	US	Male	12	White	No
-63f787256fc87f0a297a849c	25	UK	Male	16	Black or African American	No
-63f789b502d033e83fca7885	32	US	Female	12	Black or African American	No
-63f78d9a7a3d118594efff74	31	US	Male	12	White	Yes
-63f78f511969d7e1b13907e4	23	UK	Male	18	White	No
-63f794e7d8d24753edbbb136	37	US	Female	12	White	No
-63f796a016e377d12cff50f1	40	US	Female	16	White	No
-63f7bdf930a31a500169fea1	18	US	Male	12	Multiple	Yes
-63f7c538e9def44bfbdc7db3	32	US	Male	12	Multiple	Yes
-63f7e1bb3866d96e37ecfd1c	20	US	Female	12	White	No
-63f7e5adcf31a0af5e7da12f	37	US	Male	14	White	No
-63f81021ab46acf095efff80	35	US	Male	16	White	No
-63f8705ae362b217290d08c2	35	UK	Male	16	White	No
-63f8a056531af02b77961676	34	US	Male	18	Black or African American	No
-63f93d2de413ad49cf0dbff1	30	US	Female	18	Multiple	No
-63fac97f0d4e8f6bfd753d90	28	US	Not listed: queer	16	Multiple	No
-63fe16762b4c19bea77a0904	24	UK	Male	16	Black or African American	No
-63ffcb367b500c516d0648a2	37	US	Male	16	White	No
-6400d8f868ce6e7f35955276	19	US	Male	12	Black or African American	No
-6400dc45648545e7ca8f35a6	34	US	Male	16	Asian	No
-6400dc9a87b5f4d0c3604bf3	20	UK	Male	12	White	No
-6400de8f305c51d03c2a9a0e	37	US	Male	16	White	No
-6400e308335a3bf214ca885e	32	UK	Male	18	Asian	No
-6400e51c13a550f2c6729a0f	29	UK	Male	16	White	No
-6400e8b1a2889ce16019eb23	38	UK	Male	16	White	No
-6400ed5065c350e3ad8c8233	25	UK	Male	18	White	No
-6400f212a7bd9c7c5ab1cc25	34	US	Female	18	White	No
-64010f32f8dee9772983c7cd	27	US	Male	14	White	No
-640116c8ac12a41ff02a9a2d	23	US	Male	12	White	No
-6401227cb3aa0d131ec5dd53	37	UK	Female	18	White	No
-6401236cbc95a51538bcc604	24	UK	Male	16	White	No
-64012a2623351894f2917605	33	US	Male	12	White	Yes
-64012a3019588a0c50947538	27	UK	Male	16	Multiple	No
-64016b31c3a34648748168d1	24	US	Male	12	White	No
-640175d4fd2062d9fa478050	25	US	Male	12	Black or African American	No
-64017b47c83e917541f7c592	31	US	Female	18	White	Yes
-64018f4d1a16dfe2b0f7c552	34	US	Female	12	Multiple	No
-6401a92fa70fe5c6eebb1aec	36	UK	Male	16	White	No
-6401dc189a0c39635de7ebab	21	US	Male	12	White	No
-640211d8277cfdf56b1bfabb	25	UK	Male	16	White	No
-64045393fa09ada78f0b5301	38	US	Male	16	Black or African American	No
-64046e75dff33633131b49b9	37	US	Male	16	Black or African American	No
-64050ea342e8e84d43fa7bdf	27	US	Not listed: Non-Binary	12	White	Yes
-6406300d0af7758269c8dc0b	24	US	Male	16	White	No
-640785ce903930be7597e7c1	34	UK	Female	12	White	No
-6407946a4bb4212372843398	36	US	Male	18	Multiple	No
-640b816df86dcee615619d0d	21	US	Male	12	Multiple	Yes
-641359eb0e2dc93999637e35	38	US	Female	16	Black or African American	No
-641360c2d049750e77c9a34a	30	UK	Male	12	White	No
-641361334c91a0c6ff4c5b79	27	US	Male	16	White	No
-6413627f4adf0cc7eb330dfc	22	UK	Not listed: Non-binary	12	White	No
-641363233e3398da82fcb757	30	US	Female	16	White	No
-641364d0e4356f62a8c4532d	20	UK	Male	12	White	No
-64136fca174b34ba3a481cfd	32	US	Female	16	White	No
-641373f8117053037093d10a	22	UK	Male	16	Black or African American	No
-6413788e21e4ee4f2dc16daa	23	US	Male	16	American Indian or Alaska Native	Yes
-64138e0c6645b537dcb5ee24	32	UK	Male	14	White	No
-64139e0346c4b91651b69d44	19	UK	Male	14	White	No
-6414832dbec81b70c2ac38c9	18	US	Male	12	White	Yes
-64151f08bb5879eb3a22d82b	29	US	Male	12	White	No
-6415b71b73e494b88ef767e0	27	US	Male	18	Native Hawaiian or Other Pacific Islander	Yes
-641724c665e2974bb1dec659	36	US	Male	21	White	No
-64175c4b35e2efa75054afa2	30	UK	Male	18	Black or African American	No
-641772ff6ca990e4c241b1bd	26	US	Male	16	White	No
-6417a176fa3ce88d576997b5	25	US	Male	16	White	No
-6418be1071b8716c81dd6d03	39	US	Male	16	White	No
-641a604be613385009dd72db	29	US	Male	14	White	Yes
-641aa32c2d955e806c03cbbc	33	US	Male	16	White	No
-641b1fcd7275677c08982bae	24	US	Male	16	White	No
-641c6443a8bca78cf7a512d1	33	US	Male	16	Black or African American	No
-6426cfe964863ee2ff26642f	30	UK	Male	16	White	No
-64275db44c9f63e924c59f3c	36	US	Female	14	Asian	No
-642761fc480b4b9318301c73	30	UK	Male	18	White	No
-64294cae8d5cae1b2ed48562	35	US	Male	16	Black or African American	No
-6429597d55809d51e610524e	36	US	Male	16	Black or African American	No
-642afaa03f927312a91a4c87	37	UK	Male	12	White	No
-642b42fc8858b97ac2975432	18	US	Male	12	White	Yes
-642b4867b32407dbdd61737e	21	US	Male	12	Black or African American	No
-642f43cfa37a1e968da2c9b3	29	US	Male	16	Multiple	Yes
-64309be1d7d085ed8ee4c129	28	US	Male	16	White	Yes
-64384af1f6fc298b3fe49027	23	US	Male	18	Asian	No
-6439d7987b1126efcebc25ac	28	US	Male	14	Native Hawaiian or Other Pacific Islander	No
-64401360c45f52531fde4aa6	20	US	Male	12	Native Hawaiian or Other Pacific Islander	Yes
-644015377c511324cabe9616	33	UK	Male	18	White	No
-64404b98fae5f4fcdefe71af	27	UK	Male	18	Black or African American	No
-64412826681d195f47939c7f	32	UK	Male	12	White	No
-6441584c2bff52766e55f7b3	22	UK	Male	18	Multiple	No
-644164d75b4cbe61ff891e64	32	UK	Male	16	White	No
-6441890f4ea5d3738776aff4	29	US	Male	16	White	No
-64429af825cbfee55f7f2653	29	US	Male	12	White	No
-6446db24e52b65559874f4f6	27	US	Male	14	White	No
-6447ad029d917ea4a1a090a4	21	UK	Female	12	Asian	No
-6447e560a1331745c679a03b	23	UK	Female	16	White	No
-644808e09076580e3e3ce991	34	UK	Male	14	White	No
-644a8c25f747d73d9828bee3	21	UK	Female	16	White	No
-644bd5f65278efdaecb4f62f	22	US	Male	18	Asian	No
-644bfef77d2220b964ca0c30	29	UK	Female	16	White	Yes
-64551d250ef342507eb0edf9	26	US	Male	12	Black or African American	No
-6458939bc77c645ea7979b33	19	US	Female	12	Black or African American	No
-645baff202a9482deefafab3	38	US	Male	12	White	No
-6469af575bcebf3f7e552039	30	US	Male	21	White	No
-6469b26b2cf3b4b300c0cddc	30	US	Male	21	White	No
-646bda56cc5de1ac99d51971	22	UK	Male	16	White	No
-646e2298279640dfb43a4cb1	41	US	Male	14	White	No
-64725d797d0dd0abf7f47e45	25	UK	Male	12	White	No
-647652cb5644044df439e1fb	35	US	Female	14	White	No
-6478bc3b38c55f11fcabb089	40	US	Male	18	Multiple	No
-6478dddd683cc5f4a550775f	29	US	Female	12	White	No
-647967d19dbd1fc15df8a948	31	US	Male	16	White	Yes
-6481ec9f0a58d32023a4fd94	25	UK	Male	16	White	No
-6491d720871d9f5e16eafb93	19	US	Female	12	White	No
-64950eb7e2cb12bc4dc6d9d2	29	US	Male	12	Black or African American	No
-6496f9fbc2928ee6956ef623	19	US	Male	12	Black or African American	Yes
-64b06482093329a4f0078e60	34	US	Female	18	Black or African American	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+54676961fdf99b7ba4d35cd6	39	UK	Female	16	White	No	4
+546e7e16fdf99b2b8df9842e	36	US	Female	12	White	No	2
+54876fe7fdf99b03efa64374	36	UK	Male	16	White	No	1
+54e32a60fdf99b3eae9de85b	38	US	Female	16	White	No	4
+550c3ed5fdf99b3039d68894	36	UK	Female	8	White	No	4
+5512eee1fdf99b7e1fb1be40	31	UK	Female	16	White	No	3
+55519750fdf99b7f2114cc3e	33	US	Male	16	White	No	4
+5552121afdf99b74d81d09ef	38	UK	Male	21	White	No	1
+555e3c45fdf99b423b15e013	35	UK	Male	16	White	No	4
+558830fbfdf99b3a56b47ef5	29	US	Female	16	Asian	No	3
+558996f2fdf99b7ae47f5ed2	36	UK	Male	12	White	No	1
+5596f7bdfdf99b4a8bd2d49f	24	US	Male	16	Black or African American	No	2
+55a47692fdf99b126e625257	33	US	Not listed: agender	14	Black or African American	No	2
+55ad3f2dfdf99b563a2471c8	27	UK	Male	18	White	No	2
+55b42b7cfdf99b5244217cf4	36	US	Female	18	American Indian or Alaska Native	Yes	4
+55bd8669fdf99b5bfc7d4cfc	29	US	Male	12	Black or African American	No	1
+55d06fd334e9060012e5781c	35	UK	Female	16	White	No	1
+55d09e4934e9060005e5729a	28	UK	Male	14	White	No	3
+55d4c46f58c35800113dc131	35	UK	Female	16	White	No	2
+55d51a6b8ce09000127d4821	33	UK	Male	16	White	No	1
+55da1c4669dbc30010b67569	33	UK	Male	16	White	No	2
+55eb04337480920010aa9e0d	37	US	Male	14	White	No	3
+55f9e9564f51400011296872	39	UK	Female	16	White	No	1
+5608a73fd7def20012b7389d	35	US	Male	16	White	No	4
+5611f6dd7ffc8a00058117e7	34	US	Male	12	White	No	2
+5638d3a544e8c8000ee869a2	34	US	Male	14	White	Yes	3
+5640acc0074be600055e9afd	32	UK	Female	12	Multiple	No	3
+564e93659b124900127eb55b	31	US	Male	18	Asian	No	4
+5654175604212700054a12b1	32	US	Male	12	Asian	No	4
+5658000ca9872d0011e1ba26	33	US	Male	12	White	No	3
+565955077d6957000adfe029	27	US	Not listed: nonbinary	12	Black or African American	No	4
+56b4b565b2de2a000d3316ba	33	US	Female	12	White	No	4
+56c89222dfea6c000bb23762	32	US	Male	16	White	No	2
+56d7623f04c67d000c7b9de6	34	UK	Female	16	White	No	2
+56e1bb4e6ce054000b3ffcaf	35	UK	Male	16	White	No	4
+56f7f09335c4760006278fca	30	UK	Male	12	White	No	4
+56fc8248b5648e000fac9980	36	US	Male	12	White	No	3
+571144323d47e800096358d9	35	US	Male	16	White	No	4
+5715699a30185b0008b40009	28	US	Male	16	Multiple	Yes	2
+57165ba7c5aca2000a8d32ca	25	UK	Male	16	White	No	1
+5717864c94d4fc001297198d	39	UK	Female	16	White	No	4
+571f543bf6d15a0013df11e1	39	UK	Female	18	White	No	1
+572bcf0d34b25a000edd2cf1	36	US	Male	14	White	No	1
+572f8258ad13160010008a61	30	UK	Female	18	White	No	3
+5732a7595bb657000f727f02	22	US	Male	16	White	No	3
+5766d2f7fdff7a0001c1285b	36	US	Female	12	White	Yes	3
+576745749dcd970001dbdd0b	32	UK	Female	12	White	No	4
+57739704c1b42d0001a58ae6	34	UK	Female	16	White	No	3
+577d1216b425c40001434b2f	39	UK	Female	16	White	No	1
+577d6a6c160201000103d7fc	32	US	Male	16	White	Yes	2
+5783d80d275be60001358349	21	US	Male	16	Asian	No	3
+578b5756160201000103fe40	27	US	Male	12	White	Yes	4
+579f1d3bc9abeb0001af52d8	40	US	Male	16	Black or African American	No	3
+57a5c633275be6000135b61c	27	UK	Female	16	White	No	4
+57a9f41a16a091000112f1cf	23	US	Male	16	White	No	1
+57bf2f693aa21900017f7ae6	39	US	Male	12	White	No	3
+57c2f3ed0c656b00019c5988	35	US	Female	16	Black or African American	No	2
+57c4761195a3ea00016e5992	26	UK	Female	18	Asian	No	2
+57dab7f721d77800018e42fe	28	US	Male	14	Multiple	No	3
+57dd3b0e91b7fc0001493db9	34	UK	Male	12	White	No	4
+57e4d48d6c447e000116b22a	31	US	Female	14	White	No	2
+57ee8eb1e62704000199d5ae	37	UK	Female	12	White	No	2
+57f2b5b82a1c2a0001ab0562	37	US	Male	12	White	No	1
+58061b34c7b1100001138a1e	32	UK	Male	16	White	No	1
+5809006b2a296e0001005451	37	US	Female	14	White	No	3
+5862a405d22a5800014c4c27	25	UK	Male	16	Asian	No	3
+58635484a73baa00010db537	37	US	Female	12	White	No	2
+5870f3b92bd3c90001859a3d	29	UK	Female	16	White	Yes	3
+587674406e2f8d00015c6148	32	US	Male	16	White	No	4
+588093c6704f1100014a3d01	35	UK	Female	16	White	No	2
+589ce4d65e63bf00013b3175	28	US	Female	12	White	No	4
+589cf2a3f6cc2100012af256	34	UK	Male	18	White	No	1
+58a478847cf56d0001f91f2e	38	UK	Female	16	White	No	2
+58a63a64ea3d11000170e1cc	35	US	Male	12	White	No	3
+58bfee7de5869400018f5e9e	37	UK	Male	16	White	No	4
+58d954ec58d78900016eaf6d	28	UK	Female	12	White	No	3
+58e52aa56112f70001f47096	32	UK	Female	18	White	No	4
+58ed2be2a083320001a13783	38	US	Female	12	White	No	3
+58eec4b09fbdde00011e95b0	33	US	Male	18	Multiple	No	1
+58f3913fcb9e9600013ca530	37	UK	Female	14	White	No	4
+590208c89571f50001c666e3	35	US	Male	16	White	No	4
+59098fbcc3338c000105a042	35	UK	Male	18	White	No	3
+59175c2896ffb800017c4caf	36	UK	Female	21	White	No	4
+592bb32c943e670001cde123	38	US	Male	16	White	No	1
+594425f07ccfd00001d3f462	27	US	Male	16	Black or African American	No	3
+59451bd536b8f40001de0a83	39	UK	Female	14	Multiple	No	4
+594ec90eca6e670001b2c184	29	US	Male	16	White	No	2
+59528796a186be000114dc32	28	US	Male	16	White	No	3
+595727bd7c76640001aa8f6e	24	US	Female	12	White	Yes	2
+596dd49a0fe2ff00016a7d50	40	UK	Female	16	White	No	1
+596f8a83c988c000015bf765	38	UK	Female	12	White	No	4
+5971cee2f4058000011deea6	35	UK	Female	16	White	No	1
+597e1b3f9d51240001f1f71d	37	UK	Female	16	White	No	2
+598aee4fe65fa90001580921	40	UK	Female	21	White	No	2
+599e74eeb4e8c80001d1147e	37	UK	Female	12	White	No	1
+59aae1188cef7d00011f8884	30	US	Female	14	Asian	No	3
+59b85e50d793b40001459a2f	39	UK	Female	16	White	No	2
+59c3eeac05da9d0001402bcd	36	US	Female	14	White	No	2
+59c4f0a2916c4d000109428a	40	UK	Male	12	White	No	2
+59d3d4026cc82800013e31a2	40	UK	Female	12	White	No	2
+59d6c032ea41450001ec76c9	27	US	Male	12	White	No	3
+59d9d9cd8fd07a0001842484	29	US	Male	12	White	Yes	1
+59dc458f77860e000151240e	40	US	Male	12	Multiple	No	1
+59e27cc0c0d35a0001294e6b	30	UK	Male	18	White	No	1
+59e6f84616ecc200016ff141	33	UK	Female	16	White	No	4
+59f78f90a764fc000135f6e6	37	US	Female	18	Multiple	No	4
+59ff81fd5d06850001afeeab	28	US	Male	12	Black or African American	No	1
+5a063c2d844c7a00015e477d	34	US	Male	12	White	No	3
+5a0a03fa074b190001251b3c	33	US	Male	12	White	No	4
+5a198755f2e3460001edc5c9	34	US	Male	12	White	No	2
+5a270517b4a5de00011af15c	33	UK	Female	16	White	No	1
+5a2adf6a8e00a000019864fb	39	US	Male	16	White	No	1
+5a3bdd2c8d005a0001829f3e	32	US	Male	12	White	Yes	3
+5a47b7be2f91ec0001dcbfee	37	US	Female	12	White	No	2
+5a639a04c0d836000107b977	40	US	Female	16	Black or African American	No	4
+5a6f1ccade1f390001dbd8b7	40	US	Male	12	White	No	3
+5a6fd0626923df0001ef977b	35	US	Male	16	White	Yes	1
+5a7dc159000dab00018c5a06	30	UK	Female	18	White	No	3
+5a804807000dab00018c6e5a	39	UK	Female	16	White	No	4
+5a8b3fa3b093f80001a80576	32	US	Male	14	White	No	2
+5a8d8079190420000156435d	38	US	Male	16	White	No	1
+5a8f3dd5eea3d300016ece86	39	US	Female	12	White	No	2
+5a9f9e14b5e2110001c6f6f5	35	UK	Female	12	White	No	2
+5aa2ac74873cda00010d4bd2	31	US	Male	12	White	No	3
+5aac21406be3fa00013a2a51	27	UK	Female	12	White	No	1
+5ab10212fb22320001bacdfe	29	UK	Male	12	White	No	1
+5ab65c67f69e940001d8e06c	27	UK	Female	18	Asian	No	3
+5abd5f3b5cd105000161f167	24	US	Male	12	White	No	3
+5aca34565cd1050001626480	33	UK	Female	21	White	No	4
+5acf8cd5a010190001b34afa	36	US	Female	12	White	No	2
+5ad0c55ad9f7470001db0e09	26	UK	Male	18	White	No	4
+5ad0c8fd4d061300011b07e4	31	UK	Female	18	Black or African American	No	3
+5ad57f5c27c301000101d9c5	31	US	Female	12	Black or African American	No	3
+5ad59462045cb000015c9960	33	UK	Female	18	White	No	2
+5ad5efefe2338200017798d4	28	UK	Female	16	Asian	No	2
+5ae2b45afef71c0001bea628	31	US	Female	12	White	No	1
+5aeb063b2f05b500013028a0	36	UK	Female	21	White	No	2
+5aed87e375deca0001627011	40	UK	Male	12	White	No	4
+5af28311c36b060001f7f98d	38	US	Female	12	Black or African American	No	2
+5af2f6c0c36b060001f80163	31	UK	Male	14	Multiple	No	1
+5af59378f856320001cf2ffc	25	US	Female	12	White	Yes	2
+5af5e288e19f8c00019e3d09	32	UK	Not listed: agender	16	White	No	4
+5afb134c57516b0001416b48	26	UK	Male	16	White	No	4
+5b12b275e9270900013c3e01	32	UK	Female	16	White	No	4
+5b1f92bdc9d3cb0001107e75	29	UK	Male	14	White	No	1
+5b2aac848580750001aa0b64	20	UK	Male	12	Asian	No	4
+5b393581c49ecb00010a6693	22	US	Male	12	White	Yes	2
+5b421b9ac2e3810001763252	35	UK	Female	16	Multiple	No	4
+5b4915add4c93b00019beed6	35	UK	Female	12	Black or African American	No	2
+5b494218ff7497000125219a	37	UK	Male	12	Multiple	No	2
+5b4d41e13d01bd0001ec46c2	36	US	Male	16	Black or African American	Yes	4
+5b50d6214e2d6800010b6092	23	UK	Female	16	White	No	2
+5b575da5f633200001232769	25	UK	Male	16	White	No	4
+5b59862535af16000164960a	33	UK	Female	14	White	No	3
+5b5cff1c9351420001b78419	33	US	Male	16	White	No	4
+5b6515e83662a8000158b2aa	39	US	Male	12	White	No	4
+5b65f7935c431c000127ae5f	31	US	Female	16	White	Yes	1
+5b6c312fa1fda800015fe165	33	US	Female	14	Black or African American	No	2
+5b6c72f29dc5550001f8a514	38	US	Male	16	White	No	3
+5b6cf2c61b61b60001bc0678	24	US	Male	16	White	No	1
+5b72d1b972a6fc0001b2abc2	29	US	Male	16	White	No	2
+5b7ba10e4ba9cd0001e66fb4	30	US	Female	14	White	No	1
+5b7d518d1e35f0000173153c	26	US	Female	18	Asian	No	2
+5b7ecfe47a63030001019c35	38	UK	Male	16	White	No	1
+5b82e33f184f45000155f0ba	36	UK	Male	12	White	No	4
+5b87cdc34dc3210001904196	40	UK	Female	12	White	No	3
+5b87dd09019cf60001a115b3	28	US	Male	16	White	No	1
+5b8c7161284d9b00019dee13	25	US	Female	12	White	No	1
+5b8e11444cd6dd0001bf07d9	24	US	Female	14	Black or African American	No	1
+5b920a69abfadc0001e7ffa9	27	US	Female	12	White	No	2
+5b9754dce1adf100014ac3d1	30	UK	Male	12	White	No	1
+5b985404a15058000124e508	29	UK	Male	16	White	No	1
+5b9aa47491b20a0001176287	40	US	Female	16	Black or African American	No	4
+5ba3223a68b542000112c1b6	27	US	Male	16	White	No	4
+5ba6d507cf54e40001c45aaf	38	US	Male	12	Multiple	No	1
+5ba849b3a2a1ae0001f08d2d	22	US	Male	16	White	No	1
+5baa7acf14779d0001a23968	31	UK	Female	21	White	No	4
+5bace423b95cc700014b5334	37	US	Female	18	White	No	1
+5bad4be8b712f30001b87947	39	US	Male	12	White	No	2
+5bad4db8b712f30001b87990	31	US	Male	14	White	Yes	1
+5bb0f624a1c73d0001b9d62d	30	UK	Male	21	White	No	1
+5bb0f83f71e1b2000176c35b	36	UK	Male	16	White	No	1
+5bb21a6ed14ec100019840fb	31	UK	Male	16	White	No	2
+5bb535574cb73b00011437d0	25	UK	Female	12	White	No	1
+5bbc18010cb04c00015025ce	35	US	Female	12	White	No	2
+5bbd2bdcf7358a000171636f	23	UK	Male	16	White	No	3
+5bc10133904b2f000194b264	25	UK	Male	16	White	No	3
+5bc9ed7f3d893f0001bee4b6	23	UK	Female	14	White	No	3
+5bdc4a3b0f86a60001be614a	33	UK	Female	12	White	No	4
+5bdfb648484288000130dad0	30	US	Male	12	White	No	2
+5be08379a34306000165f14c	29	UK	Female	12	White	No	4
+5be084ec4c397b0001ec3567	27	US	Male	14	White	No	2
+5be12624b08fb60001f5680a	25	UK	Male	12	Black or African American	No	1
+5be1f0b7b77afc0001bb9b06	31	UK	Female	12	White	No	4
+5be9b18df5c1060001085048	38	UK	Male	12	White	No	2
+5bea1d914e38ca00014b399e	27	US	Female	18	White	No	1
+5bead56b5324b10001c2551c	28	UK	Male	16	White	No	2
+5bebbb9694bff800011dc37c	34	US	Female	16	White	Yes	2
+5beccd423b6489000156596f	40	US	Female	16	White	No	4
+5befb6e27c387400016983bf	36	US	Male	16	White	No	3
+5bf19d37e657aa0001a2314a	39	US	Female	12	White	No	4
+5bfd8910eed5280001ead1dd	38	UK	Female	16	White	No	4
+5c0004a72340e10001bfc3a0	27	UK	Male	21	White	No	4
+5c024be169406e00014e0b8e	28	US	Male	14	Asian	Yes	4
+5c0586b43199f4000153f133	26	UK	Female	12	White	No	4
+5c05c77f24419e0001a3094f	35	US	Female	18	White	No	4
+5c086d3d3be61100011a694d	29	US	Female	18	White	No	2
+5c0c28915b32d500012eef60	37	UK	Female	18	White	No	3
+5c0e80423a0b8e000183089b	28	UK	Female	16	White	No	3
+5c11f8202b16ba0001c8b764	25	US	Female	16	Asian	No	1
+5c18c248acd3f30001459833	38	UK	Female	12	White	No	3
+5c190c311e18d10001eca667	22	UK	Male	16	Asian	No	1
+5c2477b010677f0001db2661	23	US	Female	16	White	Yes	3
+5c28884289f035000174bfbe	26	US	Female	12	Multiple	Yes	2
+5c28c65636efd800010f30fb	35	US	Female	16	White	No	2
+5c2c189b867f660001af5dc5	30	US	Female	16	White	Yes	1
+5c2dae2110677f0001dd1137	40	US	Male	16	White	No	1
+5c2e33e751dcf20001b3204d	34	UK	Female	12	White	No	4
+5c37aa8b832a8400010983b3	35	US	Male	18	Asian	No	1
+5c395df5f5ebd50001850900	28	US	Male	14	Asian	No	1
+5c3affca11b5a4000154f997	32	US	Female	12	White	No	4
+5c3dfadfef1d0d0001b2870e	27	US	Female	16	White	No	4
+5c3e80671580e9000122d168	38	UK	Male	18	White	No	2
+5c4db2cd430fb000014d1448	25	US	Male	12	Black or African American	No	1
+5c4e5f2ae5f00f0001542748	35	UK	Female	12	White	Yes	1
+5c4f7b99b33a5300013dbfdd	27	UK	Female	21	White	No	4
+5c50046b2b89f500015e5f6b	26	US	Male	16	Asian	No	3
+5c560b6fccb08c0001e134a8	34	US	Female	18	White	No	4
+5c56964991c0ad0001cfa5ae	34	US	Male	16	White	Yes	3
+5c574d3f53fba80001bd302e	32	US	Female	14	White	No	3
+5c588d147831040001973ab3	24	US	Female	12	White	No	2
+5c59f7cb4eea0b00017c9317	22	UK	Male	12	White	No	3
+5c5cb3bf6a946500015a3411	38	UK	Female	16	Black or African American	No	3
+5c5ff87f8c0552000109d7de	30	UK	Female	12	White	No	4
+5c62fbd932207f00016bd19e	28	UK	Female	16	White	No	1
+5c6325a730ccf800019350c6	25	UK	Male	12	White	No	3
+5c663cd56fdc87000162e255	25	US	Male	12	White	No	3
+5c6709ab926a5b0001eb29c1	35	US	Female	14	White	No	2
+5c6838ea5f8d580001e8a8ab	34	UK	Male	14	White	No	4
+5c6849dc5b27b00001a340f5	31	UK	Female	16	White	No	3
+5c69bdaf81ea8900018aeccd	25	US	Female	16	Multiple	No	3
+5c6d4c85948b0700010d6f44	34	UK	Male	14	White	No	4
+5c6ddaefdf677d00013fa313	37	UK	Male	16	White	No	4
+5c707693db12e3000146b16d	32	UK	Male	16	White	No	2
+5c742339e621f900163f4543	40	US	Male	12	White	No	1
+5c778f10848d2a0016b3c65d	23	US	Female	16	Asian	No	4
+5c799405e62652001656f06f	39	UK	Female	18	White	No	3
+5c7cf8b58ca9000001b52f6e	31	US	Male	12	White	No	2
+5c82c9a4d8302a00010639b8	32	US	Male	16	White	No	2
+5c83b0408c0d0100175902f7	40	UK	Female	16	White	No	3
+5c858ca8eceaa40001d3f488	28	US	Female	16	Asian	No	3
+5c8c22bafeeaeb0016207a00	25	UK	Male	12	White	No	4
+5c8d2f74e775150016db3700	23	UK	Female	18	White	No	1
+5c8f9fa8dfbf30001697845d	33	US	Female	16	White	No	3
+5c92aa671ce0cd00128c6c86	33	US	Male	18	White	No	2
+5c993969c6d15000019bbc4f	37	UK	Female	16	White	No	1
+5c9b3126a586fd00154d5440	34	UK	Female	18	White	No	2
+5c9cb71960a25400174337a0	28	UK	Male	12	White	No	2
+5c9d88bb2b3c77001744ec1c	37	UK	Male	16	White	No	4
+5ca3ccae7958d0001689df68	35	US	Female	16	Multiple	No	1
+5ca776d10982ca0012684afe	33	UK	Female	12	White	No	4
+5caba2588d77140014bac508	36	UK	Male	16	White	No	4
+5cadcbd3cdf3eb00136336a4	35	UK	Male	12	White	No	4
+5cb489ff0cd1ed0017465d19	33	US	Male	12	White	No	2
+5cb50cffce95710018cc9c9e	23	US	Female	16	Multiple	No	4
+5cbc345609683c00017c878a	28	UK	Male	18	Asian	No	1
+5cbe04b4f429ff00159de30e	37	US	Female	16	Black or African American	No	4
+5cbe2edd577eb000184124b9	23	US	Female	12	Black or African American	No	3
+5cc369725986a4001b4e9041	33	UK	Female	16	White	No	3
+5cc48c234bb96d00018a8bfe	32	UK	Male	12	White	No	2
+5cc4969c3b1b1c0018f9da36	32	UK	Male	12	Asian	No	1
+5cc8039e3ef93000171c96b8	36	US	Male	16	White	No	2
+5cc93ce7627fc30013fc22aa	25	US	Male	12	White	Yes	4
+5ccc9ace9731e100191422ab	23	UK	Male	16	Black or African American	No	4
+5cd8d08636870e001901bd6e	22	US	Male	16	Asian	No	1
+5cdfb7d5ed552600019dc9f3	34	UK	Female	16	Asian	No	3
+5ce438ca825c71001ce02880	39	UK	Female	12	White	No	1
+5cec60a0de266200191eb2c9	31	UK	Female	21	White	No	1
+5cef892f0c5fb30018fbdfbe	37	US	Not listed: trans, nonbinary, fluidflux, transmasc	16	White	No	3
+5cf510ccb0bafb00161ffd56	25	UK	Female	12	White	No	2
+5d013b6597491100014a4fca	23	US	Male	12	Multiple	Yes	2
+5d02e8a7c087120001942ae7	38	UK	Male	Other	Asian	No	3
+5d09895e65eb3400189cc207	37	US	Female	12	Black or African American	No	2
+5d09d2a3fcc453001981ee4e	34	UK	Female	Other	White	No	4
+5d0a831fac01cb001c691cb1	22	UK	Female	16	White	No	4
+5d0bff3d9599aa001a256b15	27	UK	Female	16	White	No	3
+5d0e0c9c312297001a37d0ca	23	UK	Female	12	White	No	4
+5d1426c8efc9c20001495f2f	23	US	Female	14	White	No	2
+5d15f79acc08a30019744de2	35	UK	Female	14	White	No	3
+5d15fedfa8eae10015738ed7	24	US	Male	16	White	No	4
+5d1652ba768bdf000154e37d	37	US	Female	16	White	No	3
+5d166f8340218700169a0814	25	US	Male	12	White	No	1
+5d171334b49a4a0001e8aca4	33	US	Male	12	White	No	2
+5d17c7644700940015463ef1	28	US	Female	18	Black or African American	No	3
+5d17ce93ac37cd0019535088	22	US	Male	12	Asian	No	2
+5d19281012e152001920227f	35	US	Male	21	Asian	No	1
+5d1a21a834dc47000196b3fd	24	UK	Male	16	White	No	3
+5d1c92bc5f54410001ef8f0c	22	UK	Male	14	White	No	2
+5d206e075278fa001848134d	22	US	Male	12	White	Yes	2
+5d24df75a80a600019d97b2e	32	UK	Female	21	Asian	No	1
+5d278e6a6f7c660019b56196	22	US	Female	12	Other	Yes	3
+5d29187bd96c80001769ec41	36	US	Male	18	White	No	3
+5d2de4db914b6e001877da8f	22	UK	Female	12	White	No	1
+5d2f7fb4bb27200019010768	27	US	Male	12	Multiple	Yes	4
+5d30752a0334500019f10720	22	UK	Female	16	White	No	3
+5d30ec10a5c3c900194c5d12	30	UK	Male	18	Asian	No	4
+5d3afd98bea4e90019c67c9f	23	UK	Male	16	Asian	No	1
+5d4254db5b2c430001418a3c	40	US	Female	12	White	No	3
+5d432a9dfc19f8001a2964e7	26	UK	Male	12	White	No	3
+5d46daa91274770001916403	39	US	Male	21	White	No	2
+5d49bdf4723ba900180b7de8	28	UK	Female	12	Multiple	No	4
+5d4a36e8a61675000169036f	38	US	Female	21	White	No	1
+5d4a41890e604c00011ade8b	27	US	Male	16	Asian	No	1
+5d4c394a090b51001a1775fe	27	US	Male	12	White	No	4
+5d4ca16427393e0001161cb2	27	UK	Female	16	White	No	1
+5d55d562e04e1c0001f5e682	32	US	Female	16	White	No	2
+5d59b01348766d0016949e6a	40	US	Female	16	White	No	1
+5d5d13312a28f400015a5b6f	31	UK	Female	18	Asian	No	1
+5d5d6e95909e4c0001b12fe8	25	US	Male	12	White	No	4
+5d5e39bd7427d30001d610ba	30	US	Not listed: nonbinary	12	White	Yes	3
+5d5e4baff521f100166c5d3a	25	US	Male	16	Black or African American	No	1
+5d612ae16512d700159face7	38	US	Female	18	White	No	4
+5d62886927a84f00010fbbb4	37	US	Male	18	White	No	4
+5d6472c63ca9fc00153d2ba4	25	US	Male	12	White	No	1
+5d66b39acb411d00170f69d6	39	US	Male	14	White	No	3
+5d6ab68809f9270001dac666	25	US	Male	16	White	No	1
+5d6eb94fb861b60001e7760c	33	UK	Female	16	White	No	1
+5d728c6f1c91d40001a4b6ad	23	US	Male	12	Multiple	No	4
+5d7695cc7ae60f001bc4bde6	32	UK	Female	14	Black or African American	No	2
+5d7e1d2db5bd580017d11cec	34	UK	Male	12	White	No	3
+5d8125f63d05eb0001731115	33	UK	Female	16	White	No	4
+5d833b0e6642ee0001bfa9cb	38	UK	Male	16	Asian	No	3
+5d849ee0a954540019f513dd	33	US	Female	12	White	No	3
+5d89435aa8e8120018a4e202	33	UK	Female	16	Black or African American	No	4
+5d8a2b0f887a21001543980f	30	UK	Female	16	White	No	1
+5d8a797185a7f1001a27c3cf	22	US	Female	16	White	No	4
+5d8a9a8714087d001898dbbf	20	US	Female	12	White	No	4
+5d91daf3704e790018f47229	32	US	Male	16	White	No	4
+5d93c8c883e2470018a4f853	36	UK	Female	16	Black or African American	No	4
+5d959fdf9cf6ab001982afee	39	UK	Male	12	White	No	3
+5d9be88c195db300128d652a	33	US	Female	12	White	No	2
+5da179412996110016d853d5	35	UK	Female	14	White	No	1
+5da3865a7f1f7d001005f581	27	UK	Female	18	White	No	1
+5da87d83d120450015806cc1	37	US	Male	12	Black or African American	No	1
+5db061b0f876e1001620e2ee	32	UK	Male	16	Multiple	No	4
+5db16ce33990ed0014564873	23	UK	Female	18	White	No	2
+5db41a3f9ca75a000b71110c	39	UK	Female	12	White	No	2
+5db853720f6ebd000ba94ed8	30	UK	Female	16	White	No	4
+5dbbfa90c486791b1bd03292	23	US	Male	12	White	No	3
+5dc52848b63adf3bbb43f869	37	UK	Female	16	White	No	1
+5dc61a4e1173bb4786278f33	30	US	Male	16	White	No	3
+5dcb6fb005be6f8311d7e836	26	UK	Male	14	White	No	4
+5dcc836b6a24b5912d7c33f4	25	UK	Female	16	White	No	3
+5dcefcd0307b8d05031d7264	32	US	Male	18	White	No	1
+5dcfc4a09595a10cd3ef3e59	23	US	Female	16	Asian	No	1
+5dd2e29b2c5c102e6454227a	30	US	Not listed: nonbinary	18	White	No	2
+5dd3e3cd5daaa63c5fdb7bb8	36	US	Male	16	White	No	2
+5dd3f2988f45b93cd7da62d3	32	US	Male	12	White	No	3
+5dd48444dd9a7447d224cc71	26	US	Male	16	White	No	4
+5dd72efa82569a6d38e06854	40	US	Female	16	White	No	4
+5dd742a140460e6e2b707d58	26	US	Male	12	White	No	4
+5dda7e609d9e309e55d8eeb2	33	UK	Male	18	Multiple	No	3
+5ddc3d39fce606ba6f9e1fa4	35	US	Female	16	White	No	2
+5ddd7db419eecbce5c2dbc6f	34	US	Female	14	Black or African American	No	1
+5dded98ea4aa26f899702668	32	UK	Male	16	Asian	No	2
+5de260b9553cee28d97b058d	29	US	Male	18	White	No	3
+5de4eec72cf204481c6e5c1e	36	UK	Male	14	White	No	4
+5de5a131676a6d531c75b6ab	24	US	Male	14	White	No	3
+5de8734b44b3127e513ae247	32	US	Female	16	White	No	3
+5de8bc74553cee8280a7dd84	25	US	Male	16	White	Yes	4
+5dea9f92c3aca11bffec8b7e	28	US	Male	16	White	No	3
+5ded38c39f631c3f7601388f	40	US	Female	16	White	No	2
+5dee72917309b950e5262f3a	29	US	Male	16	White	No	3
+5df15288b1fb0506c5fc6afb	34	UK	Female	16	White	No	2
+5df490aa6e4db6337452be8b	40	US	Male	14	White	No	4
+5df8dfbb9b92b164c645b5b5	28	UK	Male	16	White	No	4
+5dfac1ba83907981767ce907	31	US	Female	14	White	No	2
+5dfc64647adf4b971f329cbf	35	US	Male	14	White	Yes	4
+5e03f8517f08edece67a3137	34	US	Male	16	White	Yes	1
+5e12202adc79bd8a6c74499b	27	UK	Female	18	White	No	2
+5e126c25a98a7a8fab258f14	22	US	Male	12	White	No	4
+5e13859753e8469d270982c0	35	UK	Male	12	White	No	2
+5e14f72f557425b04528df9a	33	UK	Male	16	White	No	3
+5e1582d9805a30b7d0c8b9c7	24	US	Female	16	Multiple	No	2
+5e15da8a805a30bcd2ed796d	28	UK	Male	21	White	No	3
+5e185c397eeb87000d989683	33	UK	Female	16	White	No	4
+5e1878b9a3d56c151399af37	25	UK	Female	18	White	No	4
+5e1aa82a8b6dfb30edf157a8	39	US	Female	16	Black or African American	No	4
+5e1b2b3e4a955b350b1e0a63	34	UK	Male	12	White	No	2
+5e1cf0cfdc1a170855fd89c2	28	UK	Female	16	Black or African American	No	2
+5e212f851bad6c42f4faeece	36	US	Female	16	White	No	2
+5e24e9e7adb5b7773faa4522	39	UK	Female	16	Multiple	No	2
+5e26f291ab132b92d1bb6544	35	UK	Female	16	Multiple	Yes	2
+5e282e43266894a3e79a6eaa	23	UK	Female	12	White	No	3
+5e29d82712b2f8029e117f2b	27	UK	Male	12	White	No	4
+5e2ef776425d8601c43079f2	38	US	Female	14	White	No	3
+5e2ef88b30c15c000bbfae06	24	US	Female	21	White	No	3
+5e2f65a3be23b2525a9b4d97	39	UK	Female	18	White	No	4
+5e30492697a58001749fce6b	25	UK	Female	12	White	No	3
+5e30f51461ac040fd0d1b266	33	US	Female	8	Black or African American	No	2
+5e3760815bfa436fd256b2e9	29	US	Male	12	White	No	4
+5e3db8f9456974000afeb855	21	US	Female	16	Asian	No	2
+5e3ddcf95556b204cb143eab	28	UK	Female	18	White	No	3
+5e405a1cfce14d29997364da	26	US	Male	16	Black or African American	No	4
+5e40c6d2aa21c630069197ea	26	US	Male	12	White	No	2
+5e41723aade7c2000b4c14f8	36	UK	Male	12	White	No	1
+5e4192083514ba02bc057574	37	UK	Male	12	White	No	4
+5e42d790c1742f000c1e2a9b	31	US	Male	16	White	No	1
+5e437d7404eaba215eafbd2a	40	US	Female	16	White	No	3
+5e45477286e27102354a420b	26	US	Male	12	White	No	1
+5e456129f5b428000b5b0f81	31	UK	Male	16	White	No	4
+5e5291ff6c3d7d2a79ec869e	33	US	Female	16	White	No	3
+5e533e9d1ffa373595a2bcfb	32	US	Male	16	White	No	4
+5e5578c220b63957aeea65dd	19	US	Female	12	White	No	3
+5e5c58012272eb4328419f08	22	US	Female	16	Asian	No	2
+5e5fe64a8278d103d35cac54	37	US	Male	12	White	No	2
+5e60db57fdef8001c1fdc6f7	28	UK	Female	16	White	No	4
+5e641dcaef80c61af57629c3	29	UK	Female	12	White	No	3
+5e69987e0873d600084bc920	29	US	Female	12	White	No	3
+5e6b9027bc9dab1425346017	35	UK	Female	16	White	No	2
+5e6bb512e18e0d03e89a7831	25	UK	Not listed: Intersex	14	White	No	2
+5e6d7b0421be18343d8bc4a9	23	UK	Female	18	White	No	1
+5e6de0ab9e71d4392921839b	38	US	Male	14	Multiple	No	2
+5e6ec2818808e6486e268039	28	US	Female	16	White	No	1
+5e6f3121d618ce4f1e207112	34	UK	Male	18	Asian	No	4
+5e716ca3bea4de092aebb04e	25	UK	Female	18	White	No	3
+5e730aa954a7b42617d99c5a	26	US	Female	12	Black or African American	No	4
+5e7902515312ee4a99c22e53	35	UK	Male	18	White	No	1
+5e7987df47422a5443426cd7	19	UK	Female	12	Asian	No	1
+5e7e846a89a21d55d5e77411	21	UK	Male	12	Asian	No	3
+5e80b2ad6f603400087d0611	36	UK	Male	18	White	No	3
+5e836a3c2598d409928dae31	39	US	Male	16	White	No	3
+5e84bd7c34d5d9072128fac1	36	US	Male	14	White	No	1
+5e872f5b3a32c337ba65aa68	33	US	Male	8	Black or African American	No	2
+5e88288b0a0d8f4ad029f6e3	39	US	Male	12	White	No	3
+5e8caf1b063693041f6ac524	40	US	Male	12	White	No	1
+5e8d44819163b611f62d706c	31	US	Female	8	White	No	3
+5e8f1eb6bb578701f190229b	28	UK	Female	18	White	No	1
+5e8f4b597ec957073a4ea143	23	UK	Male	16	White	No	2
+5e905888b3f91e367d4b555f	26	UK	Female	16	Multiple	No	1
+5e92a1a4fc57e20f92eef47f	36	US	Female	16	White	No	3
+5e937e8e4d246b6b4162ae72	33	US	Male	21	White	No	4
+5e9847daec534b03f4769cab	27	UK	Male	18	Asian	No	2
+5e98ce846515431026d195c6	27	UK	Female	18	White	No	4
+5e9a753ccc244610ac6b0d87	33	US	Female	14	White	No	2
+5e9b9eaee0e30b0b27983c50	22	UK	Female	18	Asian	No	4
+5e9bda4fc2758f0f5713a3f8	30	UK	Female	16	White	No	2
+5e9f31ca9b0a040704ee0bad	24	UK	Female	16	White	No	3
+5e9f324c7a996d0aa2ff651e	29	US	Male	12	Multiple	Yes	1
+5ea043f2618bcf041cb4c245	31	UK	Female	12	Black or African American	No	1
+5ea556346fe116549c336fc9	22	UK	Male	12	White	No	4
+5ea63190173fb765f87a89a8	23	US	Male	12	White	No	1
+5ea848facb20c326fa2679bb	31	UK	Female	16	Asian	No	3
+5ea8c2580e5ed332ad771cb7	27	US	Female	12	Multiple	No	1
+5ea92954ef7ece00096faf5a	27	US	Female	16	Asian	No	3
+5ea95ca4936cd3035f7e3e3a	38	US	Female	18	White	No	4
+5ea9cb32040c211222bcbb69	34	US	Female	12	Multiple	No	4
+5ea9f6b340571b17901e6949	31	UK	Female	16	White	No	2
+5eaab7bc385332016e089dda	37	UK	Male	16	White	No	1
+5eaecb0824839e59ed3523eb	38	UK	Male	18	White	No	2
+5eb1d84a32ae1d128f1fc7ba	19	UK	Male	12	White	No	2
+5eb2134abde80d38a869a0a3	38	US	Female	16	White	No	1
+5eb32b8adc8fc511560fca82	22	US	Male	12	Asian	Yes	1
+5eb400dfeb119a1f67e22297	22	UK	Female	16	Multiple	No	3
+5eb4909c2f46f82f9280a49b	25	UK	Male	12	White	No	3
+5eb8ff91a1bdb386c80cd7ea	30	UK	Male	16	White	No	3
+5ebed2706c113a28c66ad396	21	UK	Male	14	Asian	No	4
+5ec06f59c4ceb1481f225bbd	21	US	Female	12	White	No	3
+5ec2142f6e98202af3300059	27	US	Male	12	White	No	4
+5ec359a0e7928519b8cf64af	24	US	Male	16	Multiple	Yes	2
+5ec3f8bde69a92288ec450af	27	UK	Female	12	White	No	3
+5ec441b77b846b31db2d328a	23	US	Female	16	Asian	No	4
+5ec4a156bc5aac3819ac52f2	29	US	Male	14	Black or African American	No	3
+5ec53ac5db44d64b617c1b97	34	US	Female	16	White	Yes	1
+5ec599168c7fa65cabe8b5c7	34	US	Female	16	White	No	3
+5ec5a64c306f255ec98d5cc1	35	US	Female	14	Asian	No	2
+5ec62902bb44c16b842128f9	35	US	Male	16	White	No	1
+5ec6df52f52d1111598b1221	38	US	Male	12	White	No	4
+5ec6f9a4ce75e2141fb9d957	34	UK	Female	16	Black or African American	No	3
+5ec9313c4e028f4247cacaa8	24	UK	Female	18	White	No	3
+5ecb6acd10d2c36e6124c9bd	38	UK	Female	21	White	No	4
+5ecc5d22a5e08e45bf551927	21	UK	Male	16	White	No	3
+5ece0f3693c34518cb5cbef5	30	US	Female	12	White	No	4
+5ece8e8cfe7304272dc17551	39	UK	Female	16	White	No	1
+5ecf82c4e84c2d01e7ba2f7a	21	UK	Female	16	White	No	2
+5ed1cd25eb6dc1122dbd700f	32	US	Female	18	Black or African American	No	1
+5ed2bdf295ed8f251d614b21	21	UK	Male	16	White	No	4
+5ed3f7a0f387a109b6580537	31	UK	Male	18	White	No	2
+5ed3f7c5c739ce0a04ce3df5	29	UK	Female	16	White	No	3
+5ed40545225e613ba9f16b57	21	UK	Female	14	White	No	4
+5ed543442db0060a955d12e1	34	US	Male	18	White	No	NA
+5edbf6a29a8d508920c14f6c	33	UK	Male	12	White	No	3
+5ee00b8630f30b34f2a5dc1c	33	US	Male	12	White	No	4
+5ee167bb5b9407188fc9f15f	29	UK	Female	16	White	No	4
+5ee1be444c9d75206ce5aa92	26	US	Male	16	Asian	No	2
+5ee232f2b970662cfa352567	35	US	Male	16	White	No	4
+5ee5483b1dfa3b0ded826eee	23	UK	Male	16	Asian	No	3
+5ee5e3b02eebe932ee9559c5	33	US	Male	12	White	No	4
+5ee62007551db1034cb9696a	24	UK	Male	12	White	No	4
+5ee6be54321536000905346a	31	US	Female	14	Multiple	No	1
+5ee7b0a316b7d10662171450	25	UK	Male	12	White	No	1
+5ee811d6f82aa71171ed4d83	26	US	Female	12	Multiple	No	1
+5ee91ec1ef56832aa7947169	33	UK	Male	16	White	No	4
+5ee93ab8a93d8b15baf72fc5	24	US	Female	16	White	No	3
+5ee9e9c1496265000a792544	25	UK	Female	16	White	No	1
+5eea49c09e6f8711b4cdf3bb	26	US	Male	16	White	No	4
+5eeaa8ee94a7f8046a02a20d	39	US	Male	21	White	No	3
+5eeaff28cf5da71d691ef212	23	US	Male	16	Asian	No	1
+5eecd2e3a38fd009dd9d1f3d	33	UK	Male	12	White	No	4
+5eee761287fdd331fc618449	31	UK	Male	12	White	No	4
+5eee7e5812de8e32ecde556c	24	UK	Female	16	White	No	1
+5ef23630f2d2bf0589880921	27	UK	Female	16	White	No	2
+5ef246c6d2b9060809858e7e	25	US	Female	12	White	No	1
+5ef35d30f4c5240865ab26b5	24	UK	Male	14	White	No	1
+5efa98dd74af25000cdbbf43	22	US	Male	12	White	No	1
+5efb022116108c000a66a141	30	UK	Female	18	White	No	1
+5efb31fa8cd32f04bf048643	36	US	Female	12	White	No	1
+5efb49177e130c0785b93842	29	UK	Female	16	White	No	3
+5efb4cfd797e7108c3823ae5	28	UK	Female	18	White	No	3
+5efca9b3026506070acda120	40	UK	Female	16	White	No	1
+5efcd984f7176d0e6a59dd17	36	UK	Female	16	White	No	1
+5efcdcfeaead790f210c3181	40	UK	Female	12	White	No	3
+5efd3f03dbefb617cf28b12e	33	US	Male	16	Asian	No	4
+5efef32a88bb6a01c8087591	22	US	Male	14	White	No	1
+5effb79e21345d0b33188d71	22	UK	Female	12	Multiple	Yes	1
+5f0576c2b5b074000a8664cc	27	UK	Female	16	White	No	2
+5f05b6a83c0c4206b334458a	39	UK	Male	16	White	No	4
+5f07d4c092ba8742ace3d2de	39	US	Female	12	White	No	1
+5f08d7adb7990e14b0a2b4a2	30	UK	Male	16	White	No	4
+5f0a14c3d362030c483654a3	21	UK	Male	12	Asian	No	2
+5f0a7dec44c42c19a6c9f6d9	34	US	Male	12	White	No	1
+5f0bcb67acb8844f8a226f2b	24	US	Female	12	White	No	4
+5f0e9896f5e4e11e12c8f5ac	24	US	Male	12	White	No	2
+5f0fba550d4c1304aa069f1d	25	UK	Female	12	White	No	1
+5f105b47d36c8701ec112317	23	UK	Female	18	White	No	4
+5f105fb050ae3d02c17bf90e	20	UK	Female	12	White	No	3
+5f110f4591d25946c7df1b87	28	US	Male	12	White	No	2
+5f117601aeef1d5095578b01	36	US	Female	12	White	No	4
+5f11eb333c6e2c0df5b92270	22	UK	Female	12	White	No	4
+5f178176fd9dc510cad21a86	28	US	Male	12	White	Yes	4
+5f1b775a104d42375a677b15	25	UK	Female	16	White	Yes	3
+5f1c0a9e47a90a000ad55e2c	24	UK	Female	16	White	No	3
+5f1c0b2946a0aa454dd5ee2c	19	UK	Male	Other	Multiple	No	2
+5f1dc8e9a351ad07a95854c1	27	US	Male	16	White	No	1
+5f20c7843957f61f62c58bb6	28	US	Female	12	White	No	3
+5f218ec7604e35564a7ea1ea	28	US	Male	12	White	No	4
+5f23cda9d12b451b7da3e09d	21	UK	Female	16	White	No	1
+5f240054aa2111204f231a51	29	UK	Female	8	White	No	3
+5f2788ddf5b51d1407d074b5	23	UK	Male	14	Black or African American	No	3
+5f2ef53d7729c52ae63230a2	37	UK	Female	14	White	No	3
+5f3077924fd8214dc6684e55	24	UK	Female	16	White	No	2
+5f31bbe840a5c90e5a9a7b68	32	US	Female	16	White	No	4
+5f36767024b51d0277f24582	30	UK	Female	18	White	Yes	2
+5f3b033d78bf3c202a84aeb6	33	UK	Male	16	White	No	1
+5f3bd56999a44d9324b76ddb	38	UK	Male	18	White	No	3
+5f3c2648a9ef86a4c10de377	34	US	Male	16	White	No	3
+5f3c5d4c9168ccad270ddb36	25	UK	Male	14	White	No	1
+5f3d18ef9b85490197cc41fb	37	UK	Male	12	White	No	3
+5f3d6f7010ad88124f3906e2	26	UK	Male	12	White	No	3
+5f44ed0e7f545e029071c4e8	26	UK	Female	16	White	No	3
+5f4a835e9e84256238129995	32	US	Female	12	White	No	3
+5f4afb1288eb746d1804dc1e	20	US	Female	12	Asian	No	1
+5f4c49b249b99c1462dd2640	39	US	Female	12	White	No	4
+5f4c9e74da9c148b0d42ecbd	35	US	Male	18	Asian	No	1
+5f4dc319c9fb1509b77d8b84	25	US	Female	12	White	No	3
+5f4e58804562c701d08b08d2	28	UK	Female	16	Multiple	No	4
+5f4eb6d4b6f7400f5bffa97f	33	UK	Female	18	White	No	2
+5f4ee0e82f0d6c12d692c29b	37	US	Male	12	Multiple	No	2
+5f4f5d2da7606a000ab233c9	34	UK	Male	12	White	No	4
+5f4f94b31fa4ba0605c8bcae	24	UK	Female	16	Multiple	No	2
+5f4fe37111a2531213497942	39	UK	Male	12	White	No	3
+5f54b7bc649418811db24711	26	UK	Male	18	White	No	1
+5f56268bff7e03a1800a3a2f	25	UK	Female	16	White	No	1
+5f565c9592080106c6b4d467	33	US	Female	16	Black or African American	No	3
+5f579cc797c3ee2607f6e344	27	US	Female	12	Multiple	No	3
+5f590fd00f0eec104b473961	25	US	Female	16	Multiple	No	3
+5f5b27db857807236ee3e3f3	29	US	Male	14	White	No	2
+5f5f72d80c064e02b8662ced	22	UK	Male	14	White	No	1
+5f67c39d8d62624067e07396	28	UK	Female	18	White	No	3
+5f6912baefd1c50f7f3b83f7	27	UK	Male	16	White	No	1
+5f6e36c7f042f033d0f97bc1	32	US	Male	12	White	No	3
+5f6f28ca6df91347f156ad9a	30	US	Female	8	White	No	4
+5f712c16875f0375275c57d5	29	US	Male	16	White	No	3
+5f729d7c15c1dd1ee6058997	26	US	Female	12	White	No	1
+5f77480675b83a250b3e8c36	24	UK	Female	12	White	No	2
+5f775d8ac99f3125e763b144	25	US	Male	18	White	No	2
+5f778d553167a12eae0e1c00	30	UK	Female	16	White	No	4
+5f7a28b8bedcf2112ebd1289	37	US	Female	16	White	No	1
+5f7dd6ed4303f7000814dd3b	35	US	Female	12	White	No	2
+5f7e6f9c1212c514f9437e3a	21	US	Male	12	Black or African American	No	2
+5f7f466a83fbad0b6a4ccb15	24	UK	Female	12	White	No	1
+5f846dd4e962ce0bf61b95fb	23	UK	Female	18	White	No	4
+5f85c88c61e23608718cbd03	34	UK	Male	18	Multiple	No	2
+5f88a9e10b3478081e131706	33	UK	Female	16	White	No	4
+5f8b066742a6381ddae03d75	37	US	Male	14	White	No	3
+5f8b4513fb7c7425abdbbb81	39	US	Male	16	Black or African American	No	1
+5f8cbc5c355ea745e6cef2ca	39	US	Female	14	White	Yes	3
+5f8d88be68198208a829cd5f	22	UK	Female	16	White	No	3
+5f8f0ae15fe9e60fbbbaead9	28	US	Male	18	Black or African American	No	4
+5f9389fafdbecb173b329cca	22	US	Male	12	White	No	2
+5f93aff4d654c619d22b94b9	32	US	Male	21	White	No	1
+5f985596be2ea910b23827ed	23	US	Male	16	Asian	No	4
+5fa1636a77c875235bd8e1f6	28	US	Male	14	White	Yes	2
+5fa7c59d7c24a5554e80e4aa	30	US	Male	14	Multiple	Yes	2
+5fa9a4789785cb1d1735dba4	35	UK	Female	16	White	No	4
+5fadeb340e10471fdeb5fbf5	24	US	Male	12	White	Yes	1
+5faeb8eb6562cd0163f216ec	28	US	Male	12	Asian	No	1
+5fb2ce5316dfd3963b4be37c	30	US	Female	16	Multiple	No	1
+5fb3e1ecadba8802c0d12fe6	23	UK	Male	18	Asian	No	4
+5fb402a66cba9801673f2b5c	32	UK	Female	12	White	No	4
+5fb5829e56cf2b0b8446dda2	24	UK	Female	18	White	No	2
+5fb70808c7c7bb1d76c2b9d4	34	UK	Female	16	White	No	2
+5fb93f3349adcb75d64045d1	24	UK	Female	16	White	No	3
+5fba91d5a2e5dda8c5977190	37	US	Female	14	White	Yes	1
+5fbd948d22ebef1c398a8e8a	34	US	Female	12	White	No	2
+5fbedb605c74b312137f371b	31	US	Male	16	Asian	No	3
+5fc0c49264908d09e94c8cd7	38	US	Female	12	White	No	2
+5fc14a9cfddce609bd3e5015	24	UK	Female	16	White	No	2
+5fc2a0d812bc59000b746ee5	30	US	Male	12	White	No	1
+5fc3442312bc5917b8341963	24	US	Male	8	Black or African American	No	3
+5fc42a3648abac377a552522	37	US	Male	12	White	No	3
+5fc45894c518494211619c7e	36	UK	Male	16	White	No	1
+5fcd709227fabfc6ca7a969e	31	UK	Female	16	White	No	1
+5fd0dc0d8dae67016ed65a54	32	UM	Male	12	White	No	4
+5fd0ef1dbfdf0801f669f642	31	US	Male	16	Asian	No	2
+5fd18d125e1f92195b1717bc	26	US	Male	16	Black or African American	No	3
+5fd410790e3b0716869c801e	22	UK	Male	16	Multiple	No	1
+5fd8c059856120277dec48ef	34	UK	Female	18	Asian	No	1
+5fde9d8446872e61791b82c7	29	US	Male	12	White	Yes	1
+5fe9ccf43803bb921592f8ac	34	UK	Male	16	White	No	2
+5feb9a64d42dc5c4926ffe03	33	UK	Male	16	White	No	2
+5fef00fd52b0e2d230369a01	27	UK	Female	12	White	No	4
+5fef2fa9efea401f0b55a7c2	27	UK	Male	8	White	No	4
+5fefbee02c2ee6e7ad30b24d	27	UK	Female	18	White	No	2
+5ff35316d4f1e4411075686b	38	UK	Male	21	White	No	4
+5ff39ec71d6cb49c6c906727	33	US	Male	16	White	Yes	1
+5ff633cda2b5841a81ec5b9a	30	US	Female	16	White	No	4
+5ff94e71c59814230b0fb713	31	US	Male	14	Black or African American	No	2
+6000cefee380e61fa9bc5ae4	30	US	Male	16	White	No	4
+6002e90144049f32edaf9ccf	24	UK	Female	18	White	No	3
+600604af2e88fb932d0b7aec	32	US	Female	12	White	No	2
+60079f45348bb62bdcd363ff	38	US	Female	14	White	No	1
+600c3a4cf1786b0d29f2e0b5	24	UK	Female	18	White	No	3
+601228de8f04be234171ca8f	31	US	Male	16	Black or African American	No	4
+6012a60ae800da000ce2e328	28	UK	Female	18	White	No	1
+60130d613d3ca613b04d39bb	23	US	Female	14	Black or African American	No	1
+6014319e270fe939a04f9750	33	UK	Male	12	White	No	3
+6017f6742d7cc9ad4f98fb4d	22	UK	Male	12	White	No	2
+60188f5f74e975153e518af0	32	UK	Female	16	White	No	4
+6018e7e271455e1e9e49bda1	31	US	Female	14	White	No	4
+601957589dce2d020c0b68fd	20	UK	Male	12	White	No	1
+601bd7b6f176775ca8d0cd76	31	UK	Female	16	White	No	1
+601d7cc678b34c000c119699	23	US	Male	12	White	No	3
+601e13b872774f263d64acac	34	US	Male	18	White	No	4
+601fe0abd9466c54b4ae2edf	28	UK	Female	16	White	No	4
+60205d8a88ba9165dda2b151	35	UK	Female	16	White	No	1
+6025322c854f3a000b5f39f4	33	US	Female	12	Multiple	No	4
+6025534aacfd7c07175859d8	23	UK	Male	16	Asian	No	1
+60282d2ffedb021342e2df15	22	UK	Female	12	White	No	4
+6028daf2a770da7b4c6bc0c9	35	UK	Female	18	White	No	3
+6029b0e17f3b5d944ab183f1	33	US	Male	16	White	No	3
+602d0d644ae79165540824c7	21	UK	Female	12	White	No	3
+60301eb443d657e3194282fa	22	UK	Female	12	White	No	2
+603862f99e00971c55fe0874	32	US	Male	12	Multiple	No	1
+60392f725862f13f0fe248fd	22	UK	Female	Other	White	No	2
+603bbf426ba69e8af20ace6f	21	UK	Female	16	White	No	4
+603cdf727dc2aaaf78665c7a	30	UK	Male	16	White	No	1
+603ed5d8d98e95fc0e0a67a9	35	UK	Female	18	Asian	No	3
+603ffa2297399c196dd985c6	30	UK	Female	16	White	No	3
+60412f7a5f580407f8e6e615	37	US	Male	12	White	No	3
+604397dd75ab0c367e5f2604	36	US	Male	16	White	No	2
+6044aeec82a9db5312244eff	32	UK	Female	16	Multiple	No	2
+60469cfa17b0fd0dca2c2286	26	US	Male	16	White	No	4
+604948af3d18f08a6d339883	30	UK	Female	16	White	No	3
+604b682a8b6ed9694d8e48aa	25	US	Male	16	Black or African American	No	2
+604c43026c4192103feff6e7	21	US	Male	16	Multiple	Yes	3
+604e634b32d4a6d79fe6dff9	20	UK	Female	12	White	No	2
+604ece0ddcb93c1afcda5601	23	US	Female	14	White	Yes	3
+6053af645a4c66eac9bb2c2b	22	UK	Male	16	Asian	No	4
+6054e1ddb68b58dd23242765	36	US	Male	16	Multiple	No	4
+605504fc7a5a699c16ae8b4d	31	US	Female	16	White	Yes	2
+6055710aefbed49cbc6c872b	23	US	Female	12	Multiple	No	4
+605867beea908e8ef4302da6	20	UK	Female	18	Black or African American	No	1
+6059de1764f0ba6ded888c05	25	UK	Female	18	White	No	1
+605af9d7b86acbdc81560f8b	27	UK	Female	18	White	No	4
+605e9cc770aa6d1947d02bfa	31	UK	Male	16	White	No	2
+6061fff2c21e787791b1d052	39	US	Female	12	Black or African American	No	3
+60628138bcaf1a1ee218738e	22	US	Male	12	White	Yes	2
+606492360e422d12dc63000e	26	US	Male	18	White	No	2
+6065d6c60c9d35be7632a6ca	22	UK	Female	16	White	No	3
+606df53de4b0550a5f42fefe	36	US	Male	18	Asian	Yes	2
+607047e8bf8855d7e3112b91	32	UK	Female	14	White	No	1
+6071a3faff84952d04771a21	34	UK	Female	16	White	No	1
+6072f0c49cdfff6846fc1964	29	UK	Female	16	White	No	4
+6072f5e58232a7e276108b28	32	UK	Female	12	White	No	1
+60743e408fd768b1a939ed4c	20	UK	Male	12	White	No	2
+6074b929f753216d88c77e88	31	US	Male	12	White	No	1
+6074c0ce19889ca4efd4448e	31	UK	Female	12	Asian	No	4
+6075ecc30e7921c183644eaa	25	UK	Female	14	White	No	2
+60794cf6640dbc4d3662ef07	40	UK	Male	14	White	No	3
+607cce4d28ef1f0561fc93ca	30	US	Female	18	White	No	4
+607f0b70818fde7990b3992d	34	US	Male	16	White	No	4
+607f2e7133afa07084f6be01	34	UK	Female	16	Asian	No	2
+607f7f18d84d010ea2cd8664	23	US	Female	12	Multiple	No	1
+6080c437c4d7109234489144	23	US	Female	8	White	No	2
+6080f54b42dcabe9e1418fe3	27	US	Female	12	White	No	3
+60815de360f218f8b6164656	20	UK	Male	12	White	No	2
+6083e4575dc56d8ed869d70f	21	UK	Male	16	White	No	3
+60868644bc3f19d6d4f9a413	24	UK	Female	18	White	No	4
+60873d2ab16643e5a08cafd2	31	US	Male	16	White	No	3
+608bfa04767191aa4d57bfd8	40	US	Female	12	White	No	3
+608da9dd3e630867a6efd9b2	34	UK	Male	16	White	No	NA
+6090578fb2299eacaec32b7a	28	US	Female	12	Asian	No	2
+6091e1be3df7254e526f7168	21	US	Not listed: Non-binary	12	Multiple	No	2
+6093352bbe7fa5d5483fa970	21	US	Female	12	Multiple	Yes	4
+6094af4acc2ca8dd2c6f8edd	24	US	Female	16	White	No	3
+6095fc75ab1d101e060d808b	38	US	Male	16	Black or African American	No	3
+60996e96d40f57772e96ab4f	24	UK	Male	16	White	No	4
+609992993f9e385c720e2ba5	30	UK	Female	16	White	No	2
+609a9aae2e53d2c195a1bba6	31	UK	Female	Other	White	No	4
+60a1e78bca6d054be353758f	22	US	Female	12	Multiple	Yes	1
+60a2cf0845851125015f4c1e	30	US	Male	18	White	Yes	1
+60a80fbd13aba726d46b8f2e	25	UK	Male	18	White	No	4
+60aa79fa99f7d53701b02256	27	UK	Female	12	White	No	1
+60ab9e649e9587f020d43ede	21	UK	Female	Other	White	No	1
+60ae58bc8c294827d300e31c	23	UK	Male	18	White	No	2
+60aecded93eb495d413a482b	29	UK	Female	16	White	No	1
+60aee0858e96f753f593b729	26	US	Female	14	Multiple	Yes	3
+60b15442ddeb2fb71659ae2e	33	UK	Female	16	White	No	2
+60b610d8c3c4f177c8337729	38	UK	Male	21	White	No	2
+60b78dc1eb46833a5c6b1235	29	UK	Female	8	White	No	2
+60b8198defba8da1d95a93b8	34	US	Male	16	White	No	3
+60b8ee3c30afdb493743872e	28	US	Female	14	White	Yes	3
+60b9b66f3b3795d796a82ee6	29	UK	Male	18	White	No	2
+60ba660517a2dba7f4b8c4de	23	UK	Male	12	White	No	1
+60bb3b463887c2f9d1385cce	31	UK	Male	14	White	No	3
+60bd4bfc88b646e72d772977	33	US	Female	14	White	No	4
+60be1e056f39c387c4f02308	37	US	Male	18	Black or African American	No	3
+60bf9da88006aeba20357735	23	UK	Female	18	Asian	No	4
+60bfa45e4b4c6f448676b18e	30	UK	Male	14	White	No	4
+60c12fe6ca8c4aa6d0185190	39	US	Male	16	Black or African American	No	1
+60c29201092d523e3b08a603	37	UK	Male	12	Asian	No	4
+60c939f66b866cfeb73eec68	26	US	Female	21	White	No	3
+60c93f189082587ea79ce324	26	US	Female	16	Multiple	No	4
+60c9b0886e03c28f26d97b19	37	UK	Female	18	White	No	4
+60cb864c78911d94995416e9	23	UK	Female	16	White	No	3
+60ce179aa6f645eb5543c20e	36	UK	Female	16	White	No	1
+60cef7be32400c5dd5a5a10f	27	US	Male	12	White	No	2
+60cf5539b37d771226c81bd2	22	UK	Female	14	White	No	3
+60cfa8282c2d838ec7e98e95	21	UK	Female	12	White	No	4
+60cfc6dc65562d055da211c1	19	UK	Female	14	White	No	3
+60d0709ffc9b494cf65a266c	20	UK	Male	12	White	No	3
+60d13d406f3b34d6791c8831	26	US	Male	12	White	No	2
+60d20bdca2934c2104798fff	40	UK	Male	12	White	No	3
+60d2c59451b12e36fb281477	28	UK	Male	18	White	No	4
+60d35fa71e56e17e064c2c1e	21	UK	Male	12	Asian	No	2
+60d3740f31606cb50e49f00c	32	US	Male	16	White	No	1
+60d54e6c7c07f25c5b751491	38	US	Female	16	White	No	3
+60d5c363dd49bcb80e528806	33	US	Female	18	White	No	4
+60d6562174087c2eccf2357f	34	US	Male	16	White	No	4
+60d8c6bc9686529cdc824a49	37	US	Female	12	White	No	2
+60dd27004a74c325f5b22e17	20	UK	Male	12	White	No	2
+60ddf72ef11f891328449fb0	24	UK	Female	18	White	No	1
+60e0687e08d77efdaa4e9aa8	23	UK	Female	14	White	No	2
+60e0932282119517de61e37c	24	UK	Female	16	White	No	3
+60e3abf8c7ce5b28f917f5d3	21	US	Male	12	White	Yes	4
+60e46e6029128248ba4b9e5d	19	US	Female	12	Black or African American	No	4
+60e5e5b0ceabcb5d6c5f1dd0	36	UK	Male	12	Asian	No	2
+60e67bc1585c7158f6f9116a	33	UK	Female	12	White	No	2
+60e6edaeed006606fe5d0419	35	US	Female	14	Black or African American	No	3
+60e7044ddc2523fab6cbc0cd	30	US	Female	16	White	No	1
+60e8a63f733f423be3da1846	33	US	Female	12	White	No	2
+60e8b68c9033e23d58e9dcc0	33	US	Female	5	White	No	2
+60e8f275f92d76c8f3a687bb	29	UK	Female	18	Asian	No	4
+60e9cbd27102b08fc616fbe6	30	US	Male	21	White	Yes	3
+60ea57c074a703877f04330b	30	US	Male	12	White	Yes	1
+60ea8e0a21b4d8ed9eddcc82	25	US	Male	12	Multiple	Yes	4
+60eacff7b678411f44e11a12	24	UK	Female	16	White	No	1
+60eb81e023788423a6ea43f9	20	US	Female	12	Asian	No	1
+60edac38ac8045d6947c92c4	22	UK	Female	16	White	No	2
+60edac884fef13c0b0660daf	38	US	Female	12	White	No	4
+60eec0367a7cc5ea6ed0e099	40	UK	Male	12	White	No	2
+60ef047e8969715a3db7181a	34	UK	Male	16	White	No	4
+60f47fc03ca663a2425b8085	34	US	Male	14	Black or African American	No	4
+60f4e3ab507bbb123f866e88	24	US	Female	16	Black or African American	No	4
+60f5917414ac7d222d22db64	26	UK	Female	12	White	No	1
+60f5d68c9b6838e7659f53af	26	US	Male	16	Black or African American	No	1
+60f74d68056e79023b681952	25	US	Female	16	White	No	4
+60f8658bf9d1627d3bc87a3d	32	UK	Female	8	White	No	2
+60f94ae0c088d8cb4f4a39ff	35	UK	Female	12	White	No	2
+60fb0deb007dc3a640662150	20	US	Female	14	White	No	2
+60fb9db54c70dd24172b67c3	20	US	Female	12	Multiple	No	4
+60fc1b9a79d5bbbb6712bf8e	37	UK	Female	14	White	No	3
+60fc2f923851f117e21b878f	21	US	Female	12	White	No	1
+60fc3a1e0eb578aa02590e27	22	UK	Female	16	Multiple	No	2
+60fc613690b108048160a92c	25	US	Female	16	White	No	4
+60fcd5602ff7c8f0866ecd0c	21	US	Female	12	White	No	2
+60fcdc8565f979db697cbb62	22	US	Female	16	White	No	4
+60fcefe49e61a0aa689df3c8	27	US	Female	16	White	Yes	4
+60fcfc727484888d11fac02a	38	US	Female	12	White	No	3
+60fd006a5893cbce502dffd4	28	US	Female	16	White	No	4
+60fd0d9bafc469eb390491a0	39	UK	Female	12	White	No	2
+60fd104de10db57a893a0296	33	UK	Male	14	White	No	1
+60fd47060f9034b90c94ac08	27	UK	Female	18	White	No	3
+60fd4a53b6aed2f94948d362	20	UK	Female	12	White	No	2
+60fd58f89d037589c34f5a18	31	UK	Female	18	White	No	2
+60fd64fd34ee5940500d499f	28	US	Female	16	Asian	No	3
+60fd80c426ac8c2b5da717b7	21	US	Female	12	White	No	2
+60fd99228ede8e6e8c0a2411	22	US	Female	16	White	Yes	2
+60fdb99f392d7600a5d42c1f	27	US	Female	18	White	No	1
+60fdc934e81b93f92f561d76	24	US	Female	12	White	Yes	2
+60fde2dcd1deb9c16988f4ea	26	US	Not listed: Non-binary	18	White	No	3
+60fe0a8295a33168e57c2073	22	US	Female	12	Multiple	No	2
+60fe1e46d1cbe0214ada4526	31	US	Male	16	White	No	1
+60fe1f142ea14f6f8d70e68d	25	US	Female	16	White	No	2
+60feaeb30d9981f22b233712	20	UK	Female	12	Black or African American	Yes	2
+60fed81a020a69e3bbb6017d	25	US	Female	16	Asian	No	4
+60fee6ac4251e521b4546f1d	23	US	Female	16	White	No	1
+60fef79fa408c9eae61e49c3	30	US	Female	16	Asian	No	4
+60ff0ff28636a214aed9a72e	30	US	Male	12	White	No	3
+60ff30f3bc42a1631f5758ee	28	UK	Female	16	White	No	3
+60ff6673abdb3e7cbdfafe10	27	US	Female	14	Multiple	Yes	4
+60ffea6791b8a6fca294f97c	19	US	Male	12	White	No	2
+61002113b721112eda846c7f	20	US	Female	12	White	No	3
+610058f21b82dddf45b44009	23	US	Male	12	White	No	4
+61005ada2ffbf75efed5deb5	24	US	Female	12	White	No	4
+61005b49f8382e2e24f00ef0	33	US	Female	18	White	No	4
+61009113cbe76c23b4a0800d	21	US	Female	12	White	No	1
+610093fb67a014f2230f77bb	21	US	Female	12	Black or African American	No	1
+6100c17164f9f4c063f4d25f	22	US	Female	16	Asian	No	3
+6100d28f1e251a6dff92f0df	22	US	Female	16	White	No	3
+6100fd9153a73727cf2edda8	20	US	Not listed: nonbinary	12	Multiple	Yes	3
+61020197f83a83260d8c78b4	28	US	Female	16	White	No	4
+6103777b1cf4f1d223482c72	20	US	Male	12	White	No	2
+6103a781f654509f2e43ef13	26	US	Female	12	Multiple	Yes	3
+6104768a9cb1e52907ff3bd5	26	US	Female	16	Black or African American	No	2
+6104f2626b46bd21f1c9a1b3	29	US	Male	12	Asian	No	3
+6105758d070f9b350cea24ba	29	UK	Female	18	Asian	No	4
+6105f0d0cbe5d053ff7ecade	32	US	Female	12	White	Yes	2
+61067ed9f756e2096f4ae3bc	36	UK	Female	16	White	Yes	4
+610761fce69907203f8b2488	23	US	Female	16	White	No	3
+6107747487630f86119418da	28	US	Female	16	White	No	1
+6107a5be3cbf757b3297d8a1	38	UK	Male	12	White	No	3
+61084dbab48ab21fce452554	25	US	Female	18	White	No	4
+61088f97759a1199340202e9	21	US	Female	12	White	No	2
+6108d6efa698e3dbe3b313d3	30	US	Male	18	Black or African American	No	4
+6108e2470b62bbe11b9f2e7c	25	US	Female	12	Asian	No	4
+61098efe1c7dcf4133162908	22	US	Female	16	White	Yes	3
+6109df8b813b0d148dde496f	29	US	Female	18	White	No	3
+610acf76d33d448b391eb588	21	US	Not listed: Nonbinary	12	White	No	4
+610b64dc95ff0ef5b5b9ac6b	25	US	Male	12	White	No	1
+610c66163e803a3564dfaf9c	20	UK	Male	16	Black or African American	No	1
+610d170f7bb4e720cb85b6b2	20	US	Female	12	White	No	2
+610e0a1e95c323743ff02dcb	37	US	Male	16	Black or African American	No	2
+610e47e32fee3f67f185cb37	34	UK	Female	Other	White	No	4
+61103c2b7810420e5f23f437	24	US	Female	14	White	No	2
+61107313f8a8c5d8adc23703	21	US	Female	12	American Indian or Alaska Native	Yes	1
+6110bcb9e93c1960b9f28deb	30	US	Female	18	White	No	1
+6110db4e6d45d7849cd5231e	38	UK	Male	16	White	No	1
+611112142433b5e95c84acd9	28	US	Female	16	White	No	3
+611131e47725f6a04c723651	28	US	Female	16	White	Yes	3
+61114a817e2f468c9af43bba	21	US	Female	12	White	Yes	1
+61119018babf810c0cab7d3b	26	US	Not listed: non binary	14	White	No	4
+6111949dc977e72c3f9e7335	25	US	Female	16	White	No	3
+6111997b776e4a117a04cccb	24	US	Female	16	White	Yes	1
+6111b5e34b026c7ce51a4353	31	UK	Female	21	White	No	1
+6111cbf1e5dffb55a8f70153	24	US	Female	12	White	No	4
+611291090e626fdfde536f38	39	US	Male	12	Black or African American	No	1
+6112c77c4cb58daede378463	22	US	Male	16	Asian	No	3
+611383641ef5dff3b6f75ee5	25	UK	Female	18	White	No	3
+611409d13bdb227076c9426b	24	US	Female	16	White	No	1
+6116006273dc164b00631515	28	UK	Female	18	White	No	4
+6116aa8875bdab57cab52804	27	US	Female	12	White	Yes	4
+61193152f8e8156f6723e801	26	UK	Male	16	White	No	4
+611988e5392b6d421939c5d1	23	UK	Female	16	White	No	4
+611a435c3f45b6c288196363	23	UK	Female	18	White	No	3
+611ab91a00baa062f55b86d8	23	US	Female	16	White	Yes	3
+611ae10542e79063248b4f47	20	US	Male	12	Multiple	Yes	1
+611e4e160f41977f737035ef	21	UK	Male	16	White	No	3
+611fb8ddcc7bb35d86ec0714	33	UK	Female	16	White	No	1
+6120d602c1976a4114dcb110	32	US	Female	14	White	No	3
+61210b5c3f465c51a7f4166a	38	US	Female	18	White	No	3
+61216047eea1fe5523aa30e4	21	US	Female	12	White	No	1
+6122bff4706b6d848da00ec1	26	US	Female	16	White	Yes	2
+61230b14a3bcb65c585dfdaa	37	US	Female	16	White	No	2
+6125653f9d984b6fd3d68983	30	US	Male	16	Multiple	No	4
+612669b8c92504572e54c62b	29	UK	Male	16	White	No	4
+6128a3db67305ef94021fcd7	29	UK	Male	18	White	No	3
+6129cc7a565c9c03752802fa	26	US	Female	18	Multiple	No	1
+612cb8ab5ad60fc4504e073f	28	UK	Female	14	White	No	2
+612d5ca50be0e9ff3505561f	30	UK	Female	12	Multiple	No	4
+612df6ef33e1afb850d6d56f	31	US	Male	12	White	Yes	2
+6130ea03d6862384241af61a	23	US	Female	16	White	No	4
+61313473de5462f652bb133c	30	US	Male	14	White	Yes	1
+6132cc58d1dcc24bcdb61606	26	US	Female	12	White	No	1
+61338374ecef87bfdfd1c7bb	20	US	Male	14	White	No	2
+6134eba70b3263b484d2b471	20	US	Female	12	White	No	3
+613589ac6333693e1927fa76	39	US	Female	12	Multiple	No	4
+613637a4f7a0e5359082010b	30	UK	Female	21	White	No	2
+613b33351fe3b5ef6a70f654	22	UK	Not listed: non-binary	16	White	No	1
+613b94b83b5cb4c72904f8b3	24	UK	Female	16	White	No	3
+613b94c0131c197e3151d176	25	UK	Female	16	White	No	2
+613e4fe98859554b7170871b	27	UK	Female	16	White	No	1
+613e7bf4ae5857b728674b91	20	UK	Female	12	White	No	2
+613fa6a4ac727e4d53fcaf38	20	UK	Female	Other	White	No	2
+61413568af671b4a3f59aa8a	24	US	Male	16	White	Yes	4
+6141f62294ff9bf9d89e8897	28	UK	Female	18	White	No	1
+61432781817c1541f59bbf33	19	UK	Male	12	White	No	1
+6144c14d93e88592f8e9750d	26	UK	Female	16	Black or African American	No	3
+6146f9d153bd39dfa1fe49b5	24	UK	Female	18	White	No	4
+6147082f6a4363dd25430c10	24	UK	Female	12	White	No	3
+6147213e9333ddd0c65b3ed3	34	UK	Female	16	White	No	3
+61474f07f4cfbc50cb3b2f1e	27	UK	Female	14	White	No	3
+61479ab9218564b0c032d382	30	UK	Female	18	Black or African American	No	1
+6148963108ad9e90ae61c8ab	24	UK	Male	0	White	No	4
+61498e629580b6d5cc8f67f3	27	UK	Male	16	White	No	3
+614a125a754b4a9660643d88	23	US	Female	16	White	No	4
+614dc45c0ed5f55d9036e0d9	27	UK	Female	16	White	No	1
+614e43c148febeb17c93e998	37	UK	Male	16	White	No	3
+614e5f296503fcbc29f42b3a	39	US	Male	14	White	Yes	1
+614fe09fec9ce4a2a415476d	18	US	Female	18	White	No	3
+61511b7499620085c08c171d	40	US	Female	18	White	No	1
+6151b373b274d12a949a4369	28	UK	Female	16	White	No	3
+6151e572a07b1d5e164bab2c	25	US	Male	16	Other	Yes	4
+61530d04a2176282b7ee6fac	35	UK	Female	16	White	No	2
+6153593be7f8925dee8d7db6	33	UK	Female	12	White	No	1
+6153b5513ccada2d35fae508	32	US	Male	14	White	No	2
+61544c7e85951454f9c5b60e	24	UK	Female	16	White	No	2
+6154973c69da7c97996a19f6	24	US	Female	16	White	No	2
+6154b0b9c638eb2b8b147def	35	US	Female	12	Black or African American	No	2
+61577f23f2c969a3eae09d3b	32	UK	Female	18	White	No	1
+61592ea07347e286bca1955f	22	US	Female	16	Asian	No	1
+6159fb27b6340dda3fc6a5c3	36	US	Male	12	White	No	2
+615c6b6db80030c2df00f6b7	23	UK	Female	16	Asian	No	3
+615c9a75a3347425d96d9f4f	21	UK	Female	12	White	No	3
+615dd0f9a1497c3521241dbc	39	UK	Female	16	White	No	3
+615dd1eb2702a672f7db49f1	37	US	Female	12	White	No	2
+615edb3967bc743ac381a940	24	UK	Female	14	White	No	2
+615fdfca4830432512527cf3	27	US	Female	12	White	Yes	1
+6160c8f657e3c4094b01614a	35	UK	Male	12	White	No	1
+616413c53aace889a0f13c3a	21	UK	Female	16	White	No	2
+616426c9ef325b5dd26f7d8e	29	US	Female	18	Black or African American	No	3
+6164b1a030e4e2dbcd02e92e	29	UK	Male	16	White	No	2
+6164cb24dbf61b550392e841	33	US	Male	18	White	No	4
+616555ec3460f0a519c1cdff	24	UK	Female	18	White	No	4
+6165a8ee6dde7ff6f4b22e6f	32	US	Female	12	Black or African American	No	4
+6165ab1d62dc48b90438ea1d	32	US	Male	16	Multiple	No	3
+6167abbd7db521535e811eb0	22	US	Female	16	Black or African American	No	4
+6168713d805efede55796d7f	27	US	Male	12	White	No	3
+6168ace1ef0f716f56f08f5b	34	US	Female	18	Black or African American	No	2
+61698720ea3862e067c47c73	31	UK	Male	16	White	No	3
+616996c4f97c112b8c31d813	35	US	Female	12	White	No	4
+616ae9c2a6c0fec55d16c130	23	UK	Female	16	White	No	1
+616c056b42e788ef31efc4b0	38	US	Female	16	Asian	No	2
+616ddd8fb030bba466234e7a	35	US	Male	12	White	Yes	2
+616f3c3672c07234d96edc86	26	UK	Female	16	White	No	4
+61716052a11968c4644776b7	38	UK	Male	12	White	No	2
+617172d3e4d3b6d6ab6a705c	35	UK	Male	12	White	No	4
+6171f15c2b846b1f468a266e	32	US	Male	16	White	No	4
+61731c0ef27028acbfbbf972	25	US	Male	18	Black or African American	No	1
+6175e05636b79082f8d345c5	35	US	Female	16	White	No	1
+61bb36e440db417c1a13894a	21	UK	Male	16	White	No	3
+61f2adfaa09e72f23cbaf9da	29	US	Female	16	Black or African American	No	3
+61fa945e5719bc09cb834f15	30	US	Male	18	White	No	4
+62029a07ef1cb18a1337c583	20	UK	Male	14	White	No	1
+62029a55ef1cb18a1337c61a	24	US	Male	16	White	No	2
+62029adcef1cb18a1337c71c	25	US	Female	18	White	No	1
+6234864ec4a6e1aa0229fbd7	37	US	Female	14	White	No	2
+62349b9d9d293b56a95ede2c	28	UK	Male	12	White	No	1
+6234a7fc493d026318784c23	20	US	Female	12	White	No	3
+6236844dad7b8f69aad35b69	20	US	Male	12	Multiple	Yes	1
+6237ca974050879378c8fea8	25	US	Male	12	White	No	2
+62694fbeede8c79c1b047e80	32	UK	Male	18	Multiple	No	3
+62712d1c0b71829386d60eb4	36	UK	Male	16	White	No	3
+62718acba39cea360d198b7d	32	US	Female	12	White	Yes	3
+62728c148af5805feea46dc8	40	US	Female	12	White	No	2
+6272b9dfc470a51d5fa0e6ea	41	US	Male	14	Asian	No	1
+6273eeabe7637501530d9733	27	UK	Male	14	White	No	3
+6277fb597942c07d74b16b98	33	UK	Female	16	Asian	No	1
+627809c52874925390a423a6	31	US	Female	12	White	No	4
+627935c4e5d7e70b502e206e	28	US	Male	16	White	No	4
+62824c37f4cc437ab86e0ae6	34	UK	Female	12	White	No	1
+6282571cf39cd89341a474e9	21	US	Male	12	Black or African American	Yes	2
+62827ef2d905564e88a46d01	25	US	Female	14	White	No	1
+6282a9b9015ed5c3dbf566b3	20	US	Female	12	White	No	4
+628419137c4c3ded72e4874d	22	US	Male	16	White	No	1
+62853cad232ad9273433f22e	31	US	Female	16	White	No	2
+6285918873f1ff83c2bfa809	21	US	Male	14	White	No	2
+628659966054a3064240cb17	34	US	Male	18	White	Yes	2
+628678ca852c5ee97a800552	37	US	Female	16	White	No	1
+62867b51e71606f873d41b05	36	US	Male	12	White	No	3
+6286ad40f6f08677959e431e	25	UK	Female	12	White	No	1
+628781515f29a0394e23b15b	31	UK	Male	16	White	No	3
+628bbe2c0f8080e6985e8592	26	US	Male	12	White	Yes	4
+628d62e2c99c773b217f1321	28	US	Male	12	White	No	4
+628e5f283594e1a48a04886f	32	US	Male	12	White	No	3
+628f6d4d2a3cf806fc7e01ff	24	UK	Male	16	White	No	1
+628f9b391ab8b87c64643248	30	US	Female	14	Black or African American	No	4
+6290d34243e9347c40bac608	31	US	Female	12	White	No	2
+6290d930eb8f73a88e290de6	27	US	Male	12	White	No	2
+62913423a2eafb7ddd64d975	20	US	Male	12	Asian	No	1
+629186f7e2f20297ead170be	27	US	Male	12	White	No	1
+629531cb501e6d23d9797050	39	US	Male	18	White	No	4
+629534afc0924e49e1464589	37	US	Male	18	Asian	No	3
+6296bef3248bf76cc113926b	24	US	Male	12	Black or African American	No	1
+6298a9085d14b6e56be0c482	31	US	Female	14	White	Yes	4
+629b3b3c89d490460eacbfbc	38	UK	Male	21	White	No	4
+629e1fc50453c5096d91c5f4	39	UK	Female	18	White	No	2
+629f2a1f516a323b811b8273	33	UK	Male	16	White	No	2
+629f2a9c3effb1dc81c49116	31	UK	Male	18	White	No	2
+629f2dccc6e91be06559e2f1	35	UK	Male	18	White	No	1
+629f2edb4e2e1d417c524cb7	20	UK	Male	12	White	No	1
+62a0b2f90e25677103262820	25	US	Male	12	White	No	2
+62a2648755dec7ce4164f875	32	UK	Male	16	White	No	2
+62a2adb16716c2e0c8d3c07a	24	US	Female	12	Multiple	No	3
+62a338e26dc04ba4e4fb26bb	39	UK	Male	16	White	No	3
+62a42874616cea6120350ad9	34	US	Male	12	White	No	4
+62a733deec84f43ab19f7cca	25	US	Female	16	Asian	No	1
+62a7970f8387f3fcc95b106b	31	UK	Male	12	White	No	4
+62a88dbc14372bc103a1accb	40	UK	Male	12	White	No	2
+62a8f3aeaf0846daa75fbc3d	26	UK	Male	18	Black or African American	No	4
+62ab2034b58fe149d144acf4	35	UK	Male	12	White	No	3
+62ac75a88ed59acd2d641ef5	38	UK	Male	14	White	No	3
+62ac7ba73347a349866fb1f9	28	US	Not listed: Nonbinary	12	White	No	4
+62ac7d0d794fad54e6cf7d84	32	US	Male	14	White	No	2
+62aca272d3567b4b0e575647	25	UK	Male	12	White	No	3
+62b09bc02efbcc7d0dd81f3b	27	US	Male	14	White	No	1
+62b1418c313cf1ef437ed9c3	18	US	Female	12	Multiple	Yes	1
+62b1ff970dfb7055f35d6937	30	UK	Female	12	White	No	4
+62b33a6e9bcbf397ffc647b0	19	UK	Male	12	White	No	3
+62b4370c9a89e5a09c4447de	40	UK	Female	16	Asian	No	3
+62b4403257f7d42730f83394	39	UK	Male	12	Multiple	No	2
+62b447656327845c605becd9	22	UK	Male	16	White	No	1
+62b46cafda63e83d14eb4ec5	30	US	Male	16	Black or African American	No	3
+62b5d90d09660072824f68cf	37	UK	Male	18	White	No	3
+62b5e2bd8c3c515ab19b911a	34	UK	Male	16	White	No	4
+62b5fea64b239d91783414ff	28	UK	Male	12	Black or African American	No	4
+62b8b2be4c2b1d481f4f68c0	40	UK	Male	14	White	No	1
+62bc3401dc67c7598dbba4a6	30	US	Male	16	Black or African American	No	4
+62bd685ac3edc9ad0d77812b	35	US	Male	18	Black or African American	No	1
+62bdc8f9ce5149c655938472	30	US	Male	14	Multiple	Yes	3
+62bddb63d7c84ff6e9c592f5	25	US	Female	12	White	Yes	1
+62c0ccde4bd16c7f96a2959f	35	US	Male	16	White	No	2
+62c41fe598ab94de4d4f021e	27	US	Male	16	Black or African American	No	3
+62c61d523167ae5eafc98e6c	30	US	Male	18	White	No	3
+62c79dafb9222348d5e5a90c	32	US	Male	18	Black or African American	No	4
+62c83041b362f6fad2f05822	31	UK	Male	16	White	No	2
+62c8c2d71e87b86722f0215b	35	US	Male	18	Asian	No	2
+62c8d159937c939dd4d139e3	30	US	Male	12	White	No	3
+62caff3bc44f4d702b6e2e35	25	US	Male	12	White	No	2
+62cc0f224275a8e076973853	28	UK	Male	16	White	No	1
+62cdb59eb5cfe2052ca5074c	37	UK	Female	12	White	No	3
+62cdd40d1b2793efe13fd204	33	US	Female	12	White	No	3
+62ce9f115a24ca323371d2dc	30	UK	Male	16	Asian	No	3
+62cf2192b9212fc96a5b3917	28	US	Male	16	Black or African American	No	4
+62d133d8355730e56a6722dc	33	UK	Male	12	White	No	2
+62d161281d1cc51873268298	18	UK	Female	18	White	No	2
+62d59d0df8da03fdf7f8c317	24	UK	Male	12	White	No	3
+62d68f14d9b476ca9b026253	29	UK	Male	16	White	No	3
+62d709bbd195748a93cf951b	20	UK	Male	12	White	No	4
+62d9242891fdb4cd2294633e	23	UK	Male	14	White	No	1
+62da6435cd756fcdd166ba69	28	UK	Female	12	White	No	3
+62daadb99f0265052485e7cf	31	UK	Male	16	White	No	1
+62db607906a1c0be0039aa32	37	US	Not listed: transfem	12	White	No	1
+62df7fc27c9e824a7a774103	40	US	Male	16	White	No	3
+62e024e1be720e4322dade00	39	UK	Male	12	White	No	1
+62e02b1ed5b0fbc1b1dc09e7	36	US	Female	12	Black or African American	No	1
+62e0629e7fbb8a1907dade0e	40	US	Male	18	Black or African American	No	3
+62e0c40c68eaa2ad1508eae6	28	AL	Not listed: Prefer not to say	16	Multiple	Yes	3
+62e154b0682e270b4acdf5ee	31	UK	Male	14	White	No	3
+62e185484154c451882a8a3d	25	US	Male	16	White	No	2
+62e19208352cd518d7b2f085	34	US	Male	12	White	No	1
+62e1f3f870894e12168113c5	32	US	Male	16	Black or African American	No	1
+62e25115fb932baf4a93173f	31	UK	Male	12	White	No	4
+62e3f7b224ec70641fd86b7b	35	UK	Male	12	White	No	2
+62e40abe71c1b7e395e9bf4a	39	UK	Male	18	White	No	3
+62eaacea4ed738b3a35c0455	31	US	Not listed: non binary	16	White	No	2
+62ebd8c191cf8e7fe54af5cf	35	UK	Male	16	Multiple	No	3
+62ebf162fc296d770d108698	19	UK	Male	14	White	No	3
+62ec4c02ead47ce424644dd8	29	UK	Male	14	White	No	1
+62ecf80065974f9ca24a6430	33	UK	Female	12	White	No	2
+62ee4337445b044245a71185	25	UK	Male	16	White	No	1
+62fb383ce16d6921d1c2c2b8	24	US	Male	16	Black or African American	No	2
+62fb7a1e911792cb94b547c6	29	UK	Male	16	White	No	2
+62fb7b282ed3a1e42d9a5f46	19	UK	Female	12	White	No	2
+62fb7ba781f1eaac2b543934	25	UK	Female	16	White	No	1
+62fb7dc39338d2a30ae9cff4	24	UK	Female	18	Asian	No	3
+62fb7eb177df6c3faae7baba	30	UK	Female	16	White	No	4
+62fbdda6e4b5a034b71296f8	30	US	Male	12	White	No	4
+62fc25ef4ce0d3d169b7a120	31	US	Female	12	White	No	4
+62fcabf17fc3d7ef0952fb6c	26	UK	Male	12	White	No	3
+62fe6312269d0e4ae894297b	33	US	Male	12	White	No	2
+62fe744f4cd35a1a91b43f13	27	US	Male	16	Black or African American	No	2
+63003bb4d6f83995fb271ba3	40	US	Male	16	White	No	3
+63026a8fd8429b224cd2a134	26	US	Male	16	White	No	1
+63039dbefda87c47a91fec04	36	US	Male	12	Black or African American	No	4
+6303b2a667e441d9712da559	31	UK	Female	21	White	No	1
+6303c0bf11a5be642b52830e	35	UK	Female	8	White	No	2
+63068110447ef1aaa9660816	28	UK	Male	12	White	No	2
+63069f585b35a5ec752fcd30	34	US	Male	18	Black or African American	No	2
+6306d4da805f2e38a841c3ad	26	US	Male	12	White	No	4
+63077eb74317918cf6dde8db	31	US	Male	12	Black or African American	No	2
+6307bd3bb93e804d22332b3e	32	US	Male	12	White	No	2
+630a2fd6e76ccbe74374656d	19	US	Male	8	White	Yes	2
+630adf01fe54101d5214a17f	31	US	Male	14	White	No	3
+630f06eb561655a94229a93d	18	US	Male	14	Asian	No	2
+6312ada1ce715ee3916c3748	29	US	Male	14	White	No	2
+63136313a568ce59fb97feb9	33	US	Male	12	White	Yes	3
+631381096e95278a3f97fed4	34	US	Female	12	Multiple	Yes	1
+6314453e0a22cc4e1e66ca08	37	US	Male	16	White	No	2
+6314bc49055e150c92f4736e	34	US	Male	16	Asian	No	4
+6315a102cb675027354ef5d8	29	US	Male	12	Black or African American	No	4
+631610af8e747093cd90e00d	38	UK	Female	12	Multiple	No	3
+631659ad8e5354f16aef7249	35	US	Male	12	Multiple	No	2
+631746048043e6fd54a798d4	26	UK	Male	12	Black or African American	No	3
+63179fe6d8b52834c9c8f5f7	21	US	Male	12	White	No	1
+6318ec19888839dfc0b4d5c8	21	UK	Male	12	White	No	4
+631a0abd840b151d3bf54b6b	35	UK	Male	12	White	No	1
+631a114b543a75e72096fc17	39	US	Male	12	White	No	4
+631ab79e8635a1df26319958	19	US	Male	12	White	No	3
+631b1437200a529b7f31919d	28	UK	Female	21	White	No	1
+631b32b0796f2941b55e7d58	33	US	Male	14	White	No	4
+631bfb8f27645e704e21c1cd	25	US	Male	16	Asian	No	1
+631c8e97db06f601f81bd82f	26	US	Male	18	White	No	1
+631f1b608af38f654d2a3b1f	39	US	Male	14	White	No	1
+631f8164145b26de1567f040	36	UK	Male	16	White	No	2
+631fd12cab0b639506214b7b	38	US	Male	16	Black or African American	No	1
+632222532c12ab0ab7ca00bd	30	UK	Male	12	White	No	2
+632245347d475b31018e889f	26	US	Male	14	White	No	1
+63239f94b13228f09348c943	24	US	Male	12	White	No	4
+6324190c00acac6ac06d882b	20	US	Female	12	White	No	4
+63251e479509813fab713ad2	39	US	Male	16	White	No	2
+6325482a5da955ebe4a72c93	39	US	Male	16	Black or African American	No	4
+63287c548c0d66d1e300fd64	30	UK	Male	16	White	No	4
+632881a28fcc3aae4da242e2	19	UK	Male	12	White	No	3
+6329f8bd8622aaba8e13a6d7	19	UK	Female	12	White	No	2
+632a2b88ee7ba45758fde30b	30	US	Male	16	White	No	4
+632b19a12e685b61f1ac6508	35	UK	Male	16	White	No	4
+632b1b35331d4efbfb0d0f8d	28	UK	Male	12	White	No	3
+632b21ce03008aff6a4314b6	31	US	Male	14	White	No	1
+632c0075227e9b734c80424d	38	US	Male	12	White	No	1
+632c211dcdf6a137b26dfdce	29	US	Male	16	White	No	2
+632e79f0df7174aeed22be38	34	US	Male	12	White	No	3
+632ff41f3631baf749984e3e	33	US	Male	12	Black or African American	No	3
+6332177870f40e88d0206f74	35	US	Male	16	Asian	No	3
+6335e35d7a38530d68fd75ca	21	US	Male	16	Black or African American	No	3
+63383ce105061ac9c94a652a	34	US	Male	14	White	No	2
+6338c289b6f1c7bdcef71166	21	US	Male	14	White	No	4
+633c74ad6178784ed5b52104	25	US	Male	14	American Indian or Alaska Native	Yes	4
+633eb584ec1a3cf0efdc2563	36	US	Male	16	White	No	1
+63403b47287756c1978d2985	26	US	Male	16	White	No	2
+6341a541b6cfd5f8933f48c4	36	US	Male	12	Black or African American	No	3
+634282de38138fa9316eb482	30	US	Male	16	Black or African American	No	2
+6346880c3d5b5160c4dd3b62	19	UK	Male	14	Multiple	No	4
+63468824bc01887b6007d674	27	UK	Female	18	White	No	4
+6346887083e9dda2b38f6c56	28	UK	Female	14	White	No	1
+634694c3bb371c8377659b72	27	UK	Male	18	Multiple	No	2
+634695670344cd46b52f7249	22	UK	Male	16	Multiple	No	3
+63469771ec0b74d9c71458d0	38	UK	Male	16	White	No	4
+6346da4e7ac002d7383bd243	34	UK	Male	12	White	No	2
+6347e31ef77fad7edd2f53f1	40	UK	Male	16	White	No	1
+63483c4522d65d46028da7a7	32	US	Male	16	White	No	2
+634bf82ea58e2f34672d56ba	38	UK	Male	12	White	No	3
+634db0be66af0236b2c14770	32	UK	Male	18	White	No	2
+6361483717c4df2ebf189d07	28	US	Male	12	Black or African American	No	3
+63614928290a805b5455d371	28	UK	Male	16	White	No	2
+636166e1694fe8d9ed77dd68	24	US	Male	16	Asian	No	2
+6361769fee0c219b0f1cc480	34	US	Male	12	White	No	2
+6361ad38e1417ab3691c97ff	27	US	Male	16	Multiple	Yes	3
+6361bfe81e0da4a406b33f1e	30	UK	Male	12	White	No	1
+6362a31e279a0277702f9a45	22	UK	Male	12	Asian	No	1
+6365491e5682032c1c2a6687	19	UK	Male	12	Multiple	No	3
+637e1d4874d7ff427504812b	37	UK	Female	16	White	No	2
+637e2af8fcc2c65c96d9e1a0	22	US	Female	12	American Indian or Alaska Native	No	1
+637f7c6517daaa050a1632ba	30	UK	Male	16	White	No	1
+6384e8f79ddf2df1432db0e8	31	UK	Male	16	Multiple	Yes	1
+638af58823dc0ec4b64d0d34	36	US	Male	18	White	No	1
+63acd72d84094941de5813e5	26	US	Male	16	White	No	2
+63b6be87ead45e4fa772fbf5	39	US	Female	14	White	No	2
+63b6cc23f13731158517f900	39	US	Female	18	Multiple	No	3
+63b6ef9027eb90f292852ee4	30	US	Female	18	White	No	3
+63bc7fe62d69346a94c04b9e	20	UK	Male	16	Asian	No	4
+63bca8a6f3803fbb0c3aca28	36	US	Female	16	White	No	3
+63bd61cff50297c9332e3f39	28	GH	Female	16	Black or African American	No	2
+63bdfe6a69fc4d15b3aec18d	30	US	Male	16	Multiple	No	3
+63be6aae1b65a42e794770ee	32	US	Male	16	Multiple	Yes	1
+63c3164c08ff110d63b44dc6	57	US	Male	18	Black or African American	No	1
+63c3584c5e3d88814d1005ab	37	US	Female	16	Black or African American	No	4
+63c48023d6116ee42fa17bf8	33	US	Male	16	White	No	3
+63c487fa9db90581d57dc017	33	US	Male	16	White	No	1
+63ced19b7422296653437e30	34	US	Male	16	White	No	1
+63ced2194f403847de36bab5	35	US	Male	12	White	No	3
+63ced5ba289fa7af427c3740	24	US	Female	16	Black or African American	No	1
+63cee09007fbf47334157cb9	30	UK	Female	12	White	No	1
+63cee33497b8fc261dde69ba	33	UK	Female	18	Black or African American	No	1
+63cf4f4722d1c48cef8b0b10	27	US	Male	16	White	No	2
+63cff31d0fabe7166966c8b7	29	UK	Male	16	White	No	3
+63cff34d33a9948e3b0b28d6	30	US	Male	12	White	No	2
+63d005e38ccccb84f2c1d04c	29	UK	Male	16	White	No	4
+63d00e3cea3280c3ed8a340c	40	UK	Female	14	White	No	3
+63d042c98e64ec1173d30ab7	24	US	Male	16	Black or African American	No	2
+63d07155a81baf5108925992	35	US	Male	16	Asian	No	2
+63d086f89f695e2d3c210e9f	18	US	Male	12	Asian	No	4
+63d1156045971dc6b0006c73	39	US	Male	12	White	No	1
+63d13b643c7b2dd31426e8af	39	UK	Male	16	White	No	3
+63d13b764f00a53476867c25	35	US	Male	16	Asian	No	2
+63d13b9d237fce03faaae024	35	UK	Female	12	White	No	1
+63d13ca7d896eababf86d150	39	UK	Male	16	White	No	4
+63d13cb81a0a88a3ce29e33f	38	US	Male	12	White	No	1
+63d13d1465e0743b7b2b7962	24	UK	Male	18	Black or African American	No	1
+63d13f138cb8f46cf6ff65e9	23	UK	Male	16	White	No	4
+63d13f2f59ef764f641406dd	27	US	Male	12	White	No	3
+63d1412396ee4fa133b52643	31	UK	Male	16	White	No	2
+63d14eca0fd7e8476aff6652	24	US	Male	12	White	No	2
+63d15a2dccce0705127190e3	23	UK	Male	12	White	No	2
+63d18647419ae52f5e141607	35	US	Male	12	American Indian or Alaska Native	No	4
+63d1c1095b55c7061678a96e	23	US	Female	12	White	No	4
+63d2a4b549eb02187fd40092	37	US	Male	12	White	No	2
+63d2cb67dfc2a799bbd30c69	40	US	Male	16	White	No	2
+63d2eec88a81e2462be70762	30	US	Male	16	Black or African American	No	1
+63d2f3294efc674f84b302d2	26	US	Male	12	American Indian or Alaska Native	Yes	3
+63d3a3629d0b9452d3f32c7e	24	UK	Male	14	White	No	3
+63d3f99eac52371a49e65825	26	US	Female	16	White	No	1
+63d3fb15a2f8df9e46752d80	28	UK	Male	16	White	No	2
+63d3fbdc74f911908d4c50b3	29	UK	Male	18	White	No	3
+63d3fc20bb484480bed0228c	21	US	Female	12	Black or African American	No	3
+63d3fd4267f25518af752d7e	40	US	Female	16	White	No	4
+63d3fec908b40217bbd48993	34	US	Male	18	White	No	1
+63d404f4eaf69448ef9e09e6	36	US	Male	18	Asian	No	4
+63d4061bc9ec9cf926d6c9f7	29	US	Female	12	White	No	3
+63d40b7d3c7f92ff15ef6b67	20	US	Female	14	Asian	No	1
+63d40f21ea1c311723c7c847	31	US	Male	12	White	No	2
+63d410114a361b7bee9c12b9	36	US	Female	16	Black or African American	No	1
+63d413840c9c512ac3dfc533	34	US	Male	12	Multiple	No	1
+63d41536bd37096fda85cfb8	20	UK	Male	14	White	No	2
+63d41641e3864dede6329c16	38	UK	Male	18	Multiple	No	2
+63d416bc58ca5094af85cf8a	25	UK	Female	18	White	No	3
+63d4251f684e52575206f44b	23	UK	Male	12	White	No	3
+63d44472a72a227e0fef6bdc	27	US	Male	16	White	No	3
+63d447dff5d5b197f0d02275	29	UK	Male	16	White	No	3
+63d461ae668907ea6006f43f	29	US	Male	14	White	No	4
+63d4dbdd4adb3ccef611be9c	39	US	Male	12	White	No	2
+63d5e3bf4a739d1158b9ce64	35	US	Female	16	White	No	4
+63d6607ac75addc076b9ce5e	30	UK	Male	16	White	No	3
+63d672fd60ac772cd04cc33b	34	US	Male	8	Multiple	No	3
+63d68acca98cdd2bf385cfad	26	UK	Male	16	White	No	4
+63d6d8e21745f34be8ce7c35	30	US	Male	18	Black or African American	No	3
+63d6dfc970a407ead0b0d3a1	29	US	Male	16	Black or African American	No	1
+63d6f2705562fd353b7948dc	30	US	Male	14	Black or African American	No	3
+63d6fd6a2ab6a0946433add6	18	US	Male	12	White	Yes	2
+63d6ffe31d0f4bc7fad6c995	38	US	Male	18	Black or African American	No	4
+63d767905eeabd2239a652db	22	UK	Male	12	White	No	4
+63d77a647dbf6c0c53b0d375	36	US	Male	14	White	No	3
+63d79c120d736e870e993b8c	21	UK	Female	12	White	No	4
+63d79d065189719c8393e3eb	19	US	Male	12	White	No	2
+63d79d7e23a410a0bcdb390a	26	UK	Male	12	White	No	4
+63d79efd58203fb36a6e7f21	37	UK	Male	21	White	No	2
+63d79f1ac825afada26d2a63	35	UK	Male	16	White	No	1
+63d7a22621e496f7486bc851	36	US	Female	18	White	No	2
+63d7a79e2606216262545e75	24	UK	Male	14	White	No	4
+63d7aaec3ca7349b1aa83301	40	UK	Female	16	Multiple	No	4
+63d7ab86c847cafcb6b8803c	31	UK	Female	16	Asian	No	1
+63d7b127485d5655e70c8282	33	US	Male	16	Black or African American	No	3
+63d7bb92ab9685eb344e78f4	39	UK	Female	12	White	No	3
+63d7c1c77724f08194bcf7d9	24	US	Male	18	White	No	4
+63d7e609051bf50f9d1dcd35	30	UK	Male	18	White	No	3
+63d7eca29f0291aff53b003e	39	US	Female	12	Multiple	No	2
+63d7ee554df9f854d75ea6a7	25	UK	Female	18	White	No	3
+63d7f17bc657e6dc9e481a9a	26	UK	Male	12	White	No	1
+63d7f3f4e50de685d3d5b4fb	37	US	Male	16	Multiple	Yes	2
+63d7f42900f82081456a376a	38	UK	Female	12	White	No	2
+63d7f67f398e16e63a1fb6cf	26	US	Female	12	White	No	3
+63d82b0ef18b425db684c7e5	29	US	Not listed: Non-binary	12	White	No	3
+63d863ab3ccec5d222287168	20	UK	Male	12	White	No	3
+63d864bfc3bc732e26295c9c	34	US	Male	12	Multiple	No	1
+63d8665164999168637f2029	27	US	Female	12	White	No	4
+63d881ab484805569b553bd8	33	US	Male	12	White	Yes	4
+63d8d641a5a265b01a28716c	27	US	Male	12	White	No	3
+63d92dacc885e6167a4a486c	34	US	Male	18	White	No	4
+63d95313b31ba96b668888e2	34	UK	Male	18	White	No	1
+63d9f41910c61f3eb102079f	33	US	Male	12	White	No	1
+63dab0380b8791f9560fd329	35	US	Male	12	White	No	1
+63db1ccde6434330f2a99d87	37	US	Not listed: nonbinary	16	Black or African American	No	2
+63dbe76cbc72cdb0f3e93414	39	UK	Female	16	White	No	2
+63dc9888ca8a3238e40fada8	31	US	Male	12	White	No	2
+63dcc00d97b599698e60a1a6	30	US	Male	16	Black or African American	No	4
+63dd37970407f565167e5361	18	UK	Male	12	Multiple	No	4
+63ddc6baab6a2130b8a41bf7	30	US	Male	16	White	Yes	4
+63de2e4a0c6fd41343f82a79	31	US	Female	16	White	No	1
+63e316f79fdeba5ba50385e1	25	US	Male	12	Multiple	No	4
+63e3d578865b052c54e5bb22	31	UK	Female	18	White	No	4
+63e51bc04bab3dc97deba8de	29	UK	Male	14	White	No	3
+63e51bcabf370d509e9a93b0	22	UK	Female	16	White	No	1
+63e51bd9b573cd46809e1d56	28	US	Male	12	Asian	No	3
+63e51be13df7cac2d9348a05	26	US	Male	18	White	No	2
+63e51be199687d0e5eec6f0b	23	UK	Male	18	White	No	2
+63e51c373af1cc5baf0c727f	34	UK	Male	18	White	No	1
+63e51ccf6611acbfdc8c13c9	25	UK	Male	18	Asian	No	2
+63e51d228f42d1767efa8cbf	32	US	Male	12	White	No	2
+63e520b01779bbc9c4f6d1eb	37	UK	Male	16	White	No	1
+63e52666f4a31e05b9fc6680	38	UK	Male	16	White	No	3
+63e52dbdcdee07bcdb0e7da4	23	US	Female	18	White	No	2
+63e52f8ab3688f45f842114c	33	US	Male	12	Multiple	Yes	2
+63e530e893c44a3aefe9b29c	35	UK	Male	16	Asian	No	3
+63e538754c4b30560ca84884	30	US	Male	12	Multiple	No	1
+63e5525d306024ee8865e880	23	UK	Female	21	White	No	2
+63e55f03b3c1f7481cec6eb9	38	US	Female	16	White	No	1
+63e55f08844f6fb08115851f	32	US	Male	16	White	No	4
+63e56678a87f209e2ca83059	26	US	Female	12	White	No	1
+63e5747f1eb29ec68ae2ddd6	21	UK	Male	12	Multiple	No	1
+63e5a6690eeedc20da056717	39	US	Male	16	White	No	4
+63e5ffdf639ebdcf35aacb09	33	US	Male	18	White	No	2
+63e6378e04ade071ebf9ff9c	31	US	Male	16	Black or African American	No	1
+63e6cf0764dc4e52bee573af	27	UK	Male	14	White	No	1
+63e6dfd8bb1c10a44d13d7e5	29	UK	Female	16	White	No	1
+63ea44a0adefd2af8e13015c	32	UK	Male	21	Asian	No	3
+63ea451d26e9af5be0b01d50	29	US	Male	16	White	No	2
+63ea4730d677f800a8887ad6	40	US	Male	16	American Indian or Alaska Native	No	1
+63ea4a4ed214b26e3ff8b7f2	23	UK	Male	14	White	No	4
+63ea4ab1ce4168cbe9f63775	30	US	Male	16	White	No	4
+63ea52b8342eff8b95ef0f95	38	UK	Male	12	White	No	3
+63ea54cae81a2baf10a14930	27	US	Female	12	White	No	3
+63ea6b49edfcb9164c21a4bd	30	UK	Male	16	White	No	3
+63ea79021f0c43def6174042	27	US	Male	12	White	No	2
+63ea94c7220a944dcd17400b	27	UK	Male	16	Black or African American	No	4
+63eaace3d44d695631f32db0	29	UK	Male	18	Black or African American	No	2
+63eab29693a6eb7fd0174010	31	US	Male	14	Black or African American	No	4
+63eac31811a6da58d4f32d76	20	US	Male	12	White	Yes	1
+63ead665638c8546d8c3a962	21	US	Female	14	White	No	1
+63ead6f452e11793b2f8dab8	23	US	Male	12	Multiple	No	1
+63ebd1e66feb52fb3009c707	24	US	Male	16	Black or African American	No	3
+63ed0a8a65ddbf9edae99a16	26	UK	Male	18	White	No	2
+63ed15bed4665c62d9e6dbb2	24	US	Male	14	White	No	3
+63edb6401c8f280841255a82	26	US	Male	18	Multiple	Yes	2
+63f049c2d78b2bc822a16dac	34	US	Male	12	Multiple	Yes	4
+63f120152d0d387ed7666017	23	US	Male	16	White	No	3
+63f3731fccf0d4e95aa80d11	34	US	Male	18	Black or African American	No	2
+63f519601c333d44a17bb35a	19	US	Female	12	White	Yes	1
+63f5c99a1cecb4136b93f7db	38	US	Male	16	Black or African American	No	1
+63f688aaa4a19c78ebdfc479	35	US	Male	16	Black or African American	No	3
+63f77915c48d021a3bf77b0f	27	UK	Male	14	Black or African American	Yes	3
+63f77b9ca8439f6e1620c1cd	37	US	Male	12	White	No	1
+63f77ee4aa0961332b87fd0f	40	US	Female	21	White	No	3
+63f7811862c6df4e5438367d	30	US	Male	12	White	No	2
+63f787256fc87f0a297a849c	25	UK	Male	16	Black or African American	No	2
+63f789b502d033e83fca7885	32	US	Female	12	Black or African American	No	1
+63f78d9a7a3d118594efff74	31	US	Male	12	White	Yes	1
+63f78f511969d7e1b13907e4	23	UK	Male	18	White	No	4
+63f794e7d8d24753edbbb136	37	US	Female	12	White	No	3
+63f796a016e377d12cff50f1	40	US	Female	16	White	No	2
+63f7bdf930a31a500169fea1	18	US	Male	12	Multiple	Yes	4
+63f7c538e9def44bfbdc7db3	32	US	Male	12	Multiple	Yes	2
+63f7e1bb3866d96e37ecfd1c	20	US	Female	12	White	No	3
+63f7e5adcf31a0af5e7da12f	37	US	Male	14	White	No	4
+63f81021ab46acf095efff80	35	US	Male	16	White	No	1
+63f8705ae362b217290d08c2	35	UK	Male	16	White	No	4
+63f8a056531af02b77961676	34	US	Male	18	Black or African American	No	1
+63f93d2de413ad49cf0dbff1	30	US	Female	18	Multiple	No	1
+63fac97f0d4e8f6bfd753d90	28	US	Not listed: queer	16	Multiple	No	2
+63fe16762b4c19bea77a0904	24	UK	Male	16	Black or African American	No	1
+63ffcb367b500c516d0648a2	37	US	Male	16	White	No	1
+6400d8f868ce6e7f35955276	19	US	Male	12	Black or African American	No	1
+6400dc45648545e7ca8f35a6	34	US	Male	16	Asian	No	2
+6400dc9a87b5f4d0c3604bf3	20	UK	Male	12	White	No	2
+6400de8f305c51d03c2a9a0e	37	US	Male	16	White	No	2
+6400e308335a3bf214ca885e	32	UK	Male	18	Asian	No	2
+6400e51c13a550f2c6729a0f	29	UK	Male	16	White	No	1
+6400e8b1a2889ce16019eb23	38	UK	Male	16	White	No	2
+6400ed5065c350e3ad8c8233	25	UK	Male	18	White	No	4
+6400f212a7bd9c7c5ab1cc25	34	US	Female	18	White	No	2
+64010f32f8dee9772983c7cd	27	US	Male	14	White	No	4
+640116c8ac12a41ff02a9a2d	23	US	Male	12	White	No	1
+6401227cb3aa0d131ec5dd53	37	UK	Female	18	White	No	4
+6401236cbc95a51538bcc604	24	UK	Male	16	White	No	2
+64012a2623351894f2917605	33	US	Male	12	White	Yes	2
+64012a3019588a0c50947538	27	UK	Male	16	Multiple	No	2
+64016b31c3a34648748168d1	24	US	Male	12	White	No	4
+640175d4fd2062d9fa478050	25	US	Male	12	Black or African American	No	3
+64017b47c83e917541f7c592	31	US	Female	18	White	Yes	2
+64018f4d1a16dfe2b0f7c552	34	US	Female	12	Multiple	No	3
+6401a92fa70fe5c6eebb1aec	36	UK	Male	16	White	No	3
+6401dc189a0c39635de7ebab	21	US	Male	12	White	No	3
+640211d8277cfdf56b1bfabb	25	UK	Male	16	White	No	2
+64045393fa09ada78f0b5301	38	US	Male	16	Black or African American	No	4
+64046e75dff33633131b49b9	37	US	Male	16	Black or African American	No	1
+64050ea342e8e84d43fa7bdf	27	US	Not listed: Non-Binary	12	White	Yes	2
+6406300d0af7758269c8dc0b	24	US	Male	16	White	No	2
+640785ce903930be7597e7c1	34	UK	Female	12	White	No	4
+6407946a4bb4212372843398	36	US	Male	18	Multiple	No	3
+640b816df86dcee615619d0d	21	US	Male	12	Multiple	Yes	1
+641359eb0e2dc93999637e35	38	US	Female	16	Black or African American	No	4
+641360c2d049750e77c9a34a	30	UK	Male	12	White	No	3
+641361334c91a0c6ff4c5b79	27	US	Male	16	White	No	2
+6413627f4adf0cc7eb330dfc	22	UK	Not listed: Non-binary	12	White	No	1
+641363233e3398da82fcb757	30	US	Female	16	White	No	3
+641364d0e4356f62a8c4532d	20	UK	Male	12	White	No	4
+64136fca174b34ba3a481cfd	32	US	Female	16	White	No	4
+641373f8117053037093d10a	22	UK	Male	16	Black or African American	No	1
+6413788e21e4ee4f2dc16daa	23	US	Male	16	American Indian or Alaska Native	Yes	3
+64138e0c6645b537dcb5ee24	32	UK	Male	14	White	No	3
+64139e0346c4b91651b69d44	19	UK	Male	14	White	No	3
+6414832dbec81b70c2ac38c9	18	US	Male	12	White	Yes	3
+64151f08bb5879eb3a22d82b	29	US	Male	12	White	No	1
+6415b71b73e494b88ef767e0	27	US	Male	18	Native Hawaiian or Other Pacific Islander	Yes	3
+641724c665e2974bb1dec659	36	US	Male	21	White	No	4
+64175c4b35e2efa75054afa2	30	UK	Male	18	Black or African American	No	2
+641772ff6ca990e4c241b1bd	26	US	Male	16	White	No	1
+6417a176fa3ce88d576997b5	25	US	Male	16	White	No	1
+6418be1071b8716c81dd6d03	39	US	Male	16	White	No	4
+641a604be613385009dd72db	29	US	Male	14	White	Yes	4
+641aa32c2d955e806c03cbbc	33	US	Male	16	White	No	4
+641b1fcd7275677c08982bae	24	US	Male	16	White	No	3
+641c6443a8bca78cf7a512d1	33	US	Male	16	Black or African American	No	3
+6426cfe964863ee2ff26642f	30	UK	Male	16	White	No	2
+64275db44c9f63e924c59f3c	36	US	Female	14	Asian	No	2
+642761fc480b4b9318301c73	30	UK	Male	18	White	No	4
+64294cae8d5cae1b2ed48562	35	US	Male	16	Black or African American	No	3
+6429597d55809d51e610524e	36	US	Male	16	Black or African American	No	4
+642afaa03f927312a91a4c87	37	UK	Male	12	White	No	2
+642b42fc8858b97ac2975432	18	US	Male	12	White	Yes	3
+642b4867b32407dbdd61737e	21	US	Male	12	Black or African American	No	1
+642f43cfa37a1e968da2c9b3	29	US	Male	16	Multiple	Yes	4
+64309be1d7d085ed8ee4c129	28	US	Male	16	White	Yes	4
+64384af1f6fc298b3fe49027	23	US	Male	18	Asian	No	3
+6439d7987b1126efcebc25ac	28	US	Male	14	Native Hawaiian or Other Pacific Islander	No	4
+64401360c45f52531fde4aa6	20	US	Male	12	Native Hawaiian or Other Pacific Islander	Yes	4
+644015377c511324cabe9616	33	UK	Male	18	White	No	3
+64404b98fae5f4fcdefe71af	27	UK	Male	18	Black or African American	No	3
+64412826681d195f47939c7f	32	UK	Male	12	White	No	2
+6441584c2bff52766e55f7b3	22	UK	Male	18	Multiple	No	3
+644164d75b4cbe61ff891e64	32	UK	Male	16	White	No	3
+6441890f4ea5d3738776aff4	29	US	Male	16	White	No	3
+64429af825cbfee55f7f2653	29	US	Male	12	White	No	4
+6446db24e52b65559874f4f6	27	US	Male	14	White	No	4
+6447ad029d917ea4a1a090a4	21	UK	Female	12	Asian	No	4
+6447e560a1331745c679a03b	23	UK	Female	16	White	No	3
+644808e09076580e3e3ce991	34	UK	Male	14	White	No	4
+644a8c25f747d73d9828bee3	21	UK	Female	16	White	No	4
+644bd5f65278efdaecb4f62f	22	US	Male	18	Asian	No	4
+644bfef77d2220b964ca0c30	29	UK	Female	16	White	Yes	1
+64551d250ef342507eb0edf9	26	US	Male	12	Black or African American	No	3
+6458939bc77c645ea7979b33	19	US	Female	12	Black or African American	No	2
+645baff202a9482deefafab3	38	US	Male	12	White	No	3
+6469af575bcebf3f7e552039	30	US	Male	21	White	No	4
+6469b26b2cf3b4b300c0cddc	30	US	Male	21	White	No	4
+646bda56cc5de1ac99d51971	22	UK	Male	16	White	No	1
+646e2298279640dfb43a4cb1	41	US	Male	14	White	No	4
+64725d797d0dd0abf7f47e45	25	UK	Male	12	White	No	4
+647652cb5644044df439e1fb	35	US	Female	14	White	No	1
+6478bc3b38c55f11fcabb089	40	US	Male	18	Multiple	No	3
+6478dddd683cc5f4a550775f	29	US	Female	12	White	No	2
+647967d19dbd1fc15df8a948	31	US	Male	16	White	Yes	2
+6481ec9f0a58d32023a4fd94	25	UK	Male	16	White	No	1
+6491d720871d9f5e16eafb93	19	US	Female	12	White	No	1
+64950eb7e2cb12bc4dc6d9d2	29	US	Male	12	Black or African American	No	3
+6496f9fbc2928ee6956ef623	19	US	Male	12	Black or African American	Yes	4
+64b06482093329a4f0078e60	34	US	Female	18	Black or African American	No	2

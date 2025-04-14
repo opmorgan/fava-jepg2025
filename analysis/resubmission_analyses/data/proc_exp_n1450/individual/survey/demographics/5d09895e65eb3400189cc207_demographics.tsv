@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-5d09895e65eb3400189cc207	37	US	Female	12	Black or African American	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+5d09895e65eb3400189cc207	37	US	Female	12	Black or African American	No	2

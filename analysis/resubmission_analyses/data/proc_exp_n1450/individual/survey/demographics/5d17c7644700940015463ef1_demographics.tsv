@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-5d17c7644700940015463ef1	28	US	Female	18	Black or African American	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+5d17c7644700940015463ef1	28	US	Female	18	Black or African American	No	3

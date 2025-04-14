@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-61313473de5462f652bb133c	30	US	Male	14	White	Yes
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+61313473de5462f652bb133c	30	US	Male	14	White	Yes	1

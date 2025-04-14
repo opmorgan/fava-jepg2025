@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-63d3fc20bb484480bed0228c	21	US	Female	12	Black or African American	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+63d3fc20bb484480bed0228c	21	US	Female	12	Black or African American	No	3

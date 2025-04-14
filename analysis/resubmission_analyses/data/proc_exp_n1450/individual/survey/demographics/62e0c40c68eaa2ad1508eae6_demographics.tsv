@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-62e0c40c68eaa2ad1508eae6	28	AL	Not listed: Prefer not to say	16	Multiple	Yes
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+62e0c40c68eaa2ad1508eae6	28	AL	Not listed: Prefer not to say	16	Multiple	Yes	3

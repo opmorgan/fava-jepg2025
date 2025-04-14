@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-6413627f4adf0cc7eb330dfc	22	UK	Not listed: Non-binary	12	White	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+6413627f4adf0cc7eb330dfc	22	UK	Not listed: Non-binary	12	White	No	1

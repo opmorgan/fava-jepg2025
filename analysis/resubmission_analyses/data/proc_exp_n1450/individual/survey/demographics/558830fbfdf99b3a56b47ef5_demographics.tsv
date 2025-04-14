@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-558830fbfdf99b3a56b47ef5	29	US	Female	16	Asian	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+558830fbfdf99b3a56b47ef5	29	US	Female	16	Asian	No	3

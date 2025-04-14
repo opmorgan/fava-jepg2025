@@ -193,26 +193,51 @@ aah_for_rt_model <- aah_correct |>
 } else {
   aah_for_rt_model <- readRDS(here(manual_cache_dir, "aah_for_rt__model.rds"))
 }
+
+## Prepare dichotic listening data
+dic_data <- aah_summary_all |> 
+  filter(experiment == "two") |> 
+  filter(exclude_any == 0) |> 
+  mutate(ear_advantage = case_when(
+    (DL_lat <= 10 & DL_lat >= -10) ~ "none",
+    DL_lat < 10 ~ "LEA",
+    DL_lat > 10 ~ "REA"
+  ))
 ```
 
 ## Summary
 
-Is there a significant effect of response hand congruence on RT?
-Response hand congruency facilitated reaction times in Experiment 1 (10.28ms faster for congruent trials, 95/% CI [7.53, 13.03], p < .0001, two-sided), Experiment 2 (9.83ms, 95/% CI [7.33, 12.32], p > .0001, two-sided), and Experiment 1 and 2 combined (10.03ms, 95/% CI [8.18, 11.88], p < .0001, two-sided).
+**"[Spatial congruency] effects should (a) be formally reported and (b) be included in statistical models to make them more sensitive by accounting for this (current error) variance."**
 
-Does the effect of handedness on the interaction of field by level persist when controlling for response hand congruence?
-The effect of handedness on the interaction of field by level persisted when controlling for response had congruence in Experiment 1 (11.65ms, 95/% CI [0.64, 22.67], p = .038, two-sided), Experiment 2 (20.41ms, 95/% CI [10.35, 30.46], p < .0001, two-sided), and Experiments 1 and 2 combined (15.34ms, 95/% CI [7.94, 22.74ms], p < .0001, two-sided).
+(a) Is there a significant effect of response hand congruence on RT?
 
-Does the effect of handedness on the interaction of field by level persist when controlling for task order?
-- Experiment 2 (FxLxH): 
-- Experiment 3 (Exp 2, with DL laterality as a covariate; (FxLxH))
-- Experiment 3 (effect of handedness on DL laterality; (FxLxH))
+Response hand congruency facilitated reaction times in Experiment 1 (10.28ms faster for congruent trials, 95/% CI [7.53, 13.03], t(85,497.8) = 7.33, p < .0001, two-sided), Experiment 2 (9.83ms, 95/% CI [7.33, 12.32], t(111,141.5) = 7.33, p > .0001, two-sided), and Experiment 1 and 2 combined (10.03ms, 95/% CI [8.18, 11.88], t(196,646.2) = 10.64, p < .0001, two-sided).
+
+(b) Does the effect of handedness on the interaction of field by level persist when controlling for response hand congruence?
+
+The effect of handedness on the interaction of field by level persisted when controlling for response had congruence in Experiment 1 (11.65ms, 95/% CI [0.64, 22.67], t(85,498.3) = 2.07, p = .038, two-sided), Experiment 2 (20.41ms, 95/% CI [10.35, 30.46], t(111,143.37) = 3.98, p < .0001, two-sided), and Experiments 1 and 2 combined (15.34ms, 95/% CI [7.94, 22.74ms], t(196,648.5) = 4.06, p < .0001, two-sided).
 
 
-When controlling for both response hand and task order?
-- Experiment 2 (FxLxH): 
-- Experiment 3 (Exp 2, with DL laterality as a covariate; (FxLxH))
-- Experiment 3 (effect of handedness on DL laterality; (DLxH))
+**"...please check for task order effects in both Experiment 2 and 3 performance."**
+
+(1) Is there a significant effect of task order on RTs or DL laterality?
+
+Task order showed no significant effect on RT, in the full sample of Experiment 2 (difference = 10.32 ms in the direction of faster RT for participants who completed the dichotic listening task first, 95/% CI [-11.77, 32.41], t(938.5) = 0.92, p = .36, two-sided)  or in Experiment 3 (controling for language laterality: difference = 9.93ms, 95/% CI [12.18, 32.04], t(936.5) = 0.88, p = .38, two-sided). Task order also showed no significant effect on dichotic listening laterality (difference = 0.92 dichotic listening score units, 95/% CI [-4.57, 6.41], t(632) = 0.33, p = .74, two-sided).
+
+(2) Is there a significant effect of task order on any interactions of interest?
+
+Task order showed no significant effect on the interaction of field by level by handedness, in the full sample of Experiment 2 (difference = 6.93ms, 95/% CI [-13.19, 27.05], t(111,138.4) = 0.68, p = .50, two-sided), or in Experiment 3 (controlling for language laterality: difference = 9.00ms, 95/% CI [-11.32, 29.33], t(111,126.4) = 0.87, p = .39, two-sided). Task order also showed no significant effect on the relation between handedness and dichotic listening laterality (difference = 9.15 dichotic listening laterality units, in the direction of a stronger relationship for participants who completed the Navon task first, 95/% CI [-1.85, 20.16], t(631) = 1.63, p = .10, two-sided).
+
+Also check:
+(3) Does the effect of handedness on the interaction of field by level persist when controlling for task order?
+
+(a) Modeling the interaction of task order * field * level * handedness:
+
+Controlling for the four-way interaction of task order by field by level by handedness, the effect of handedness on the interaction of field by level persisted when controlling for task order, in the full sample of Experiment 2 (20.54ms, 95% CI [10.84, 30.60], t(111,138.4) = 4.00, p < .0001, two-sided), as well as in Experiment 3 (controlling for language laterality: 19.67ms, 95/% CI [9.51, 29.83], t(111,126.4) = 3.80, p = .0001, two-sided). The effect of handedness on dichotic listening laterality also persisted (difference = 10.16 dichotic listening units, 95/% CI [4.66, 15.66], t(631) = 3.63, p = .0003, two-sided).
+
+(b) Modeling task order as a simple covariate that might affect RT:
+
+Controlling for task order as a simple covariate, the effect of handedness on the interaction of field by level persisted when controlling for task order in the full sample of Experiment 2 (20.51ms, 95/% CI [10.45, 30.57], t(111,144.4) = 4.00, p < .0001, two-sided), as well as in Experiment 3 (controlling for language laterality: 19.78ms, 95/% CI [9.62, 29.93], t(111,138.5) = 3.82, p = .0001, two-sided). The effect of handedness on dichotic listening laterality also persisted (difference = 9.96 dichotic listening units, 95/% CI [4.46, 15.47], t(632) = 3.55, p = .0004, two-sided).
 
 ## Model response hand congruence
 
@@ -770,51 +795,1109 @@ rt_interaction_emm |>
                locations = cells_column_labels(columns = df))
 ```
 
-## Model task order
+
+## Model task order {.tabset}
 ```{r}
 ## Prepare variable: task order
-aah_for_rt_model |> filter(experiment == "two") |> View()
-
 aah_for_rt_model <- aah_for_rt_model |> 
-  ## Create variable: response hand
-  mutate(response_hand = 
+  mutate(task_order = 
            case_when(
-             block_response == "slash" ~ "right",
-             block_response == "z" ~ "left"
-           )) |> 
-  ## Create variable: response hand congruence
-    mutate(response_hand_congruence = 
-           case_when(
-             (response_hand == "right" & field == "RVF")  ~ "congruent",
-             (response_hand == "right" & field == "LVF")  ~ "incongruent",
-             (response_hand == "left" & field == "LVF")  ~ "congruent",
-             (response_hand == "left" & field == "RVF")  ~ "incongruent",
+             (group == 1 | group == 2) ~ "dichotic_first",
+             (group == 3 | group == 4) ~ "navon_first",
            ))
 ```
-### Exp 1
-
-#### Demographics
-```{r}
-
-```
-
-#### Stats
-
 
 ### Exp 2
 
-### Exp 1 + 2
+```{r}
+experiment_label <- "Experiment 2"
+```
+
+#### Demographics
+<br>
+```{r}
+## Pool experiments, break up by handedness
+demo_table <- aah_summary |>
+  filter(experiment == "two") |> 
+  group_by(handedness) |> 
+  summarize(
+            N = n(),
+            `Age (years)` = report_mean_sd(age),
+            `Education (years)` = report_mean_sd(education),
+            `Sex (M/F/O)` = report_sex(sex),
+            EHI = report_mean_sd(ehi)
+  ) |> 
+  rename(Handedness = handedness)
+
+demo_table |>
+  pretty_table(groupname_col = "experiment") |> 
+  tab_header(title = "Demographics, Experiment 2", subtitle = "") |> 
+  tab_footnote("Left: (EHI <= -40)  |  Mixed: (-40 < EHI < 40)  |  Right: (EHI >= 40)")
+```
+<br>
+
+#### Stats
+
+##### (1) Main effect of task order?
+
+`RT ~ field * level * handedness + task_order + (1|subject)`
+
+```{r}
+model_label <- "E2_RT_TO"
+#### FxLxH (prepare model)
+## Make a model with two handedness bins: Right and Left
+if (use_cached_models == FALSE) {
+  aah_for_rt_model_2bins <- aah_for_rt_model |> 
+    filter(handedness %in% c("Right", "Left")) |> 
+    filter(experiment == "two")
+  rt_model_2bins <- lmer(
+    rt ~ field*level*handedness
+    + task_order
+    + (1 | subject),
+    data = aah_for_rt_model_2bins
+    )
+
+  ## Manually cache model
+  saveRDS(rt_model_2bins, here(manual_cache_dir, str_c(model_label, "_model.rds")))
+  
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_model_2bins <- readRDS(here(manual_cache_dir, str_c(model_label, "_model.rds")))
+}
+```
+
+```{r}
+#### RT ~ RHC
+if (use_cached_models == FALSE) {
+## Estimate the effect of field for each level for each handedness group
+rt_emm2 <- emmeans(rt_model_2bins, ~ task_order, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+  contrast("revpairwise") |>
+  summary(infer = T, adj = "none")
+  saveRDS(rt_emm2, here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_emm2 <- readRDS(here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+}
+
+rt_emm2 |>
+  as_tibble() |> 
+  format_p.value() |> 
+  #arrange(handedness, level) |> 
+  pretty_table() |>
+  tab_header(title = "Effect of response hand congruence on RT") |>
+  tab_footnote(footnote = "A negative number means faster RT for participants who completed the dichotic listening task first",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+
+```{r}
+#### RT ~ RHC
+if (use_cached_models == FALSE) {
+## Estimate the effect of field for each level for each handedness group
+rt_emm2 <- emmeans(rt_model_2bins, ~ task_order, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+  summary(infer = T, adj = "none")
+  saveRDS(rt_emm2, here(manual_cache_dir, str_c(model_label, "emm_marginal.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_emm2 <- readRDS(here(manual_cache_dir, str_c(model_label, "emm_marginal.rds")))
+}
+
+rt_emm2 |>
+  as_tibble() |> 
+  format_p.value() |> 
+  rename(estimate = emmean) |> 
+  #arrange(handedness, level) |> 
+  pretty_table() |>
+  tab_header(title = "RT by task order") |>
+  tab_footnote(footnote = "ms",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+
+
+##### (2) Effect of task order on interactions of interest?
+
+`RT ~ field * level * handedness * task_order + (1|subject)`
+
+```{r}
+model_label <- "E2_F-L-H-TO"
+#### FxLxH (prepare model)
+## Make a model with two handedness bins: Right and Left
+if (use_cached_models == FALSE) {
+  aah_for_rt_model_2bins <- aah_for_rt_model |> 
+    filter(handedness %in% c("Right", "Left")) |> 
+    filter(experiment == "two")
+  rt_model_2bins <- lmer(
+    rt ~ field*level*handedness*task_order
+    + (1 | subject),
+    data = aah_for_rt_model_2bins
+    )
+
+  ## Manually cache model
+  saveRDS(rt_model_2bins, here(manual_cache_dir, str_c(model_label, "_model.rds")))
+  
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_model_2bins <- readRDS(here(manual_cache_dir, str_c(model_label, "_model.rds")))
+}
+```
+
+```{r}
+#### FxLxHxTO
+model_label <- "E2_F-L-H-TO"
+if (use_cached_models == FALSE) {
+## Estimate the effect of field for each level for each handedness group
+rt_emm2 <- emmeans(rt_model_2bins, ~ field*level*handedness*task_order, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+    contrast(interaction = c("consec")) |>
+    summary(infer = T)
+  saveRDS(rt_emm2, here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_emm2 <- readRDS(here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+}
+
+rt_emm2 |>
+  as_tibble() |> 
+  format_p.value() |> 
+  #arrange(handedness, level) |> 
+  pretty_table() |>
+  tab_header(title = "Effect of task order on FxLxH") |>
+  tab_footnote(footnote = "A negative number means faster RT for participants who completed the dichotic listening task first",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+
+```{r}
+model_label <- "E2_int_F-L-H_TO"
+#### FxLxH | TO
+if (use_cached_models == FALSE) {
+## Estimate the effect of field for each level for each handedness group
+rt_emm2 <- emmeans(rt_model_2bins, ~ field*level*handedness | task_order, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+  contrast(interaction = c("consec")) |>
+  summary(infer = T, adj = "none")
+  saveRDS(rt_emm2, here(manual_cache_dir, str_c(model_label, "emm_marginal.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_emm2 <- readRDS(here(manual_cache_dir, str_c(model_label, "emm_marginal.rds")))
+}
+
+rt_emm2 |>
+  as_tibble() |> 
+  format_p.value() |> 
+  #arrange(handedness, level) |> 
+  pretty_table() |>
+  tab_header(title = "Field by level by handedness, by task order (Experiment 2)") |>
+  tab_footnote(footnote = "ms",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+
+```{r}
+model_label <- "E2_int_F-L_H_TO"
+#### FxL | H | TO
+if (use_cached_models == FALSE) {
+## Estimate the effect of field for each level for each handedness group
+rt_emm2 <- emmeans(rt_model_2bins, ~ field*level | handedness + task_order, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+  contrast(interaction = c("consec")) |>
+  summary(infer = T, adj = "none")
+  saveRDS(rt_emm2, here(manual_cache_dir, str_c(model_label, "emm_marginal.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_emm2 <- readRDS(here(manual_cache_dir, str_c(model_label, "emm_marginal.rds")))
+}
+
+rt_emm2 |>
+  as_tibble() |> 
+  format_p.value() |> 
+  arrange(handedness) |> 
+  pretty_table() |>
+  tab_header(title = "Field by level, by handedness and task order (Experiment 2)") |>
+  tab_footnote(footnote = "ms",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+
+##### (3) FxLxH, controling for task order
+
+###### (a) Model task order as an interaction term
+
+`RT ~ field * level * handedness * task_order + (1|subject)`
+
+```{r}
+model_label <- "E2_F-L-H-TO"
+#### FxLxH (prepare model)
+## Make a model with two handedness bins: Right and Left
+if (use_cached_models == FALSE) {
+  aah_for_rt_model_2bins <- aah_for_rt_model |> 
+    filter(handedness %in% c("Right", "Left")) |> 
+    filter(experiment == "two")
+  rt_model_2bins <- lmer(
+    rt ~ field*level*handedness*task_order
+    + (1 | subject),
+    data = aah_for_rt_model_2bins
+    )
+
+  ## Manually cache model
+  saveRDS(rt_model_2bins, here(manual_cache_dir, str_c(model_label, "_model.rds")))
+  
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_model_2bins <- readRDS(here(manual_cache_dir, str_c(model_label, "_model.rds")))
+}
+```
+
+```{r}
+#### FxLxHxTO
+model_label <- "E2_F-L-H-TO__F-L-H"
+if (use_cached_models == FALSE) {
+## Estimate the effect of field for each level for each handedness group
+rt_emm2 <- emmeans(rt_model_2bins, ~ field*level*handedness, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+    contrast(interaction = c("consec")) |>
+    summary(infer = T)
+  saveRDS(rt_emm2, here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_emm2 <- readRDS(here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+}
+
+rt_emm2 |>
+  as_tibble() |> 
+  format_p.value() |> 
+  #arrange(handedness, level) |> 
+  pretty_table() |>
+  tab_header(title = "FxLxH, controlling for interaction with task order") |>
+  tab_footnote(footnote = "A negative number means faster RT for participants who completed the dichotic listening task first",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+
+```{r}
+model_label <- "E2_int_F-L-H-TO__F-L_H"
+#### FxLxH | TO
+if (use_cached_models == FALSE) {
+## Estimate the effect of field for each level for each handedness group
+rt_emm2 <- emmeans(rt_model_2bins, ~ field*level | handedness, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+  contrast(interaction = c("consec")) |>
+  summary(infer = T, adj = "none")
+  saveRDS(rt_emm2, here(manual_cache_dir, str_c(model_label, "emm_marginal.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_emm2 <- readRDS(here(manual_cache_dir, str_c(model_label, "emm_marginal.rds")))
+}
+
+rt_emm2 |>
+  as_tibble() |> 
+  format_p.value() |> 
+  #arrange(handedness, level) |> 
+  pretty_table() |>
+  tab_header(title = "Field by level, by handedness, controlling for interaction with task order (Experiment 2)") |>
+  tab_footnote(footnote = "ms",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+
+```{r}
+model_label <- "E2_int_F-L-H-TO__F_L-H-TO"
+#### FxL | H | TO
+if (use_cached_models == FALSE) {
+## Estimate the effect of field for each level for each handedness group
+rt_emm2 <- emmeans(rt_model_2bins, ~ field | level + handedness + task_order, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+  contrast(interaction = c("consec")) |>
+  summary(infer = T, adj = "none")
+  saveRDS(rt_emm2, here(manual_cache_dir, str_c(model_label, "emm_marginal.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_emm2 <- readRDS(here(manual_cache_dir, str_c(model_label, "emm_marginal.rds")))
+}
+
+rt_emm2 |>
+  as_tibble() |> 
+  format_p.value() |> 
+  arrange(handedness) |> 
+  pretty_table() |>
+  tab_header(title = "Field, by level, handedness and task order (Experiment 2)") |>
+  tab_footnote(footnote = "ms",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+
+###### (b) Model task order as a simple covariate
+
+`RT ~ field * level * handedness + task_order + (1|subject)`
+
+```{r}
+model_label <- "E2_F-L-H_TO"
+#### FxLxH (prepare model)
+## Make a model with two handedness bins: Right and Left
+if (use_cached_models == FALSE) {
+  aah_for_rt_model_2bins <- aah_for_rt_model |> 
+    filter(handedness %in% c("Right", "Left")) |> 
+    filter(experiment == "two")
+  rt_model_2bins <- lmer(
+    rt ~ field*level*handedness
+    + task_order
+    + (1 | subject),
+    data = aah_for_rt_model_2bins
+    )
+
+  ## Manually cache model
+  saveRDS(rt_model_2bins, here(manual_cache_dir, str_c(model_label, "_model.rds")))
+  
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_model_2bins <- readRDS(here(manual_cache_dir, str_c(model_label, "_model.rds")))
+}
+```
+
+```{r}
+#### FxLxHxTO
+model_label <- "E2_F-L-H_TO__F-L-H"
+if (use_cached_models == FALSE) {
+## Estimate the effect of field for each level for each handedness group
+rt_emm2 <- emmeans(rt_model_2bins, ~ field*level*handedness, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+    contrast(interaction = c("consec")) |>
+    summary(infer = T)
+  saveRDS(rt_emm2, here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_emm2 <- readRDS(here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+}
+
+rt_emm2 |>
+  as_tibble() |> 
+  format_p.value() |> 
+  #arrange(handedness, level) |> 
+  pretty_table() |>
+  tab_header(title = "FxLxH, controlling for task order as a simple covariate") |>
+  tab_footnote(footnote = "ms",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+
+```{r}
+model_label <- "E2_int_F-L-H_TO__F-L_H"
+#### FxLxH | TO
+if (use_cached_models == FALSE) {
+## Estimate the effect of field for each level for each handedness group
+rt_emm2 <- emmeans(rt_model_2bins, ~ field*level | handedness, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+  contrast(interaction = c("consec")) |>
+  summary(infer = T, adj = "none")
+  saveRDS(rt_emm2, here(manual_cache_dir, str_c(model_label, "emm_marginal.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_emm2 <- readRDS(here(manual_cache_dir, str_c(model_label, "emm_marginal.rds")))
+}
+
+rt_emm2 |>
+  as_tibble() |> 
+  format_p.value() |> 
+  #arrange(handedness, level) |> 
+  pretty_table() |>
+  tab_header(title = "Field by level, by handedness, controlling for task order as a simple covariate (Experiment 2)") |>
+  tab_footnote(footnote = "ms",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+
+```{r}
+model_label <- "E2_int_F-L-H_TO__F_L-H-TO"
+#### FxL | H | TO
+if (use_cached_models == FALSE) {
+## Estimate the effect of field for each level for each handedness group
+rt_emm2 <- emmeans(rt_model_2bins, ~ field | level + handedness + task_order, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+  contrast(interaction = c("consec")) |>
+  summary(infer = T, adj = "none")
+  saveRDS(rt_emm2, here(manual_cache_dir, str_c(model_label, "emm_marginal.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_emm2 <- readRDS(here(manual_cache_dir, str_c(model_label, "emm_marginal.rds")))
+}
+
+rt_emm2 |>
+  as_tibble() |> 
+  format_p.value() |> 
+  arrange(handedness) |> 
+  pretty_table() |>
+  tab_header(title = "Field, by level, handedness and task order (Experiment 2)") |>
+  tab_footnote(footnote = "ms",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+
 
 ### Exp 3
 
-#### FxLxH
+```{r}
+experiment_label <- "Experiment 3"
+```
 
-#### DLxH
+#### FxLxH (xDL)
 
-## Model both
+##### Demographics
+<br>
+```{r}
+## Pool experiments, break up by handedness
+demo_table <- aah_summary_all |>
+  filter(experiment == "two") |> 
+  filter(exclude_any == 0) |> 
+  group_by(handedness) |> 
+  summarize(
+            N = n(),
+            `Age (years)` = report_mean_sd(age),
+            `Education (years)` = report_mean_sd(education),
+            `Sex (M/F/O)` = report_sex(sex),
+            EHI = report_mean_sd(ehi)
+  ) |> 
+  rename(Handedness = handedness)
+
+demo_table |>
+  pretty_table(groupname_col = "experiment 3") |> 
+  tab_header(title = "Demographics, Experiment 3", subtitle = "") |> 
+  tab_footnote("Left: (EHI <= -40)  |  Mixed: (-40 < EHI < 40)  |  Right: (EHI >= 40)")
+```
+<br>
+
+##### Stats
+
+###### (1) Main effect of task order?
+
+`RT ~ field * level * handedness * DL_lat + task_order + (1|subject)`
+
+```{r}
+model_label <- "E3_RT_TO"
+#### FxLxH (prepare model)
+## Make a model with two handedness bins: Right and Left
+if (use_cached_models == FALSE) {
+  aah_for_rt_model_2bins <- aah_for_rt_model |> 
+    filter(handedness %in% c("Right", "Left")) |> 
+    filter(experiment == "two")
+  rt_model_2bins <- lmer(
+    rt ~ field*level*handedness*DL_lat
+    + task_order
+    + (1 | subject),
+    data = aah_for_rt_model_2bins
+    )
+
+  ## Manually cache model
+  saveRDS(rt_model_2bins, here(manual_cache_dir, str_c(model_label, "_model.rds")))
+  
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_model_2bins <- readRDS(here(manual_cache_dir, str_c(model_label, "_model.rds")))
+}
+```
+
+```{r}
+#### RT ~ RHC
+if (use_cached_models == FALSE) {
+## Estimate the effect of field for each level for each handedness group
+rt_emm2 <- emmeans(rt_model_2bins, ~ task_order, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+  contrast("revpairwise") |>
+  summary(infer = T, adj = "none")
+  saveRDS(rt_emm2, here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_emm2 <- readRDS(here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+}
+
+rt_emm2 |>
+  as_tibble() |> 
+  format_p.value() |> 
+  #arrange(handedness, level) |> 
+  pretty_table() |>
+  tab_header(title = "Effect of response hand congruence on RT (Experiment 3)") |>
+  tab_footnote(footnote = "A negative number means faster RT for participants who completed the dichotic listening task first",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+
+```{r}
+#### RT ~ RHC
+if (use_cached_models == FALSE) {
+## Estimate the effect of field for each level for each handedness group
+rt_emm2 <- emmeans(rt_model_2bins, ~ task_order, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+  summary(infer = T, adj = "none")
+  saveRDS(rt_emm2, here(manual_cache_dir, str_c(model_label, "emm_marginal.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_emm2 <- readRDS(here(manual_cache_dir, str_c(model_label, "emm_marginal.rds")))
+}
+
+rt_emm2 |>
+  as_tibble() |> 
+  format_p.value() |> 
+  rename(estimate = emmean) |> 
+  #arrange(handedness, level) |> 
+  pretty_table() |>
+  tab_header(title = "RT by task order (Experiment 3)") |>
+  tab_footnote(footnote = "ms",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
 
 
+###### (2) Effect of task order on interactions of interest?
+
+`RT ~ field * level * handedness * task_order + (1|subject)`
+
+```{r}
+model_label <- "E3_F-L-H-TO"
+#### FxLxH (prepare model)
+## Make a model with two handedness bins: Right and Left
+if (use_cached_models == FALSE) {
+  aah_for_rt_model_2bins <- aah_for_rt_model |> 
+    filter(handedness %in% c("Right", "Left")) |> 
+    filter(experiment == "two")
+  rt_model_2bins <- lmer(
+    rt ~ field*level*handedness*DL_lat*task_order
+    + (1 | subject),
+    data = aah_for_rt_model_2bins
+    )
+
+  ## Manually cache model
+  saveRDS(rt_model_2bins, here(manual_cache_dir, str_c(model_label, "_model.rds")))
+  
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_model_2bins <- readRDS(here(manual_cache_dir, str_c(model_label, "_model.rds")))
+}
+```
+
+```{r}
+#### FxLxHxTO
+model_label <- "E3_F-L-H-TO"
+if (use_cached_models == FALSE) {
+## Estimate the effect of field for each level for each handedness group
+rt_emm2 <- emmeans(rt_model_2bins, ~ field*level*handedness*task_order, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+    contrast(interaction = c("consec")) |>
+    summary(infer = T)
+  saveRDS(rt_emm2, here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_emm2 <- readRDS(here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+}
+
+rt_emm2 |>
+  as_tibble() |> 
+  format_p.value() |> 
+  #arrange(handedness, level) |> 
+  pretty_table() |>
+  tab_header(title = "Effect of task order on FxLxH (xDL)") |>
+  tab_footnote(footnote = "A negative number means faster RT for participants who completed the dichotic listening task first",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+
+###### (3) FxLxH, controling for task order
+
+####### (a) Model task order as an interaction term
+
+`RT ~ field * level * handedness * task_order + (1|subject)`
+
+```{r}
+model_label <- "E3_F-L-H-TO"
+#### FxLxH (prepare model)
+## Make a model with two handedness bins: Right and Left
+if (use_cached_models == FALSE) {
+  aah_for_rt_model_2bins <- aah_for_rt_model |> 
+    filter(handedness %in% c("Right", "Left")) |> 
+    filter(experiment == "two")
+  rt_model_2bins <- lmer(
+    rt ~ field*level*handedness*DL_lat*task_order
+    + (1 | subject),
+    data = aah_for_rt_model_2bins
+    )
+
+  ## Manually cache model
+  saveRDS(rt_model_2bins, here(manual_cache_dir, str_c(model_label, "_model.rds")))
+  
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_model_2bins <- readRDS(here(manual_cache_dir, str_c(model_label, "_model.rds")))
+}
+```
+
+```{r}
+#### FxLxHxTO
+model_label <- "E3_F-L-H-TO__F-L-H"
+if (use_cached_models == FALSE) {
+## Estimate the effect of field for each level for each handedness group
+rt_emm2 <- emmeans(rt_model_2bins, ~ field*level*handedness, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+    contrast(interaction = c("consec")) |>
+    summary(infer = T)
+  saveRDS(rt_emm2, here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_emm2 <- readRDS(here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+}
+
+rt_emm2 |>
+  as_tibble() |> 
+  format_p.value() |> 
+  #arrange(handedness, level) |> 
+  pretty_table() |>
+  tab_header(title = "FxLxH (xDL), controlling for interaction with task order") |>
+  tab_footnote(footnote = "ms",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+
+```{r}
+model_label <- "E3_int_F-L-H-TO__F-L_H"
+#### FxLxH | TO
+if (use_cached_models == FALSE) {
+## Estimate the effect of field for each level for each handedness group
+rt_emm2 <- emmeans(rt_model_2bins, ~ field*level | handedness, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+  contrast(interaction = c("consec")) |>
+  summary(infer = T, adj = "none")
+  saveRDS(rt_emm2, here(manual_cache_dir, str_c(model_label, "emm_marginal.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_emm2 <- readRDS(here(manual_cache_dir, str_c(model_label, "emm_marginal.rds")))
+}
+
+rt_emm2 |>
+  as_tibble() |> 
+  format_p.value() |> 
+  #arrange(handedness, level) |> 
+  pretty_table() |>
+  tab_header(title = "Field by level, by handedness (xDL), controlling for interaction with task order (Experiment 3)") |>
+  tab_footnote(footnote = "ms",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+
+####### (b) Model task order as a simple covariate
+
+`RT ~ field * level * handedness + task_order + (1|subject)`
+
+```{r}
+model_label <- "E3_F-L-H_TO"
+#### FxLxH (prepare model)
+## Make a model with two handedness bins: Right and Left
+if (use_cached_models == FALSE) {
+  aah_for_rt_model_2bins <- aah_for_rt_model |> 
+    filter(handedness %in% c("Right", "Left")) |> 
+    filter(experiment == "two")
+  rt_model_2bins <- lmer(
+    rt ~ field*level*handedness*DL_lat
+    + task_order
+    + (1 | subject),
+    data = aah_for_rt_model_2bins
+    )
+
+  ## Manually cache model
+  saveRDS(rt_model_2bins, here(manual_cache_dir, str_c(model_label, "_model.rds")))
+  
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_model_2bins <- readRDS(here(manual_cache_dir, str_c(model_label, "_model.rds")))
+}
+```
+
+```{r}
+#### FxLxHxTO
+model_label <- "E3_F-L-H_TO__F-L-H"
+if (use_cached_models == FALSE) {
+## Estimate the effect of field for each level for each handedness group
+rt_emm2 <- emmeans(rt_model_2bins, ~ field*level*handedness, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+    contrast(interaction = c("consec")) |>
+    summary(infer = T)
+  saveRDS(rt_emm2, here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  rt_emm2 <- readRDS(here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+}
+
+rt_emm2 |>
+  as_tibble() |> 
+  format_p.value() |> 
+  #arrange(handedness, level) |> 
+  pretty_table() |>
+  tab_header(title = "FxLxH, controlling for task order as a simple covariate") |>
+  tab_footnote(footnote = "ms",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
 
 
+#### DL ~ H
+
+```{r}
+## Prepare variable: task order
+dic_data <- dic_data |> 
+  mutate(task_order = 
+           case_when(
+             (group == 1 | group == 2) ~ "dichotic_first",
+             (group == 3 | group == 4) ~ "navon_first",
+           )) |> 
+  filter(handedness %in% c("Right", "Left"))
+```
+
+##### Stats
+
+###### (1) Main effect of task order?
+
+`DL ~ handedness + task_order`
+
+```{r}
+model_label <- "E3_DL_TO"
+#### FxLxH (prepare model)
+## Make a model with two handedness bins: Right and Left
+if (use_cached_models == FALSE) {
+  dic_model <- lm(
+    DL_lat ~ handedness
+    + task_order,
+    data = dic_data
+    )
+
+  ## Manually cache model
+  saveRDS(dic_model, here(manual_cache_dir, str_c(model_label, "_model.rds")))
+  
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  dic_model <- readRDS(here(manual_cache_dir, str_c(model_label, "_model.rds")))
+}
+```
+
+```{r}
+#### DL ~ TO
+if (use_cached_models == FALSE) {
+## Estimate the effect of field for each level for each handedness group
+dic_emm <- emmeans(dic_model, ~ task_order, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+  contrast("revpairwise") |>
+  summary(infer = T, adj = "none")
+  saveRDS(dic_emm, here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  dic_emm <- readRDS(here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+}
+
+dic_emm |>
+  as_tibble() |> 
+  format_p.value() |> 
+  #arrange(handedness, level) |> 
+  pretty_table() |>
+  tab_header(title = "Effect of task order on dichotic listening laterality (Experiment 3)") |>
+  tab_footnote(footnote = "",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+
+```{r}
+model_label <- "E3_DL_by-TO"
+#### DL ~ | TO
+if (use_cached_models == FALSE) {
+## Estimate the effect of field for each level for each handedness group
+dic_emm <- emmeans(dic_model, ~ task_order, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+  summary(infer = T, adj = "none")
+  saveRDS(dic_emm, here(manual_cache_dir, str_c(model_label, "emm_marginal.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  dic_emm <- readRDS(here(manual_cache_dir, str_c(model_label, "emm_marginal.rds")))
+}
+
+dic_emm |>
+  as_tibble() |> 
+  format_p.value() |> 
+  rename(estimate = emmean) |> 
+  #arrange(handedness, level) |> 
+  pretty_table() |>
+  tab_header(title = "Dichotic listening laterality by task order (Experiment 3)") |>
+  tab_footnote(footnote = "Dichotic listening laterality score",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+
+
+###### (2) Effect of task order on effects of interest?
+
+`DL ~ handedness * task_order`
+
+```{r}
+model_label <- "E3_H-TO"
+#### DL ~ H*TO (prepare model)
+## Make a model with two handedness bins: Right and Left
+if (use_cached_models == FALSE) {
+  dic_model <- lm(
+    DL_lat ~ handedness*task_order,
+    data = dic_data
+    )
+
+  ## Manually cache model
+  saveRDS(dic_model, here(manual_cache_dir, str_c(model_label, "_model.rds")))
+  
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  dic_model <- readRDS(here(manual_cache_dir, str_c(model_label, "_model.rds")))
+}
+```
+
+```{r}
+model_label <- "E3_H-TO"
+if (use_cached_models == FALSE) {
+dic_emm <- emmeans(dic_model, ~ handedness*task_order, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+    contrast(interaction = c("consec")) |>
+    summary(infer = T)
+  saveRDS(dic_emm, here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  dic_emm <- readRDS(here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+}
+
+dic_emm |>
+  as_tibble() |> 
+  format_p.value() |> 
+  #arrange(handedness, level) |> 
+  pretty_table() |>
+  tab_header(title = "Effect of task order on the effect of handedness on dichotic listening laterality (Experiment 3)") |>
+  tab_footnote(footnote = "Dichotic listening laterality score",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+
+```{r}
+#### DL ~ H*TO (prepare model)
+model_label <- "E3_H-TO"
+if (use_cached_models == FALSE) {
+## Estimate the effect of field for each level for each handedness group
+dic_emm <- emmeans(dic_model, ~ task_order | handedness, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+    contrast(interaction = c("consec")) |>
+    summary(infer = T)
+  saveRDS(dic_emm, here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  dic_emm <- readRDS(here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+}
+
+dic_emm |>
+  as_tibble() |> 
+  format_p.value() |> 
+  #arrange(handedness, level) |> 
+  pretty_table() |>
+  tab_header(title = "Effect of task order on dichotic listening laterality, by handedness (Experiment 3)") |>
+  tab_footnote(footnote = "Dichotic listening laterality score",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+```
+
+###### (3) DL ~ H, controling for task order
+
+####### (a) Model task order as an interaction term
+
+`DL_lat ~ handedness * TO`
+
+```{r}
+#### DL ~ H*TO (prepare model)
+model_label <- "E3_H-TO"
+if (use_cached_models == FALSE) {
+## Estimate the effect of field for each level for each handedness group
+dic_emm <- emmeans(dic_model, ~ handedness, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+    contrast(interaction = c("consec")) |>
+    summary(infer = T)
+  saveRDS(dic_emm, here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  dic_emm <- readRDS(here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+}
+
+dic_emm |>
+  as_tibble() |> 
+  format_p.value() |> 
+  #arrange(handedness, level) |> 
+  pretty_table() |>
+  tab_header(title = "Effect of handedness on dichotic listening laterality, controlling for an interaction of task order (Experiment 3)") |>
+  tab_footnote(footnote = "Dichotic listening laterality score",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+
+```
+
+####### (b) Model task order as a simple covariate
+
+`DL_lat ~ handedness * TO`
+
+```{r}
+model_label <- "E3_H_TO"
+#### DL ~ H*TO (prepare model)
+## Make a model with two handedness bins: Right and Left
+if (use_cached_models == FALSE) {
+  dic_model <- lm(
+    DL_lat ~ handedness + task_order,
+    data = dic_data
+    )
+
+  ## Manually cache model
+  saveRDS(dic_model, here(manual_cache_dir, str_c(model_label, "_model.rds")))
+  
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  dic_model <- readRDS(here(manual_cache_dir, str_c(model_label, "_model.rds")))
+}
+```
+
+```{r}
+#### DL ~ H*TO (prepare model)
+model_label <- "E3_H_TO"
+if (use_cached_models == FALSE) {
+## Estimate the effect of field for each level for each handedness group
+dic_emm <- emmeans(dic_model, ~ handedness, lmer.df = DF_METHOD,
+                          lmerTest.limit = LMERTEST_LIMIT) |>
+    contrast(interaction = c("consec")) |>
+    summary(infer = T)
+  saveRDS(dic_emm, here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+} else if (use_cached_models == TRUE) {
+  ## Load cached model
+  dic_emm <- readRDS(here(manual_cache_dir, str_c(model_label, "_emm.rds")))
+}
+
+dic_emm |>
+  as_tibble() |> 
+  format_p.value() |> 
+  #arrange(handedness, level) |> 
+  pretty_table() |>
+  tab_header(title = "Effect of handedness on dichotic listening laterality, controlling for task order as a simple covariate (Experiment 3)") |>
+  tab_footnote(footnote = "Dichotic listening laterality score",
+               locations = cells_column_labels(columns = estimate)) |>
+  tab_footnote(footnote = "Confidence level: 95%",
+               locations = cells_column_labels(columns = ends_with("CL"))) |>
+  tab_footnote(footnote = "Two-sided, uncorrected",
+               locations = cells_column_labels(columns = p.value)) |>
+  tab_footnote(footnote = "Z-approximation",
+               locations = cells_column_labels(columns = df))
+
+```
 
 <br>

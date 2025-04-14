@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-6075ecc30e7921c183644eaa	25	UK	Female	14	White	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+6075ecc30e7921c183644eaa	25	UK	Female	14	White	No	2

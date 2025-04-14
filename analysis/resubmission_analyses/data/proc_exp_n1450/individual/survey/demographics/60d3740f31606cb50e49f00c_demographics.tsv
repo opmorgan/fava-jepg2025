@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-60d3740f31606cb50e49f00c	32	US	Male	16	White	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+60d3740f31606cb50e49f00c	32	US	Male	16	White	No	1

@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-5ad5efefe2338200017798d4	28	UK	Female	16	Asian	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+5ad5efefe2338200017798d4	28	UK	Female	16	Asian	No	2

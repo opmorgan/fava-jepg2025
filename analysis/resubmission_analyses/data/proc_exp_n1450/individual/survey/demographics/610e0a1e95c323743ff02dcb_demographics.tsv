@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-610e0a1e95c323743ff02dcb	37	US	Male	16	Black or African American	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+610e0a1e95c323743ff02dcb	37	US	Male	16	Black or African American	No	2

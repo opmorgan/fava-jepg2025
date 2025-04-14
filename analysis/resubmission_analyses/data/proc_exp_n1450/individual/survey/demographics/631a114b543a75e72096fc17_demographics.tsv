@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-631a114b543a75e72096fc17	39	US	Male	12	White	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+631a114b543a75e72096fc17	39	US	Male	12	White	No	4

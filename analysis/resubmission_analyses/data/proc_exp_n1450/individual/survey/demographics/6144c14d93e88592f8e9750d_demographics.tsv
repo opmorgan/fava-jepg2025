@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-6144c14d93e88592f8e9750d	26	UK	Female	16	Black or African American	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+6144c14d93e88592f8e9750d	26	UK	Female	16	Black or African American	No	3

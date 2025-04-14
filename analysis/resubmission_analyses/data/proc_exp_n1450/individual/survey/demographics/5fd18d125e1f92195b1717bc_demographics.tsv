@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-5fd18d125e1f92195b1717bc	26	US	Male	16	Black or African American	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+5fd18d125e1f92195b1717bc	26	US	Male	16	Black or African American	No	3

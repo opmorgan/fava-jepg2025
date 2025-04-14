@@ -1,2 +1,2 @@
-subject	age	country	sex	education	race	hispanic_ethnicity
-6074c0ce19889ca4efd4448e	31	UK	Female	12	Asian	No
+subject	age	country	sex	education	race	hispanic_ethnicity	group
+6074c0ce19889ca4efd4448e	31	UK	Female	12	Asian	No	4
