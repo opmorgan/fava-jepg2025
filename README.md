@@ -1,4 +1,8 @@
-This repo contains data, analysis scripts, task scripts, and figures for the paper, "Frequency asymmetries in vision: The action asymmetry hypothesis."
+This repo contains data, analysis scripts, task scripts, and figures for the paper:
+
+Morgan, O. P., & Casasanto, D. (2025). Frequency asymmetries in perception: The action asymmetry hypothesis. _Journal of Experimental Psychology: General_.
+
+This repo is archived at: [https://osf.io/mc5gy](https://osf.io/mc5gy)
 
 The experiments in this study were preregistered using AsPredicted:
 - Experiment 1: https://aspredicted.org/GBB_3TD (#115434)
